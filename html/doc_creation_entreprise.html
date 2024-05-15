@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>doc_creation_entreprise.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, Arial, Helvetica, /*"Segoe WPC", "Segoe UI",*/ "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 12px/*14px*/);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 18px/*22px*/);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 8px /*16px*/ 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 8px/*16px*/;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: Arial, Helvetica, sans-serif;/*-apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";*/
+	padding: 0 10px/*12px*/;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 12px/*14px*/;
+	line-height: 15px/*19px*/;
+
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; /* Ajouter par moi */
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="cr%C3%A9ation-dune-entreprise">Création d'une entreprise</h1>
+<h2 id="table-des-mati%C3%A8res">Table des matières</h2>
+<hr>
+<ul>
+<li><a href="#cr%C3%A9ation-dune-entreprise">Création d'une entreprise</a>
+<ul>
+<li><a href="#table-des-mati%C3%A8res">Table des matières</a></li>
+<li><a href="#d%C3%A9veloppeur-freelance">Développeur freelance</a></li>
+<li><a href="#le-status-juridique-de-la-micro-entreprise-auto-entreprise-ou-entreprise-individuelle">Le status juridique de la micro-entreprise (auto-entreprise ou entreprise individuelle)</a>
+<ul>
+<li><a href="#informations-utilent-sur-la-micro-entreprise">Informations utilent sur la micro-entreprise</a></li>
+<li><a href="#les-avantages-de-la-micro-entreprise">Les avantages de la micro-entreprise</a></li>
+<li><a href="#les-inconv%C3%A9nients-et-les-limites-de-la-micro-entreprise">Les inconvénients et les limites de la micro-entreprise</a></li>
+<li><a href="#conditions-d%C3%A9ligibilit%C3%A9-%C3%A0-la-cr%C3%A9ation-dune-micro-entreprise">Conditions d'éligibilité à la création d'une micro-entreprise</a></li>
+<li><a href="#les-obligations-de-la-micro-entreprise">Les obligations de la micro-entreprise</a></li>
+<li><a href="#les-diff%C3%A9rentes-cotisations-sociales-et-imp%C3%B4ts-%C3%A0-payer">Les différentes cotisations sociales et impôts à payer</a>
+<ul>
+<li><a href="#les-cotisations-sociales">Les cotisations sociales</a></li>
+<li><a href="#limp%C3%B4t-sur-le-revenu">L'impôt sur le revenu</a></li>
+<li><a href="#la-cfe-cotisation-fonci%C3%A8re-des-entreprises">La CFE (Cotisation Foncière des Entreprises)</a></li>
+<li><a href="#la-tva">La TVA</a></li>
+</ul>
+</li>
+<li><a href="#r%C3%A9diger-une-facture">Rédiger une facture</a>
+<ul>
+<li><a href="#les-mentions-obligatoires-sur-une-facture">Les mentions obligatoires sur une facture</a></li>
+</ul>
+</li>
+<li><a href="#r%C3%A9diger-un-livre-de-recettes">Rédiger un livre de recettes</a>
+<ul>
+<li><a href="#les-mentions-obligatoires-sur-un-livre-de-recettes-pour-chaque-rentr%C3%A9e-dargent">Les mentions obligatoires sur un livre de recettes pour chaque rentrée d'argent</a></li>
+</ul>
+</li>
+<li><a href="#avoir-un-compte-bancaire-d%C3%A9di%C3%A9-%C3%A0-lactivit%C3%A9">Avoir un compte bancaire dédié à l'activité</a></li>
+</ul>
+</li>
+<li><a href="#les-d%C3%A9marches-%C3%A0-faire-pour-cr%C3%A9er-une-micro-entreprise">Les démarches à faire pour créer une micro-entreprise</a></li>
+<li><a href="#aides-et-astuces">Aides et Astuces</a></li>
+</ul>
+</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h2 id="d%C3%A9veloppeur-freelance">Développeur freelance</h2>
+<p>Un développeur freelance fait de la prestation de services non commercial. Il se situé donc dans la catégorie des <strong><code>Autre prestation de services et professions libérales BNC</code></strong>.
+Je serais plus dans le cas d'une micro-entreprise qui fait de la prestation de services et profession libérale.</p>
+<h2 id="le-status-juridique-de-la-micro-entreprise-auto-entreprise-ou-entreprise-individuelle">Le status juridique de la micro-entreprise (auto-entreprise ou entreprise individuelle)</h2>
+<p>La micro-entreprise est très souvent le meilleur choix pour démarrer une activité. Elle permet de tester son activité sans prendre trop de risques. Elle est très simple à créer et à gérer. Elle permet de bénéficier d'un régime fiscal et social avantageux.</p>
+<h3 id="informations-utilent-sur-la-micro-entreprise">Informations utilent sur la micro-entreprise</h3>
+<ul>
+<li>Micro-entreprise = auto-entreprise. C'est un statut juridique.
+<ul>
+<li><strong>Attention</strong> à ne pas confondre avec l'entreprise individuelle qui est l'échelon au-dessus de la micro-entreprise.</li>
+<li>La micro-entreprise est une en fait une entreprise individuelle avec le régime <code>micro</code> (régime fiscal et social avantageux).</li>
+</ul>
+</li>
+<li>Le statut de micro-entreprises n'est adapaté pour les activités qui nécessitent beaucoup d'investissement. Moins il y a d'investissement, mieux c'est.</li>
+<li>Une micro-entreprise est faite pour lancer son activité, pas pour la faire durer, une fois que l'activité est lancée (et qu'elle fonctionne), il faut changer de statut juridique.</li>
+<li>Le numéro de Siret est un numéro unique qui permet d'identifier une entreprise.</li>
+<li>Il est possible de facturer des choses à un client avant d'avoir son numéro de Siret, il faut juste avoir créée son statut en ligne et remplacer le numéro de Siret par &quot;<code>en cours d'immatriculation</code>&quot; sur la facture.</li>
+</ul>
+<h3 id="les-avantages-de-la-micro-entreprise">Les avantages de la micro-entreprise</h3>
+<ul>
+<li>Statut simple a créé.
+<ul>
+<li>ça se fait en ligne.</li>
+<li>ça prend 5 minutes.</li>
+<li>c'est gratuit.</li>
+</ul>
+</li>
+<li>Statut simple a géré.</li>
+<li>Très peu d'obligations comptables
+<ul>
+<li>déclarer ses revenus une fois par mois ou par trimestres</li>
+<li>garder une trace de toutes les rentrées d'argent</li>
+<li>pas d'obligation de prendre un compte professionnel</li>
+</ul>
+</li>
+<li>Exonération de TVA
+<ul>
+<li>Les entreprises qui font appel à d'autres entreprises ne paient pas de TVA donc ça ne change rien pour eux. Par contre les particuliers en tant que normal paient la TVA, mais pas quand elles font appel à des micro-entreprises.</li>
+<li>Attention tout de même, dans certains cas, il est possible de payer la TVA, ce sera précisé dans la partie dédiée à cette dernière.</li>
+</ul>
+</li>
+</ul>
+<h3 id="les-inconv%C3%A9nients-et-les-limites-de-la-micro-entreprise">Les inconvénients et les limites de la micro-entreprise</h3>
+<ul>
+<li>Chiffre d'affaires limité qui dépend de l'activité.
+<ul>
+<li>Activité d'achat vente de marchandises. (<strong>BIC</strong>, Bénéfices Industriels et Commerciaux)
+<ul>
+<li><strong>188 700 € hors taxe maximum par an.</strong></li>
+</ul>
+</li>
+<li>Prestations de services commerciales ou artisanales (<strong>BIC</strong>)
+<ul>
+<li><strong>188 700 € hors taxe maximum par an.</strong></li>
+</ul>
+</li>
+<li>Autre prestation de services et professions libérales (<strong>BNC</strong>, Bénéfices Non Commerciaux)
+<ul>
+<li><strong>77 700 € hors taxe maximum par an (~ 6 400€/mois).</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Impossibilité de déduction de charges
+<ul>
+<li>On ne peut pas déduire les charges de l'entreprise de son chiffre d'affaires.</li>
+<li>Peux importe l'argent que l'on dépense, on paie des charges sur le chiffre d'affaires et non sur le bénéfice.</li>
+</ul>
+</li>
+<li>Impossibilité de s'associer
+<ul>
+<li>On ne peut pas s'associer avec d'autres personnes pour créer une entreprise, donc pas de co-fondateur, pas de salarié. On peut quand même faire appel à des prestataires externes, donc il est possible de faire appel à des freelances par exemple. Mais ce genre d'association est une sorte d'arrangement non-officiel (légal) pas très optimisé en termes de fiscalité.</li>
+</ul>
+</li>
+<li>Peu crédible pour des investisseurs et des banques
+<ul>
+<li>Investisseurs
+<ul>
+<li>Comme il n'est pas possible de s'associer, les investisseurs ne peuvent pas prendre de part dans l'entreprise.</li>
+<li>pas très intéressant pour eux, puisque l'entreprise ne génère pas beaucoup de bénéfice.</li>
+</ul>
+</li>
+<li>Les banques
+<ul>
+<li>Les calculs de prêts sont très défavorables pour les micro-entreprises.</li>
+<li>Les banques ont peur de ne pas être remboursé.</li>
+<li>Cela reste des généralités, il est possible de trouver des banques qui acceptent de prêter de l'argent à des micro-entreprises, mais c'est juste un peu plus compliqué que pour d'autres statuts juridiques.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="conditions-d%C3%A9ligibilit%C3%A9-%C3%A0-la-cr%C3%A9ation-dune-micro-entreprise">Conditions d'éligibilité à la création d'une micro-entreprise</h3>
+<ul>
+<li>Condition liée à la personne
+<ul>
+<li>Majeur (et français)</li>
+</ul>
+</li>
+<li>Condition liée à l'activité
+<ul>
+<li>Pas d'activité agricole</li>
+<li>Pas d'activité de location de bien immobilier</li>
+<li>Pas d'activité médicale</li>
+<li>Pas d'activité illégale</li>
+</ul>
+</li>
+<li>Condition liée au chiffre d'affaires
+<ul>
+<li>Ne pas dépasser les plafonds de chiffre d'affaires</li>
+</ul>
+</li>
+</ul>
+<h3 id="les-obligations-de-la-micro-entreprise">Les obligations de la micro-entreprise</h3>
+<ul>
+<li>Rédiger une facture pour toutes les rentrés d'argents. (Freebe)</li>
+<li>Tenir un livre de recettes (Freebe)
+<ul>
+<li>Un livre de recettes est un document officiel qui permet de garder une trace de toutes les rentrées d'argent de l'entreprise avec quelques informations supplémentaires.</li>
+</ul>
+</li>
+<li>Avoir un compte bancaire dédié à l'activité (avec quelques subtilités)</li>
+<li>Payer ses cotisations sociales</li>
+</ul>
+<h3 id="les-diff%C3%A9rentes-cotisations-sociales-et-imp%C3%B4ts-%C3%A0-payer">Les différentes cotisations sociales et impôts à payer</h3>
+<ul>
+<li>Si on ne gagne rien, on ne paie rien (sauf le CFE).</li>
+<li>Certaines autres petites charges sont à payer tous les mois ou tous les trimestres, mais elles sont négligeables puisqu'elles représentent en tout moins de 1 % du chiffre d'affaires.</li>
+<li>Toutes les cotisations sociales et impôts sont à payer tous les mois ou tous les trimestres en fonction de ce que l'on choisit.</li>
+<li>Les seules charges à payer sont les cotisations sociales, impôts et la CFE. Ces charges représentent en général <strong>entre 20 % et 40 % du chiffre d'affaires annuel de l'entreprise</strong>.</li>
+</ul>
+<h4 id="les-cotisations-sociales">Les cotisations sociales</h4>
+<ul>
+<li>Les cotisations sociales sont un pourcentage du chiffre d'affaires.
+<ul>
+<li><strong>12,3 %</strong> pour les activités d'achat vente de marchandises (<strong>BIC</strong>)</li>
+<li><strong>21,2 %</strong> pour les prestations de services commerciales ou artisanales (<strong>BIC</strong>)</li>
+<li><strong>21,1 %</strong> pour les autres prestations de services et professions libérales affiliées au régime général pour leur retraite (<strong>BNC</strong>)</li>
+<li><strong>21,2 %</strong> pour les activités libérales affiliées à la CIPAV</li>
+</ul>
+</li>
+</ul>
+<h4 id="limp%C3%B4t-sur-le-revenu">L'impôt sur le revenu</h4>
+<ul>
+<li>Il y a deux façons de payer l'impôt sur le revenu.
+<ul>
+<li>Via la déclaration d'impôts (comme tout le monde)
+<ul>
+<li>Avec cette méthode, il y a simplement à déclarer le chiffre d'affaires de l'année précédente de l'entreprise dans la déclaration d'impôts. Les impôts vont ensuite appliquer un abattement de **50 % en prestation de services commerciales et de <strong>34 % en prestation de services classique ou libérales</strong>. Ensuite, le chiffre d'affaires restant est ajouté aux autres sources de revenu (si vous en avez) et vous payez l'impôt sur le revenu comme tout le monde.</li>
+</ul>
+</li>
+<li>Via le versement libératoire (directement avec les cotisations sociales)
+<ul>
+<li>Cette méthode est plus simple et plus avantageuse si le chiffre d'affaires est faible ou si vous êtes déjà beaucoup imposé sur vos autres sources de revenu.</li>
+<li>Avec cette méthode, il y a simplement à payer un pourcentage du chiffre d'affaires en même temps que les cotisations sociales.
+<ul>
+<li><strong>1,7 %</strong> pour les prestations de services commerciales (<strong>BIC</strong>)</li>
+<li><strong>2,2 %</strong> pour les autres prestations de services et professions libérales (<strong>BNC</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sachant cela, c'est à vous de choisir la méthode qui vous convient le mieux et surtout qui vous fera payer le moins d'impôt.</li>
+<li>Il est possible de changer de méthode à tout moment et ce sera valable à partir de l'année suivante.</li>
+</ul>
+<h4 id="la-cfe-cotisation-fonci%C3%A8re-des-entreprises">La CFE (Cotisation Foncière des Entreprises)</h4>
+<ul>
+<li>C'est la seule chose à payer même si on ne gagne rien.</li>
+<li>La manière de calculer la CFE est très compliquée et dépend de beaucoup de paramètres. Ce qu'il faut retenir, c'est qu'elle représente rarement plus de <strong>300 € par an</strong>.</li>
+</ul>
+<h4 id="la-tva">La TVA</h4>
+<ul>
+<li>En début d'activité, vous ne payerez pas la TVA.</li>
+<li>Mais dans certains cas, il est possible que vous soyez obligé de payer la TVA, c'est le cas si :
+<ul>
+<li>On dépasse les plafonds de chiffre d'affaires.</li>
+</ul>
+</li>
+<li>Si vous dépassez les plafonds de chiffre d'affaires pendant 2 années consécutives, c'est que votre entreprise fonctionne suffisamment bien pour que vous changiez de statut juridique.</li>
+<li>Pour éviter les complications et les erreurs, je vous recommande vivement de changer de statut juridique dès que vous dépassez les plafonds de chiffre d'affaires voir un peu avant de les dépasser.</li>
+</ul>
+<h3 id="r%C3%A9diger-une-facture">Rédiger une facture</h3>
+<p>Une facture est un document comptable et officiel qui permet de garder une trace de toutes les rentrées d'argent de l'entreprise.</p>
+<h4 id="les-mentions-obligatoires-sur-une-facture">Les mentions obligatoires sur une facture</h4>
+<ul>
+<li>Notre nom et prénom (parce que c'est une micro-entreprise).</li>
+<li>Les coordonnées de l'entreprise (adresse, téléphone, email, site web).</li>
+<li>Date d'émission de la facture.</li>
+<li>Le numéro de la facture.</li>
+<li>L'identité du client et ses coordonnées (nom, prénom, adresse).</li>
+<li>Le nom de la prestation ou du produit vendu (un par ligne avec la quantité et le prix unitaire).</li>
+<li>Les remises éventuelles (uniquement, s'il y en a).</li>
+<li>Le montant total a payé. (avec et sans TVA).</li>
+<li>Le numéro de Siret de l'entreprise.</li>
+</ul>
+<h3 id="r%C3%A9diger-un-livre-de-recettes">Rédiger un livre de recettes</h3>
+<p>Un livre de recettes est un document officiel qui permet de garder une trace de toutes les rentrées d'argent de l'entreprise avec quelques informations supplémentaires.</p>
+<h4 id="les-mentions-obligatoires-sur-un-livre-de-recettes-pour-chaque-rentr%C3%A9e-dargent">Les mentions obligatoires sur un livre de recettes pour chaque rentrée d'argent</h4>
+<ul>
+<li>La date de l'encaissement</li>
+<li>Le numéro de la facture correspondante</li>
+<li>L'identité du client</li>
+<li>La nature de la prestation ou la référence du produit vendu</li>
+<li>Le montant encaissé hors taxe</li>
+<li>Le mode de règlement (chèque, espèce, virement, ...)</li>
+</ul>
+<h3 id="avoir-un-compte-bancaire-d%C3%A9di%C3%A9-%C3%A0-lactivit%C3%A9">Avoir un compte bancaire dédié à l'activité</h3>
+<p><strong>Attention : si on paie de la TVA, il faut avoir un compte pro en France uniquement, sinon ça ne passera pas.</strong></p>
+<p>Il est obligatoire d'avoir un compte bancaire dédié à l'activité, uniquement si le chiffre d'affaires dépasse les 10 000 € par an pendant 2 années consécutives. Ce compte bancaire peut être un compte courant si on ne paie pas de TVA.</p>
+<ul>
+<li>Ce n'est pas nécessaire de créer un compte pro, un simple compte courant suffit.</li>
+</ul>
+<h2 id="les-d%C3%A9marches-%C3%A0-faire-pour-cr%C3%A9er-une-micro-entreprise">Les démarches à faire pour créer une micro-entreprise</h2>
+<ol>
+<li>Créer son statut juridique en ligne
+<ul>
+<li>Se rendre sur le site de <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil.html">l'URSSAF</a>
+<ul>
+<li>C'est totalement <strong>GRATUIT</strong>. Donc ne payer pas un tiers pour le faire à votre place.</li>
+</ul>
+</li>
+<li>Remplir le formulaire
+<ul>
+<li>Surtout vérifier bien votre catégorie d'activité (BIC ou BNC), c'est le plus important.</li>
+<li>Vous pouvez payer pour avoir de l'aide pour remplir le formulaire, mais ce n'est pas forcément nécessaire.</li>
+</ul>
+</li>
+<li>Vous recevrez votre numéro de Siret par courrier entre 2 semaines et 1 mois suivant la validation du formulaire.</li>
+</ul>
+</li>
+<li>Ça y est, vous êtes officiellement micro-entrepreneur.
+<ul>
+<li>Vous pouvez facturer vos clients.</li>
+<li>Vous pouvez ouvrir un compte bancaire dédié à l'activité.</li>
+<li>Vous pouvez tenir un livre de recettes.</li>
+<li>Vous pouvez payer vos cotisations sociales, impôts et autre charge.</li>
+<li>... etc</li>
+</ul>
+</li>
+</ol>
+<h2 id="aides-et-astuces">Aides et Astuces</h2>
+<ul>
+<li>
+<p><strong>Freebe</strong>, un outil de gestion de la comptabilité très pratique.</p>
+<ul>
+<li>Logiciel en ligne créé spécialement pour les micro-entreprises et les petites entreprises (<strong>84 €/an</strong>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Demandé l'ACRE</strong> (Aide aux Créateurs et Repreneurs d'Entreprise)</p>
+<ul>
+<li>L'ACRE est une aide financière qui permet de diminuer les cotisations sociales pendant 3 ans.</li>
+<li>Permet de diminuer les cotisations sociales de <strong>50 % la première année</strong>, <strong>25 % la deuxième année</strong> et <strong>10 % la troisième année</strong>. (Parfois vous verrez 50 % pendant 3 ans, c'était le cas avant, mais ça a changé donc ce n'est plus d'actualité)</li>
+<li>Pour bénéficier de l'ACRE, il faut au moins l'une des conditions suivantes :
+<ul>
+<li>être demandeur d'emploi</li>
+<li>être bénéficiaire du RSA</li>
+<li>Avoir entre 18 et 26 ans</li>
+<li>Moins de 30 ans et être en situation de handicap</li>
+<li>Quelques autres conditions très spécifiques peuvent s'appliquer, mais elles sont très rares.</li>
+</ul>
+</li>
+<li>En plus de l'une des conditions précédentes, il faut aussi faire la demande de l'ACRE dans les 45 jours suivant la création de l'entreprise.</li>
+</ul>
+</li>
+<li>
+<p><strong>Demandé l'ARCE</strong> (aide à la Reprise ou à la Création d'Entreprise)</p>
+<ul>
+<li>L'ARCE est une aide financière qui permet de toucher 60 % des droits restant à l'ARE (allocation de retour à l'emploi) en deux fois. Une fois lors de la création de l'entreprise et l'autre fois 6 mois plus tard.</li>
+<li>Pour bénéficier de l'ARCE, il faut au moins l'une des conditions suivantes :
+<ul>
+<li>être demandeur d'emploi</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
