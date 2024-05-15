@@ -1,6 +1,6 @@
 # Flashing Android OS
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -34,3 +34,7 @@ L'installation de ROM (Read Only Memory, Mémoire en lecture seul) personnalisé
 
 > <https://www.reliancedigital.in/solutionbox/how-to-run-a-new-android-os-on-your-dated-android-smartphone/>
 > <https://source.android.com/docs/core/architecture/bootloader/locking_unlocking?hl=fr>
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

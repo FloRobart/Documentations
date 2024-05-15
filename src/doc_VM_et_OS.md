@@ -1,6 +1,6 @@
 # Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -753,3 +753,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Allez dans `Apparence` > `Pointeurs`
 - Sélectionner '`Adwaita`'
 - Vous pouvez faire un clique droit sur la barre des tâches ou sur la barre d'outils (en haut de l'écran) puis cliquer sur '`Démarrer en mode d'édition`' pour modifier la barre des tâches et la barre d'outils
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

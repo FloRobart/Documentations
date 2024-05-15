@@ -1,6 +1,6 @@
 # Deployement d'une application sur APT
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -87,3 +87,7 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
   ```
 
 ## Déploiement du projet
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

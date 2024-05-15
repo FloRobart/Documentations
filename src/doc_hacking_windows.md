@@ -1,6 +1,6 @@
 # Hacking Windows 10 (et antérieur)
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -68,3 +68,7 @@ on peux ajouter n'importe qu'elle programme dans `'HKEY_LOCAL_MACHINE\SOFTWARE\M
 - allez dans les clés de rgistre
 - modifier la clé ``
 - remplacer le fichier `` par le fichier `cmd.exe`
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

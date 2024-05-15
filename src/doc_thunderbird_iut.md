@@ -1,6 +1,6 @@
 # Instalation et configuration de thunderbird pour l'IUT
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -54,3 +54,7 @@ Au premier lancemant de thunderbird, il faut configurer le compte mail.
 
 - Cliquer sur `Terminé`
 - Cliquer à nouveau sur `Terminé`
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

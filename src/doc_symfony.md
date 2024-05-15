@@ -1,6 +1,6 @@
 # Documentation installation et utilisation du framework PHP Symfony
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -469,3 +469,7 @@ wget est un utilitaire en ligne de commande pour télécharger de fichiers depui
   ```powershell
   composer require <packageName>
   ```
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

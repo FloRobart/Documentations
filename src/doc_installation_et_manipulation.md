@@ -1,6 +1,6 @@
 # Documentation d'installation et de configuration de différents logiciels et explications de manipulations diverses
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -2516,3 +2516,7 @@ Il existe deux méthodes pour installer PHP sur Windows, la première est la plu
     ```shell
     php artisan serve
     ```
+
+****
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

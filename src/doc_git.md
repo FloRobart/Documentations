@@ -1,6 +1,6 @@
 # Installation et configuration de git sur Linux et Windows
 
-<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
 ## Règles
 
@@ -221,3 +221,7 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   git commit -m "Message de commit"
   git push
   ```
+
+***
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
