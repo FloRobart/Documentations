@@ -1,5 +1,7 @@
 # Flashing Android OS
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

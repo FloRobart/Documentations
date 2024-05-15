@@ -1,5 +1,7 @@
 # Installation et configuration de git sur Linux et Windows
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

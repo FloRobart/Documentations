@@ -1,5 +1,7 @@
 # Instalation et configuration de thunderbird pour l'IUT
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

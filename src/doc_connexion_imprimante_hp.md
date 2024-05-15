@@ -1,5 +1,7 @@
 # Connexion d'une imprimante HP (Deskjet 3733) au wifi
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

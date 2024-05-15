@@ -1,5 +1,7 @@
 # Hacking Windows 10 (et antérieur)
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

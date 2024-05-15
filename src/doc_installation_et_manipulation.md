@@ -1,5 +1,7 @@
 # Documentation d'installation et de configuration de différents logiciels et explications de manipulations diverses
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"

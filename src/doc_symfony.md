@@ -1,5 +1,7 @@
 # Documentation installation et utilisation du framework PHP Symfony
 
+<a href="../README.md"><button type="button">Retour à toute les documentations</button></a>
+
 ## Règles
 
 - "`Saisie utilisateur`"
