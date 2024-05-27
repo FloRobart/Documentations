@@ -51,6 +51,8 @@ commande, extrait code et extrait de fichier
       - [Création d'une image de la partition windows](#création-dune-image-de-la-partition-windows)
       - [Réinstallation de windows](#réinstallation-de-windows)
     - [Utilisation d'applications Windows sur Ubuntu](#utilisation-dapplications-windows-sur-ubuntu)
+    - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
+    - [Rendre la serveur laravel accessible sur tout les appareils d'un réseau local](#rendre-la-serveur-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
   - [Exécution de logiciel Windows sur Linux](#exécution-de-logiciel-windows-sur-linux)
     - [Wine](#wine)
       - [Installation de Wine - Linux](#installation-de-wine---linux)
@@ -945,6 +947,54 @@ La réinstallation de windows à partir d'une image système permet de réinstal
   ```
 
 - Vous pouvez maintenant utiliser l'application Windows sur Ubuntu
+
+### Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local
+
+- Ouvrez le fichier `/opt/lampp/etc/extra/httpd-xampp.conf` avec un éditeur de texte en administrateur
+
+  ```shell
+  sudo open /opt/lampp/etc/extra/httpd-xampp.conf
+  ```
+
+- Remplacez la ligne "`Require local`" par "`Require all granted`" comment indiqué ci-dessous
+
+  ```conf
+  <Directory "/opt/lampp/phpmyadmin">
+      AllowOverride AuthConfig Limit
+      Require all granted
+      ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+  </Directory>
+  ```
+
+- Sauvegardez le fichier
+- Rechargez le serveur Apache en utilisant l'inteface graphique de XAMPP
+
+### Rendre la serveur laravel accessible sur tout les appareils d'un réseau local
+
+- Lancer le serveur laravel avec la commande suivante
+
+  ```shell
+  php artisan serve --host=0.0.0.0 --port=8000
+  ```
+
+- Récupérer l'adresse IP de l'ordinateur sur lequel le serveur laravel est lancé
+
+  ```shell
+  hostname -I
+  ```
+
+- Ouvrir un navigateur sur un autre appareil du réseau local
+- Aller à l'adresse IP de l'ordinateur sur lequel le serveur laravel est lancé suivi de `:8000`
+
+  ```shell
+  <adresse_ip>:8000
+  ```
+
+  - En règle général l'adresse IP est de la forme `192.168.1.XX`
+
+    ```shell
+    192.168.1.XX:8000
+    ```
 
 <div class="page"></div>
 
