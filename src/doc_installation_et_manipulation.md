@@ -977,17 +977,40 @@ La réinstallation de windows à partir d'une image système permet de réinstal
   php artisan serve --host=0.0.0.0 --port=8000
   ```
 
-- Récupérer l'adresse IP de l'ordinateur sur lequel le serveur laravel est lancé
+- Récupérer l'adresse IP ou le nom de la machine sur laquel le serveur laravel est lancé
 
-  ```shell
-  hostname -I
-  ```
+  - Récupérer l'adresse IP sous Linux
 
-- Ouvrir un navigateur sur un autre appareil du réseau local
-- Aller à l'adresse IP de l'ordinateur sur lequel le serveur laravel est lancé suivi de `:8000`
+    ```shell
+    hostname -I
+    ```
+  
+  - Récupérer le nom de la machine sous Linux
+
+    ```shell
+    hostname
+    ```
+
+  - Récupérer l'adresse IP sous Windows
+
+    ```shell
+    ipconfig
+    ```
+  
+  - Récupérer l'adresse IP sous Windows grâce à l'inteface graphique
+    - <https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9>
+
+- Ouvrir un navigateur sur un autre appareil connecté au même réseau
+- Entrer l'adresse IP de la machine sur lequel le serveur laravel est lancé suivi du numéro de port, en l'occurence "`:8000`"
 
   ```shell
   <adresse_ip>:8000
+  ```
+
+  OU
+
+  ```shell
+  <nom>:8000
   ```
 
   - En règle général l'adresse IP est de la forme `192.168.1.XX`
