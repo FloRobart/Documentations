@@ -45,6 +45,7 @@ commande, extrait code et extrait de fichier
     - [Modifier l'action du click sur une l'icone de l'application](#modifier-laction-du-click-sur-une-licone-de-lapplication)
       - [Avec le terminal](#avec-le-terminal)
       - [Avec une application tierce](#avec-une-application-tierce)
+    - [Désinstallation de fichier deb](#désinstallation-de-fichier-deb)
     - [Création d'un fichier deb](#création-dun-fichier-deb)
     - [Création de pages de manuel - Linux](#création-de-pages-de-manuel---linux)
     - [Réinstallation de windows à partir d'une image système](#réinstallation-de-windows-à-partir-dune-image-système)
@@ -700,6 +701,22 @@ Vous avez maintenant une clé USB vierge avec 1 partition non allouée
 - Cliquez sur '`click-action`'
 - Décochez la case '`Utiliser la valeur par défaut`'
 - Sélectionnez l'option que vous voulez, dans mon cas '`minimize-or-previews`'
+
+### Désinstallation de fichier deb
+
+- source
+  ><https://www.baeldung.com/linux/apt-uninstall-dpkg-deb-package>
+- Pour désinstaller un fichier deb, il faut utiliser la commande `dpkg` avec l'option `-r` ou `--remove` :
+
+  ```shell
+  sudo dpkg -r <nom_du_fichier_deb>
+  ```
+
+- Pour désinstaller et supprimer tout les fichiers de configuration d'un fichier deb, il faut utiliser la commande `dpkg` avec l'option `--purge` :
+
+  ```shell
+  sudo dpkg --purge <nom_du_fichier_deb>
+  ```
 
 ### Création d'un fichier deb
 
