@@ -24,15 +24,23 @@ commande, extrait code et extrait de fichier
 - [Installation et configuration de git sur Linux et Windows](#installation-et-configuration-de-git-sur-linux-et-windows)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
-  - [Installation de git sur Ubuntu Desktop et Debian](#installation-de-git-sur-ubuntu-desktop-et-debian)
-  - [Installation sur Windows 10 et 11](#installation-sur-windows-10-et-11)
-  - [Configuration pour Linux et Windows](#configuration-pour-linux-et-windows)
-  - [Liaison avec Github sur Linux et Windows](#liaison-avec-github-sur-linux-et-windows)
-  - [Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu](#utilisation-de-plusieurs-comptes-github-sur-le-même-ordinateur---ubuntu)
+  - [Installation](#installation)
+    - [Installation de Git sur Ubuntu Desktop et Debian](#installation-de-git-sur-ubuntu-desktop-et-debian)
+    - [Installation de Git sur Windows 10 et 11](#installation-de-git-sur-windows-10-et-11)
+  - [Configuration](#configuration)
+    - [Configuration pour Linux et Windows](#configuration-pour-linux-et-windows)
+    - [Liaison avec Github sur Linux et Windows](#liaison-avec-github-sur-linux-et-windows)
+  - [Utilisation](#utilisation)
+    - [Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu](#utilisation-de-plusieurs-comptes-github-sur-le-même-ordinateur---ubuntu)
+    - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
+  - [Erreur](#erreur)
+    - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
 
 <div style="page-break-after: always;"></div>
 
-## Installation de git sur Ubuntu Desktop et Debian
+## Installation
+
+### Installation de Git sur Ubuntu Desktop et Debian
 
 - Installer le paquet `git` depuis le dépot `apt` :
 
@@ -52,7 +60,7 @@ commande, extrait code et extrait de fichier
     git version 2.34.1
     ```
 
-## Installation sur Windows 10 et 11
+### Installation de Git sur Windows 10 et 11
 
 - Télécharger le fichier d'installation sur le site officiel :
   
@@ -77,7 +85,9 @@ commande, extrait code et extrait de fichier
     git version 2.41.0.windows.1
     ```
 
-## Configuration pour Linux et Windows
+## Configuration
+
+### Configuration pour Linux et Windows
 
 - Si vous avez besoins d'aide pour la configuration de git, lancer la commande :
 
@@ -97,7 +107,7 @@ commande, extrait code et extrait de fichier
   git config --global user.name <votre prenom>
   ```
 
-## Liaison avec Github sur Linux et Windows
+### Liaison avec Github sur Linux et Windows
 
 - Générer une clé SSH :
 
@@ -115,9 +125,12 @@ commande, extrait code et extrait de fichier
 
 - Ajouter la clé public (présente dans le fichier `~/.ssh/id_rsa.pub`) à Github dans '`Settings`' > '`SSH and GPG keys`' > '`New SSH key`'
 
-## Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu
+## Utilisation
 
-**Source : <https://gist.github.com/bonnopc/c78920431284ce3fc2a5270016205116>**
+### Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu
+
+- Source
+  > <https://gist.github.com/bonnopc/c78920431284ce3fc2a5270016205116>
 
 La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH différentes, mais vous pouvez l'adapter pour autant de comptes que vous voulez.
 
@@ -211,7 +224,7 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
 
     ```config
     [remote "origin"]
-	    url = git@<NOM>.github.com:exemple/exemple-repo.git
+      url = git@<NOM>.github.com:exemple/exemple-repo.git
     ```
 
 - Vérifier que tout fonctionne correctement en poussant un changement
@@ -221,6 +234,64 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   git commit -m "Message de commit"
   git push
   ```
+
+### Remplacer la branch master par une autre branch
+
+- Source
+  > <https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch>
+- Vérifier que la branch master est bien à jour
+
+  ```shell
+  git checkout master
+  git pull
+  ```
+
+- Passer sur la branch que vous voulez mettre à la place de la branch master que nous appelons `<new_branch>` et vérifier qu'elle est bien à jour
+
+  ```shell
+  git checkout <new_branch>
+  git pull
+  ```
+
+- Fusionner la branch `<new_branch>` avec la branch master en écrasant la branch master
+
+  ```shell
+  git merge -s ours master
+  ```
+
+- Passer sur la branch master
+
+  ```shell
+  git checkout master
+  ```
+
+- Fusionner la branch `<new_branch>` avec la branch master
+
+  ```shell
+  git merge <new_branch>
+  ```
+
+- Mettre à jour la branch master sur Github
+
+  ```shell
+  git push origin master
+  ```
+
+## Erreur
+
+### Erreur d'authentification HTTPS
+
+- Ne pas passer par HTTPS, il faut utiliser le ssh pour communiquer avec Github. Si votre clé ssh est bien configurer comme indiquer au dessus vous n'aurez normalement pas de problème.
+
+- Sinon vous pouvez aussi mêtre un token à la place du mot de passe mais il faudra le remettre à chaque action que vous effectuer sur Github
+
+  - Générer un token d'authentification sur Github dans '`Settings`' > '`Developer settings`' > '`Personal access tokens`' > '`Fine-grained personal access tokens`' > '`Generate new token`'
+
+  - Sélectionner quel repo vous voulez accéder avec votre token, dans mon cas j'ai sélectionné '`All repositories`'
+
+  - Donner les autororisations que vous voulez, dans mon cas j'ai sélectionné la plus haute autorisation de chaque élément de la catégorie `Repository permissions` et j'ai rien toucher à l'autre catégorie.
+
+  - Cliquer sur '`Generate token`'
 
 ***
 
