@@ -15,7 +15,7 @@
 commande, extrait code et extrait de fichier
 ```
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Table des matières
 
@@ -24,8 +24,7 @@ commande, extrait code et extrait de fichier
 - [Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation](#installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systèmes-dexploitation)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
-  - [Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`](#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt)
-  - [Installation en téléchargeant le fichier deb](#installation-en-téléchargeant-le-fichier-deb)
+  - [Installation de VirtualBox](#installation-de-virtualbox)
   - [Création d'une machine virtuel Ubuntu desktop dans VirtualBox](#création-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox)
     - [Création de la machine virtuel](#création-de-la-machine-virtuel)
     - [Création du profil utilisateur](#création-du-profil-utilisateur)
@@ -69,78 +68,11 @@ commande, extrait code et extrait de fichier
       - [Suite de la configuration du partitionnement](#suite-de-la-configuration-du-partitionnement)
     - [Configuration de KDE Plasma pour ressembler à Ubuntu desktop](#configuration-de-kde-plasma-pour-ressembler-à-ubuntu-desktop)
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
-## Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`
+## Installation de VirtualBox
 
-- récupérer les clés de signature du dépôt de VirtualBox :
-
-  ```shell
-  wget -q -O- http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
-  ```
-
-- Ajouter le dépôt de VirtualBox à la liste des sources de paquets :
-
-  ```shell
-  echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-  ```
-
-  **Attention, la commande suivante est valable uniquement pour Ubuntu 22.04.1 LTS et supérieur**
-
-  ```shell
-  echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg] http://download.virtualbox.org/virtualbox/debian jammy contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-  ```
-
-  **Pour la version 20.04.1 LTS d'ubuntu utiliser la ligne suivante**
-
-  ```shell
-  echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-  ```
-
-- Mettre à jour la liste des paquets disponibles :
-
-  ```shell
-  sudo apt update
-  ```
-
-- Pour connaître la dernière version de virtualbox installable :
-
-  ```shell
-  apt-cache madison virtualbox
-  ```
-
-- Installer la dernière version de virtualbox (dans mon cas la version 6.1) :
-
-  ```shell
-  sudo apt install virtualbox-<version>
-  ```
-
-- Ajouter votre compte dans le groupe `vboxusers` pour avoir accès à l'USB dans vos machines virtuelles.
-
-  ```shell
-  sudo usermod -G vboxusers -a $USER
-  ```
-
-- il peut-être nécessaire de mettre à jour le module DKMS, même si moi je n'ai pas eu à le faire :
-
-  ```shell
-  sudo /etc/init.d/vboxdrv setup
-  ```
-
-## Installation en téléchargeant le fichier deb
-
-- Télécharger le fichier deb disponible sur :
-  > <https://download.virtualbox.org/virtualbox/>
-- Vérifier la dernière version disponible sur :
-  > <https://download.virtualbox.org/virtualbox/LATEST.TXT>
-- Dans mon cas la dernière version est la 7.0.8, disponible ici :
-  > <https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb>
-
-- Executez le fichier deb télécharger :
-
-  ```shell
-  sudo dpkg -i virtualbox-*.deb
-  ```
+[Installation de VirtualBox](./doc_installation_et_utilisation.md#installation-de-virtualbox)
 
 ## Création d'une machine virtuel Ubuntu desktop dans VirtualBox
 

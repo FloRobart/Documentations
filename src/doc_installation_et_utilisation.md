@@ -53,6 +53,9 @@ commande, extrait code et extrait de fichier
   - [Installation de Scoop - Windows](#installation-de-scoop---windows)
   - [Installation de Jekyll - Linux](#installation-de-jekyll---linux)
   - [Installation de Discord - Linux](#installation-de-discord---linux)
+  - [Installation de VirtualBox](#installation-de-virtualbox)
+    - [Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`](#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt)
+    - [Installation en téléchargeant le fichier deb](#installation-en-téléchargeant-le-fichier-deb)
   - [GParted](#gparted)
     - [Installation de GParted - Linux](#installation-de-gparted---linux)
     - [Allouée la partition grace à GParted - Linux](#allouée-la-partition-grace-à-gparted---linux)
@@ -518,6 +521,79 @@ script d’information sur le système, en ligne de commande
     ```shell
     sudo dpkg -i discord-*.deb
     ```
+
+## Installation de VirtualBox
+
+### Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`
+
+- récupérer les clés de signature du dépôt de VirtualBox :
+
+  ```shell
+  wget -q -O- http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
+  ```
+
+- Ajouter le dépôt de VirtualBox à la liste des sources de paquets :
+
+  ```shell
+  echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+  ```
+
+  **Attention, la commande suivante est valable uniquement pour Ubuntu 22.04.1 LTS et supérieur**
+
+  ```shell
+  echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg] http://download.virtualbox.org/virtualbox/debian jammy contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+  ```
+
+  **Pour la version 20.04.1 LTS d'ubuntu utiliser la ligne suivante**
+
+  ```shell
+  echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+  ```
+
+- Mettre à jour la liste des paquets disponibles :
+
+  ```shell
+  sudo apt update
+  ```
+
+- Pour connaître la dernière version de virtualbox installable :
+
+  ```shell
+  apt-cache madison virtualbox
+  ```
+
+- Installer la dernière version de virtualbox (dans mon cas la version 6.1) :
+
+  ```shell
+  sudo apt install virtualbox-<version>
+  ```
+
+- Ajouter votre compte dans le groupe `vboxusers` pour avoir accès à l'USB dans vos machines virtuelles.
+
+  ```shell
+  sudo usermod -G vboxusers -a $USER
+  ```
+
+- il peut-être nécessaire de mettre à jour le module DKMS, même si moi je n'ai pas eu à le faire :
+
+  ```shell
+  sudo /etc/init.d/vboxdrv setup
+  ```
+
+### Installation en téléchargeant le fichier deb
+
+- Télécharger le fichier deb disponible sur :
+  > <https://download.virtualbox.org/virtualbox/>
+- Vérifier la dernière version disponible sur :
+  > <https://download.virtualbox.org/virtualbox/LATEST.TXT>
+- Dans mon cas la dernière version est la 7.0.8, disponible ici :
+  > <https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb>
+
+- Executez le fichier deb télécharger :
+
+  ```shell
+  sudo dpkg -i virtualbox-*.deb
+  ```
 
 ## GParted
 
