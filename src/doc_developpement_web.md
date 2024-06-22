@@ -30,11 +30,12 @@ commande, extrait code et extrait de fichier
     - [Installation de Composer - Linux](#installation-de-composer---linux)
       - [Installation simple d'une version récente de Composer - Linux](#installation-simple-dune-version-récente-de-composer---linux)
       - [Installation de la dernière version stable de Composer - Linux](#installation-de-la-dernière-version-stable-de-composer---linux)
+  - [PHP MyAdmin](#php-myadmin)
+    - [Installation de PHP MyAdmin - Linux](#installation-de-php-myadmin---linux)
+    - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
   - [Apache](#apache)
     - [Installation du serveur web Apache pour php - Linux](#installation-du-serveur-web-apache-pour-php---linux)
   - [Base de données](#base-de-données)
-    - [PHP MyAdmin](#php-myadmin)
-      - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
     - [MySQL](#mysql)
       - [Installation de MySQL - Linux](#installation-de-mysql---linux)
       - [Configuration de MySQL - Linux](#configuration-de-mysql---linux)
@@ -195,29 +196,17 @@ commande, extrait code et extrait de fichier
   composer create-project codeigniter4/appstarter <nameApp>
   ```
 
-## Apache
+## PHP MyAdmin
 
-### Installation du serveur web Apache pour php - Linux
+### Installation de PHP MyAdmin - Linux
 
 - Installer le paquet du dépot `apt` :
 
   ```shell
-  sudo apt install libapache2-mod-php
+  sudo apt install phpmyadmin
   ```
 
-- Voici quelque commande utile pour gérer le serveur web Apache :
-
-  ```shell
-  systemctl start apache2
-  systemctl status apache2
-  systemctl stop apache2
-  ```
-
-## Base de données
-
-### PHP MyAdmin
-
-#### Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local
+### Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local
 
 - Ouvrez le fichier `/opt/lampp/etc/extra/httpd-xampp.conf` avec un éditeur de texte en administrateur
 
@@ -241,6 +230,26 @@ commande, extrait code et extrait de fichier
   ```shell
   systemctl restart apache2
   ```
+
+## Apache
+
+### Installation du serveur web Apache pour php - Linux
+
+- Installer le paquet du dépot `apt` :
+
+  ```shell
+  sudo apt install libapache2-mod-php
+  ```
+
+- Voici quelque commande utile pour gérer le serveur web Apache :
+
+  ```shell
+  systemctl start apache2
+  systemctl status apache2
+  systemctl stop apache2
+  ```
+
+## Base de données
 
 ### MySQL
 
