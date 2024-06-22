@@ -201,13 +201,13 @@ commande, extrait code et extrait de fichier
 
 - Installer le paquet du dépot `apt` :
 
-  ```bash
+  ```shell
   sudo apt install libapache2-mod-php
   ```
 
 - Voici quelque commande utile pour gérer le serveur web Apache :
 
-  ```bash
+  ```shell
   systemctl start apache2
   systemctl status apache2
   systemctl stop apache2
@@ -236,7 +236,11 @@ commande, extrait code et extrait de fichier
   ```
 
 - Sauvegardez le fichier
-- Rechargez le serveur Apache en utilisant l'inteface graphique de XAMPP
+- Rechargez le serveur Apache en utilisant l'inteface graphique de XAMPP ou grâce à la commande suivante :
+
+  ```shell
+  systemctl restart apache2
+  ```
 
 ### MySQL
 
