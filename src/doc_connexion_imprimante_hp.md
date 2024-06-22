@@ -23,3 +23,7 @@ commande, extrait code et extrait de fichier
 
 - Allez dans l'applications `hp smart` et cliquer sur le bouton `Ajouter une imprimante` en haut au milieu.
 - Votre imprimante devrait apparaître dans la liste des imprimantes disponibles, cliquer dessus puis suivez les instructions.
+
+****
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

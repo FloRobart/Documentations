@@ -15,11 +15,11 @@
 commande, extrait code et extrait de fichier
 ```
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Table des matières
 
-***
+****
 
 - [Instalation et configuration de thunderbird pour l'IUT](#instalation-et-configuration-de-thunderbird-pour-liut)
   - [Règles](#règles)
@@ -27,7 +27,7 @@ commande, extrait code et extrait de fichier
   - [Installation de thunderbird](#installation-de-thunderbird)
   - [Configuration de thunderbird pour l'IUT](#configuration-de-thunderbird-pour-liut)
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Installation de thunderbird
 
@@ -55,6 +55,6 @@ Au premier lancemant de thunderbird, il faut configurer le compte mail.
 - Cliquer sur `Terminé`
 - Cliquer à nouveau sur `Terminé`
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

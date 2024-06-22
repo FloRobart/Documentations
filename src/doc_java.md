@@ -26,7 +26,7 @@ commande, extrait code et extrait de fichier
   - [Table des matières](#table-des-matières)
   - [Java](#java)
     - [Installation de Java - Linux](#installation-de-java---linux)
-    - [Installation de Java - Windows](#installation-de-java---windows)
+    - [Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux](#réparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code---linux)
   - [Maven](#maven)
     - [Installation de Maven - Linux](#installation-de-maven---linux)
     - [Utilisation de Maven](#utilisation-de-maven)
@@ -58,7 +58,76 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
   java --version
   ```
 
-### Installation de Java - Windows
+### Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux
+
+- Éditer le fichier `.bashrc` :
+
+  ```shell
+  code /home/${USER}/.bashrc
+  ```
+
+- Ajouter les lignes suivantes à la fin du fichier `.bashrc` :
+  - Dans mon cas le chemin vers le JDK est `/usr/lib/jvm/java-17-openjdk-amd64`
+
+  ```shell
+  # Ajout de la variable JAVA_HOME pour vs code
+  export JAVA_HOME='<path to jdk>'
+  export PATH="${PATH}:${JAVA_HOME}/bin"
+  ```
+
+- Mettre à jour le fichier `.bashrc` :
+
+  ```shell
+  source /home/${USER}/.bashrc
+  ```
+
+- Fermer puis réouvrir vs code
+- Aller dans les paramètres de vs code
+- Rechercher "`java runtime`"
+- Vous devrier voir '`Java › Configuration: Runtimes`'
+- Cliquer sur '`Modifier dans setting.json`'
+
+  !["Image des paramètres de vs code"](../Images/java_config_jdk.png "Image des paramètres de vs code")
+
+- Ajouter la valeur de java home dans le fichier `settings.json` comme montrer ci-dessous :
+
+  ```json
+    ...
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "GitHub Dark Perso",
+    "java.jdt.ls.java.home": "<add JAVA_HOME here>",
+    "explorer.confirmDelete": false,
+      "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-17",
+          "path": "<add JAVA_HOME here>",
+          "default": true
+        }
+      ],
+      "diffEditor.ignoreTrimWhitespace": false,
+      ...
+  ```
+
+  - Dans mon cas :
+
+    ```json
+      ...
+      "git.autofetch": true,
+      "git.confirmSync": false,
+      "workbench.colorTheme": "GitHub Dark Perso",
+      "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+      "explorer.confirmDelete": false,
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/java-17-openjdk-amd64",
+            "default": true
+          }
+        ],
+        "diffEditor.ignoreTrimWhitespace": false,
+        ...
+    ```
 
 ## Maven
 
@@ -159,3 +228,7 @@ si votre algorithmes est dans l'une de ces listes ou les deux, il faut normaleme
   - `prod` : Serveur de production de l'entreprise
   - `portable` : Serveur sur mon pc portable
 - `-DpathServerConfig` : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)
+
+****
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

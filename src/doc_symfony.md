@@ -19,7 +19,7 @@ commande, extrait code et extrait de fichier
 
 ## Table des matières
 
-***
+****
 
 - [Documentation installation et utilisation du framework PHP Symfony](#documentation-installation-et-utilisation-du-framework-php-symfony)
   - [Règles](#règles)
@@ -470,6 +470,6 @@ wget est un utilitaire en ligne de commande pour télécharger de fichiers depui
   composer require <packageName>
   ```
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

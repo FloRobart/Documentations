@@ -4,7 +4,7 @@
 
 ## Table des matières
 
-***
+****
 
 - [Création d'une page de dons pour le Téléthon](#création-dune-page-de-dons-pour-le-téléthon)
   - [Table des matières](#table-des-matières)
@@ -12,7 +12,7 @@
   - [Prérequis](#prérequis)
   - [Procédure](#procédure)
   
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Introduction
 
@@ -51,6 +51,6 @@ Ce tutoriel explique comment créer une page de dons pour le Téléthon.
 - Enregistrer les informations
 - C'est fini !
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

@@ -19,7 +19,7 @@ commande, extrait code et extrait de fichier
 
 ## Table des matières
 
-***
+****
 
 - [Documentation complète pour le développement web](#documentation-complète-pour-le-développement-web)
   - [Règles](#règles)
@@ -33,6 +33,8 @@ commande, extrait code et extrait de fichier
   - [Apache](#apache)
     - [Installation du serveur web Apache pour php - Linux](#installation-du-serveur-web-apache-pour-php---linux)
   - [Base de données](#base-de-données)
+    - [PHP MyAdmin](#php-myadmin)
+      - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
     - [MySQL](#mysql)
       - [Installation de MySQL - Linux](#installation-de-mysql---linux)
       - [Configuration de MySQL - Linux](#configuration-de-mysql---linux)
@@ -213,6 +215,29 @@ commande, extrait code et extrait de fichier
 
 ## Base de données
 
+### PHP MyAdmin
+
+#### Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local
+
+- Ouvrez le fichier `/opt/lampp/etc/extra/httpd-xampp.conf` avec un éditeur de texte en administrateur
+
+  ```shell
+  sudo open /opt/lampp/etc/extra/httpd-xampp.conf
+  ```
+
+- Remplacez la ligne "`Require local`" par "`Require all granted`" comment indiqué ci-dessous
+
+  ```conf
+  <Directory "/opt/lampp/phpmyadmin">
+      AllowOverride AuthConfig Limit
+      Require all granted
+      ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+  </Directory>
+  ```
+
+- Sauvegardez le fichier
+- Rechargez le serveur Apache en utilisant l'inteface graphique de XAMPP
+
 ### MySQL
 
 #### Installation de MySQL - Linux
@@ -249,6 +274,6 @@ commande, extrait code et extrait de fichier
 
 [Documentation CodeIgniter](./doc_codeigniter.md)
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

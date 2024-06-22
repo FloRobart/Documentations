@@ -26,7 +26,8 @@ commande, extrait code et extrait de fichier
   - [Table des matières](#table-des-matières)
   - [Description de Ventoy](#description-de-ventoy)
   - [Installation de Ventoy (Multi-boot USB) - Linux](#installation-de-ventoy-multi-boot-usb---linux)
-  - [Créer une clé bootable avec Ventoy](#créer-une-clé-bootable-avec-ventoy)
+  - [Utilisation de Ventoy](#utilisation-de-ventoy)
+  - [Création d'une clé bootable avec Ventoy](#création-dune-clé-bootable-avec-ventoy)
   - [Ajouter des ISO dans la clé USB bootable préalablement créée avec Ventoy](#ajouter-des-iso-dans-la-clé-usb-bootable-préalablement-créée-avec-ventoy)
   - [Démarrer un ordinateur sur une clé USB bootable créée avec Ventoy](#démarrer-un-ordinateur-sur-une-clé-usb-bootable-créée-avec-ventoy)
 
@@ -72,9 +73,13 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
   sudo rm ventoy-<version>-linux.tar.gz`
   ```
 
-## Créer une clé bootable avec Ventoy
+## Utilisation de Ventoy
+
+## Création d'une clé bootable avec Ventoy
 
 - Brancher la clé USB
+- [Réinitialiser la clé USB](./doc_manipulation.md#réinitialiser-une-clé-usb-ou-un-disque-dur)
+- [Formater la clé USB en EXT4](./doc_manipulation.md#allouée-la-partition-grace-à-gparted)
 - Ouvrez le gestionnaire de fichier
 - Placer vous dans le dossier `/opt/ventoy-<version>/`
 - Activez les droits d'exécution du logiciel : clic droit sur '`VentoyGUI.x86_64`' > '`propriété`' > '`Permissions`' > cochez '`Autoriser l'exécution du fichier comme un programme`'
@@ -142,3 +147,7 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 - Sélectionner l'ISO que vous voulez démarrer
 - Sélectionner le mode de démarrage, dans mon cas : '`Boot in normal mode`'
 - Suiver les instructions d'installation de l'OS
+
+****
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

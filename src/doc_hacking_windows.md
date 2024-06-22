@@ -15,11 +15,11 @@
 commande, extrait code et extrait de fichier
 ```
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Table des matières
 
-***
+****
 
 - [Hacking Windows 10 (et antérieur)](#hacking-windows-10-et-antérieur)
   - [Règles](#règles)
@@ -28,7 +28,7 @@ commande, extrait code et extrait de fichier
     - [Première méthode (Testé sur Windows 10 22h2 sur VirtualBox)](#première-méthode-testé-sur-windows-10-22h2-sur-virtualbox)
     - [Deuxième méthode (Testé sur Windows 10 22h2 sur VirtualBox)](#deuxième-méthode-testé-sur-windows-10-22h2-sur-virtualbox)
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Déverrouiller le compte administrateur
 
@@ -69,6 +69,6 @@ on peux ajouter n'importe qu'elle programme dans `'HKEY_LOCAL_MACHINE\SOFTWARE\M
 - modifier la clé ``
 - remplacer le fichier `` par le fichier `cmd.exe`
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

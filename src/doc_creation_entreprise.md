@@ -4,7 +4,7 @@
 
 ## Table des matières
 
-***
+****
 
 - [Création d'une entreprise](#création-dune-entreprise)
   - [Table des matières](#table-des-matières)
@@ -28,7 +28,7 @@
   - [Les démarches à faire pour créer une micro-entreprise](#les-démarches-à-faire-pour-créer-une-micro-entreprise)
   - [Aides et Astuces](#aides-et-astuces)
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Développeur freelance
 
@@ -221,6 +221,6 @@ Il est obligatoire d'avoir un compte bancaire dédié à l'activité, uniquement
   - Pour bénéficier de l'ARCE, il faut au moins l'une des conditions suivantes :
     - être demandeur d'emploi
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

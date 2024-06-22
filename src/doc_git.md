@@ -15,11 +15,11 @@
 commande, extrait code et extrait de fichier
 ```
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Table des matières
 
-***
+****
 
 - [Installation et configuration de git sur Linux et Windows](#installation-et-configuration-de-git-sur-linux-et-windows)
   - [Règles](#règles)
@@ -36,7 +36,7 @@ commande, extrait code et extrait de fichier
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
 
-<div style="page-break-after: always;"></div>
+<div class="page"></div>
 
 ## Installation
 
@@ -293,6 +293,6 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
 
   - Cliquer sur '`Generate token`'
 
-***
+****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

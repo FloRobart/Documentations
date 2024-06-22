@@ -1,4 +1,4 @@
-# Documentation d'installation et de configuration de différents logiciels
+# Documentation d'installation, de configuration et d'utilisation de différents logiciels
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
@@ -21,7 +21,7 @@ commande, extrait code et extrait de fichier
 
 ****
 
-- [Documentation d'installation et de configuration de différents logiciels](#documentation-dinstallation-et-de-configuration-de-différents-logiciels)
+- [Documentation d'installation, de configuration et d'utilisation de différents logiciels](#documentation-dinstallation-de-configuration-et-dutilisation-de-différents-logiciels)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
   - [Installation Ventoy (Multi-boot USB) - Linux](#installation-ventoy-multi-boot-usb---linux)
@@ -32,7 +32,6 @@ commande, extrait code et extrait de fichier
   - [Installation de Netbeans - Linux](#installation-de-netbeans---linux)
   - [Installation de Postman - Linux](#installation-de-postman---linux)
   - [Installation de Trello desktop - Linux](#installation-de-trello-desktop---linux)
-  - [Installation de GParted - Linux](#installation-de-gparted---linux)
   - [Installation de Slack - Linux](#installation-de-slack---linux)
   - [Installation de curl - Linux](#installation-de-curl---linux)
   - [Installation de wget](#installation-de-wget)
@@ -45,7 +44,6 @@ commande, extrait code et extrait de fichier
   - [Installation de Flatpak (gestionnaire de paquets) - Linux](#installation-de-flatpak-gestionnaire-de-paquets---linux)
   - [Installation de Mission center - Linux](#installation-de-mission-center---linux)
   - [Installation de ZSH (interpréteur de commandes shell) - Linux](#installation-de-zsh-interpréteur-de-commandes-shell---linux)
-  - [Installation de Dconf-Editor - Linux](#installation-de-dconf-editor---linux)
   - [Installation du gestionnaire de packet Snap - Linux](#installation-du-gestionnaire-de-packet-snap---linux)
   - [Installation de Thunderbird - Linux](#installation-de-thunderbird---linux)
   - [Installation de FileZilla - Linux](#installation-de-filezilla---linux)
@@ -55,8 +53,13 @@ commande, extrait code et extrait de fichier
   - [Installation de Scoop - Windows](#installation-de-scoop---windows)
   - [Installation de Jekyll - Linux](#installation-de-jekyll---linux)
   - [Installation de Discord - Linux](#installation-de-discord---linux)
-    - [Installation de Discord avec le dépot `snap`](#installation-de-discord-avec-le-dépot-snap)
-    - [Installation de Discord avec un fichier deb](#installation-de-discord-avec-un-fichier-deb)
+  - [GParted](#gparted)
+    - [Installation de GParted - Linux](#installation-de-gparted---linux)
+    - [Allouée la partition grace à GParted - Linux](#allouée-la-partition-grace-à-gparted---linux)
+  - [Dconf-Editor](#dconf-editor)
+    - [Installation de Dconf-Editor - Linux](#installation-de-dconf-editor---linux)
+    - [Utilisation de Dconf-Editor](#utilisation-de-dconf-editor)
+      - [Modifier le comportement du dock (barre de tâche) de Gnome](#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome)
   - [Pandoc](#pandoc)
     - [Description](#description)
     - [Installation de Pandoc - Linux](#installation-de-pandoc---linux)
@@ -67,12 +70,6 @@ commande, extrait code et extrait de fichier
     - [Lancer un jeu avec MelonDS](#lancer-un-jeu-avec-melonds)
     - [Améliorer les graphismes de MelonDS](#améliorer-les-graphismes-de-melonds)
     - [Configurer les touches de MelonDS](#configurer-les-touches-de-melonds)
-  - [Installation de Visual Studio code - Linux](#installation-de-visual-studio-code---linux)
-    - [Avec un fichier deb](#avec-un-fichier-deb)
-    - [Avec le dépot `snap`](#avec-le-dépot-snap)
-    - [Installation de mon thème personnalisé pour vscode - Linux](#installation-de-mon-thème-personnalisé-pour-vscode---linux)
-      - [Avec le script d'installation](#avec-le-script-dinstallation)
-      - [Manuellement](#manuellement)
 
 <div class="page"></div>
 
@@ -196,14 +193,6 @@ Equivalent de `Windirstat` qui permet d'analyser les disques pour savoir quel do
 
   ```shell
   sudo snap install trello-desktop
-  ```
-
-## Installation de GParted - Linux
-
-- Installer le paquet du dépot `apt` :
-
-  ```shell
-  sudo apt install gparted
   ```
 
 ## Installation de Slack - Linux
@@ -409,14 +398,6 @@ wget est un utilitaire en ligne de commande pour télécharger de fichiers depui
   sudo apt install zsh
   ```
 
-## Installation de Dconf-Editor - Linux
-
-- Installer le paquet du dépot `apt` :
-
-  ```shell
-  sudo apt install dconf-editor
-  ```
-
 ## Installation du gestionnaire de packet Snap - Linux
 
 - Installer le paquet principale du dépot `apt` :
@@ -523,25 +504,62 @@ script d’information sur le système, en ligne de commande
 
 ## Installation de Discord - Linux
 
-### Installation de Discord avec le dépot `snap`
+- Installation de Discord avec le dépot `snap`
 
-- Installer discord :
+    ```shell
+    sudo snap install discord
+    ```
+
+- Installation de Discord avec un fichier deb
+  - Télecharger le fichier deb de la dernière version sur :
+    > <https://discord.com/download>
+  - Executer le fichier deb
+
+    ```shell
+    sudo dpkg -i discord-*.deb
+    ```
+
+## GParted
+
+### Installation de GParted - Linux
+
+- Installer le paquet du dépot `apt` :
 
   ```shell
-  sudo snap install discord
+  sudo apt install gparted
   ```
 
-- Connectez vous à votre compte
+### Allouée la partition grace à GParted - Linux
 
-### Installation de Discord avec un fichier deb
+- [Installer GParted](./doc_installation.md#installation-de-gparted---linux)
+- Ouvrez GParted
+- Dans la liste déroulante en haut à droite, sélectionnez la clé USB
+- Clique droit sur la partition non allouée
+- Sélectionnez '`Nouvelle`'
+- Dans 'Espace libre précédent (Mio)', entrez le minimum, dans mon cas "`1`"
+- Laisser tout les autres champs par défaut
+- Sélectionnez le système de fichier de votre choix, dans mon cas "`ext4`"
+- Cliquez sur '`Ajouter`'
 
-- Télecharger le fichier deb de la dernière version sur :
-  > <https://discord.com/download>
-- Executer le fichier deb
+## Dconf-Editor
+
+### Installation de Dconf-Editor - Linux
+
+- Installer le paquet du dépot `apt` :
 
   ```shell
-  sudo dpkg -i discord-*.deb
+  sudo apt install dconf-editor
   ```
+
+### Utilisation de Dconf-Editor
+
+#### Modifier le comportement du dock (barre de tâche) de Gnome
+
+- Ouvrir Dconf-Editor
+- Allez dans `/org/gnome/shell/extensions/dash-to-dock`
+- Cliquez sur '`click-action`'
+- Décochez la case '`Utiliser la valeur par défaut`'
+- Sélectionnez l'option que vous voulez, dans mon cas '`minimize-or-previews`'
 
 ## Pandoc
 
@@ -609,116 +627,6 @@ Il permet par exemple de convertir un fichier markdown en fichier pdf, html, doc
 - Ouvrir MelonDS
 - Aller dans le menu '`Config`' > '`Input and hotkeys`'
 - Séléctionner la touche que vous voulez configurer
-
-## Installation de Visual Studio code - Linux
-
-### Avec un fichier deb
-
-- Télecharger le fichier deb de la dernière version sur :
-
-> <https://code.visualstudio.com/download>
-
-- Executer le fichier deb
-
-  ```shell
-  sudo dpkg -i code_*_amd64.deb
-  ```
-
-### Avec le dépot `snap`
-
-- Installer le paquet du dépot `snap` :
-
-  ```shell
-  sudo snap install code --classic
-  ```
-
-### Installation de mon thème personnalisé pour vscode - Linux
-
-#### Avec le script d'installation
-
-- Cloner le repertoire Github :
-  - Clone avec HTTPS
-
-    ```shell
-    git clone https://github.com/FloRobart/Themes_for_vsCode.git
-    ```
-
-  - Clone avec SSH
-
-    ```shell
-    git clone git@github.com:FloRobart/Themes_for_vsCode.git
-    ```
-
-- Rendre le script executable :
-
-  ```shell
-  chmod +x installateur.sh
-  ```
-
-- Executer la script :
-
-  ```shell
-  ./installateur.sh
-  ```
-
-- Vous pouvez maintenant choisir le thème nommer '`GitHub Dark Perso`' dans les paramètres de vscode
-
-#### Manuellement
-
-- Assurez vous d'avoir installé l'extension Github thème qui à comme ID :
-  > GitHub.github-vscode-theme
-- Cloner le repertoire Github :
-
-  ```shell
-  git clone https://github.com/FloRobart/Themes_for_vsCode.git
-  ```
-
-- Copier le thème dans le répertoire des thèmes de vscode :
-
-  ```shell
-  cp "path/to/Themes_for_vsCode/Themes/dark-perso.json" "/home/$USER/.vscode/extensions/github.github-vscode-theme-<version>/themes/dark-perso.json"
-  ```
-
-- Modifier le fichier `package.json` pour y ajouter le nouveau thème
-
-    Ajouter le texte suivant comme dans l'exemple si dessous
-
-  ```json
-  ,
-  {
-      "label": "GitHub Dark Perso",
-      "uiTheme": "vs-dark",
-      "path": "./themes/dark-perso.json"
-  }
-  ```
-
-- Exemple
-
-  ```json
-  {
-      ...
-  
-      "contributes": {
-          "themes": [
-  
-              ...
-  
-              {
-                  "label": "GitHub Dark",
-                  "uiTheme": "vs-dark",
-                  "path": "./themes/dark.json"
-              },
-              {
-                  "label": "GitHub Dark Perso",
-                  "uiTheme": "vs-dark",
-                  "path": "./themes/dark-perso.json"
-              }
-          ]
-      },
-  
-      ...
-  }
-  ```
 
 ****
 

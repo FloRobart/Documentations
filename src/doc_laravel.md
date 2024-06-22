@@ -31,6 +31,7 @@ commande, extrait code et extrait de fichier
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
+    - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
 
 <div class="page"></div>
 
@@ -160,3 +161,57 @@ commande, extrait code et extrait de fichier
       ```shell
       php artisan serve
       ```
+
+### Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local
+
+- Lancer le serveur laravel avec la commande suivante
+
+  ```shell
+  php artisan serve --host=0.0.0.0 --port=8000
+  ```
+
+- Récupérer l'adresse IP ou le nom de la machine sur laquel le serveur laravel est lancé
+
+  - Récupérer l'adresse IP sous Linux
+
+    ```shell
+    hostname -I
+    ```
+  
+  - Récupérer le nom de la machine sous Linux
+
+    ```shell
+    hostname
+    ```
+
+  - Récupérer l'adresse IP sous Windows
+
+    ```shell
+    ipconfig
+    ```
+  
+  - Récupérer l'adresse IP sous Windows grâce à l'inteface graphique
+    - <https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9>
+
+- Ouvrir un navigateur sur un autre appareil connecté au même réseau
+- Entrer l'adresse IP de la machine sur lequel le serveur laravel est lancé suivi du numéro de port, en l'occurence "`:8000`"
+
+  ```shell
+  <adresse_ip>:8000
+  ```
+
+  OU
+
+  ```shell
+  <nom>:8000
+  ```
+
+  - En règle général l'adresse IP est de la forme `192.168.1.XX`
+
+    ```shell
+    192.168.1.XX:8000
+    ```
+
+****
+
+<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
