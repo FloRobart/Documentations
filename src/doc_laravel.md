@@ -24,18 +24,19 @@ commande, extrait code et extrait de fichier
 - [Documentation Laravel](#documentation-laravel)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
-  - [Installation](#installation)
+  - [Installation de Laravel](#installation-de-laravel)
     - [Installation de Laravel CLI](#installation-de-laravel-cli)
-  - [Configuration](#configuration)
-  - [Utilisation](#utilisation)
+  - [Configuration de Laravel](#configuration-de-laravel)
+  - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
+    - [Création de migration](#création-de-migration)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
 
 <div class="page"></div>
 
-## Installation
+## Installation de Laravel
 
 - Documentation officiel, complète et très bien expliqué
   > <https://laravel.com/docs/10.x>
@@ -59,7 +60,7 @@ commande, extrait code et extrait de fichier
   composer global require laravel/installer
   ```
 
-## Configuration
+## Configuration de Laravel
 
 - Configuration des permissions dans votre projet Laravel
 
@@ -68,7 +69,7 @@ commande, extrait code et extrait de fichier
   sudo chmod -R 755 /path/to/your-project-name
   ```
 
-## Utilisation
+## Utilisation de Laravel
 
 ### Création d'un projet Laravel
 
@@ -89,6 +90,8 @@ commande, extrait code et extrait de fichier
   ```shell
   composer create-project --prefer-dist laravel/laravel your-project-name "8.*"
   ```
+
+### Création de migration
 
 ### Lancement d'un projet Laravel en local grâce au serveur web Apache
 
