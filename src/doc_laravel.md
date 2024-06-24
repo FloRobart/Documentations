@@ -115,6 +115,21 @@ commande, extrait code et extrait de fichier
   php artisan make:model <ModelName> -m
   ```
 
+  - Modifier le fichier de Model pour ajouter le nom de la table
+
+    ```php
+    protected $fillable = [
+      'name',
+      'email',
+    ];
+    ```
+
+- Éxécuter les migrations
+
+  ```shell
+  php artisan migrate
+  ```
+
 - Créer un contrôleur
 
   ```shell
