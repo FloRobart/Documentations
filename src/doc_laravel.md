@@ -29,7 +29,7 @@ commande, extrait code et extrait de fichier
   - [Configuration de Laravel](#configuration-de-laravel)
   - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
-    - [Création de migration](#création-de-migration)
+    - [Gestion de la base de données](#gestion-de-la-base-de-données)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
@@ -95,7 +95,31 @@ commande, extrait code et extrait de fichier
   composer create-project --prefer-dist laravel/laravel your-project-name "8.*"
   ```
 
-### Création de migration
+### Gestion de la base de données
+
+- Créer une migration
+
+  ```shell
+  php artisan make:migration create_<table-name>_table
+  ```
+
+- Créer un modèle
+
+  ```shell
+  php artisan make:model <ModelName>
+  ```
+
+- Créer un modèle et une migration
+
+  ```shell
+  php artisan make:model <ModelName> -m
+  ```
+
+- Créer un contrôleur
+
+  ```shell
+  php artisan make:controller <ControllerName>
+  ```
 
 ### Lancement d'un projet Laravel en local grâce au serveur web Apache
 
