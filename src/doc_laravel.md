@@ -33,6 +33,10 @@ commande, extrait code et extrait de fichier
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
+  - [Tailwind CSS](#tailwind-css)
+  - [LiveWire](#livewire)
+    - [Ajout de LiveWire à un projet Laravel](#ajout-de-livewire-à-un-projet-laravel)
+    - [Création d'un composant Livewire](#création-dun-composant-livewire)
 
 <div class="page"></div>
 
@@ -214,6 +218,32 @@ commande, extrait code et extrait de fichier
     ```shell
     192.168.1.XX:8000
     ```
+
+## Tailwind CSS
+
+- Ajout de Tailwind CSS à un projet Laravel
+
+  ```shell
+  npm install tailwindcss
+  ```
+
+## LiveWire
+
+### Ajout de LiveWire à un projet Laravel
+
+- Installer LiveWire grâce à `Composer`
+
+  ```shell
+  composer require livewire/livewire
+  ```
+
+### Création d'un composant Livewire
+
+- Éxécuter la commande suivante dans le dossier racine de votre projet Laravel pour créer un composant Livewire
+
+  ```shell
+  php artisan make:livewire <NomDuComposant>
+  ```
 
 ****
 
