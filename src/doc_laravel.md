@@ -27,6 +27,7 @@ commande, extrait code et extrait de fichier
   - [Installation de Laravel](#installation-de-laravel)
     - [Installation de Laravel CLI](#installation-de-laravel-cli)
   - [Configuration de Laravel](#configuration-de-laravel)
+    - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
   - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
     - [Gestion de la base de données](#gestion-de-la-base-de-données)
@@ -66,11 +67,58 @@ commande, extrait code et extrait de fichier
 
 ## Configuration de Laravel
 
-- Configuration des permissions dans votre projet Laravel
+- Configuration des permissions dans votre projet Laravel (normalement vous n'avez pas besoin de faire cette étape)
 
   ```shell
   sudo chown -R www-data:www-data /path/to/your-project-name
   sudo chmod -R 755 /path/to/your-project-name
+  ```
+
+### Intégration de Tailwind CSS
+
+- Installation de Tailwind CSS
+
+  ```shell
+  npm install -D tailwindcss postcss autoprefixer
+  ```
+
+- Création du fichier de configuration de Tailwind CSS
+
+  ```shell
+  npx tailwindcss init -p
+  ```
+
+- Ajoutez le code suivant dans le fichier `tailwind.config.js`
+
+  ```js
+  /** @type {import('tailwindcss').Config} */
+  export default {
+    content: [
+      "./resources/**/*.blade.php",
+      "./resources/**/*.js",
+      "./resources/**/*.vue",
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  }
+  ```
+
+- Ajoutez le code suivant dans le fichier `ressources/css/app.css`
+
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  @tailwind forms;
+  ```
+
+- Vous pouvez compiler les fichiers CSS de Tailwind CSS en utilisant la commande suivante
+  - Vous pouvez voir ça comme l'activation du style Tailwind CSS. Il faudra refaire cette commande à chaque fois que vous ajouter un nouveau style dans votre projet
+
+  ```shell
+  npm run build
   ```
 
 ## Utilisation de Laravel
