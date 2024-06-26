@@ -28,15 +28,15 @@ commande, extrait code et extrait de fichier
     - [Installation de Laravel CLI](#installation-de-laravel-cli)
   - [Configuration de Laravel](#configuration-de-laravel)
     - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
+    - [Intégration de Livewire](#intégration-de-livewire)
   - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
     - [Gestion de la base de données](#gestion-de-la-base-de-données)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
-  - [Tailwind CSS](#tailwind-css)
-  - [LiveWire](#livewire)
-    - [Ajout de LiveWire à un projet Laravel](#ajout-de-livewire-à-un-projet-laravel)
+  - [Livewire](#livewire)
+    - [Ajout de Livewire à un projet Laravel](#ajout-de-livewire-à-un-projet-laravel)
     - [Création d'un composant Livewire](#création-dun-composant-livewire)
 
 <div class="page"></div>
@@ -120,6 +120,10 @@ commande, extrait code et extrait de fichier
   ```shell
   npm run build
   ```
+
+### Intégration de Livewire
+
+- [Ajouter et utiliser Livewire à un projet Laravel](#livewire)
 
 ## Utilisation de Laravel
 
@@ -306,17 +310,9 @@ commande, extrait code et extrait de fichier
     192.168.1.XX:8000
     ```
 
-## Tailwind CSS
+## Livewire
 
-- Ajout de Tailwind CSS à un projet Laravel
-
-  ```shell
-  npm install tailwindcss
-  ```
-
-## LiveWire
-
-### Ajout de LiveWire à un projet Laravel
+### Ajout de Livewire à un projet Laravel
 
 - Installer LiveWire grâce à `Composer`
 
