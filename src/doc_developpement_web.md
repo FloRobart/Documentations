@@ -43,6 +43,8 @@ commande, extrait code et extrait de fichier
       - [Installation de PostgreSQL - Linux](#installation-de-postgresql---linux)
       - [Configuration de Postgresql - Linux](#configuration-de-postgresql---linux)
   - [XAMPP](#xampp)
+    - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
+    - [Utilisation de XAMPP](#utilisation-de-xampp)
   - [Framwork PHP](#framwork-php)
     - [Laravel](#laravel)
     - [Symfony](#symfony)
@@ -272,6 +274,66 @@ commande, extrait code et extrait de fichier
 > <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04>
 
 ## XAMPP
+
+### Installation de XAMPP - Linux
+
+- Téléchargez la dernière version de XAMPP sur le site officiel :
+
+  ><https://www.apachefriends.org/fr/index.html>
+
+- Placez vous dans le répertoire de téléchargement, dans mon cas `/home/${USER}/Téléchargements` :
+
+  ```shell
+  cd /home/${USER}/Téléchargements
+  ```
+
+- Donnez les droits d'exécution au fichier téléchargé :
+
+  ```shell
+  chmod +x xampp-linux-x64-8.1.12-0-installer.run
+  ```
+
+- Exécutez le fichier téléchargé :
+
+  ```shell
+  ./xampp-linux-x64-8.1.12-0-installer.run
+  ```
+
+- Suivez les instructions de l'installeur
+- Créez un raccourci pour XAMPP :
+
+  ```shell
+  sudo ln -s /opt/lampp/xampp /usr/bin/xampp
+  ```
+
+- Créez une alias pour XAMPP et pour le GUI de XAMPP :
+
+  ```shell
+  echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
+  echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
+  ```
+
+- Rechargez le fichier `~/.bashrc` :
+
+  ```shell
+  source ~/.bashrc
+  ```
+
+### Utilisation de XAMPP
+
+**Si les commandes ne fonctionnent pas, regarder la section [Installation de XAMPP - Linux](#installation-de-xampp---linux) pour voir comment créer des alias pour XAMPP et le GUI de XAMPP.**
+
+- Ouvrir le GUI de XAMPP :
+
+  ```shell
+  xampp-gui
+  ```
+
+- Afficher l'aide de XAMPP :
+
+  ```shell
+  xampp --help
+  ```
 
 ## Framwork PHP
 
