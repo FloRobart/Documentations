@@ -148,6 +148,10 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 - Sélectionner le mode de démarrage, dans mon cas : '`Boot in normal mode`'
 - Suiver les instructions d'installation de l'OS
 
+<br />
+
+- Si le système d'exploitation s'installe correctement mais que vous n'arrivez pas à démarrer dessus, il faut désactiver le Secure Boot dans le BIOS et désactiver la `Compatibility Support Module (CSM)`.
+
 ****
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
