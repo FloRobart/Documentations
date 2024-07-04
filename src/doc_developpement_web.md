@@ -275,6 +275,9 @@ commande, extrait code et extrait de fichier
 
 ## XAMPP
 
+- Source :
+  ><https://linux.how2shout.com/how-to-start-xampp-in-ubuntu-using-the-command-line/>
+
 ### Installation de XAMPP - Linux
 
 - Téléchargez la dernière version de XAMPP sur le site officiel :
@@ -300,10 +303,17 @@ commande, extrait code et extrait de fichier
   ```
 
 - Suivez les instructions de l'installeur
-- Créez un raccourci pour XAMPP :
+- Créez un icon sur le bureau pour XAMPP :
 
   ```shell
-  sudo ln -s /opt/lampp/xampp /usr/bin/xampp
+  echo "[Desktop Entry]
+  Version=1.0
+  Type=Application
+  Name=XAMPP
+  Exec=sudo /opt/lampp/manager-linux-x64.run
+  Icon=/opt/lampp/htdocs/favicon.ico
+  Terminal=false
+  StartupNotify=false" > ~/Bureau/XAMPP.desktop
   ```
 
 - Créez une alias pour XAMPP et pour le GUI de XAMPP :
