@@ -30,6 +30,9 @@ commande, extrait code et extrait de fichier
     - [Installation de Composer - Linux](#installation-de-composer---linux)
       - [Installation simple d'une version récente de Composer - Linux](#installation-simple-dune-version-récente-de-composer---linux)
       - [Installation de la dernière version stable de Composer - Linux](#installation-de-la-dernière-version-stable-de-composer---linux)
+  - [XAMPP](#xampp)
+    - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
+    - [Utilisation de XAMPP](#utilisation-de-xampp)
   - [PHP MyAdmin](#php-myadmin)
     - [Installation de PHP MyAdmin - Linux](#installation-de-php-myadmin---linux)
     - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
@@ -42,9 +45,6 @@ commande, extrait code et extrait de fichier
     - [PosgreSQL](#posgresql)
       - [Installation de PostgreSQL - Linux](#installation-de-postgresql---linux)
       - [Configuration de Postgresql - Linux](#configuration-de-postgresql---linux)
-  - [XAMPP](#xampp)
-    - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
-    - [Utilisation de XAMPP](#utilisation-de-xampp)
   - [Framwork PHP](#framwork-php)
     - [Laravel](#laravel)
     - [Symfony](#symfony)
@@ -198,6 +198,78 @@ commande, extrait code et extrait de fichier
   composer create-project codeigniter4/appstarter <nameApp>
   ```
 
+## XAMPP
+
+- Source :
+  ><https://linux.how2shout.com/how-to-start-xampp-in-ubuntu-using-the-command-line/>
+
+### Installation de XAMPP - Linux
+
+- Téléchargez la dernière version de XAMPP sur le site officiel :
+
+  ><https://www.apachefriends.org/fr/index.html>
+
+- Placez vous dans le répertoire de téléchargement, dans mon cas `/home/${USER}/Téléchargements` :
+
+  ```shell
+  cd /home/${USER}/Téléchargements
+  ```
+
+- Donnez les droits d'exécution au fichier téléchargé :
+
+  ```shell
+  chmod +x xampp-linux-x64-8.1.12-0-installer.run
+  ```
+
+- Exécutez le fichier téléchargé :
+
+  ```shell
+  ./xampp-linux-x64-8.1.12-0-installer.run
+  ```
+
+- Suivez les instructions de l'installeur
+- Créez un icon sur le bureau pour XAMPP :
+
+  ```shell
+  echo "[Desktop Entry]
+  Version=1.0
+  Type=Application
+  Name=XAMPP
+  Exec=sudo /opt/lampp/manager-linux-x64.run
+  Icon=/opt/lampp/htdocs/favicon.ico
+  Terminal=false
+  StartupNotify=false" > ~/Bureau/XAMPP.desktop
+  ```
+
+- Créez une alias pour XAMPP et pour le GUI de XAMPP :
+
+  ```shell
+  echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
+  echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
+  ```
+
+- Rechargez le fichier `~/.bashrc` :
+
+  ```shell
+  source ~/.bashrc
+  ```
+
+### Utilisation de XAMPP
+
+**Si les commandes ne fonctionnent pas, regarder la section [Installation de XAMPP - Linux](#installation-de-xampp---linux) pour voir comment créer des alias pour XAMPP et le GUI de XAMPP.**
+
+- Ouvrir le GUI de XAMPP :
+
+  ```shell
+  xampp-gui
+  ```
+
+- Afficher l'aide de XAMPP :
+
+  ```shell
+  xampp --help
+  ```
+
 ## PHP MyAdmin
 
 ### Installation de PHP MyAdmin - Linux
@@ -272,78 +344,6 @@ commande, extrait code et extrait de fichier
 #### Configuration de Postgresql - Linux
 
 > <https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04>
-
-## XAMPP
-
-- Source :
-  ><https://linux.how2shout.com/how-to-start-xampp-in-ubuntu-using-the-command-line/>
-
-### Installation de XAMPP - Linux
-
-- Téléchargez la dernière version de XAMPP sur le site officiel :
-
-  ><https://www.apachefriends.org/fr/index.html>
-
-- Placez vous dans le répertoire de téléchargement, dans mon cas `/home/${USER}/Téléchargements` :
-
-  ```shell
-  cd /home/${USER}/Téléchargements
-  ```
-
-- Donnez les droits d'exécution au fichier téléchargé :
-
-  ```shell
-  chmod +x xampp-linux-x64-8.1.12-0-installer.run
-  ```
-
-- Exécutez le fichier téléchargé :
-
-  ```shell
-  ./xampp-linux-x64-8.1.12-0-installer.run
-  ```
-
-- Suivez les instructions de l'installeur
-- Créez un icon sur le bureau pour XAMPP :
-
-  ```shell
-  echo "[Desktop Entry]
-  Version=1.0
-  Type=Application
-  Name=XAMPP
-  Exec=sudo /opt/lampp/manager-linux-x64.run
-  Icon=/opt/lampp/htdocs/favicon.ico
-  Terminal=false
-  StartupNotify=false" > ~/Bureau/XAMPP.desktop
-  ```
-
-- Créez une alias pour XAMPP et pour le GUI de XAMPP :
-
-  ```shell
-  echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
-  echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
-  ```
-
-- Rechargez le fichier `~/.bashrc` :
-
-  ```shell
-  source ~/.bashrc
-  ```
-
-### Utilisation de XAMPP
-
-**Si les commandes ne fonctionnent pas, regarder la section [Installation de XAMPP - Linux](#installation-de-xampp---linux) pour voir comment créer des alias pour XAMPP et le GUI de XAMPP.**
-
-- Ouvrir le GUI de XAMPP :
-
-  ```shell
-  xampp-gui
-  ```
-
-- Afficher l'aide de XAMPP :
-
-  ```shell
-  xampp --help
-  ```
 
 ## Framwork PHP
 
