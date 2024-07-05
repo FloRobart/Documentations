@@ -11,6 +11,7 @@
   - [Installation et configuration de Thunderbird pour l'IUT du Havre](src/doc_thunderbird_iut.html)
 - Documentation d'outils de développement
   - [Git](src/doc_git.html)
+  - [SSH](src/doc_ssh.html)
   - [Visual Studio Code](src/doc_vscode.html)
   - [Développement web](src/doc_developpement_web.html)
   - [Laravel](src/doc_laravel.html)
@@ -40,6 +41,7 @@
   - [Installation et configuration de Thunderbird pour l'IUT du Havre](pdf/doc_thunderbird_iut.pdf)
 - Documentation d'outils de développement
   - [Git](pdf/doc_git.pdf)
+  - [SSH](pdf/doc_ssh.pdf)
   - [Visual Studio Code](pdf/doc_vscode.pdf)
   - [Développement web](pdf/doc_developpement_web.pdf)
   - [Laravel](pdf/doc_laravel.pdf)
