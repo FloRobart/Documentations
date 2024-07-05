@@ -241,18 +241,27 @@ commande, extrait code et extrait de fichier
   StartupNotify=false" > ~/Bureau/XAMPP.desktop
   ```
 
-- Créez une alias pour XAMPP et pour le GUI de XAMPP :
+- Activations de la commande `xampp` et `xampp-gui` :
+  - Vous avez 2 solutions pour activer les commandes `xampp` et `xampp-gui`, sois vous créer des liens symboliques sois vous créez des alias.
+  - Créez des liens symboliques pour XAMPP et pour XAMPP GUI :
 
-  ```shell
-  echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
-  echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
-  ```
+    ```shell
+    sudo ln /opt/lampp/xampp /usr/local/bin/xampp
+    sudo ln /opt/lampp/manager-linux-x64.run /usr/local/bin/xampp-gui
+    ```
 
-- Rechargez le fichier `~/.bashrc` :
+  - Créez une alias pour XAMPP et pour le GUI de XAMPP :
 
-  ```shell
-  source ~/.bashrc
-  ```
+    ```shell
+    echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
+    echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
+    ```
+
+    - Rechargez le fichier `~/.bashrc` :
+
+      ```shell
+      source ~/.bashrc
+      ```
 
 ### Utilisation de XAMPP
 
@@ -291,21 +300,25 @@ commande, extrait code et extrait de fichier
 - Remplacez la ligne "`Require local`" par "`Require all granted`" comment indiqué ci-dessous
 
   ```conf
+  ...
   <Directory "/opt/lampp/phpmyadmin">
       AllowOverride AuthConfig Limit
       Require all granted
       ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
   </Directory>
+  ...
   ```
 
 - Sauvegardez le fichier
 - Rechargez le serveur Apache en utilisant l'inteface graphique de XAMPP ou grâce à la commande suivante :
 
   ```shell
-  systemctl restart apache2
+  sudo xampp reloadapache
   ```
 
 ## Apache
+
+**SI vous avez installé XAMPP, vous n'avez pas besoin d'installer Apache.**
 
 ### Installation du serveur web Apache pour php - Linux
 
@@ -324,6 +337,8 @@ commande, extrait code et extrait de fichier
   ```
 
 ## Base de données
+
+**SI vous avez installé XAMPP, vous n'avez pas besoin d'installer MySQL ou PostgreSQL.**
 
 ### MySQL
 
