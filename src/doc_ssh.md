@@ -109,7 +109,7 @@ commande, extrait code et extrait de fichier
   ssh <user>@<host>
   ```
 
-  - `<user>` : Nom d'utilisateur
+  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
   - `<host>` : Adresse IP ou nom de domaine
 
 ### Transfert de fichier
@@ -120,10 +120,10 @@ commande, extrait code et extrait de fichier
   scp <fichier> <user>@<host>:<destination>
   ```
 
-  - `<fichier>` : Fichier à transférer
-  - `<user>` : Nom d'utilisateur
+  - `<fichier>` : Fichier local à transférer
+  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
   - `<host>` : Adresse IP ou nom de domaine
-  - `<destination>` : Destination du fichier
+  - `<destination>` : Destination du fichier sur le serveur
 
 ****
 
