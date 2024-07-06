@@ -535,6 +535,7 @@ snap-store --quit && sudo snap refresh snap-store
   ```
 
 - Votre adresse IP doit être celle que vous avez rentré dans le fichier de configuration
+- **Ça n'a pas fonctionné, je suis passé par l'inteface graphique de Ubuntu pour configurer l'adresse IP statique, c'est beaucoup plus simple et ça a fonctionné parfaitement**
 
 ****
 
