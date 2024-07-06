@@ -27,6 +27,7 @@ commande, extrait code et extrait de fichier
   - [Installation de SSH](#installation-de-ssh)
     - [Installation du client SSH](#installation-du-client-ssh)
     - [Installation du serveur SSH](#installation-du-serveur-ssh)
+    - [Installation de SSH FileSystem (SSHFS)](#installation-de-ssh-filesystem-sshfs)
   - [Configuration de SSH](#configuration-de-ssh)
     - [Configuration du client SSH](#configuration-du-client-ssh)
     - [Configuration du serveur SSH](#configuration-du-serveur-ssh)
@@ -34,6 +35,7 @@ commande, extrait code et extrait de fichier
     - [Mise en place d'un serveur SSH](#mise-en-place-dun-serveur-ssh)
     - [Connexion à un serveur](#connexion-à-un-serveur)
     - [Transfert de fichier](#transfert-de-fichier)
+    - [Monter un système de fichier distant](#monter-un-système-de-fichier-distant)
 
 <div class="page"></div>
 
@@ -53,6 +55,16 @@ commande, extrait code et extrait de fichier
 
   ```bash
   sudo apt install openssh-server
+  ```
+
+### Installation de SSH FileSystem (SSHFS)
+
+**SSHFS permet de monter un système de fichier distant sur son système local via SSH.**
+
+- Installer le paquet du dépot `apt` :
+
+  ```bash
+  sudo apt install sshfs
   ```
 
 ## Configuration de SSH
@@ -124,6 +136,26 @@ commande, extrait code et extrait de fichier
   - `<user>` : Nom d'utilisateur à utiliser sur le serveur
   - `<host>` : Adresse IP ou nom de domaine
   - `<destination>` : Destination du fichier sur le serveur
+
+### Monter un système de fichier distant
+
+- Créer un dossier dans lequel sera monter le système de fichier distant :
+
+  ```bash
+  mkdir <dossier>
+  ```
+
+  - `<dossier>` : Nom du dossier
+- Monter le système de fichier distant :
+
+  ```bash
+  sshfs <user>@<host>:/path/to/distant/folder /local/folder
+  ```
+
+  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+  - `<host>` : Adresse IP ou nom de domaine du serveur
+  - `/path/to/distant/folder` : Chemin du dossier distant à monter
+  - `/local/folder` : Chemin du dossier local (créé précédemment)
 
 ****
 
