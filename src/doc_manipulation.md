@@ -42,6 +42,7 @@ commande, extrait code et extrait de fichier
     - [Réinstallation de windows](#réinstallation-de-windows)
   - [Mettre à jour snap store d'Ubuntu](#mettre-à-jour-snap-store-dubuntu)
   - [Problème avec le gestionnaire de paquets apt - Linux](#problème-avec-le-gestionnaire-de-paquets-apt---linux)
+  - [Rendre l'adresse IP statique sur Ubuntu - Linux](#rendre-ladresse-ip-statique-sur-ubuntu---linux)
 
 <div class="page"></div>
 
@@ -464,6 +465,76 @@ snap-store --quit && sudo snap refresh snap-store
   ```shell
   sudo apt --fix-broken install
   ```
+
+## Rendre l'adresse IP statique sur Ubuntu - Linux
+
+- Source
+  > <https://freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/>
+
+- Récupérer l'adresse IP, le nom de votre interface réseau, le masque de sous-réseau et la passerelle par défaut
+
+  - Pour récupérer l'adresse IP, le nom de votre interface réseau et le masque de sous-réseau lancer la commande :
+
+    ```shell
+    ip a
+    ```
+  
+  - Pour récupérer la passerelle par défaut lancer la commande :
+
+    ```shell
+    ip route
+    ```
+
+- Créer un fichier de configuration pour votre interface réseau :
+
+  ```shell
+  sudo touch /etc/netplan/01-network-manager-all.yaml
+  ```
+
+- Ouvrir le fichier de configuration avec un éditeur de texte :
+
+  ```shell
+  sudo open /etc/netplan/01-network-manager-all.yaml
+  ```
+
+- Ajouter les lignes suivantes au fichier :
+
+  ```yaml
+  network:
+    version: 2
+    renderer: NetworkManager
+    ethernets:
+      eth0:
+        dhcp4: no
+        addresses: [<ip_fixe>/<netmask>]
+        gateway4: <gateway_ip>
+        nameservers:
+            addresses: [8.8.8.8,8.8.8.4]
+  ```
+
+  - `<ip_fixe>` : adresse IP statique
+  - `<netmask>` : masque de sous-réseau
+  - `<gateway_ip>` : passerelle par défaut
+
+- Tester la configuration :
+
+  ```shell
+  sudo netplan try
+  ```
+
+- Appliquer la configuration :
+
+  ```shell
+  sudo netplan apply
+  ```
+
+- Vérifier que la configuration est bien appliquée :
+
+  ```shell
+  ip a
+  ```
+
+- Votre adresse IP doit être celle que vous avez rentré dans le fichier de configuration
 
 ****
 
