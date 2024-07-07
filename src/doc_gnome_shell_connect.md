@@ -33,6 +33,8 @@ commande, extrait code et extrait de fichier
 
 GSConnect est une extension pour Gnome Shell qui permet de connecter un smartphone Android à un ordinateur sous Gnome. Elle permet de synchroniser les notifications, les messages, les appels, les fichiers, la copie de texte, le partage de liens, le partage de fichiers, le contrôle multimédia, le contrôle de la souris et du clavier, le partage de la connexion internet, de faire sonner le téléphone et bien plus encore.
 
+GSConnect est un outils incroyable de permet de faire énormément de choses entre un smartphone Android et un ordinateur sous Gnome.
+
 ## Installation de GSConnect
 
 - Source
