@@ -8,6 +8,7 @@
   - [Installation et configuration de machine virtuel et système d'exploitation](src/doc_VM_et_OS.html)
   - [Ventoy multi-boot](src/doc_ventoy.html)
   - [Exécution d'application Windows sur Linux](src/doc_windows_on_linux.html)
+  - [Connexion de Ubuntu et d'un appareil Android](src/doc_gnome_shell_connect.html)
   - [Installation et configuration de Thunderbird pour l'IUT du Havre](src/doc_thunderbird_iut.html)
 - Documentation d'outils de développement
   - [Git](src/doc_git.html)
@@ -38,6 +39,7 @@
   - [Installation et configuration de machine virtuel et système d'exploitation](pdf/doc_VM_et_OS.pdf)
   - [Ventoy multi-boot](pdf/doc_ventoy.pdf)
   - [Exécution d'application Windows sur Linux](pdf/doc_windows_on_linux.pdf)
+  - [Connexion de Ubuntu et d'un appareil Android](pdf/doc_gnome_shell_connect.pdf)
   - [Installation et configuration de Thunderbird pour l'IUT du Havre](pdf/doc_thunderbird_iut.pdf)
 - Documentation d'outils de développement
   - [Git](pdf/doc_git.pdf)
