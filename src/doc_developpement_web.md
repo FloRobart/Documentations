@@ -242,7 +242,7 @@ commande, extrait code et extrait de fichier
   ```
 
 - Activations de la commande `xampp` et `xampp-gui` :
-  - Vous avez 2 solutions pour activer les commandes `xampp` et `xampp-gui`, sois vous créer des liens symboliques sois vous créez des alias.
+  - **Vous avez 2 solutions pour activer les commandes `xampp` et `xampp-gui`, sois vous créer des liens symboliques sois vous créez des alias.**
   - Créez des liens symboliques pour XAMPP et pour XAMPP GUI :
 
     ```shell
