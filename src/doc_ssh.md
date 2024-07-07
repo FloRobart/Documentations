@@ -149,7 +149,7 @@ commande, extrait code et extrait de fichier
 - Monter le système de fichier distant :
 
   ```bash
-  sshfs <user>@<host>:/path/to/distant/folder /local/folder
+  sshfs <user>@<host>:/path/to/distant/folder /local/empty/folder
   ```
 
   - `<user>` : Nom d'utilisateur à utiliser sur le serveur
