@@ -536,6 +536,28 @@ snap-store --quit && sudo snap refresh snap-store
 
 - Votre adresse IP doit être celle que vous avez rentré dans le fichier de configuration
 - **Ça n'a pas fonctionné, je suis passé par l'inteface graphique de Ubuntu pour configurer l'adresse IP statique, c'est beaucoup plus simple et ça a fonctionné parfaitement**
+  - Voici le fichier génére par l'interface graphique :
+
+    ```yaml
+    network:
+      version: 2
+      ethernets:
+        enp3s0:
+          renderer: NetworkManager
+          match: {}
+          addresses:
+          - "192.168.1.250/24"
+          networkmanager:
+            uuid: "<uuid>"
+            name: "netplan-<nom_carte_reseau>"
+            passthrough:
+              connection.timestamp: "1720295850"
+              ipv4.address1: "192.168.1.250/24,<gateway>"
+              ipv4.method: "manual"
+              ipv6.method: "disabled"
+              ipv6.ip6-privacy: "-1"
+              proxy._: ""
+    ```
 
 ****
 
