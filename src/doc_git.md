@@ -35,6 +35,7 @@ commande, extrait code et extrait de fichier
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
+    - [Erreur le nom gitbug.com ne peut pas être résolu](#erreur-le-nom-gitbugcom-ne-peut-pas-être-résolu)
 
 <div class="page"></div>
 
@@ -292,6 +293,49 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   - Donner les autororisations que vous voulez, dans mon cas j'ai sélectionné la plus haute autorisation de chaque élément de la catégorie `Repository permissions` et j'ai rien toucher à l'autre catégorie.
 
   - Cliquer sur '`Generate token`'
+
+### Erreur le nom gitbug.com ne peut pas être résolu
+
+- Si vous obtenez l'erreur ci-dessous :
+
+  ```shell
+  ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+  fatal: Impossible de lire le dépôt distant.
+  ```
+
+- Vérifier que vous avez bien une connexion internet
+- Si votre connexion internet fonctionne, vérifier que vous pouvez accéder à Github
+
+  ```shell
+  ping github.com
+  ```
+
+- Si vous obtenez l'erreur ci-dessous :
+
+  ```shell
+  ping: github.com: Temporary failure in name resolution
+  ```
+
+- Ça veut dire que vous avez un problème de DNS, ouvrez le fichier `/etc/resolv.conf`
+  
+  ```shell
+  sudo nano /etc/resolv.conf
+  ```
+
+- Ajouter donc les lignes suivantes dans le fichier `/etc/resolv.conf`
+
+  ```conf
+  ...
+  nameserver 8.8.8.8
+  nameserver 8.8.4.4
+  ```
+
+- Sauvegarder le fichier
+- Relancer la commande ping pour vérifier que vous avez bien accès à Github
+
+    ```shell
+    ping github.com
+    ```
 
 ****
 
