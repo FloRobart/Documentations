@@ -139,6 +139,7 @@ commande, extrait code et extrait de fichier
 
 ### Monter un système de fichier distant
 
+- [Installer SSHFS](#installation-de-ssh-filesystem-sshfs)
 - Créer un dossier dans lequel sera monter le système de fichier distant :
 
   ```bash
