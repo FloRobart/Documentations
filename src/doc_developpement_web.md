@@ -32,6 +32,8 @@ commande, extrait code et extrait de fichier
       - [Installation de la dernière version stable de Composer - Linux](#installation-de-la-dernière-version-stable-de-composer---linux)
   - [XAMPP](#xampp)
     - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
+    - [Erreur avec XAMPP](#erreur-avec-xampp)
+      - [Erreur un autre serveur web est déjà en cours d'exécution](#erreur-un-autre-serveur-web-est-déjà-en-cours-dexécution)
     - [Utilisation de XAMPP](#utilisation-de-xampp)
   - [PHP MyAdmin](#php-myadmin)
     - [Installation de PHP MyAdmin - Linux](#installation-de-php-myadmin---linux)
@@ -262,6 +264,37 @@ commande, extrait code et extrait de fichier
       ```shell
       source ~/.bashrc
       ```
+
+  - (Optionnel) Personnellement j'ai mis toutes les alias ci-dessous pour XAMPP :
+
+    ```shell
+    alias xampp='sudo /opt/lampp/xampp'
+    alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'
+    alias xampp-start='xampp startapache && xampp startmysql'
+    alias xampp-stop='xampp stopapache && xampp stopmysql'
+    ```
+
+### Erreur avec XAMPP
+
+#### Erreur un autre serveur web est déjà en cours d'exécution
+
+- Si vous avez l'erreur suivante :
+
+  ```shell
+  XAMPP:  Another web server is already running.
+  ```
+
+- Vous pouvez arrêter le serveur web Apache en utilisant la commande suivante :
+
+  ```shell
+  sudo /etc/init.d/apache2 stop
+  ```
+
+- Vous pouvez ensuite relancer XAMPP en utilisant la commande suivante :
+
+  ```shell
+  xampp startapache
+  ```
 
 ### Utilisation de XAMPP
 
