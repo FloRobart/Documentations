@@ -27,6 +27,7 @@ commande, extrait code et extrait de fichier
   - [Installation de Laravel](#installation-de-laravel)
     - [Installation de Laravel CLI](#installation-de-laravel-cli)
   - [Configuration de Laravel](#configuration-de-laravel)
+    - [Intégration de plusieurs base de données](#intégration-de-plusieurs-base-de-données)
     - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
     - [Intégration de Livewire](#intégration-de-livewire)
   - [Utilisation de Laravel](#utilisation-de-laravel)
@@ -73,6 +74,11 @@ commande, extrait code et extrait de fichier
   sudo chown -R www-data:www-data /path/to/your-project-name
   sudo chmod -R 755 /path/to/your-project-name
   ```
+
+### Intégration de plusieurs base de données
+
+- Source
+  > <https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223>
 
 ### Intégration de Tailwind CSS
 
