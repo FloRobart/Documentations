@@ -188,6 +188,12 @@ commande, extrait code et extrait de fichier
   php artisan migrate
   ```
 
+- Éxécuter une migration spécifique
+
+  ```shell
+  php artisan migrate --path=/path/to/migration.php
+  ```
+
 - Créer un contrôleur
 
   ```shell
