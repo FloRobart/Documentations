@@ -67,6 +67,7 @@ commande, extrait code et extrait de fichier
       - [Configuration de la partition SWAP](#configuration-de-la-partition-swap)
       - [Suite de la configuration du partitionnement](#suite-de-la-configuration-du-partitionnement)
     - [Configuration de KDE Plasma pour ressembler à Ubuntu desktop](#configuration-de-kde-plasma-pour-ressembler-à-ubuntu-desktop)
+  - [Licence](#licence)
 
 <div class="page"></div>
 
@@ -685,6 +686,28 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Allez dans `Apparence` > `Pointeurs`
 - Sélectionner '`Adwaita`'
 - Vous pouvez faire un clique droit sur la barre des tâches ou sur la barre d'outils (en haut de l'écran) puis cliquer sur '`Démarrer en mode d'édition`' pour modifier la barre des tâches et la barre d'outils
+
+## Licence
+
+doc_VM_et_OS.md
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 
 ****
 

@@ -36,6 +36,7 @@ commande, extrait code et extrait de fichier
     - [Suppressions de la sécurité SSL de Java pour Wildfly - Windows](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---windows)
     - [Lancement de Wildfly - Linux](#lancement-de-wildfly---linux)
     - [Lancement de Wildfly - Windows](#lancement-de-wildfly---windows)
+  - [Licence](#licence)
 
 <div class="page"></div>
 
@@ -228,6 +229,28 @@ si votre algorithmes est dans l'une de ces listes ou les deux, il faut normaleme
   - `prod` : Serveur de production de l'entreprise
   - `portable` : Serveur sur mon pc portable
 - `-DpathServerConfig` : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)
+
+## Licence
+
+doc_java.md
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 
 ****
 

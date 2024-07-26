@@ -30,6 +30,7 @@ commande, extrait code et extrait de fichier
   - [Création d'une clé bootable avec Ventoy](#création-dune-clé-bootable-avec-ventoy)
   - [Ajouter des ISO dans la clé USB bootable préalablement créée avec Ventoy](#ajouter-des-iso-dans-la-clé-usb-bootable-préalablement-créée-avec-ventoy)
   - [Démarrer un ordinateur sur une clé USB bootable créée avec Ventoy](#démarrer-un-ordinateur-sur-une-clé-usb-bootable-créée-avec-ventoy)
+  - [Licence](#licence)
 
 <div class="page"></div>
 
@@ -151,6 +152,28 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 <br />
 
 - Si le système d'exploitation s'installe correctement mais que vous n'arrivez pas à démarrer dessus, il faut désactiver le Secure Boot dans le BIOS et désactiver la `Compatibility Support Module (CSM)`.
+
+## Licence
+
+doc_ventoy.md
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 
 ****
 

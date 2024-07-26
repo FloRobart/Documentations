@@ -64,6 +64,7 @@
       - [Avancement de Thème for vsCode](#avancement-de-thème-for-vscode)
       - [Description de Thème for vsCode](#description-de-thème-for-vscode)
       - [Technologie utilisé pour Thème for vsCode](#technologie-utilisé-pour-thème-for-vscode)
+  - [Licence](#licence)
 
 <div class="page"></div>
 
@@ -328,3 +329,25 @@ Un thème de couleur + coloration syntaxique pour Visual Studio Code
 - JSON
 - Bash
 - Batch
+
+## Licence
+
+All_project.md
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.

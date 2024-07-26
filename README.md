@@ -20,6 +20,7 @@
   - [CodeIgniter](src/doc_codeigniter.html)
   - [Java](src/doc_java.html)
 - Documentation d'outils de déploiement d'applications
+  - [Mise sous licence GNU GPL d'un projet](src/doc_mise_sous_licence.html)
   - [Création et déploiement de paquets DEB](src/doc_create_deb_package.html)
 - Documentation d'outils de sécurité
   - [Contournement des sécurités de Windows (10)](src/doc_hacking_windows.html)
@@ -73,3 +74,25 @@
 - [Thème pour vscode](https://github.com/FloRobart/Themes_for_vsCode)
 - [Script IUT Le Havre](https://github.com/FloRobart/Script_IUT_Le-Havre)
 - [Zone de dessin partagé](https://github.com/FloRobart/Drawing_area_android)
+
+## Licence
+
+README.md
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
