@@ -29,6 +29,7 @@ commande, extrait code et extrait de fichier
     - [Renoncement aux droits d'auteur](#renoncement-aux-droits-dauteur)
     - [Ajouter le fichier de licence](#ajouter-le-fichier-de-licence)
     - [Ajout de la licence dans le code](#ajout-de-la-licence-dans-le-code)
+    - [Ajout de logo de la licence](#ajout-de-logo-de-la-licence)
   - [Licence](#licence)
 
 <div class="page"></div>
@@ -776,6 +777,11 @@ La licence GNU GPL est une licence libre qui permet de partager et de modifier u
   along with this program; if not, write to the Free Software Foundation,
   Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
   ```
+
+### Ajout de logo de la licence
+
+- Vous pouvez si vous le souhaitez ajouter le logo de la licence GPL dans votre projet.
+  > <https://www.gnu.org/graphics/license-logos.html>
 
 ## Licence
 
