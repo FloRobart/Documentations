@@ -63,6 +63,7 @@ La licence GNU GPL est une licence libre qui permet de partager et de modifier u
   - [Texte de la licence GNU GPL HTML](https://www.gnu.org/licenses/gpl-3.0.html)
   - [Texte de la licence GNU GPL Texte brut](https://www.gnu.org/licenses/gpl-3.0.txt)
   - [Tutoriel d'origine pour utiliser la licence GNU GPL](https://www.gnu.org/licenses/gpl-howto.fr.html)
+  - [Autre tutoriel pour utiliser la licence GNU GPL](https://www.april.org/files/groupes/doc/licences/licences-5.html)
 
 - Ajouter le texte suivant dans le fichier `COPYING` ou `LICENCE` avec l'extention `md`, `html` ou `txt` à la racine du projet :
 
