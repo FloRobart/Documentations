@@ -30,6 +30,9 @@ commande, extrait code et extrait de fichier
     - [Installation de Composer - Linux](#installation-de-composer---linux)
       - [Installation simple d'une version récente de Composer - Linux](#installation-simple-dune-version-récente-de-composer---linux)
       - [Installation de la dernière version stable de Composer - Linux](#installation-de-la-dernière-version-stable-de-composer---linux)
+  - [Nodejs et NPM](#nodejs-et-npm)
+    - [Installation de Nodejs - Linux](#installation-de-nodejs---linux)
+    - [Installation de NPM - Linux](#installation-de-npm---linux)
   - [XAMPP](#xampp)
     - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
     - [Erreur avec XAMPP](#erreur-avec-xampp)
@@ -199,6 +202,24 @@ commande, extrait code et extrait de fichier
 
   ```bash
   composer create-project codeigniter4/appstarter <nameApp>
+  ```
+
+## Nodejs et NPM
+
+### Installation de Nodejs - Linux
+
+- Installer le paquet du dépot `apt` :
+
+  ```shell
+  sudo apt install nodejs
+  ```
+
+### Installation de NPM - Linux
+
+- Installer le paquet du dépot `apt` :
+
+  ```shell
+  sudo apt install npm
   ```
 
 ## XAMPP
