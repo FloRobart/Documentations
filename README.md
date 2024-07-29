@@ -21,7 +21,7 @@
   - [CodeIgniter](src/doc_codeigniter.html)
   - [Java](src/doc_java.html)
 - Documentation d'outils de déploiement d'applications
-  - [Mise sous licence GNU GPL d'un projet](src/doc_mise_sous_licence_gnu_gpl.html)
+  - [Mise sous licence d'un projet](src/doc_mise_sous_licence.html)
   - [Création et déploiement de paquets DEB](src/doc_create_deb_package.html)
 - Documentation d'outils de sécurité
   - [Contournement des sécurités de Windows (10)](src/doc_hacking_windows.html)
@@ -54,7 +54,7 @@
   - [CodeIgniter](pdf/doc_codeigniter.pdf)
   - [Java](pdf/doc_java.pdf)
 - Documentation d'outils de déploiement d'applications
-  - [Mise sous licence GNU GPL d'un projet](pdf/doc_mise_sous_licence_gnu_gpl.pdf)
+  - [Mise sous licence d'un projet](pdf/doc_mise_sous_licence.pdf)
   - [Création et déploiement de paquets DEB](pdf/doc_create_deb_package.pdf)
 - Documentation d'outils de sécurité
   - [Contournement des sécurités de Windows (10)](pdf/doc_hacking_windows.pdf)
