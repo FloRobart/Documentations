@@ -320,7 +320,7 @@ wget est un utilitaire en ligne de commande pour télécharger de fichiers depui
 
     ```shell
     # Ajout de la clé d'API OpenAI pour gpt-cli
-    export OPENAI_API_KEY='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'
+    export OPENAI_API_KEY='<votre clé d\'api>'
     ```
 
 - Modifier le script python `gpt.py` :
