@@ -1,4 +1,4 @@
-# Installation et configuration de git sur Linux et Windows
+# Documentation Git, GitHub, GitLab et autres outils basés sur Git
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
@@ -21,7 +21,7 @@ commande, extrait code et extrait de fichier
 
 ****
 
-- [Installation et configuration de git sur Linux et Windows](#installation-et-configuration-de-git-sur-linux-et-windows)
+- [Documentation Git, GitHub, GitLab et autres outils basés sur Git](#documentation-git-github-gitlab-et-autres-outils-basés-sur-git)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
   - [Installation](#installation)
@@ -33,6 +33,7 @@ commande, extrait code et extrait de fichier
   - [Utilisation](#utilisation)
     - [Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu](#utilisation-de-plusieurs-comptes-github-sur-le-même-ordinateur---ubuntu)
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
+    - [Création d'un workflow Github pour Laravel](#création-dun-workflow-github-pour-laravel)
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
     - [Erreur le nom gitbug.com ne peut pas être résolu](#erreur-le-nom-gitbugcom-ne-peut-pas-être-résolu)
@@ -278,6 +279,11 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   ```shell
   git push origin master
   ```
+
+### Création d'un workflow Github pour Laravel
+
+- Source
+  > <https://docs.github.com/fr/enterprise-cloud@latest/actions/using-workflows/creating-starter-workflows-for-your-organization>
 
 ## Erreur
 
