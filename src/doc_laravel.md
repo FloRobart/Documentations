@@ -26,17 +26,16 @@ commande, extrait code et extrait de fichier
   - [Table des matières](#table-des-matières)
   - [Installation de Laravel](#installation-de-laravel)
     - [Installation de Laravel CLI](#installation-de-laravel-cli)
-  - [Configuration de Laravel](#configuration-de-laravel)
-    - [Intégration de plusieurs base de données](#intégration-de-plusieurs-base-de-données)
-    - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
-    - [Intégration de Livewire](#intégration-de-livewire)
   - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
     - [Gestion de la base de données](#gestion-de-la-base-de-données)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
-  - [Livewire](#livewire)
+  - [Configuration de votre projet Laravel](#configuration-de-votre-projet-laravel)
+    - [Intégration de plusieurs base de données](#intégration-de-plusieurs-base-de-données)
+    - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
+    - [Intégration de Livewire](#intégration-de-livewire)
     - [Ajout de Livewire à un projet Laravel](#ajout-de-livewire-à-un-projet-laravel)
     - [Création d'un composant Livewire](#création-dun-composant-livewire)
   - [Licence](#licence)
@@ -66,71 +65,6 @@ commande, extrait code et extrait de fichier
   ```shell
   composer global require laravel/installer
   ```
-
-## Configuration de Laravel
-
-- Configuration des permissions dans votre projet Laravel (normalement vous n'avez pas besoin de faire cette étape)
-
-  ```shell
-  sudo chown -R www-data:www-data /path/to/your-project-name
-  sudo chmod -R 755 /path/to/your-project-name
-  ```
-
-### Intégration de plusieurs base de données
-
-- Source
-  > <https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223>
-
-### Intégration de Tailwind CSS
-
-- Installation de Tailwind CSS
-
-  ```shell
-  npm install -D tailwindcss postcss autoprefixer
-  ```
-
-- Création du fichier de configuration de Tailwind CSS
-
-  ```shell
-  npx tailwindcss init -p
-  ```
-
-- Ajoutez le code suivant dans le fichier `tailwind.config.js`
-
-  ```js
-  /** @type {import('tailwindcss').Config} */
-  export default {
-    content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }
-  ```
-
-- Ajoutez le code suivant dans le fichier `ressources/css/app.css`
-
-  ```css
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  @tailwind forms;
-  ```
-
-- Vous pouvez compiler les fichiers CSS de Tailwind CSS en utilisant la commande suivante
-  - Vous pouvez voir ça comme l'activation du style Tailwind CSS. Il faudra refaire cette commande à chaque fois que vous ajouter un nouveau style dans votre projet
-
-  ```shell
-  npm run build
-  ```
-
-### Intégration de Livewire
-
-- [Ajouter et utiliser Livewire à un projet Laravel](#livewire)
 
 ## Utilisation de Laravel
 
@@ -323,7 +257,68 @@ commande, extrait code et extrait de fichier
     192.168.1.XX:8000
     ```
 
-## Livewire
+## Configuration de votre projet Laravel
+
+- Configuration des permissions dans votre projet Laravel (normalement vous n'avez pas besoin de faire cette étape)
+
+  ```shell
+  sudo chown -R www-data:www-data /path/to/your-project-name
+  sudo chmod -R 755 /path/to/your-project-name
+  ```
+
+### Intégration de plusieurs base de données
+
+- Source
+  > <https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223>
+
+### Intégration de Tailwind CSS
+
+- Installation de Tailwind CSS
+
+  ```shell
+  npm install -D tailwindcss postcss autoprefixer
+  ```
+
+- Création du fichier de configuration de Tailwind CSS
+
+  ```shell
+  npx tailwindcss init -p
+  ```
+
+- Ajoutez le code suivant dans le fichier `tailwind.config.js`
+
+  ```js
+  /** @type {import('tailwindcss').Config} */
+  export default {
+    content: [
+      "./resources/**/*.blade.php",
+      "./resources/**/*.js",
+      "./resources/**/*.vue",
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  }
+  ```
+
+- Ajoutez le code suivant dans le fichier `ressources/css/app.css`
+
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  @tailwind forms;
+  ```
+
+- Vous pouvez compiler les fichiers CSS de Tailwind CSS en utilisant la commande suivante
+  - Vous pouvez voir ça comme l'activation du style Tailwind CSS. Il faudra refaire cette commande à chaque fois que vous ajouter un nouveau style dans votre projet
+
+  ```shell
+  npm run build
+  ```
+
+### Intégration de Livewire
 
 ### Ajout de Livewire à un projet Laravel
 
