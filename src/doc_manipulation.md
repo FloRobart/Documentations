@@ -43,6 +43,9 @@ commande, extrait code et extrait de fichier
   - [Mettre à jour snap store d'Ubuntu](#mettre-à-jour-snap-store-dubuntu)
   - [Problème avec le gestionnaire de paquets apt - Linux](#problème-avec-le-gestionnaire-de-paquets-apt---linux)
   - [Rendre l'adresse IP statique sur Ubuntu - Linux](#rendre-ladresse-ip-statique-sur-ubuntu---linux)
+  - [Modifier les noms de domaine](#modifier-les-noms-de-domaine)
+    - [Modifier les noms de domaine de façon temporaire](#modifier-les-noms-de-domaine-de-façon-temporaire)
+    - [Modifier les noms de domaine de façon permanente](#modifier-les-noms-de-domaine-de-façon-permanente)
   - [Licence](#licence)
 
 <div class="page"></div>
@@ -559,6 +562,79 @@ snap-store --quit && sudo snap refresh snap-store
               ipv6.ip6-privacy: "-1"
               proxy._: ""
     ```
+
+## Modifier les noms de domaine
+
+### Modifier les noms de domaine de façon temporaire
+
+**Attention, cette modification est temporaire, elle sera perdu après un redémarrage de l'ordinateur. Si vous voulez une solution définitive passé à [la prochaine étape](#modifier-les-noms-de-domaine-de-façon-permanente)**
+
+- Ouvrir un terminal
+- Modifier le fichier `/etc/resolv.conf`
+
+  ```shell
+  sudo nano /etc/resolv.conf
+  ```
+
+- Ajouter les lignes suivantes à la fin du fichier :
+
+  ```conf
+  ...
+  nameserver <nouvelle_adresse_ip>
+  ```
+
+  - `<nouvelle_adresse_ip>` : nouvelle adresse IP du serveur DNS
+  - Exemple avec les serveurs DNS de Google :
+
+    ```conf
+    ...
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+    ```
+
+- Sauvegarder le fichier
+  > Ctrl + X
+- Confirmer la sauvegarde
+- Ne modifier surtout pas pas le nom du fichier, appuyer sur entrer pour confirmer le nom qui est entrer par défaut
+- Vérifier que la modification est bien prise en compte
+
+  ```shell
+  ping google.com
+  ```
+
+### Modifier les noms de domaine de façon permanente
+
+- source :
+  > <https://www.baeldung.com/linux/permanent-etc-resolv-conf>
+
+- Faite le [changement de DNS de façon temporaire](#modifier-les-noms-de-domaine-de-façon-temporaire)
+- Modifier le fichier `/etc/NetworkManager/NetworkManager.conf`
+
+  ```shell
+  sudo vim /etc/NetworkManager/NetworkManager.conf
+  ```
+
+- Ajouter `dns=none` sous la section `[main]`
+
+  ```conf
+  [main]
+  dns=none
+  ...
+  ```
+
+- Redémarrer le service NetworkManager
+
+  ```shell
+  sudo systemctl restart NetworkManager.service
+  ```
+
+- Désactiver le service systemd-resolved pour éviter qu'il écrase les modifications apportées au fichier `/etc/resolv.conf` au prochain redémarrage
+
+  ```shell
+  sudo systemctl disable --now systemd-resolved.service
+  ```
+
+- Désactiver également tout les autres services qui pourraient modifier le fichier `/etc/resolv.conf` si vous en avez.
 
 ## Licence
 
