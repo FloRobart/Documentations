@@ -5,14 +5,6 @@
 - [Listes de tous mes projets](#listes-de-tous-mes-projets)
   - [Table des matières](#table-des-matières)
   - [En cours](#en-cours)
-    - [Finance Dashboard](#finance-dashboard)
-      - [Avancement de Finance Dashboard](#avancement-de-finance-dashboard)
-      - [Description de Finance Dashboard](#description-de-finance-dashboard)
-      - [Technologie utilisé pour Finance Dashboard](#technologie-utilisé-pour-finance-dashboard)
-    - [My Cloud](#my-cloud)
-      - [Avancement de My Cloud](#avancement-de-my-cloud)
-      - [Description de My Cloud](#description-de-my-cloud)
-      - [Technologie utilisé pour My Cloud](#technologie-utilisé-pour-my-cloud)
     - [Top classement](#top-classement)
       - [Avancement de Top classement](#avancement-de-top-classement)
       - [Description de Top classement](#description-de-top-classement)
@@ -21,15 +13,11 @@
       - [Avancement de Youtube Downloader](#avancement-de-youtube-downloader)
       - [Description de Youtube Downloader](#description-de-youtube-downloader)
       - [Technologie utilisé pour Youtube Downloader](#technologie-utilisé-pour-youtube-downloader)
-    - [Gestionnaire de compte](#gestionnaire-de-compte)
-      - [Avancement de Gestionnaire de compte](#avancement-de-gestionnaire-de-compte)
-      - [Description de Gestionnaire de compte](#description-de-gestionnaire-de-compte)
-      - [Technologie utilisé pour Gestionnaire de compte](#technologie-utilisé-pour-gestionnaire-de-compte)
   - [Pas commencé](#pas-commencé)
-    - [Defind app](#defind-app)
-      - [Avancement de Defind app](#avancement-de-defind-app)
-      - [Description de Defind app](#description-de-defind-app)
-      - [Technologie utilisé pour Defind app](#technologie-utilisé-pour-defind-app)
+    - [Saint valentin checkbook](#saint-valentin-checkbook)
+      - [Avancement de Saint valentin checkbook](#avancement-de-saint-valentin-checkbook)
+      - [Description de Saint valentin checkbook](#description-de-saint-valentin-checkbook)
+      - [Technologie utilisé pour Saint valentin checkbook](#technologie-utilisé-pour-saint-valentin-checkbook)
     - [Tinder for friends](#tinder-for-friends)
       - [Avancement de Tinder for friends](#avancement-de-tinder-for-friends)
       - [Description de Tinder for friends](#description-de-tinder-for-friends)
@@ -51,10 +39,6 @@
       - [Avancement de Maven Lite](#avancement-de-maven-lite)
       - [Description de Maven Lite](#description-de-maven-lite)
       - [Technologie utilisé pour Maven Lite](#technologie-utilisé-pour-maven-lite)
-    - [Site voiture Valentin](#site-voiture-valentin)
-      - [Avancement de Site voiture Valentin](#avancement-de-site-voiture-valentin)
-      - [Description de Site voiture Valentin](#description-de-site-voiture-valentin)
-      - [Technologie utilisé pour Site voiture Valentin](#technologie-utilisé-pour-site-voiture-valentin)
   - [Terminé](#terminé)
     - [Script IUT Le Havre](#script-iut-le-havre)
       - [Avancement de Script IUT Le Havre](#avancement-de-script-iut-le-havre)
@@ -64,51 +48,19 @@
       - [Avancement de Thème for vsCode](#avancement-de-thème-for-vscode)
       - [Description de Thème for vsCode](#description-de-thème-for-vscode)
       - [Technologie utilisé pour Thème for vsCode](#technologie-utilisé-pour-thème-for-vscode)
+    - [Finance Dashboard](#finance-dashboard)
+      - [Avancement de Finance Dashboard](#avancement-de-finance-dashboard)
+      - [Description de Finance Dashboard](#description-de-finance-dashboard)
+      - [Technologie utilisé pour Finance Dashboard](#technologie-utilisé-pour-finance-dashboard)
+    - [Gestionnaire de compte](#gestionnaire-de-compte)
+      - [Avancement de Gestionnaire de compte](#avancement-de-gestionnaire-de-compte)
+      - [Description de Gestionnaire de compte](#description-de-gestionnaire-de-compte)
+      - [Technologie utilisé pour Gestionnaire de compte](#technologie-utilisé-pour-gestionnaire-de-compte)
   - [Licence](#licence)
 
 <div class="page"></div>
 
 ## En cours
-
-### Finance Dashboard
-
-- [ ] Trello
-
-#### Avancement de Finance Dashboard
-
-- J'ai fait que le début
-- Élément restant à faire
-  - Onglet des différentes catégories
-  - Tableaux de bord
-
-#### Description de Finance Dashboard
-
-Une application simple pour gerer mes finances
-
-#### Technologie utilisé pour Finance Dashboard
-
-- PHP Laravel
-- Tailwind CSS
-- MySQL
-
-### My Cloud
-
-- [ ] Trello
-
-#### Avancement de My Cloud
-
-- Presque fini
-- Il reste juste le gestionnaire de fichier à faire
-
-#### Description de My Cloud
-
-Un cloud personnel
-
-#### Technologie utilisé pour My Cloud
-
-- PHP Laravel
-- Tailwind CSS
-- MySQL
 
 ### Top classement
 
@@ -148,44 +100,25 @@ Un site pour télécharger des playlist youtube en mp3
 - Tailwind CSS
 - MySQL
 
-### Gestionnaire de compte
-
-- [x] Trello
-
-#### Avancement de Gestionnaire de compte
-
-- pas encore commencer
-- Il faut juste que je reprène la base des projets laravel et que j'ajoute un tableau avec mes comptes et mes mots de passe
-
-#### Description de Gestionnaire de compte
-
-Mon gestionnaire de compte simple et sécurisé en local
-
-#### Technologie utilisé pour Gestionnaire de compte
-
-- PHP Laravel
-- Tailwind CSS
-- MySQL
-
 ## Pas commencé
 
-### Defind app
+### Saint valentin checkbook
 
 - [x] Trello
 
-#### Avancement de Defind app
+#### Avancement de Saint valentin checkbook
 
-- J'ai pas commencer
-- C'est une grosse application
-- Ça me prendrai beaucoup trop de temps
+- Pas commencé
 
-#### Description de Defind app
+#### Description de Saint valentin checkbook
 
-Une application avec plein de jeux de soirée
+Un site pour créer des chèques (tickets) pour offrir différents services à son/sa partenaire. Par exemple: un massage, un repas, un câlin, etc.
 
-#### Technologie utilisé pour Defind app
+Faire en sorte que se sois adaptable pour la fête des mères, des pères, etc.
 
-- Flutter (probablement)
+#### Technologie utilisé pour Saint valentin checkbook
+
+- Aucune idée (peut-être Java ou Flutter pour que se sois une application mobile)
 
 ### Tinder for friends
 
@@ -279,23 +212,6 @@ Un gestionnaire de projet Java simple et léger
 
 - Java
 
-### Site voiture Valentin
-
-- [x] Trello
-
-#### Avancement de Site voiture Valentin
-
-- Terminé mais à refaire entièrement
-
-#### Description de Site voiture Valentin
-
-Un site vitrine pour valentin
-
-#### Technologie utilisé pour Site voiture Valentin
-
-- HTML
-- CSS
-
 ## Terminé
 
 ### Script IUT Le Havre
@@ -329,6 +245,42 @@ Un thème de couleur + coloration syntaxique pour Visual Studio Code
 - JSON
 - Bash
 - Batch
+
+### Finance Dashboard
+
+- [x] Trello
+
+#### Avancement de Finance Dashboard
+
+- Terminé
+
+#### Description de Finance Dashboard
+
+Une application simple pour gerer mes finances
+
+#### Technologie utilisé pour Finance Dashboard
+
+- PHP Laravel
+- Tailwind CSS
+- MySQL
+
+### Gestionnaire de compte
+
+- [x] Trello
+
+#### Avancement de Gestionnaire de compte
+
+- Terminé
+
+#### Description de Gestionnaire de compte
+
+Mon gestionnaire de compte simple et sécurisé en local
+
+#### Technologie utilisé pour Gestionnaire de compte
+
+- PHP Laravel
+- Tailwind CSS
+- MySQL
 
 ## Licence
 
