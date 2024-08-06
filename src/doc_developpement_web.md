@@ -35,9 +35,11 @@ commande, extrait code et extrait de fichier
     - [Installation de NPM - Linux](#installation-de-npm---linux)
   - [XAMPP](#xampp)
     - [Installation de XAMPP - Linux](#installation-de-xampp---linux)
+    - [Configuration de XAMPP - Linux](#configuration-de-xampp---linux)
+      - [Modifier la taille maximale des paquets](#modifier-la-taille-maximale-des-paquets)
+    - [Utilisation de XAMPP](#utilisation-de-xampp)
     - [Erreur avec XAMPP](#erreur-avec-xampp)
       - [Erreur un autre serveur web est déjà en cours d'exécution](#erreur-un-autre-serveur-web-est-déjà-en-cours-dexécution)
-    - [Utilisation de XAMPP](#utilisation-de-xampp)
   - [PHP MyAdmin](#php-myadmin)
     - [Installation de PHP MyAdmin - Linux](#installation-de-php-myadmin---linux)
     - [Mise en place de l'accès à phpmyadmin sur tout les appareils d'un réseau local](#mise-en-place-de-laccès-à-phpmyadmin-sur-tout-les-appareils-dun-réseau-local)
@@ -299,6 +301,85 @@ commande, extrait code et extrait de fichier
     alias xampp-stop='xampp stopapache && xampp stopmysql'
     ```
 
+### Configuration de XAMPP - Linux
+
+#### Modifier la taille maximale des paquets
+
+- Ouvrer le fichier de configuration de MySQL :
+
+  - Avec un éditeur de texte
+
+    ```shell
+    sudo nano /opt/lampp/etc/my.cnf
+    ```
+
+  - Avec l'inteface graphique de XAMPP
+    - Ouvrer l'inteface graphique de XAMPP :
+
+      ```shell
+      xampp-gui
+      ```
+
+    - Cliquer sur l'onglet `Manage Servers`
+    - Cliquer sur `MySQL Database`
+    - Cliquer sur le bouton `Configure`
+    - Cliquer sur le bouton `Open Conf File` dans la fenêtre qui s'est ouverte à l'étape précédente
+- Changer la valeur de `max_allowed_packet` pour remplacer `1M` par la taille maximale que vous voulez, par exemple `20M` pour 20 Mo :
+
+  ```conf
+  ...
+  max_allowed_packet=20M
+  ...
+  ```
+
+- Redémarrer le serveur MySQL :
+
+  ```shell
+  xampp restartmysql
+  ```
+
+- Penser également à modifier la taille maximale des fichiers dans le fichier de configuration de PHP :
+
+  - Ouvrer le fichier de configuration de PHP :
+
+    ```shell
+    sudo nano /opt/lampp/etc/php.ini
+    ```
+  
+  - Changer les valeurs de `post_max_size` et `upload_max_filesize` pour remplacer `8M` par la taille maximale que vous voulez, par exemple `20M` pour 20 Mo :
+
+    ```conf
+    ...
+    post_max_size=20M
+    ...
+    upload_max_filesize=20M
+    ...
+    ```
+
+  - Si vous avez des fichiers très volumineux à envoyer, pensez également à modifier la valeur de `max_execution_time` pour augmenter le temps d'exécution maximal d'un script PHP. Par exemple, pour 5 minutes au lieu de 30 secondes par defaut sur PHP 8.3 :
+
+    ```conf
+    ...
+    max_execution_time=300
+    ...
+    ```
+
+### Utilisation de XAMPP
+
+**Si les commandes ne fonctionnent pas, regarder la section [Installation de XAMPP - Linux](#installation-de-xampp---linux) pour voir comment créer des alias pour XAMPP et le GUI de XAMPP.**
+
+- Ouvrir le GUI de XAMPP :
+
+  ```shell
+  xampp-gui
+  ```
+
+- Afficher l'aide de XAMPP :
+
+  ```shell
+  xampp --help
+  ```
+
 ### Erreur avec XAMPP
 
 #### Erreur un autre serveur web est déjà en cours d'exécution
@@ -319,22 +400,6 @@ commande, extrait code et extrait de fichier
 
   ```shell
   xampp startapache
-  ```
-
-### Utilisation de XAMPP
-
-**Si les commandes ne fonctionnent pas, regarder la section [Installation de XAMPP - Linux](#installation-de-xampp---linux) pour voir comment créer des alias pour XAMPP et le GUI de XAMPP.**
-
-- Ouvrir le GUI de XAMPP :
-
-  ```shell
-  xampp-gui
-  ```
-
-- Afficher l'aide de XAMPP :
-
-  ```shell
-  xampp --help
   ```
 
 ## PHP MyAdmin
