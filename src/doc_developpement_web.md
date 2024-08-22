@@ -272,25 +272,25 @@ commande, extrait code et extrait de fichier
 
 - Activations de la commande `xampp` et `xampp-gui` :
   - **Vous avez 2 solutions pour activer les commandes `xampp` et `xampp-gui`, sois vous créer des liens symboliques sois vous créez des alias.**
-  - Créez des liens symboliques pour XAMPP et pour XAMPP GUI :
-
-    ```shell
-    sudo ln /opt/lampp/xampp /usr/local/bin/xampp
-    sudo ln /opt/lampp/manager-linux-x64.run /usr/local/bin/xampp-gui
-    ```
-
-  - Créez une alias pour XAMPP et pour le GUI de XAMPP :
-
-    ```shell
-    echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
-    echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
-    ```
-
-    - Rechargez le fichier `~/.bashrc` :
+    - Créez des liens symboliques pour XAMPP et pour XAMPP GUI :
 
       ```shell
-      source ~/.bashrc
+      sudo ln /opt/lampp/xampp /usr/local/bin/xampp
+      sudo ln /opt/lampp/manager-linux-x64.run /usr/local/bin/xampp-gui
       ```
+
+    - Créez une alias pour XAMPP et pour le GUI de XAMPP :
+
+      ```shell
+      echo "alias xampp='sudo /opt/lampp/xampp'" >> ~/.bashrc
+      echo "alias xampp-gui='sudo /opt/lampp/manager-linux-x64.run'" >> ~/.bashrc
+      ```
+
+      - Rechargez le fichier `~/.bashrc` :
+
+        ```shell
+        source ~/.bashrc
+        ```
 
   - (Optionnel) Personnellement j'ai mis toutes les alias ci-dessous pour XAMPP :
 
