@@ -12,6 +12,7 @@
   - [Connexion de Ubuntu et d'un appareil Android](src/doc_gnome_shell_connect.html)
   - [Installation et configuration de Thunderbird pour l'IUT du Havre](src/doc_thunderbird_iut.html)
 - Documentation d'outils de développement
+  - [Gestion de projet](src/doc_gestion_de_projet.html)
   - [Git](src/doc_git.html)
   - [SSH](src/doc_ssh.html)
   - [Visual Studio Code](src/doc_vscode.html)
