@@ -32,6 +32,8 @@ commande, extrait code et extrait de fichier
     - [Liaison avec Github sur Linux et Windows](#liaison-avec-github-sur-linux-et-windows)
   - [Utilisation](#utilisation)
     - [Utilisation de plusieurs comptes Github sur le même ordinateur - Ubuntu](#utilisation-de-plusieurs-comptes-github-sur-le-même-ordinateur---ubuntu)
+      - [Configuration pour Git](#configuration-pour-git)
+      - [Configuration pour SSH et Github](#configuration-pour-ssh-et-github)
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
     - [Création d'un workflow Github pour Laravel](#création-dun-workflow-github-pour-laravel)
   - [Erreur](#erreur)
@@ -136,6 +138,28 @@ commande, extrait code et extrait de fichier
   > <https://gist.github.com/bonnopc/c78920431284ce3fc2a5270016205116>
 
 La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH différentes, mais vous pouvez l'adapter pour autant de comptes que vous voulez.
+
+#### Configuration pour Git
+
+- Placez-vous dans le dossier de votre projet
+
+  ```shell
+  cd /chemin/vers/votre/projet
+  ```
+
+- Modifier votre adresse mail pour un projet spécifique
+
+  ```shell
+  git config user.email "Votre adresse mail"
+  ```
+
+- Modifier votre nom d'utilisateur pour un projet spécifique
+
+  ```shell
+  git config user.name "Votre nom"
+  ```
+
+#### Configuration pour SSH et Github
 
 - Générer une nouvelle clé SSH comme indiqué dans la section [Liaison avec Github sur Linux et Windows](#liaison-avec-github-sur-linux-et-windows)
 - Effacer les clés mises en cache précédentes
