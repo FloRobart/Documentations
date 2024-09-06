@@ -35,6 +35,7 @@ commande, extrait code et extrait de fichier
       - [Configuration pour Git](#configuration-pour-git)
       - [Configuration pour SSH et Github](#configuration-pour-ssh-et-github)
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
+    - [Mise en attente de changements](#mise-en-attente-de-changements)
     - [Création d'un workflow Github pour Laravel](#création-dun-workflow-github-pour-laravel)
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
@@ -302,6 +303,37 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
 
   ```shell
   git push origin master
+  ```
+
+### Mise en attente de changements
+
+- Source
+  > <https://git-scm.com/book/fr/v2/Utilitaires-Git-Remisage-et-nettoyage>
+
+- Ajouter les changements à la pile des modifications non finies
+
+  ```shell
+  git stash
+  ```
+
+- Faire des changements que vous voulez
+  - Vous pouvez faire autant de changements que vous voulez
+  - Vous pouvez changer de branch
+  - Vous pouvez faire des commits
+  - Vous pouvez faire des pulls
+  - Vous pouvez faire des pushs
+  - etc...
+
+- Récupérer la liste des changements mis en attente
+
+  ```shell
+  git stash list
+  ```
+
+- Merge les changements mis en attente
+
+  ```shell
+  git stash apply
   ```
 
 ### Création d'un workflow Github pour Laravel
