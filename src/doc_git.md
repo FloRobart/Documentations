@@ -36,6 +36,7 @@ commande, extrait code et extrait de fichier
       - [Configuration pour SSH et Github](#configuration-pour-ssh-et-github)
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
     - [Mise en attente de changements](#mise-en-attente-de-changements)
+    - [Retourner à un commit précédent](#retourner-à-un-commit-précédent)
     - [Création d'un workflow Github pour Laravel](#création-dun-workflow-github-pour-laravel)
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
@@ -334,6 +335,28 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
 
   ```shell
   git stash apply
+  ```
+
+- Supprimer les changements mis en attente
+
+  ```shell
+  git stash clear
+  ```
+
+### Retourner à un commit précédent
+
+**Attention, cette commande est dangereuse, elle va supprimer tous l'historique des commits après le commit que vous avez choisi.**
+
+- Revenir à un commit précédent
+
+  ```shell
+  git reset --hard <commit>
+  ```
+
+- Faire un push pour mettre à jour le dépôt
+
+  ```shell
+  git push --force
   ```
 
 ### Création d'un workflow Github pour Laravel
