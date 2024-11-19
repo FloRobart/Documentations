@@ -353,14 +353,17 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   git reset --hard <commit>
   ```
 
-  - Remplacer `<commit>` par le SHA complet du commit auquel vous voulez revenir.
+  - Remplacer `<commit>` par le SHA complet du commit auquel vous voulez revenir
     - Vous pouvez trouver le SHA complet d'un commit avec la commande `git log`
-  - Si vous voulez supprimer un commit fait par erreur, vous devez prendre le SHA du commit précédent l'erreur.
-  - Si vous voulez supprimer le dernier commit, vous pouvez utiliser la commande
+      - Voici à quoi ressemble un SHA : `6ae4b917362ce6ac196f651e83b8afb14452fae0`
+  - Si vous voulez supprimer un commit fait par erreur, vous devez prendre le SHA du commit précédent l'erreur
+  - Si vous voulez supprimer le dernier commit, vous pouvez utiliser la commande suivante :
 
     ```shell
     git reset --hard HEAD~1
     ```
+
+    - Vous pouvez remplacer 1 par le nombre de commit que vous voulez supprimer
 
 - Faire un push pour mettre à jour le dépôt
 
