@@ -30,6 +30,7 @@ commande, extrait code et extrait de fichier
     - [GitHub](#github)
     - [GitLab](#gitlab)
   - [Gestionnaire de tâches](#gestionnaire-de-tâches)
+    - [Github Project](#github-project)
     - [Trello](#trello)
     - [ClickUp](#clickup)
     - [Jira](#jira)
@@ -92,9 +93,11 @@ GitLab est un outils très performant et très complet mais est surtout utilisé
 
 ## Gestionnaire de tâches
 
-Un gestionnaire de tâches est un outil qui permet de gérer les tâches de chaque membre de l'équipe. C'est un outil indispensable pour la gestion de projet. C'est lui qui permet de savoir qui fait quoi et quand et également de savoir où en est le projet, se qui reste à faire, etc. Tous comme le gestionnaire de version, il sera beaucoup utilisé et central dans le projet. Il doit donc être choisi avec soin.
+Un gestionnaire de tâches est un outil qui permet de gérer les tâches de chaque membre de l'équipe. C'est un outil indispensable pour la gestion de projet. C'est lui qui permet de savoir qui fait quoi et quand et également de savoir où en est le projet, se qu'il reste à faire, etc. Tous comme le gestionnaire de version, il sera beaucoup utilisé et central dans le projet. Il doit donc être choisi avec soin.
 
-Il existe plusieurs gestionnaires de tâches comme [Trello](https://trello.com/fr), Asana, ClickUp, Todoist, Wrike, Monday, Jira, Notion, etc. Ces outils permettent de gérer les tâches de chaque membre de l'équipe.
+Il existe plusieurs gestionnaires de tâches comme Github Project, [Trello](https://trello.com/fr), Asana, ClickUp, Todoist, Wrike, Monday, Jira, Notion, etc. Ces outils permettent de gérer les tâches de chaque membre de l'équipe.
+
+### Github Project
 
 ### Trello
 
