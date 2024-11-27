@@ -21,16 +21,40 @@ Ce tutoriel explique comment créer une page de dons pour le Téléthon.
 
 ## Prérequis
 
-- Avoir une accréditation de manifesation papier pour le Téléthon de l'annnée en cours
+- Avoir une accréditation de manifesation papier de l'annnée en cours pour le Téléthon.
 
 ## Procédure
 
 1. Se rendre sur le site [https://mapage.telethon.fr/sport/add](https://mapage.telethon.fr/sport/add)
 2. Remplir le formulaire d'inscription (il est un peu long)
+    - Titre de la page
+
+      ```txt
+      10 000 Roulettes
+      ```
+
+    - Nom affiché sur la page
+
+      ```txt
+      10000-roulettes
+      ```
+
+    - Objectif de dons (par défaut)
+
+      ```txt
+      500
+      ```
+
+    - Date de fin de collecte (par défaut)
+
+      ```txt
+      01/03/2025
+      ```
+
     - Description de la page pour 2023
 
       ```txt
-      Cette année encore, notre groupe de rollers est ravi de s'engager dans une aventure extraordinaire au profit du Téléthon 2023. Nous mettons nos patins en action pour une cause qui nous tient particulièrement à coeur, et nous souhaitons partager avec vous notre motivation profonde.
+      Cette année encore, notre groupe de rollers est ravi de s'engager dans une aventure extraordinaire au profit du Téléthon 2024. Nous mettons nos patins en action pour une cause qui nous tient particulièrement à coeur, et nous souhaitons partager avec vous notre motivation profonde.
 
       Enfilant nos rollers avec enthousiasme, nous croyons fermement que la solidarité et l'action communautaire peuvent faire une différence significative dans la vie de ceux qui en ont le plus besoin. Le Téléthon incarne cette force collective qui transcende les frontières et rassemble les individus autour d'un objectif commun : soutenir la recherche médicale pour vaincre les maladies génétiques rares.
 
@@ -46,8 +70,20 @@ Ce tutoriel explique comment créer une page de dons pour le Téléthon.
 
       Merci beaucoup pour votre soutien.
 
-      L'équipe des 10 000 roulettes pour le Téléthon 2023.
+      L'équipe des 10 000 roulettes pour le Téléthon 2024.
       ```
+
+    - Contrat
+
+      ```txt
+      Oui
+      ```
+
+    - Civilité
+    - Nom
+    - Prénom
+    - E-mail
+    - Liens avec l’AFM-Téléthon
 
 - Enregistrer les informations
 - C'est fini !
