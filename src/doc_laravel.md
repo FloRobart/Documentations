@@ -29,11 +29,13 @@ commande, extrait code et extrait de fichier
   - [Utilisation de Laravel](#utilisation-de-laravel)
     - [Création d'un projet Laravel](#création-dun-projet-laravel)
     - [Gestion de la base de données](#gestion-de-la-base-de-données)
+    - [Intégration de plusieurs base de données](#intégration-de-plusieurs-base-de-données)
+    - [Migrations](#migrations)
+    - [Seeders](#seeders)
     - [Lancement d'un projet Laravel en local grâce au serveur web Apache](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache)
     - [Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel](#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel)
     - [Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local](#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local)
   - [Configuration de votre projet Laravel](#configuration-de-votre-projet-laravel)
-    - [Intégration de plusieurs base de données](#intégration-de-plusieurs-base-de-données)
     - [Intégration de Tailwind CSS](#intégration-de-tailwind-css)
     - [Intégration de Livewire](#intégration-de-livewire)
     - [Ajout de Livewire à un projet Laravel](#ajout-de-livewire-à-un-projet-laravel)
@@ -133,6 +135,140 @@ commande, extrait code et extrait de fichier
 
   ```shell
   php artisan make:controller <ControllerName>
+  ```
+
+### Intégration de plusieurs base de données
+
+- Source
+  > <https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223>
+
+### Migrations
+
+- [Source](doc_migration_et_seeder_by_tanvir.html)
+
+Les migrations sont des fichiers qui permettent de creer, modifier ou supprimer des tables dans une base de donnees. Les migrations sont executees en premier lieu pour configurer la base de donnees de l'application.
+
+Si vous voulez modifier une table existante, il ne faut pas modifier la migration existante. Il faut créer une nouvelle migration pour ajouter ou modifier des colonnes. le but étant que vous ayez toujours la possibilité de revenir en arrière et que vous puissiez les utiliser sans supprimer les données de la base de données.
+
+- Créer une migration
+
+  ```bash
+  php artisan make:migration <nom_de_la_migration>
+  ```
+
+  - **Convention de nommage** : Lorsque l'on nomme un fichier de migration dans le terminal bash, il est recommandé de le créer de la forme suivante `create_<nom_de_la_table>_table`
+
+- Ouvrez le fichier créé dans le dossier `/database/migrations` et ajoutez le code qui permet de créer la table. L'aspect du fichier de migration est déjà configuré, il contient déjà les méthodes `up` et `down` qui permettent de lancer et d'annuler la migration. Utilisez ce template pour compléter le code en remplaçant les `<>` par les valeurs appropriées :
+
+  ```PHP
+  <?php
+
+  use Illuminate\Database\Migrations\Migration;
+  use Illuminate\Database\Schema\Blueprint;
+  use Illuminate\Support\Facades\Schema;
+
+  class <nom_de_la_migration> extends Migration
+  {
+      $connection = <connection_name>;
+
+      /**
+       * Run the migrations.
+       *
+       * @return void
+       */
+      public function up()
+      {
+          Schema::create('<nom_de_la_table>', function (Blueprint $table) {
+              $table->id();
+              $table-><type>('<column_name>')-><attribute>();
+              $table->string('exemple')->nullable()->default('default_value');
+              $table->timestamps();
+          });
+      }
+
+      /**
+       * Reverse the migrations.
+       *
+       * @return void
+       */
+      public function down()
+      {
+          Schema::dropIfExists('<nom_de_la_table>');
+      }
+  }
+  ```
+
+    - `nom_de_la_migration` : Nom de la migration (Laravel le complète automatiquement)
+    - `connection_name` : Nom de la connexion à la base de données (Par défaut `mysql`)
+    - `nom_de_la_table` : Nom de la table à créer (Laravel le complète automatiquement mais vérifiez que le nom est correct)
+    - `id()` : Crée une colonne `id` de type `bigIncrements` (Vous pouvez utiliser `id('id_name')` pour changer le nom de la colonne de l'id)
+    - `type` : Type de la colonne (integer, string, text, etc.)
+    - `column_name` : Nom de la colonne
+    - `attribute` : Attribut de la colonne (nullable, default, etc.)
+    - `string('exemple')->nullable()->default('default_value')` : Crée une colonne `exemple` de type `string` qui peut être `null` et qui a une valeur par défaut `default_value`
+    - `timestamps()` : Crée deux colonnes `created_at` et `updated_at` de type `timestamp`
+
+- Exécuter les migrations
+
+  ```bash
+  php artisan migrate
+  ```
+
+### Seeders
+
+- [Source](doc_migration_et_seeder_by_tanvir.html)
+
+Un seeder est un fichier qui permet de remplir les tables de la base de donnees avec des donnees. Les seeders sont executees apres les migrations pour fournir des donnees a l'application.
+
+- Créer un seeder
+
+  ```bash
+  php artisan make:seeder <nom_du_seeder>
+  ```
+
+  - **Convention de nommage** : Lorsque l'on nomme un fichier seeder dans le terminal bash, il est recommandé de le créer de la forme suivante `<NomDeLaTable>Seeder`. S'il y a un `s` avant `Seeder`, il est conseillé de supprimer ce `s`.
+
+- Ouvrez le fichier de seeder situé dans le dossier `/database/seeders` et ajoutez le code nécessaire pour remplir la table de la base de données. Le fichier de seeder contient deja la classe `<nom_du_seeder>` qui contient la méthode `run` qui permet de lancer le remplissage de la table. Utilisez ce template pour compléter le code en remplaçant les `<>` par les valeurs appropriées :
+
+  ```PHP
+  <?php
+
+  namespace Database\Seeders;
+
+  use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+  use Illuminate\Database\Seeder;
+  use Illuminate\Support\Facades\DB;
+
+  class <nom_du_seeder> extends Seeder
+  {
+      /**
+       * Run the database seeds.
+       */
+      public function run(): void
+      {
+          DB::connection(<connection_name>)->table(<nom_de_la_table>)->insert([
+              [
+                  <nom_du_primaire> => <valeur_du_primaire>,
+                  <nom_de_la_colonne> => <valeur_de_la_colonne>,
+                  ...
+              ]
+          ]);
+      }
+  }
+  ```
+
+    - `nom_du_seeder` : Nom du seeder (Laravel le complète automatiquement)
+    - `connection_name` : Nom de la connexion à la base de données (Par défaut `mysql`)
+    - `nom_de_la_table` : Nom de la table à remplir
+    - `nom_du_primaire` : Nom de la colonne de la clé primaire
+    - `valeur_du_primaire` : Valeur de la clé primaire
+    - `nom_de_la_colonne` : Nom de la colonne à remplir
+    - `valeur_de_la_colonne` : Valeur de la colonne
+
+- Exécuter les seeders
+
+  ```bash
+  php artisan db:seed
   ```
 
 ### Lancement d'un projet Laravel en local grâce au serveur web Apache
@@ -265,11 +401,6 @@ commande, extrait code et extrait de fichier
   sudo chown -R www-data:www-data /path/to/your-project-name
   sudo chmod -R 755 /path/to/your-project-name
   ```
-
-### Intégration de plusieurs base de données
-
-- Source
-  > <https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223>
 
 ### Intégration de Tailwind CSS
 
