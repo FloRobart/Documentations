@@ -35,6 +35,7 @@
   - [Regles de la documentation](src/Regles_de_la_documentation.html)
 
 ---
+---
 
 ## Documentations au format pdf
 
