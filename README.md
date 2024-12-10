@@ -34,6 +34,8 @@
 - Règles de notation de la documentation
   - [Regles de la documentation](src/Regles_de_la_documentation.html)
 
+---
+
 ## Documentations au format pdf
 
 - Documentation d'installation, de configuration, d'utilisation et de manipulation de différent logiciels et systèmes d'exploitation
