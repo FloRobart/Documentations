@@ -565,11 +565,11 @@ Memcached est un système de gestion de cache en mémoire rapide, utilisé pour 
 
 - **`MAIL_MAILER`** : Service utilisé pour envoyer des emails (`smtp`, `mailgun`, `sendmail`, etc.).
 - **`MAIL_DRIVER`** : Ancien nom pour `MAIL_MAILER` (encore utilisé dans certaines versions).
-- **`MAIL_HOST`** : Adresse du serveur SMTP.
-- **`MAIL_PORT`** : Port utilisé pour le serveur SMTP.
+- **`MAIL_HOST`** : Adresse du serveur SMTP. (Exemple : `smtp.gmail.com` pour Gmail).
+- **`MAIL_PORT`** : Port utilisé pour le serveur SMTP. (Exemple : `465` pour Gmail).
 - **`MAIL_USERNAME`** : Identifiant pour le serveur SMTP.
 - **`MAIL_NAME`** : Nom de l’expéditeur (affiché dans les emails envoyés).
-- **`MAIL_PASSWORD`** : Mot de passe pour le serveur SMTP.
+- **`MAIL_PASSWORD`** : Mot de passe pour le serveur SMTP. Disponible sur Gmail via la propriété `Mot de passe d'application` disponible uniquement si l'authentification à deux facteurs est activée.
 - **`MAIL_ENCRYPTION`** : Méthode de cryptage pour les emails (`tls`, `ssl`).
 - **`MAIL_FROM_ADDRESS`** : Adresse email de l’expéditeur par défaut.
 - **`MAIL_FROM_NAME`** : Nom affiché pour l’expéditeur.
