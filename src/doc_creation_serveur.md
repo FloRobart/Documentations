@@ -468,21 +468,22 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
 - Source
 
   > <https://www.gekkode.com/developpement/installation-de-laravel-et-configuration-apache/>
+  > <https://codewithsusan.com/notes/multiple-laravel-apps-on-apache-server>
 
-- Créer un nouveau projet Laravel.
+- Créer un nouveau projet Laravel
 
   ```bash
   composer create-project --prefer-dist laravel/laravel <nom_projet>
   ```
 
-  - En cas de problème de droits, vous pouvez sois ajouter `sudo` devant la commande ou lancez la commande dans votre répertoire personnel (`/home/${USER}`) puis déplacer le projet dans le dossier `/var/www/`.
-- Créer un fichier `.env` à la racine du projet Laravel.
+  - En cas de problème de droits, vous pouvez sois ajouter `sudo` devant la commande ou lancez la commande dans votre répertoire personnel (`/home/${USER}`) puis déplacer le projet dans le dossier `/var/www/`
+- Créer un fichier `.env` à la racine du projet Laravel
 
   ```bash
   cp .env.example .env
   ```
 
-- Modifier le fichier `.env` pour qu'il corresponde à votre base de données.
+- Modifier le fichier `.env` pour qu'il corresponde à votre base de données
 
   ```txt
   ...
@@ -497,39 +498,45 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   ...
   ```
 
-- Modifier les permissions du dossier.
+- Modifier les permissions du dossier du projet Laravel
 
   ```bash
   sudo chown -R www-data:www-data /var/www/<nom_projet>
   ```
 
-- Modifier les permissions du dossier de stockage.
+- Modifier les permissions du dossier de `stockage`
 
   ```bash
   sudo chmod -R 777 /var/www/<nom_projet>/storage
   ```
 
-- Mettre à jour les dépendances de Composer.
+- Modifier les permissions du dossier de `bootstrap/cache`
+
+  ```bash
+  sudo chmod -R 777 /var/www/<nom_projet>/bootstrap/cache
+  ```
+
+- Mettre à jour les dépendances de Composer
 
   ```bash
   composer update
   npm update
   ```
 
-- Installer les dépendances du projet Laravel.
+- Installer les dépendances du projet Laravel
 
   ```bash
   composer install
   npm install
   ```
 
-- Générer une clé pour le projet Laravel.
+- Générer une clé pour le projet Laravel
 
   ```bash
   php artisan key:generate
   ```
 
-- Migrer les tables de la base de données.
+- Migrer les tables de la base de données
 
   ```bash
   php artisan migrate
@@ -541,25 +548,25 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   sudo a2enmod rewrite
   ```
 
-- Créer un fichier de configuration pour le site web Laravel.
+- Créer un fichier de configuration pour le site web Laravel
 
   ```bash
   sudo nano /etc/apache2/sites-available/002-<nom_projet>.conf
   ```
 
-- Changer les permissions et le groupe du dossier.
+- Changer les permissions et le groupe du dossier
 
   ```bash
   sudo chown -R www-data:www-data /var/www/<nom_projet>
   ```
 
-- Créer un fichier de configuration pour le site web.
+- Créer un fichier de configuration pour le site web
 
   ```bash
   sudo nano /etc/apache2/sites-available/001-<nom_projet>.conf
   ```
 
-  - Ajouter le code suivant.
+  - Ajouter le code suivant
 
     ```txt
     <VirtualHost *:80>
@@ -579,26 +586,26 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
     </VirtualHost>
     ```
 
-    - Remplacer `<nom_projet>` par le nom du site web.
-    - `ServerAdmin` : Adresse email de l'administrateur du site.
-    - `DocumentRoot` : Chemin du dossier du site web.
-    - `ServerName` : Nom du site web.
-    - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers.
-    - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache.*
-  - Sauvegarder et quitter.
-- Activer le site web.
+    - Remplacer `<nom_projet>` par le nom du site web
+    - `ServerAdmin` : Adresse email de l'administrateur du site
+    - `DocumentRoot` : Chemin du dossier du site web
+    - `ServerName` : Nom du site web
+    - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers
+    - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache*
+  - Sauvegarder et quitter
+- Activer le site web
 
   ```bash
   sudo a2ensite 002-<nom_projet>.conf
   ```
 
-- Désactiver le site actuellement actif.
+- Désactiver le site actuellement actif
 
   ```bash
   sudo a2dissite 001-<nom_site>.conf
   ```
 
-- Redémarrer Apache.
+- Redémarrer Apache
 
   ```bash
   sudo service apache2 restart
