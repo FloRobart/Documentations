@@ -490,7 +490,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
 
   DB_CONNECTION=mysql
   DB_HOST=<adresse_ip>
-  DB_PORT=3306
+  DB_PORT=<port>
   DB_DATABASE=<nom_base_de_données>
   DB_USERNAME=<nom_utilisateur>
   DB_PASSWORD=<mot_de_passe>
@@ -593,6 +593,8 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
     - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers
     - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache*
   - Sauvegarder et quitter
+  - Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.
+  - Vous devrez également ajouter en première ligne du fichier de configuration apache `listen <port>` pour chaque site web ainsi que `<VirtualHost *:<port>>` à la place de `<VirtualHost *:80>`.
 - Activer le site web
 
   ```bash
