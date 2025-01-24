@@ -26,15 +26,15 @@ commande, extrait code et extrait de fichier
   - [Table des matières](#table-des-matières)
   - [Préambule](#préambule)
   - [Récupération du matériel](#récupération-du-matériel)
-  - [Installation du système d'exploitation](#installation-du-système-dexploitation)
-  - [Installation et configuration des outils](#installation-et-configuration-des-outils)
-    - [SSH](#ssh)
-    - [Apache](#apache)
-      - [Installation de Apache](#installation-de-apache)
-      - [Création et déploiement d'un site web avec Apache](#création-et-déploiement-dun-site-web-avec-apache)
-    - [PHP](#php)
-    - [MySQL](#mysql)
-    - [Composer](#composer)
+  - [OS Debian](#os-debian)
+  - [SSH](#ssh)
+  - [PHP](#php)
+  - [Apache](#apache)
+    - [Installation de Apache](#installation-de-apache)
+    - [Utilisation d'Apache (Aide mémoire)](#utilisation-dapache-aide-mémoire)
+    - [Création et déploiement d'un site web avec Apache](#création-et-déploiement-dun-site-web-avec-apache)
+  - [MySQL](#mysql)
+  - [Composer](#composer)
   - [Déploiement d'un projet Laravel](#déploiement-dun-projet-laravel)
   - [Licence](#licence)
 
@@ -46,15 +46,32 @@ commande, extrait code et extrait de fichier
 
   > [Playlist Youtube de Grafikart](https://www.youtube.com/watch?v=cfJh8vdKuQU&list=PLjwdMgw5TTLUnvhOKLcpCG8ORQsfE7uB4)
 
-Certains passages de la playlist de Grafikart sont obsolètes, j'ai donc pris d'autre source pour les parties qui ne fonctionnaient pas. Les autres sources seront indiquées de la même façon que celle-ci dans les parties concernées.
+Certains passages de la playlist de Grafikart sont obsolètes (Janvier 2025), j'ai donc pris d'autre source pour les parties qui ne fonctionnaient pas. Les autres sources seront indiquées de la même façon que celle-ci dans les parties concernées.
 
-Dans ce tutoriel, je vais installer un serveur web sur un ordinateur, de l'intallation du système d'exploitation à la configuration des outils nécessaires pour un serveur web.
+Le maître mot de ce tutoriel est la **sécurité**. Faire un serveur c'est bien mais faire un serveur sécurisé c'est mieux. C'est pourquoi, en plus de faire les étapes de base pour créer un serveur web, je vais vous montrer comment sécuriser votre serveur.
+
+Dans ce tutoriel couvrira :
+
+- L'installation du système d'exploitation Debian
+- L'installation de SSH
+- La configuration du serveur SSH
+- L'installation d'Apache
+- La configuration du serveur Apache
+- L'installation de PHP
+- L'installation de MySQL
+- La configuration du serveur MySQL
+- L'installation de Composer
+- La création d'un projet Laravel
+  - La configuration du serveur Apache pour le projet Laravel
+  - La configuration de la base de données pour le projet Laravel
+  - La configuration des permissions pour le projet Laravel
+- Le déploiement du projet Laravel sur le serveur apache
 
 ## Récupération du matériel
 
 Vous pouvez créer un serveur avec n'importe quel ordinateur. Personnellement, j'utilise un ancien ordinateur de burreau qui à une dizaine d'années.
 
-## Installation du système d'exploitation
+## OS Debian
 
 Je vais utiliser Debian server pour ce tutoriel.
 
@@ -72,7 +89,7 @@ Je vais utiliser Debian server pour ce tutoriel.
 - Entrer le nom de l'utilisateur courant.
 - Entrer le mot de passe de l'utilisateur courant.
 - Confirmer le mot de passe.
-- Selectionner le partitionnement du disque dur. // TODO : Ajouter les détails
+- Selectionner le partitionnement du disque dur.
 - Selectionner le pays pour le miroir des paquets.
 - Selectionner le miroir des paquets `deb.debian.org`.
 - Entrer le proxy (laisser vide si vous n'en avez pas).
@@ -126,11 +143,9 @@ Vous avez maintenant un serveur Debian fonctionnel sur lequel vous êtes connect
 
   - Résultat attendu : `la date actuelle`
 
-## Installation et configuration des outils
+## SSH
 
-### SSH
-
-- Changer la configuration de SSH
+- Changer la configuration de SSH pour plus de sécurité.
 
   ```bash
   sudo nano /etc/ssh/sshd_config
@@ -199,124 +214,7 @@ Vous avez maintenant un serveur Debian fonctionnel sur lequel vous êtes connect
   chmod 600 ~/.ssh/authorized_keys
   ```
 
-### Apache
-
-- Source
-
-  > <https://friendhosting.net/en/blog/install-apache-on-debian-11.php>
-  > <https://youtu.be/arVwa7jvp5M?si=MwPq8noTIiIgu2iV>
-
-Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à configurer et c'est plus modulaire. Nginx est plus performant mais mon serveur n'est pas destiné à être utilisé par des milliers de personnes.
-
-#### Installation de Apache
-
-- Installer Apache
-
-  ```bash
-  sudo apt install apache2
-  ```
-
-- Vérifier si Apache est bien installé.
-
-  ```bash
-  sudo service apache2 status
-  ```
-
-- Ajouter votre utilisateur au groupe `www-data`.
-
-  ```bash
-  sudo usermod -a -G www-data <nom_utilisateur>
-  ```
-
-- Changer les permissions du dossier `/var` si vous le souhaitez.
-
-  ```bash
-  sudo chown -R www-data:www-data /var
-  ```
-
-#### Création et déploiement d'un site web avec Apache
-
-- Source
-
-  > <https://friendhosting.net/en/blog/install-apache-on-debian-11.php>
-
-- Créer un dossier pour le site web.
-
-  ```bash
-  sudo mkdir /var/www/<nom_site>
-  ```
-
-- Changer les permissions et le groupe du dossier.
-
-  ```bash
-  sudo chown -R www-data:www-data /var/www/<nom_site>
-  ```
-
-- Créer un fichier `index.php` dans le dossier du site web.
-
-  ```bash
-  sudo nano /var/www/<nom_site>/index.php
-  ```
-
-  - Ajouter le code suivant.
-
-    ```php
-    <?php phpinfo(); ?>
-    ```
-
-  - Sauvegarder et quitter.
-- Créer un fichier de configuration pour le site web.
-
-  ```bash
-  sudo nano /etc/apache2/sites-available/001-<nom_site>.conf
-  ```
-
-  - Ajouter le code suivant.
-
-    ```txt
-    <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/<nom_site>
-        ServerName <nom_site>
-        ServerAlias www.<nom_site>
-
-        <Directory /var/www/<nom_site>>
-            Options +Indexes +FollowSymLinks 
-            AllowOverride All
-            Require all granted
-        </Directory>
-
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>
-    ```
-
-    - Remplacer `<nom_site>` par le nom du site web.
-    - `ServerAdmin` : Adresse email de l'administrateur du site.
-    - `DocumentRoot` : Chemin du dossier du site web.
-    - `ServerName` : Nom du site web.
-    - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers.
-    - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache.*
-  - Sauvegarder et quitter.
-- Activer le site web.
-
-  ```bash
-  sudo a2ensite 001-<nom_site>.conf
-  ```
-
-- Désactiver le site par défaut.
-
-  ```bash
-  sudo a2dissite 000-default.conf
-  ```
-
-- Redémarrer Apache.
-
-  ```bash
-  sudo service apache2 restart
-  ```
-
-### PHP
+## PHP
 
 - Installer PHP ainsi que les extensions nécessaires.
 
@@ -360,7 +258,225 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
     ...
     ```
 
-### MySQL
+## Apache
+
+- Source
+
+  > <https://friendhosting.net/en/blog/install-apache-on-debian-11.php>
+  > <https://youtu.be/arVwa7jvp5M?si=MwPq8noTIiIgu2iV>
+
+Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à configurer et c'est plus modulaire. Nginx est plus performant mais mon serveur n'est pas destiné à être utilisé par des milliers de personnes.
+
+### Installation de Apache
+
+- Installer Apache
+
+  ```bash
+  sudo apt install apache2
+  ```
+
+- Vérifier si Apache est bien installé.
+
+  ```bash
+  sudo systemctl status apache2
+  ```
+
+- Ajouter votre utilisateur au groupe `www-data`.
+
+  ```bash
+  sudo usermod -a -G www-data <nom_utilisateur>
+  ```
+
+- Changer les permissions du dossier `/var` si vous le souhaitez.
+
+  ```bash
+  sudo chown -R www-data:www-data /var
+  ```
+
+### Utilisation d'Apache (Aide mémoire)
+
+- Démarrer Apache.
+
+  ```bash
+  sudo systemctl start apache2
+  ```
+
+- Arrêter Apache.
+
+  ```bash
+  sudo systemctl stop apache2
+  ```
+
+- Redémarrer Apache.
+
+  ```bash
+  sudo systemctl restart apache2
+  ```
+
+- Activer Apache au démarrage.
+
+  ```bash
+  sudo systemctl enable apache2
+  ```
+
+- Désactiver Apache au démarrage.
+
+  ```bash
+  sudo systemctl disable apache2
+  ```
+
+- Vérifier si Apache est bien lancé.
+
+  ```bash
+  sudo systemctl status apache2
+  ```
+
+- Activer un module Apache.
+
+  ```bash
+  sudo a2enmod <module>
+  ```
+
+  - Remplacer `<module>` par le nom du module.
+- Désactiver un module Apache.
+
+  ```bash
+  sudo a2dismod <module>
+  ```
+
+  - Remplacer `<module>` par le nom du module.
+- Activer un site web.
+
+  ```bash
+  sudo a2ensite <site>
+  ```
+
+  - Remplacer `<site>` par le nom du site web.
+- Désactiver un site web.
+
+  ```bash
+  sudo a2dissite <site>
+  ```
+
+  - Remplacer `<site>` par le nom du site web.
+- Voir les sites web disponibles.
+
+  ```bash
+  ls -la /etc/apache2/sites-available
+  ```
+
+- Voir les sites web actifs.
+
+  ```bash
+  ls -la /etc/apache2/sites-enabled
+  ```
+
+- Voir les modules disponibles.
+
+  ```bash
+  ls -la /etc/apache2/mods-available
+  ```
+
+- Voir les modules actifs.
+
+  ```bash
+  ls -la /etc/apache2/mods-enabled
+  ```
+
+### Création et déploiement d'un site web avec Apache
+
+- Source
+
+  > <https://friendhosting.net/en/blog/install-apache-on-debian-11.php>
+
+Dans cette partie nous allons créer un site web rapide et le déployer avec Apache. Le but est à la fois de vous montrer comment déployer un site web avec Apache et de vérifier que le serveur fonctionne correctement.
+
+- Créer un dossier pour le site web.
+
+  ```bash
+  sudo mkdir /var/www/<nom_site>
+  ```
+
+- Changer les permissions et le groupe du dossier.
+
+  ```bash
+  sudo chown -R www-data:www-data /var/www/<nom_site>
+  ```
+
+- Créer un fichier `index.php` dans le dossier du site web.
+
+  ```bash
+  sudo nano /var/www/<nom_site>/index.php
+  ```
+
+  - Ajouter le code suivant.
+
+    ```php
+    <?php phpinfo(); ?>
+    ```
+
+  - Sauvegarder et quitter.
+- Créer un fichier de configuration pour le site web.
+
+  ```bash
+  sudo nano /etc/apache2/sites-available/001-<nom_site>.conf
+  ```
+  
+  - Il est fortement recommandé de commencer le nom du fichier de configuration par un numéro pour que les fichiers soient chargés dans l'ordre.
+
+  - Ajouter le code suivant.
+
+    ```txt
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/<nom_site>
+        ServerName <nom_site>
+        ServerAlias www.<nom_site>
+
+        <Directory /var/www/<nom_site>>
+            Options +Indexes +FollowSymLinks 
+            AllowOverride All
+            Require all granted
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+    ```
+
+    - Remplacer `<nom_site>` par le nom du site web.
+    - `ServerAdmin` : Adresse email de l'administrateur du site.
+    - `DocumentRoot` : Chemin du dossier du site web.
+    - `ServerName` : Nom du site web.
+    - **Conseils et astuces**
+      - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers
+      - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache*
+      - Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.
+      - Vous devrez également ajouter en première ligne du fichier de configuration apache `listen <port>` pour chaque site web ainsi que `<VirtualHost *:<port>>` à la place de `<VirtualHost *:80>`.
+    - *Pour plus de détails sur les informations du fichier de configuration, voir la source de se cette documentation et/ou la documentation officielle d'Apache.*
+  - Sauvegarder et quitter.
+- Activer le site web.
+
+  ```bash
+  sudo a2ensite 001-<nom_site>.conf
+  ```
+
+- Désactiver le site par défaut.
+
+  ```bash
+  sudo a2dissite 000-default.conf
+  ```
+
+- Redémarrer Apache.
+
+  ```bash
+  sudo service apache2 restart
+  ```
+
+- Rendez-vous sur votre navigateur et entrez l'adresse IP de votre serveur `http://<adresse_ip>`.
+  - Vous devriez voir la page d'information de PHP.
+
+## MySQL
 
 - Source
 
@@ -381,7 +497,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   sudo dpkg -i mysql-apt-config_0.8.33-1_all.deb
   ```
 
-- Mettre à jour les paquets
+- Mettre à jour les paquets `apt`
 
   ```bash
   sudo  apt  install  mysql-server  -y
@@ -419,7 +535,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   CREATE USER 'db_user'@'localhost' IDENTIFIED BY 'Strong@@password123';
   ```
 
-- Donner les droits à l'utilisateur au base de données et tables que vous souhaitez.
+- Donner les droits à l'utilisateur aux bases de données et tables que vous souhaitez.
 
   ```sql
   GRANT ALL PRIVILEGES ON <database>.<table> TO 'db_user'@'localhost' WITH GRANT OPTION;
@@ -427,6 +543,8 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
 
   - Remplacer `<database>` par le nom de la base de données (ou `*` pour toutes les bases de données).
   - Remplacer `<table>` par le nom de la table (ou `*` pour toutes les tables).
+  - *Je vous recommande de ne pas donner tous les privilèges à l'utilisateur pour des raisons de sécurité.*
+  - *Vous pouvez donner seulement certains privilèges à l'utilisateur en remplaçant `ALL PRIVILEGES` par les privilèges que vous souhaitez donner à l'utilisateur.*
 
 - Mettre à jour les privilèges.
 
@@ -440,7 +558,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   exit
   ```
 
-- Tester la connexion à la base de données.
+- Connecter en tant qu'utilisateur pour tester la connexion à la base de données.
 
   ```bash
   mysql -u db_user -p
@@ -459,7 +577,9 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   exit
   ```
 
-### Composer
+**Pour des raisons de sécurité, il est recommandé de créer un utilisateur pour chaque base de données et de ne pas utiliser l'utilisateur `root` pour les connexions à la base de données.**
+
+## Composer
 
 - [Installation de la dernière version de Composer](https://florobart.github.io/Documentations/src/doc_developpement_web.html#installation-de-la-derni%C3%A8re-version-stable-de-composer---linux)
 
@@ -504,19 +624,14 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   sudo chown -R www-data:www-data /var/www/<nom_projet>
   ```
 
-- Modifier les permissions du dossier de `stockage`
+- Modifier les permissions du dossier de `stockage` et `bootstrap/cache`
 
   ```bash
   sudo chmod -R 777 /var/www/<nom_projet>/storage
-  ```
-
-- Modifier les permissions du dossier de `bootstrap/cache`
-
-  ```bash
   sudo chmod -R 777 /var/www/<nom_projet>/bootstrap/cache
   ```
 
-- Mettre à jour les dépendances de Composer
+- Mettre à jour les dépendances `Composer` et `NPM`
 
   ```bash
   composer update
@@ -548,29 +663,23 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   sudo a2enmod rewrite
   ```
 
-- Créer un fichier de configuration pour le site web Laravel
-
-  ```bash
-  sudo nano /etc/apache2/sites-available/002-<nom_projet>.conf
-  ```
-
-- Changer les permissions et le groupe du dossier
+- Changer le propriétaire et le groupe du dossier de votre projet Laravel
 
   ```bash
   sudo chown -R www-data:www-data /var/www/<nom_projet>
   ```
 
-- Créer un fichier de configuration pour le site web
+- Créer un fichier de configuration apache pour le projet Laravel
 
   ```bash
-  sudo nano /etc/apache2/sites-available/001-<nom_projet>.conf
+  sudo nano /etc/apache2/sites-available/002-<nom_projet>.conf
   ```
 
   - Ajouter le code suivant
 
     ```txt
     <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
+        ServerAdmin admin@mail.com
         DocumentRoot /var/www/<nom_projet>/public
         ServerName <nom_projet>
         ServerAlias www.<nom_projet>
@@ -581,8 +690,8 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
             Require all granted
         </Directory>
 
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        ErrorLog ${APACHE_LOG_DIR}/error.<nom_projet>.log
+        CustomLog ${APACHE_LOG_DIR}/access.<nom_projet>.log combined
     </VirtualHost>
     ```
 
@@ -590,11 +699,13 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
     - `ServerAdmin` : Adresse email de l'administrateur du site
     - `DocumentRoot` : Chemin du dossier du site web
     - `ServerName` : Nom du site web
-    - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers
-    - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache*
+    - **Conseils et astuces**
+      - **Attention :** Sur un site en production, il faudra changer `+Indexes` par `-Indexes` pour désactiver l'indexation des dossiers
+      - *Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache*
+      - Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.
+      - Vous devrez également ajouter en première ligne du fichier de configuration apache `listen <port>` pour chaque site web ainsi que `<VirtualHost *:<port>>` à la place de `<VirtualHost *:80>`.
+    - *Pour plus de détails sur les informations du fichier de configuration, voir la source de se cette documentation et/ou la documentation officielle d'Apache.*
   - Sauvegarder et quitter
-  - Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.
-  - Vous devrez également ajouter en première ligne du fichier de configuration apache `listen <port>` pour chaque site web ainsi que `<VirtualHost *:<port>>` à la place de `<VirtualHost *:80>`.
 - Activer le site web
 
   ```bash
@@ -610,7 +721,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
 - Redémarrer Apache
 
   ```bash
-  sudo service apache2 restart
+  sudo systemctl restart apache2
   ```
 
 ## Licence

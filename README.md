@@ -5,7 +5,7 @@
 - Documentation d'installation, de configuration, d'utilisation et de manipulation de différent logiciels et systèmes d'exploitation
   - [Installation, configuration et utilisation de différent logiciels](src/doc_installation_et_utilisation.html)
   - [Manipulation diverses et résolution de problème en tout genre](src/doc_manipulation.html)
-  - [Création d'un serveur local](src/doc_creation_serveur_local.html)
+  - [Création d'un serveur](src/doc_creation_serveur.html)
   - [Installation et configuration de machine virtuel et système d'exploitation](src/doc_VM_et_OS.html)
   - [Ventoy multi-boot](src/doc_ventoy.html)
   - [Exécution d'application Windows sur Linux](src/doc_windows_on_linux.html)
@@ -42,7 +42,7 @@
 - Documentation d'installation, de configuration, d'utilisation et de manipulation de différent logiciels et systèmes d'exploitation
   - [Installation, configuration et utilisation de différent logiciels](pdf/doc_installation_et_utilisation.pdf)
   - [Manipulation diverses et résolution de problème en tout genre](pdf/doc_manipulation.pdf)
-  - [Création d'un serveur local](pdf/doc_creation_serveur_local.pdf)
+  - [Création d'un serveur](pdf/doc_creation_serveur.pdf)
   - [Installation et configuration de machine virtuel et système d'exploitation](pdf/doc_VM_et_OS.pdf)
   - [Ventoy multi-boot](pdf/doc_ventoy.pdf)
   - [Exécution d'application Windows sur Linux](pdf/doc_windows_on_linux.pdf)
