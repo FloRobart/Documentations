@@ -340,7 +340,7 @@ Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à 
   sudo apt install libapache2-mod-php
   ```
 
-- Activer des module PHP comme GD
+- Activer des module PHP comme GD si nécessaire.
 
   ```bash
   sudo vim /etc/php/8.2/apache2/php.ini 
