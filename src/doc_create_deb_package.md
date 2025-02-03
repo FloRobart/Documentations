@@ -200,12 +200,14 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
     Reporter les bogues par mail à l\'adresse \<email@gmail.com\>
     ```
 
-- Convertissez votre fichier en fichier Roff
+- Convertissez votre fichier texte ou markdown en fichier Roff avec txt2man
 
   ```shell
   txt2man -t <nom_du_fichier> > <nom_du_fichier>.1
   ```
-
+ 
+  - ou avec pandoc
+ 
   ```shell
   pandoc ‐-from markdown ‐-to roff <nom_fichier_source> -o <nom_fichier_destination>.1
   ```
@@ -226,7 +228,7 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
   - Attention, le nom du fichier `.1.gz` doit obligatoirement être le nom de la commande que vous avez créer. Dans mon cas le nom de la commande est `mvnl` donc le nom du fichier `.1.gz` doit être `mvnl.1.gz`
 
   ```shell
-  gzip <nom_du_fichier>.1 > <nom_du_fichier>.1.gz
+  gzip -k <nom_du_fichier>.1 > <nom_du_fichier>.1.gz
   ```
 
 - Pour que la commande `man` fonctionne il faut placer le fichier `.1.gz` dans le dossier `/usr/local/man/<langue>/man1/`.
