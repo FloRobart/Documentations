@@ -72,6 +72,22 @@ commande, extrait code et extrait de fichier
 
 ### Configuration du client SSH
 
+- Générer une clé SSH :
+
+  ```shell
+  ssh-keygen -t rsa -b 4096 -C "votre adresse mail"
+  ```
+
+- laisser vide les trois champs suivant :
+
+  > Enter file in which to save the key (/home/$USER/.ssh/id_rsa):
+
+  > Enter passphrase (empty for no passphrase):
+
+  > Enter same passphrase again:
+
+- Ajouter la clé public (présente dans le fichier `~/.ssh/id_rsa.pub`) sur le serveur SSH.
+
 ### Configuration du serveur SSH
 
 ## Utilisation de SSH
