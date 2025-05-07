@@ -383,7 +383,7 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
   git remote add upstream <url/to/depos>
   ```
 
-- Comparer les modifications ?
+- Récupérer les informations du dépos orginal (nom des branchs, étiquette, ...)
 
   ```sh
   git fetch upstream
