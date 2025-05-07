@@ -37,6 +37,7 @@ commande, extrait code et extrait de fichier
     - [Remplacer la branch master par une autre branch](#remplacer-la-branch-master-par-une-autre-branch)
     - [Mise en attente de changements](#mise-en-attente-de-changements)
     - [Retourner à un commit précédent](#retourner-à-un-commit-précédent)
+    - [Tirer (Pull) la nouvelle version d'un repertoire forked](#tirer-pull-la-nouvelle-version-dun-repertoire-forked)
     - [Création d'un workflow Github pour Laravel](#création-dun-workflow-github-pour-laravel)
   - [Erreur](#erreur)
     - [Erreur d'authentification HTTPS](#erreur-dauthentification-https)
@@ -369,6 +370,38 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
 
   ```shell
   git push --force
+  ```
+
+### Tirer (Pull) la nouvelle version d'un repertoire forked
+
+- Source
+  > <https://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository>
+
+- Créer une nouvelle télécommande (Remote) nommer `upstream` qui pointe vers l'url du dépos original
+
+  ```sh
+  git remote add upstream <url/to/depos>
+  ```
+
+- Comparer les modifications ?
+
+  ```sh
+  git fetch upstream
+  ```
+
+- Récupérer les modification en local
+
+  ```sh
+  git merge upstream/<orginal-branch> <local-branch>
+  ```
+
+  - `<orginal-branch>` : Branch du dépos original à récupérer (souvent `master`)
+  - `<local-branch>` : Branch local sur laquelle vous voulez récupérer les modifications (souvent identique à `<orginal-branch>`)
+
+- Pousser (Push) les modifications vers votre dépos forked
+
+  ```sh
+  git push
   ```
 
 ### Création d'un workflow Github pour Laravel
