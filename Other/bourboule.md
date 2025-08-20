@@ -1,6 +1,6 @@
 # Activité la Bourboule
 
-- Source : https://sancy.com
+- Source : [https://sancy.com](https://sancy.com)
 - Prix : par personne
 
 | Nom | Horaire | Prix | Site web |
