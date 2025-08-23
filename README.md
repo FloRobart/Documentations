@@ -83,6 +83,12 @@
 - [Script IUT Le Havre](https://github.com/FloRobart/Script_IUT_Le-Havre)
 - [Zone de dessin partagé](https://github.com/FloRobart/Drawing_area_android)
 
+## Autres
+
+### Vacances
+
+- [Activité et restaurants la Bourboule](Other/bourboule.html)
+
 ## Licence
 
 README.md
