@@ -53,9 +53,10 @@ commande, extrait code et extrait de fichier
   - [Installation de Scoop - Windows](#installation-de-scoop---windows)
   - [Installation de Jekyll - Linux](#installation-de-jekyll---linux)
   - [Installation de Discord - Linux](#installation-de-discord---linux)
-  - [Installation de VirtualBox](#installation-de-virtualbox)
+  - [Installation de VirtualBox sur Linux (Ubuntu)](#installation-de-virtualbox-sur-linux-ubuntu)
     - [Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`](#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt)
     - [Installation en téléchargeant le fichier deb](#installation-en-téléchargeant-le-fichier-deb)
+    - [Activer VirtualBox avec le secure boot](#activer-virtualbox-avec-le-secure-boot)
   - [GParted](#gparted)
     - [Installation de GParted - Linux](#installation-de-gparted---linux)
     - [Allouée la partition grace à GParted - Linux](#allouée-la-partition-grace-à-gparted---linux)
@@ -523,7 +524,7 @@ script d’information sur le système, en ligne de commande
     sudo dpkg -i discord-*.deb
     ```
 
-## Installation de VirtualBox
+## Installation de VirtualBox sur Linux (Ubuntu)
 
 ### Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets `apt`
 
@@ -595,6 +596,104 @@ script d’information sur le système, en ligne de commande
   ```shell
   sudo dpkg -i virtualbox-*.deb
   ```
+
+### Activer VirtualBox avec le secure boot
+
+- Si vous recevez se message d'erreur
+
+  ```txt
+  Kernel driver not installed (rc=-1908)
+  
+  The VirtualBox Linux kernel driver is either not loaded or not set up correctly. Please try setting it up again by executing
+  
+  '/sbin/vboxconfig' as root.
+  
+  If your system has EFI Secure Boot enabled you may also need to sign the kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) before you can load them. Please see your Linux system's documentation for more information.
+  
+  where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT.
+  ```
+
+  - Cela signifi que probablement que le secure boot est activé. Vous devrez donc recompiler certains modules de VirtualBox ainsi que les signées
+- Mettez à jour vos paquet
+  
+  ```shell
+  sudo at update && sudo apt upgrade
+  ```
+
+- Créer un dossier pour stocker les clés de signature
+
+  ```shell
+  sudo mkdir /root/module-signing
+  ```
+
+- Connecter vous en tant que root et acceder au dossier que vous venez de créer
+
+  ```shell
+  sudo su
+  cd /root/module-signing
+  ```
+
+- Générer une clé de signature
+
+  ```shell
+  openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=Module Sign Key/"
+  ```
+
+- Enregistrer les clés auprès du secure boot
+
+  ```shell
+  sudo mokutil --import MOK.der
+  ```
+
+- Choisir un mot de passe (préférer un mot de passe sans majuscule ni chiffre)
+- Redémarrer votre ordinateur
+- Une page bleu apparait
+- Selectionner l'option `Enroll MOK`
+- Selectionner `Continuer`
+- Selectionner `Yes`
+- Entrer le mot de passe précédemment créer
+- Selectionner `Reboot`
+- Une fois l'ordinateur redémarrer
+- Ouvrer un terminal
+- Compiler et signer les modules VirtualBox
+
+  ```shell
+  sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 \
+  /root/module-signing/MOK.priv \
+  /root/module-signing/MOK.der \
+  $(modinfo -n vboxdrv)
+  ```
+
+  ```shell
+  sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 \
+  /root/module-signing/MOK.priv /root/module-signing/MOK.der $(modinfo -n vboxnetflt)
+  ```
+
+  ```shell
+  sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 \
+  /root/module-signing/MOK.priv /root/module-signing/MOK.der $(modinfo -n vboxnetadp)
+  ```
+
+- Recharger les modules
+
+  ```shell
+  sudo modprobe vboxdrv
+  ```
+
+- Vérifier que les modules existes bien
+
+  ```shell
+  lsmod | grep vbox
+  ```
+
+  - Résultat attendu
+
+    ```txt
+    vboxdrv               696320  0
+    ```
+  
+  - Si rien n'est affiché c'est qu'aucun module n'a été trouver
+- Vous pouvez maintenant lancer votre Machine Virtuel
 
 ## GParted
 
