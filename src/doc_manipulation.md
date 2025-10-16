@@ -470,6 +470,22 @@ snap-store --quit && sudo snap refresh snap-store
   sudo apt --fix-broken install
   ```
 
+  - Si se message d'erreur s'affiche :
+
+    ```txt
+    Lecture des listes de paquets... Fait
+    Construction de l'arbre des dépendances... Fait
+    Lecture des informations d'état... Fait      
+    E: Le paquet <package_name> doit être réinstallé, mais il est impossible de trouver son archive.
+    ```
+
+    - C'est que le paquet est cassé et qu'il faut le supprimer de la façon décrite ci-dessous
+- Si un paquet est cassé et en état de réinstallation obligatoire (reinstreq), vous pouvez le supprimer avec la commande suivante :
+
+  ```shell
+  sudo dpkg --remove --force-remove-reinstreq <package_name>
+  ```
+
 ## Rendre l'adresse IP statique sur Ubuntu - Linux
 
 - Source
