@@ -143,16 +143,26 @@ commande, extrait code et extrait de fichier
 
 ### Transfert de fichier
 
-- Transférer un fichier vers un serveur SSH :
+- Transférer un fichier depuis l'hôte vers un serveur SSH :
 
-  ```bash
-  scp <fichier> <user>@<host>:<destination>
+  ```sh
+  scp <fichier> <user>@<host>:<destination> -P <port>
   ```
 
   - `<fichier>` : Fichier local à transférer
   - `<user>` : Nom d'utilisateur à utiliser sur le serveur
   - `<host>` : Adresse IP ou nom de domaine
   - `<destination>` : Destination du fichier sur le serveur
+- Transférer un fichier depuis un serveur SSH vers l'hôte :
+
+  ```sh
+  scp -P 7518 <user>@<host>:<fichier> <destination>
+  ```
+
+  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+  - `<host>` : Adresse IP ou nom de domaine
+  - `<fichier>` : Fichier distant à transférer sur l'hôte
+  - `<destination>` : Destination du fichier en local
 
 ### Monter un système de fichier distant
 
