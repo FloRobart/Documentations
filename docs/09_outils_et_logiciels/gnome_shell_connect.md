@@ -61,7 +61,7 @@ GSConnect est un outils incroyable de permet de faire énormément de choses ent
 - Assurez-vous que le smartphone et l'ordinateur sont connectés au même réseau
 - Assurez-vous que l'extension est activée dans les paramètres de Gnome Shell
 
-  ![Image kde_connect_activation](../Images/kde_connect_activation.png)
+  ![Image kde_connect_activation](../images/kde_connect_activation.png)
 
 - Ouvrir l'application `KDE Connect` sur le smartphone
 - Cliquer sur le nom de l'ordinateur dans la liste des appareils disponibles

@@ -80,7 +80,7 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
   - Créer les dossiers nécessaires dans le dossier du projet, par exemple si vous voulez créer une commande `mvnl` il faut que le fichier de commande est pour nom `mvnl` et qu'il soit dans le dossier `/usr/bin/`. Donc il faut créer le dossier `usr/bin/` dans le dossier du projet et y mettre le fichier `mvnl`. Ceci est du au fait que quand le fichier deb sera installer, les fichiers seront copier dans le système de fichier de l'ordinateur en respectant l'arborescence du dossier du projet.
 - Exemple d'arborescence de dossier du projet
 
-  ![Arborescence de dossier du projet](../Images/maven_lite_arbo.png)
+  ![Arborescence de dossier du projet](../images/maven_lite_arbo.png)
 
 - Créer le fichier deb
 

@@ -88,7 +88,7 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
 - Vous devrier voir '`Java › Configuration: Runtimes`'
 - Cliquer sur '`Modifier dans setting.json`'
 
-  !["Image des paramètres de vs code"](../Images/java_config_jdk.png "Image des paramètres de vs code")
+  !["Image des paramètres de vs code"](../images/java_config_jdk.png "Image des paramètres de vs code")
 
 - Ajouter la valeur de java home dans le fichier `settings.json` comme montrer ci-dessous :
 

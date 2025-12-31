@@ -86,7 +86,7 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 - Activez les droits d'exécution du logiciel : clic droit sur '`VentoyGUI.x86_64`' > '`propriété`' > '`Permissions`' > cochez '`Autoriser l'exécution du fichier comme un programme`'
 - Lancer le logiciel en mode GUI : Double cliquer sur le fichier `VentoyGUI.x86_64`
 
-  !["Image du GUI de Ventoy abscente"](../Images/ventoy_gui.png "Image du GUI de Ventoy")
+  !["Image du GUI de Ventoy abscente"](../images/ventoy_gui.png "Image du GUI de Ventoy")
 
 - Si l'anglais ne vous cinvient pas allez dans le menu '`Language`' puis choisir la langue qui vous convient
 - Sélectionner la clé USB dans la liste déroulante '`Périphérique`'

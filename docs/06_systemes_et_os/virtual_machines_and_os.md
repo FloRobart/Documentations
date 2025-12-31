@@ -214,7 +214,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Nommer la valeur "`BypassRamCheck`"
 - Double cliquer sur la valeur '`BypassRamCheck`' puis saisir "`1`" dans le champ `Données de la valeur`
 - Vous devriez avoir ceci :
-  !["Image editeur du registre windows 11"](../Images/virtualbox_installation_windows_11.png "Image de l'éditeur du registre de Windows 11")
+  !["Image editeur du registre windows 11"](../images/virtualbox_installation_windows_11.png "Image de l'éditeur du registre de Windows 11")
 - Fermez l'éditeur du registre et l'invite de commande pour continuer l'installation de Windows 11
 - Cliquer sur '`Je n'ai pas de clé de produit (Product Key)`'
 - Sélectionner la version de Windows 11 que vous voulez installer, dans mon cas j'ai sélectionner '`Windows 11 Famille`'

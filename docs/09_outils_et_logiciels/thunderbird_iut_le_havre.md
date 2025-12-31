@@ -1,4 +1,4 @@
-# Connexion d'une imprimante HP (Deskjet 3733) au wifi
+# Instalation et configuration de thunderbird pour l'IUT
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
@@ -15,18 +15,50 @@
 commande, extrait code et extrait de fichier
 ```
 
-- connecter l'ordinateur au réseau auquel va être connecter l'imprimante.
-- appuyer pendant 3 secondes sur le bouton "Sans fil" et "Annuler" de l'imprimante
+<div class="page"></div>
 
-<img src="../Images/sans_fil.png" alt="Image du bouton Sans fil" width="50" height="50">
-<img src="../Images/annuler.png" alt="Image du bouton Annuler" width="50" height="50">
+## Table des matières
 
-- Allez dans l'applications `hp smart` et cliquer sur le bouton `Ajouter une imprimante` en haut au milieu.
-- Votre imprimante devrait apparaître dans la liste des imprimantes disponibles, cliquer dessus puis suivez les instructions.
+****
+
+- [Instalation et configuration de thunderbird pour l'IUT](#instalation-et-configuration-de-thunderbird-pour-liut)
+  - [Règles](#règles)
+  - [Table des matières](#table-des-matières)
+  - [Installation de thunderbird](#installation-de-thunderbird)
+  - [Configuration de thunderbird pour l'IUT](#configuration-de-thunderbird-pour-liut)
+  - [Licence](#licence)
+
+<div class="page"></div>
+
+## Installation de thunderbird
+
+- Installer le paquet du dépot `apt` :
+
+  ```shell
+  sudo apt install thunderbird thunderbird-locale-fr
+  ```
+
+## Configuration de thunderbird pour l'IUT
+
+Au premier lancemant de thunderbird, il faut configurer le compte mail.
+
+- Remplir les champs suivants :
+  - `Votre nom complet` : "`Prénom Nom`"
+  - `Adresse e-mail` : "`Prénom.nom@etu.univ-lehavre.fr`"
+  - `Mot de passe` : "`Mot de passe`"
+- Cliquer sur `Continuer`
+- Remplisser les champs du serveur entrant
+  ![Serveur entrant](../images/thunderbird_serveur_entrant.png)
+
+- Remplisser les champs du serveur sortant
+  ![Serveur sortant](../images/thunderbird_serveur_sortant.png)
+
+- Cliquer sur `Terminé`
+- Cliquer à nouveau sur `Terminé`
 
 ## Licence
 
-doc_connexion_imprimante_hp.md
+doc_thunderbird_iut.md
 
 Copyright (C) 2024 Floris Robart
 
