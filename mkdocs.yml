@@ -1,0 +1,111 @@
+site_name: Documentation Floris
+site_description: Documentation personnelle sur divers sujets informatiques et autres centres d'intérêt.
+site_author: Floris Robart
+repo_url: https://github.com/FloRobart/Documentations
+repo_name: Florobart/Documentation
+
+docs_dir: docs
+site_dir: site
+
+theme:
+    name: mkdocs
+    features:
+        - navigation.tabs
+        - navigation.sections
+        - navigation.top
+        - navigation.instant
+        - toc.follow
+        - content.code.copy
+    locale: fr
+    user_color_mode_toggle: true
+    color_mode:
+        default_mode: auto
+        disable_switch: false
+    highlightjs: true
+    hljs_style: github
+    hljs_style_dark: github-dark
+
+extra_css:
+    - css/custom.css
+
+plugins:
+    - search:
+        lang: fr
+    - awesome-pages
+
+markdown_extensions:
+    - toc:
+        permalink: true
+        toc_depth: 4
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.tabbed
+    - footnotes
+    - tables
+    - attr_list
+
+nav:
+    - Accueil: index.md
+
+    - Meta & règles:
+        - Vue d’ensemble: 00_meta/all_project.md
+        - Règles de documentation: 00_meta/documentation_rules.md
+
+    - Gestion de projet:
+        - Gestion de projet: 01_gestion_de_projet/project_management.md
+        - Création d’entreprise: 01_gestion_de_projet/company_creation.md
+
+    - Développement:
+        - Bonnes pratiques de code: 02_developpement/coding_best_practices.md
+        - Développement web: 02_developpement/web_development.md
+        - Mise sous licence: 02_developpement/doc_mise_sous_licence.md
+
+    - Frameworks & langages:
+        - Backend:
+            - Java: 03_frameworks_et_langages/backend/java.md
+            - Laravel: 03_frameworks_et_langages/backend/laravel.md
+            - Symfony: 03_frameworks_et_langages/backend/symfony.md
+            - CodeIgniter: 03_frameworks_et_langages/backend/codeigniter.md
+        - Frontend:
+            - React: 03_frameworks_et_langages/frontend/react.md
+
+    - DevOps & conteneurs:
+        - Docker: 04_devops_et_conteneurs/docker.md
+        - Création de paquet .deb: 04_devops_et_conteneurs/deb_package_creation.md
+        - Création de serveur: 04_devops_et_conteneurs/doc_creation_serveur.md
+
+    - Bases de données:
+        - PostgreSQL: 05_bases_de_donnees/postgresql.md
+        - Migrations & seeders: 05_bases_de_donnees/migrations_and_seeders_by_tanvir.md
+
+    - Systèmes & OS:
+        - Machines virtuelles & OS: 06_systemes_et_os/virtual_machines_and_os.md
+        - Windows sur Linux: 06_systemes_et_os/windows_on_linux.md
+        - Android OS (flashing): 06_systemes_et_os/android_os_flashing.md
+        - Ventoy: 06_systemes_et_os/ventoy.md
+        - Manipulations générales: 06_systemes_et_os/general_manipulation.md
+
+    - Réseau & sécurité:
+        - SSH: 07_reseau_et_securite/ssh.md
+        - Sécurité Windows: 07_reseau_et_securite/windows_security.md
+
+    - Outils & logiciels:
+        - Git: 09_outils_et_logiciels/git.md
+        - VS Code: 09_outils_et_logiciels/vscode.md
+        - Thunderbird (IUT Le Havre): 09_outils_et_logiciels/thunderbird_iut_le_havre.md
+        - GNOME Shell Connect: 09_outils_et_logiciels/gnome_shell_connect.md
+        - Installation & utilisation: 09_outils_et_logiciels/installation_usage.md
+
+    - Matériel:
+        - Imprimante HP: 10_materiel/hp_printer_setup.md
+
+    - Autres:
+        - Page don Téléthon: 98_others/doc_creation_page_don_telethon.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Florobart
