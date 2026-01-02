@@ -265,7 +265,7 @@ Vous avez maintenant une clé USB vierge avec 1 partition non allouée
 
 - Vérifier que vous êtes bien sur Ubuntu 23.04 grâce à la commande suivante
 
-  **Il peut être nécessaire de l'installer (via [le packet apt neofetch](./doc_installation.md#installation-de-neofetch---linux))**
+  **Il peut être nécessaire de l'installer (via [le packet apt neofetch](../../06_systemes_et_os/doc_installation.md#installation-de-neofetch---linux))**
 
   ```shell
   neofetch
@@ -298,15 +298,15 @@ Vous avez maintenant une clé USB vierge avec 1 partition non allouée
 
 - Ouvrez le logiciel `Logiciels et mise à jour` (en anglais `Software & Updates`)
 
-  !["Image de l'icon du logiciel de mise à jour de Ubuntu"](../images/icon_ubuntu_software_and_update.png "Image de l'icon du logiciel de mise à jour de Ubuntu")
+  !["Image de l'icon du logiciel de mise à jour de Ubuntu"](../../images/icon_ubuntu_software_and_update.png "Image de l'icon du logiciel de mise à jour de Ubuntu")
 
 - Allez dans l'onglet '`Mise à jour`'
 
-  !["Image du logiciel de mise à jour de Ubuntu"](../images/logiciel_ubuntu_software_and_update.png "Image du logiciel de mise à jour de Ubuntu")
+  !["Image du logiciel de mise à jour de Ubuntu"](../../images/logiciel_ubuntu_software_and_update.png "Image du logiciel de mise à jour de Ubuntu")
 
 - Changer la valeur de '`Me prévenir lorsqu'une nouvelle version d'Ubuntu est disponible`' en '`Pour chaque nouvelle version`'
 
-  !["Image de la section mise à jour du logiciel de mise à jour de Ubuntu"](../images/a_changer_dans_ubuntu_software_and_update.png "Image de la section mise à jour du logiciel de mise à jour de Ubuntu")
+  !["Image de la section mise à jour du logiciel de mise à jour de Ubuntu"](../../images/a_changer_dans_ubuntu_software_and_update.png "Image de la section mise à jour du logiciel de mise à jour de Ubuntu")
 
 - Fermer le logiciel de mise à jour
 - Ouvrer un terminal
@@ -400,7 +400,7 @@ Vous avez maintenant une clé USB vierge avec 1 partition non allouée
 
 ### Avec une application tierce
 
-[Modifier l'action du click avec une application tierce](./doc_installation_et_utilisation.md#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome)
+[Modifier l'action du click avec une application tierce](../../06_systemes_et_os/doc_installation_et_utilisation.md#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome)
 
 ## Désinstallation de fichier deb
 

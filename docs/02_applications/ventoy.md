@@ -79,8 +79,8 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 ## Création d'une clé bootable avec Ventoy
 
 - Brancher la clé USB
-- [Réinitialiser la clé USB](./doc_manipulation.md#réinitialiser-une-clé-usb-ou-un-disque-dur)
-- [Formater la clé USB en EXT4](./doc_manipulation.md#allouée-la-partition-grace-à-gparted)
+- [Réinitialiser la clé USB](../06_systemes_et_os/doc_manipulation.md#réinitialiser-une-clé-usb-ou-un-disque-dur)
+- [Formater la clé USB en EXT4](../06_systemes_et_os/doc_manipulation.md#allouée-la-partition-grace-à-gparted)
 - Ouvrez le gestionnaire de fichier
 - Placer vous dans le dossier `/opt/ventoy-<version>/`
 - Activez les droits d'exécution du logiciel : clic droit sur '`VentoyGUI.x86_64`' > '`propriété`' > '`Permissions`' > cochez '`Autoriser l'exécution du fichier comme un programme`'

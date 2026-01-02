@@ -1,4 +1,4 @@
-# Documentation complète pour le développement web
+# Documentation complète pour le développement web avec PHP
 
 <a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
 
@@ -21,7 +21,7 @@ commande, extrait code et extrait de fichier
 
 ****
 
-- [Documentation complète pour le développement web](#documentation-complète-pour-le-développement-web)
+- [Documentation complète pour le développement web avec PHP](#documentation-complète-pour-le-développement-web-avec-php)
   - [Règles](#règles)
   - [Table des matières](#table-des-matières)
   - [PHP](#php)
@@ -488,19 +488,19 @@ commande, extrait code et extrait de fichier
 
 ### Laravel
 
-[Documentation Laravel](./doc_laravel.md)
+[Documentation Laravel](../../02_developpement/doc_laravel.md)
 
 ### Symfony
 
-[Documentation Symfony](./doc_symfony.md)
+[Documentation Symfony](../../02_developpement/doc_symfony.md)
 
 ### React
 
-[Documentation React](./doc_react.md)
+[Documentation React](../../02_developpement/doc_react.md)
 
 ### CodeIgniter
 
-[Documentation CodeIgniter](./doc_codeigniter.md)
+[Documentation CodeIgniter](../../02_developpement/doc_codeigniter.md)
 
 ## Licence
 

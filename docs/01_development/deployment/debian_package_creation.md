@@ -80,7 +80,7 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
   - Créer les dossiers nécessaires dans le dossier du projet, par exemple si vous voulez créer une commande `mvnl` il faut que le fichier de commande est pour nom `mvnl` et qu'il soit dans le dossier `/usr/bin/`. Donc il faut créer le dossier `usr/bin/` dans le dossier du projet et y mettre le fichier `mvnl`. Ceci est du au fait que quand le fichier deb sera installer, les fichiers seront copier dans le système de fichier de l'ordinateur en respectant l'arborescence du dossier du projet.
 - Exemple d'arborescence de dossier du projet
 
-  ![Arborescence de dossier du projet](../images/maven_lite_arbo.png)
+  ![Arborescence de dossier du projet](../../images/maven_lite_arbo.png)
 
 - Créer le fichier deb
 
@@ -94,7 +94,7 @@ Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous 
 
 - Tutoriel source
   ><https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/>
-- [Installer le paquet `txt2man`](./doc_installation.md#installation-de-txt2man---linux)
+- [Installer le paquet `txt2man`](../../04_devops_et_conteneurs/doc_installation.md#installation-de-txt2man---linux)
 - Créer un fichier texte ou markdown avec les informations de la page de manuel
   - Exemple de fichier markdown avec Maven Lite
     - Les titres de niveau 1 sont obligatoires. Ce sont des conventions des pages de manuel.

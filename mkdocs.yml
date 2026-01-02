@@ -47,65 +47,62 @@ markdown_extensions:
     - tables
     - attr_list
 
-nav:
-    - Accueil: index.md
-
-    - Meta & règles:
-        - Vue d’ensemble: 00_meta/all_project.md
-        - Règles de documentation: 00_meta/documentation_rules.md
-
-    - Gestion de projet:
-        - Gestion de projet: 01_gestion_de_projet/project_management.md
-        - Création d’entreprise: 01_gestion_de_projet/company_creation.md
-
-    - Développement:
-        - Bonnes pratiques de code: 02_developpement/coding_best_practices.md
-        - Développement web: 02_developpement/web_development.md
-        - Mise sous licence: 02_developpement/doc_mise_sous_licence.md
-
-    - Frameworks & langages:
-        - Backend:
-            - Java: 03_frameworks_et_langages/backend/java.md
-            - Laravel: 03_frameworks_et_langages/backend/laravel.md
-            - Symfony: 03_frameworks_et_langages/backend/symfony.md
-            - CodeIgniter: 03_frameworks_et_langages/backend/codeigniter.md
-        - Frontend:
-            - React: 03_frameworks_et_langages/frontend/react.md
-
-    - DevOps & conteneurs:
-        - Docker: 04_devops_et_conteneurs/docker.md
-        - Création de paquet .deb: 04_devops_et_conteneurs/deb_package_creation.md
-        - Création de serveur: 04_devops_et_conteneurs/doc_creation_serveur.md
-
-    - Bases de données:
-        - PostgreSQL: 05_bases_de_donnees/postgresql.md
-        - Migrations & seeders: 05_bases_de_donnees/migrations_and_seeders_by_tanvir.md
-
-    - Systèmes & OS:
-        - Machines virtuelles & OS: 06_systemes_et_os/virtual_machines_and_os.md
-        - Windows sur Linux: 06_systemes_et_os/windows_on_linux.md
-        - Android OS (flashing): 06_systemes_et_os/android_os_flashing.md
-        - Ventoy: 06_systemes_et_os/ventoy.md
-        - Manipulations générales: 06_systemes_et_os/general_manipulation.md
-
-    - Réseau & sécurité:
-        - SSH: 07_reseau_et_securite/ssh.md
-        - Sécurité Windows: 07_reseau_et_securite/windows_security.md
-
-    - Outils & logiciels:
-        - Git: 09_outils_et_logiciels/git.md
-        - VS Code: 09_outils_et_logiciels/vscode.md
-        - Thunderbird (IUT Le Havre): 09_outils_et_logiciels/thunderbird_iut_le_havre.md
-        - GNOME Shell Connect: 09_outils_et_logiciels/gnome_shell_connect.md
-        - Installation & utilisation: 09_outils_et_logiciels/installation_usage.md
-
-    - Matériel:
-        - Imprimante HP: 10_materiel/hp_printer_setup.md
-
-    - Autres:
-        - Page don Téléthon: 98_others/doc_creation_page_don_telethon.md
-
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Florobart
+
+nav:
+    - Accueil: index.md
+    - Meta & règles:
+        - Tous mes projets: 00_meta/all_project.md
+        - Règles de documentation: 00_meta/documentation_rules.md
+    - Développement:
+        - Gestion de projets:
+            - Outils de gestion de projets : 01_development/project_management/project_management_tools.md
+        - Database:
+            - PostgreSQL : 01_development/database/postgresql.md
+            - Migration Laravel : 01_development/database/migrations_and_seeders_by_tanvir.md
+        - Back-end:
+            - Java : 01_development/backend/java.md
+            - Laravel : 01_development/backend/laravel.md
+            - Symfony : 01_development/backend/symfony.md
+            - CodeIgniter: 01_development/backend/codeigniter.md
+        - Front-end:
+            - React : 01_development/frontend/react.md
+        - Déploiement:
+            - Docker : 01_development/deployment/docker.md
+            - Creation de packets Debian : 01_development/deployment/debian_package_creation.md
+            - Mise sous licence d'un projet open source: 01_development/deployment/open_source_licensing_gnu_gpl.md
+        - Autres:
+            - Bonne pratiques de développement by ChatGPT : 01_development/others/coding_best_practices_by_chatgpt.md
+            - Developpement web en PHP: 01_development/others/web_development_php.md
+    - Applications:
+        - Installation d'applications Linux divers: 02_applications/installation_usage.md
+        - Git: 02_applications/git.md
+        - SSH: 02_applications/ssh.md
+        - Visual Studio Code: 02_applications/vscode.md
+        - Gnome Shell Connect (GSC): 02_applications/gnome_shell_connect.md
+        - Ventoy: 02_applications/ventoy.md
+        - Connection d'une imprimante HP: 02_applications/hp_printer_connection.md
+        - Configuration de Thunderbird pour l'IUT du Havre: 02_applications/thunderbird_iut_le_havre.md
+    - Systèmes:
+        - Server:
+            - Création d'un serveur web PHP: 03_system/server/php_web_server_creation.md
+        - Linux:
+            - Création d'un dual boot: 03_system/linux/dual_boot.md
+            - Utilisation d'outils windows sous Linux: 03_system/linux/windows_on_linux.md
+        - Windows:
+            - Contournement des sécurités Windows: 03_system/windows/windows_security.md
+        - Android:
+            - Flashing d'un appareil Android: 03_system/android/flashing_android_device.md
+        - Machines virtuelles:
+            - Machines virtuels avec VirtualBox: 03_system/virtual_machine/virtual_machines.md
+        - Autres:
+            - Resolution de problèmes divers sous Linux: 03_system/others/general_manipulation.md
+    - Entrepreneuriat:
+        - Creation d'une entreprise pour le developpement: 04_entrepreneuriat/company_creation_for_development.md
+    - Electronique:
+        - Aucune documentation pour le moment: Aucune documentation pour le moment.
+    - Autres:
+        - Page don Téléthon: 98_others/creation_page_don_telethon.md

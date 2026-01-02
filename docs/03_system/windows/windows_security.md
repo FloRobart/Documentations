@@ -1,28 +1,10 @@
 # Hacking Windows 10 (et antérieur)
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
 ****
 
 - [Hacking Windows 10 (et antérieur)](#hacking-windows-10-et-antérieur)
-  - [Règles](#règles)
   - [Table des matières](#table-des-matières)
   - [Déverrouiller le compte administrateur](#déverrouiller-le-compte-administrateur)
     - [Première méthode (Testé sur Windows 10 22h2 sur VirtualBox)](#première-méthode-testé-sur-windows-10-22h2-sur-virtualbox)
@@ -62,7 +44,7 @@ commande, extrait code et extrait de fichier
   net localgroup administrateurs [nom du compte] /add
   ```
 
-=================================================================================
+****
 
 on peux ajouter n'importe qu'elle programme dans `'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run'` pour qu'il se lance au démarrage de windows
 

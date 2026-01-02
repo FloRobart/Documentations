@@ -73,8 +73,8 @@ commande, extrait code et extrait de fichier
   sudo apt install php php-cli php-common php-mbstring php-xml php-zip php-mysql php-pgsql php-sqlite3 php-json php-bcmath php-gd php-tokenizer php-xmlwriter
   ```
 
-- [Installer Composer](./doc_developpement_web.md#composer)
-- [Installer le serveur web Apache pour php](./doc_developpement_web.md#apache)
+- [Installer Composer](../../03_frameworks_et_langages/backend/doc_developpement_web.md#composer)
+- [Installer le serveur web Apache pour php](../../03_frameworks_et_langages/backend/doc_developpement_web.md#apache)
 
 ### Installation de Laravel CLI
 
@@ -160,7 +160,7 @@ commande, extrait code et extrait de fichier
 
 ### Migrations
 
-- [Source](doc_migration_et_seeder_by_tanvir.html)
+- [Source](../../03_frameworks_et_langages/backend/doc_migration_et_seeder_by_tanvir.html)
 
 Les migrations sont des fichiers qui permettent de creer, modifier ou supprimer des tables dans une base de donnees. Les migrations sont executees en premier lieu pour configurer la base de donnees de l'application.
 
@@ -232,7 +232,7 @@ Si vous voulez modifier une table existante, il ne faut pas modifier la migratio
 
 ### Seeders
 
-- [Source](doc_migration_et_seeder_by_tanvir.html)
+- [Source](../../03_frameworks_et_langages/backend/doc_migration_et_seeder_by_tanvir.html)
 
 Un seeder est un fichier qui permet de remplir les tables de la base de donnees avec des donnees. Les seeders sont executees apres les migrations pour fournir des donnees a l'application.
 

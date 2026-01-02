@@ -80,7 +80,7 @@ commande, extrait code et extrait de fichier
 
 ## Installation Ventoy (Multi-boot USB) - Linux
 
-[Documentation complète de Ventoy](./doc_ventoy.md)
+[Documentation complète de Ventoy](../09_outils_et_logiciels/doc_ventoy.md)
 
 ## Installation de Chrome - Linux
 
@@ -707,7 +707,7 @@ script d’information sur le système, en ligne de commande
 
 ### Allouée la partition grace à GParted - Linux
 
-- [Installer GParted](./doc_installation.md#installation-de-gparted---linux)
+- [Installer GParted](../09_outils_et_logiciels/doc_installation.md#installation-de-gparted---linux)
 - Ouvrez GParted
 - Dans la liste déroulante en haut à droite, sélectionnez la clé USB
 - Clique droit sur la partition non allouée

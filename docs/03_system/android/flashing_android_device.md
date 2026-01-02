@@ -1,28 +1,10 @@
 # Flashing Android OS
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
 ****
 
 - [Flashing Android OS](#flashing-android-os)
-  - [Règles](#règles)
   - [Table des matières](#table-des-matières)
   - [Information générale](#information-générale)
   - [Licence](#licence)
