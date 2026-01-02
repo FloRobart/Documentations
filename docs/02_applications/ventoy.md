@@ -1,38 +1,16 @@
 # Documentation de Ventoy
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Documentation de Ventoy](#documentation-de-ventoy)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Description de Ventoy](#description-de-ventoy)
-  - [Installation de Ventoy (Multi-boot USB) - Linux](#installation-de-ventoy-multi-boot-usb---linux)
-  - [Utilisation de Ventoy](#utilisation-de-ventoy)
-  - [Création d'une clé bootable avec Ventoy](#création-dune-clé-bootable-avec-ventoy)
-  - [Ajouter des ISO dans la clé USB bootable préalablement créée avec Ventoy](#ajouter-des-iso-dans-la-clé-usb-bootable-préalablement-créée-avec-ventoy)
-  - [Démarrer un ordinateur sur une clé USB bootable créée avec Ventoy](#démarrer-un-ordinateur-sur-une-clé-usb-bootable-créée-avec-ventoy)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Description de Ventoy](#description-de-ventoy)
+    - [Installation de Ventoy (Multi-boot USB) - Linux](#installation-de-ventoy-multi-boot-usb---linux)
+    - [Utilisation de Ventoy](#utilisation-de-ventoy)
+    - [Création d'une clé bootable avec Ventoy](#création-dune-clé-bootable-avec-ventoy)
+    - [Ajouter des ISO dans la clé USB bootable préalablement créée avec Ventoy](#ajouter-des-iso-dans-la-clé-usb-bootable-préalablement-créée-avec-ventoy)
+    - [Démarrer un ordinateur sur une clé USB bootable créée avec Ventoy](#démarrer-un-ordinateur-sur-une-clé-usb-bootable-créée-avec-ventoy)
+    - [Licence](#licence)
 
 ## Description de Ventoy
 
@@ -42,51 +20,51 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 
 - Télécharger le fichier tar.gz de la dernière version Ventoy sur le site officiel :
 
-  > <https://github.com/ventoy/Ventoy/releases/download/>< version >/ventoy-< version >-linux.tar.gz
+    > <https://github.com/ventoy/Ventoy/releases/download/>< version >/ventoy-< version >-linux.tar.gz
 
 - Placer vous dans le dossier de téléchargement où le fichier `ventoy-<version>-linux.tar.gz` à été installé :
 
-  ```shell
-  cd ~/Téléchargements
-  ```
+    ```shell
+    cd ~/Téléchargements
+    ```
 
 - Déplacer le fichier tar.gz dans le dossier de votre choix, pour moi ce sera `/opt` :
 
-  ```shell
-  sudo mv ventoy-<version>-linux.tar.gz /opt/
-  ```
+    ```shell
+    sudo mv ventoy-<version>-linux.tar.gz /opt/
+    ```
 
 - Placer vous dans le dossier `/opt` :
 
-  ```shell
-  cd /opt
-  ```
+    ```shell
+    cd /opt
+    ```
 
 - Extraire le fichier tar.gz :
 
-  ```shell
-  tar -xvf ventoy-<version>-linux.tar.gz
-  ```
+    ```shell
+    tar -xvf ventoy-<version>-linux.tar.gz
+    ```
 
 - Supprimer le fichier tar.gz :
 
-  ```shell
-  sudo rm ventoy-<version>-linux.tar.gz`
-  ```
+    ```shell
+    sudo rm ventoy-<version>-linux.tar.gz`
+    ```
 
 ## Utilisation de Ventoy
 
 ## Création d'une clé bootable avec Ventoy
 
 - Brancher la clé USB
-- [Réinitialiser la clé USB](../06_systemes_et_os/doc_manipulation.md#réinitialiser-une-clé-usb-ou-un-disque-dur)
-- [Formater la clé USB en EXT4](../06_systemes_et_os/doc_manipulation.md#allouée-la-partition-grace-à-gparted)
+- [Réinitialiser la clé USB](../03_system/others/general_manipulation.md#réinitialiser-une-clé-usb-ou-un-disque-dur)
+- [Formater la clé USB en EXT4](../02_applications/installation_usage.md#allouée-la-partition-grace-à-gparted---linux)
 - Ouvrez le gestionnaire de fichier
 - Placer vous dans le dossier `/opt/ventoy-<version>/`
 - Activez les droits d'exécution du logiciel : clic droit sur '`VentoyGUI.x86_64`' > '`propriété`' > '`Permissions`' > cochez '`Autoriser l'exécution du fichier comme un programme`'
 - Lancer le logiciel en mode GUI : Double cliquer sur le fichier `VentoyGUI.x86_64`
 
-  !["Image du GUI de Ventoy abscente"](../images/ventoy_gui.png "Image du GUI de Ventoy")
+    !["Image du GUI de Ventoy abscente"](../images/ventoy_gui.png "Image du GUI de Ventoy")
 
 - Si l'anglais ne vous cinvient pas allez dans le menu '`Language`' puis choisir la langue qui vous convient
 - Sélectionner la clé USB dans la liste déroulante '`Périphérique`'
@@ -96,29 +74,29 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 ## Ajouter des ISO dans la clé USB bootable préalablement créée avec Ventoy
 
 - Télécharger les ISO de votre choix.
-  - Lien pour télécharger les ISO de Ubuntu desktop :
-    > <https://www.ubuntu-fr.org/download/>
-  - Lien pour télécharger les ISO de Ubuntu server  :
-    > <https://ubuntu.com/download/server>
+    - Lien pour télécharger les ISO de Ubuntu desktop :
+        > <https://www.ubuntu-fr.org/download/>
+    - Lien pour télécharger les ISO de Ubuntu server  :
+        > <https://ubuntu.com/download/server>
 
 - Placer vous dans la racine de votre clé USB :
 
-  ```shell
-  cd /media/${USER}/<nom_de_la_cle_USB>
-  ```
+    ```shell
+    cd /media/${USER}/<nom_de_la_cle_USB>
+    ```
 
 - Créer un dossier pour chaque ISO :
 
-  ```shell
-  mkdir <nom_du_dossier>
-  ```
+    ```shell
+    mkdir <nom_du_dossier>
+    ```
 
 - Copier et synchroniser l'ISO dans le dossier :
-  - Cette opération prend plusieurs minutes
+    - Cette opération prend plusieurs minutes
 
-  ```shell
-  cp -v ~/Téléchargements/<nom_du_fichier_ISO> <nom_du_dossier>/ && sync
-  ```
+    ```shell
+    cp -v ~/Téléchargements/<nom_du_fichier_ISO> <nom_du_dossier>/ && sync
+    ```
 
 ## Démarrer un ordinateur sur une clé USB bootable créée avec Ventoy
 
@@ -155,8 +133,6 @@ Ventoy est un utilitaire qui permet de créer une clé USB multi-boot. Il suffit
 
 ## Licence
 
-doc_ventoy.md
-
 Copyright (C) 2024 Floris Robart
 
 Authors: Floris Robart
@@ -174,7 +150,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

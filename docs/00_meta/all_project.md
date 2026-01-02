@@ -3,62 +3,60 @@
 ## Table des matières
 
 - [Listes de tous mes projets](#listes-de-tous-mes-projets)
-  - [Table des matières](#table-des-matières)
-  - [En cours](#en-cours)
-    - [Top classement](#top-classement)
-      - [Avancement de Top classement](#avancement-de-top-classement)
-      - [Description de Top classement](#description-de-top-classement)
-      - [Technologie utilisé pour Top classement](#technologie-utilisé-pour-top-classement)
-    - [Youtube Downloader](#youtube-downloader)
-      - [Avancement de Youtube Downloader](#avancement-de-youtube-downloader)
-      - [Description de Youtube Downloader](#description-de-youtube-downloader)
-      - [Technologie utilisé pour Youtube Downloader](#technologie-utilisé-pour-youtube-downloader)
-  - [Pas commencé](#pas-commencé)
-    - [Saint valentin checkbook](#saint-valentin-checkbook)
-      - [Avancement de Saint valentin checkbook](#avancement-de-saint-valentin-checkbook)
-      - [Description de Saint valentin checkbook](#description-de-saint-valentin-checkbook)
-      - [Technologie utilisé pour Saint valentin checkbook](#technologie-utilisé-pour-saint-valentin-checkbook)
-    - [Tinder for friends](#tinder-for-friends)
-      - [Avancement de Tinder for friends](#avancement-de-tinder-for-friends)
-      - [Description de Tinder for friends](#description-de-tinder-for-friends)
-      - [Technologie utilisé pour Tinder for friends](#technologie-utilisé-pour-tinder-for-friends)
-    - [Le bon producteur](#le-bon-producteur)
-      - [Avancement du bon producteur](#avancement-du-bon-producteur)
-      - [Description du bon producteur](#description-du-bon-producteur)
-      - [Technologie utilisé pour Le bon producteur](#technologie-utilisé-pour-le-bon-producteur)
-    - [Organisateur pour les 24h du mans roller](#organisateur-pour-les-24h-du-mans-roller)
-      - [Avancement de l'organisateur pour les 24h du mans roller](#avancement-de-lorganisateur-pour-les-24h-du-mans-roller)
-      - [Description de l'organisateur pour les 24h du mans roller](#description-de-lorganisateur-pour-les-24h-du-mans-roller)
-      - [Technologie utilisé pour l'organisateur pour les 24h du mans roller](#technologie-utilisé-pour-lorganisateur-pour-les-24h-du-mans-roller)
-  - [Commencé (en pause)](#commencé-en-pause)
-    - [All'OScp](#alloscp)
-      - [Avancement d'All'OScp](#avancement-dalloscp)
-      - [Description d'All'OScp](#description-dalloscp)
-      - [Technologie utilisé pour All'OScp](#technologie-utilisé-pour-alloscp)
-    - [Maven Lite](#maven-lite)
-      - [Avancement de Maven Lite](#avancement-de-maven-lite)
-      - [Description de Maven Lite](#description-de-maven-lite)
-      - [Technologie utilisé pour Maven Lite](#technologie-utilisé-pour-maven-lite)
-  - [Terminé](#terminé)
-    - [Script IUT Le Havre](#script-iut-le-havre)
-      - [Avancement de Script IUT Le Havre](#avancement-de-script-iut-le-havre)
-      - [Description de Script IUT Le Havre](#description-de-script-iut-le-havre)
-      - [Technologie utilisé pour Script IUT Le Havre](#technologie-utilisé-pour-script-iut-le-havre)
-    - [Thème for vsCode](#thème-for-vscode)
-      - [Avancement de Thème for vsCode](#avancement-de-thème-for-vscode)
-      - [Description de Thème for vsCode](#description-de-thème-for-vscode)
-      - [Technologie utilisé pour Thème for vsCode](#technologie-utilisé-pour-thème-for-vscode)
-    - [Finance Dashboard](#finance-dashboard)
-      - [Avancement de Finance Dashboard](#avancement-de-finance-dashboard)
-      - [Description de Finance Dashboard](#description-de-finance-dashboard)
-      - [Technologie utilisé pour Finance Dashboard](#technologie-utilisé-pour-finance-dashboard)
-    - [Gestionnaire de compte](#gestionnaire-de-compte)
-      - [Avancement de Gestionnaire de compte](#avancement-de-gestionnaire-de-compte)
-      - [Description de Gestionnaire de compte](#description-de-gestionnaire-de-compte)
-      - [Technologie utilisé pour Gestionnaire de compte](#technologie-utilisé-pour-gestionnaire-de-compte)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [En cours](#en-cours)
+        - [Top classement](#top-classement)
+            - [Avancement de Top classement](#avancement-de-top-classement)
+            - [Description de Top classement](#description-de-top-classement)
+            - [Technologie utilisé pour Top classement](#technologie-utilisé-pour-top-classement)
+        - [Youtube Downloader](#youtube-downloader)
+            - [Avancement de Youtube Downloader](#avancement-de-youtube-downloader)
+            - [Description de Youtube Downloader](#description-de-youtube-downloader)
+            - [Technologie utilisé pour Youtube Downloader](#technologie-utilisé-pour-youtube-downloader)
+    - [Pas commencé](#pas-commencé)
+        - [Saint valentin checkbook](#saint-valentin-checkbook)
+            - [Avancement de Saint valentin checkbook](#avancement-de-saint-valentin-checkbook)
+            - [Description de Saint valentin checkbook](#description-de-saint-valentin-checkbook)
+            - [Technologie utilisé pour Saint valentin checkbook](#technologie-utilisé-pour-saint-valentin-checkbook)
+        - [Tinder for friends](#tinder-for-friends)
+            - [Avancement de Tinder for friends](#avancement-de-tinder-for-friends)
+            - [Description de Tinder for friends](#description-de-tinder-for-friends)
+            - [Technologie utilisé pour Tinder for friends](#technologie-utilisé-pour-tinder-for-friends)
+        - [Le bon producteur](#le-bon-producteur)
+            - [Avancement du bon producteur](#avancement-du-bon-producteur)
+            - [Description du bon producteur](#description-du-bon-producteur)
+            - [Technologie utilisé pour Le bon producteur](#technologie-utilisé-pour-le-bon-producteur)
+        - [Organisateur pour les 24h du mans roller](#organisateur-pour-les-24h-du-mans-roller)
+            - [Avancement de l'organisateur pour les 24h du mans roller](#avancement-de-lorganisateur-pour-les-24h-du-mans-roller)
+            - [Description de l'organisateur pour les 24h du mans roller](#description-de-lorganisateur-pour-les-24h-du-mans-roller)
+            - [Technologie utilisé pour l'organisateur pour les 24h du mans roller](#technologie-utilisé-pour-lorganisateur-pour-les-24h-du-mans-roller)
+    - [Commencé (en pause)](#commencé-en-pause)
+        - [All'OScp](#alloscp)
+            - [Avancement d'All'OScp](#avancement-dalloscp)
+            - [Description d'All'OScp](#description-dalloscp)
+            - [Technologie utilisé pour All'OScp](#technologie-utilisé-pour-alloscp)
+        - [Maven Lite](#maven-lite)
+            - [Avancement de Maven Lite](#avancement-de-maven-lite)
+            - [Description de Maven Lite](#description-de-maven-lite)
+            - [Technologie utilisé pour Maven Lite](#technologie-utilisé-pour-maven-lite)
+    - [Terminé](#terminé)
+        - [Script IUT Le Havre](#script-iut-le-havre)
+            - [Avancement de Script IUT Le Havre](#avancement-de-script-iut-le-havre)
+            - [Description de Script IUT Le Havre](#description-de-script-iut-le-havre)
+            - [Technologie utilisé pour Script IUT Le Havre](#technologie-utilisé-pour-script-iut-le-havre)
+        - [Thème for vsCode](#thème-for-vscode)
+            - [Avancement de Thème for vsCode](#avancement-de-thème-for-vscode)
+            - [Description de Thème for vsCode](#description-de-thème-for-vscode)
+            - [Technologie utilisé pour Thème for vsCode](#technologie-utilisé-pour-thème-for-vscode)
+        - [Finance Dashboard](#finance-dashboard)
+            - [Avancement de Finance Dashboard](#avancement-de-finance-dashboard)
+            - [Description de Finance Dashboard](#description-de-finance-dashboard)
+            - [Technologie utilisé pour Finance Dashboard](#technologie-utilisé-pour-finance-dashboard)
+        - [Gestionnaire de compte](#gestionnaire-de-compte)
+            - [Avancement de Gestionnaire de compte](#avancement-de-gestionnaire-de-compte)
+            - [Description de Gestionnaire de compte](#description-de-gestionnaire-de-compte)
+            - [Technologie utilisé pour Gestionnaire de compte](#technologie-utilisé-pour-gestionnaire-de-compte)
+    - [Licence](#licence)
 
 ## En cours
 
@@ -182,9 +180,9 @@ Un site web qui permet d'organiser plus facilement les 24h du mans roller
 
 - il reste environs la moitié de l'application à faire
 - Élément restant à faire
-  - Sytème de comparaison de fichier
-  - connection SFTP
-  - système de backup
+    - Sytème de comparaison de fichier
+    - connection SFTP
+    - système de backup
 
 #### Description d'All'OScp
 
@@ -283,8 +281,6 @@ Mon gestionnaire de compte simple et sécurisé en local
 - MySQL
 
 ## Licence
-
-All_project.md
 
 Copyright (C) 2024 Floris Robart
 

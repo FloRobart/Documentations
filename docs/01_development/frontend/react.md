@@ -1,34 +1,14 @@
 # Documentation React
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Documentation React](#documentation-react)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Sources](#sources)
-  - [Installation de React](#installation-de-react)
-  - [Installation du dev tools React](#installation-du-dev-tools-react)
-  - [Création d'un projet React](#création-dun-projet-react)
-  - [Licence](#licence)
+    - [Table des matières](#table-des-matières)
+    - [Sources](#sources)
+    - [Installation de React](#installation-de-react)
+    - [Installation du dev tools React](#installation-du-dev-tools-react)
+    - [Création d'un projet React](#création-dun-projet-react)
+    - [Licence](#licence)
 
 ## Sources
 
@@ -44,43 +24,41 @@ commande, extrait code et extrait de fichier
 React DevTools est une extension pour navigateur qui permet d'inspecter les composants React dans l'arborescence des composants.
 
 - Installer React DevTools
-  > <https://react.dev/learn/react-developer-tools>
+    > <https://react.dev/learn/react-developer-tools>
 
 ## Création d'un projet React
 
 - Créer un projet React
-  
-  ```bash
-  npm create vite@latest <Nom du projet>
-  ```
+
+    ```bash
+    npm create vite@latest <Nom du projet>
+    ```
 
 - Se déplacer dans le dossier du projet
 
-  ```bash
-  cd <Nom du projet>
-  ```
+    ```bash
+    cd <Nom du projet>
+    ```
 
 - Installer les dépendances
 
-  ```bash
-  npm install
-  ```
+    ```bash
+    npm install
+    ```
 
 - Lancer le serveur de développement
 
-  ```bash
-  npm run dev
-  ```
+    ```bash
+    npm run dev
+    ```
 
 - Ouvrir le navigateur à l'adresse suivante
 
-  ```bash
-  http://localhost:5173
-  ```
+    ```bash
+    http://localhost:5173
+    ```
 
 ## Licence
-
-doc_laravel.md
 
 Copyright (C) 2024 Floris Robart
 
@@ -99,7 +77,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

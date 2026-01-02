@@ -1,5 +1,17 @@
 # Migrations et Seeders
 
+## Table des matières
+
+- [Migrations et Seeders](#migrations-et-seeders)
+    - [Table des matières](#table-des-matières)
+    - [Comment utiliser les migrations et seeders dans Lalachante](#comment-utiliser-les-migrations-et-seeders-dans-lalachante)
+        - [Les migrations](#les-migrations)
+        - [Les seeders](#les-seeders)
+    - [Creation d'une migration et d'un seeder](#creation-dune-migration-et-dun-seeder)
+        - [Pour creer une migration](#pour-creer-une-migration)
+        - [Comment creer un seeder](#comment-creer-un-seeder)
+    - [Conclusion](#conclusion)
+
 ## Comment utiliser les migrations et seeders dans Lalachante
 
 Lalachante contient des migrations et des seeders qui permettent de configurer les bases de donnees de l'application. Voici comment les utiliser:

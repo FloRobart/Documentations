@@ -2,71 +2,67 @@
 
 ## Table des matières
 
-****
-
 - [Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation](#installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systèmes-dexploitation)
-  - [Table des matières](#table-des-matières)
-  - [Installation de VirtualBox](#installation-de-virtualbox)
-  - [Création d'une machine virtuel Ubuntu desktop dans VirtualBox](#création-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox)
-    - [Création de la machine virtuel](#création-de-la-machine-virtuel)
-    - [Création du profil utilisateur](#création-du-profil-utilisateur)
-    - [Configuration matériel de la machine virtuel](#configuration-matériel-de-la-machine-virtuel)
-    - [Installer les additions invités après l'installation de la VM](#installer-les-additions-invités-après-linstallation-de-la-vm)
-    - [Activer le copier coller entre l'hôte et la VM](#activer-le-copier-coller-entre-lhôte-et-la-vm)
-  - [Création d'une machine virtuel Windows 11](#création-dune-machine-virtuel-windows-11)
-    - [Création de la machine virtuel Windows 11](#création-de-la-machine-virtuel-windows-11)
-    - [Configuration matériel de la machine virtuel Windows 11](#configuration-matériel-de-la-machine-virtuel-windows-11)
-    - [Installation et configuration de Windows 10/11](#installation-et-configuration-de-windows-1011)
-    - [Installer les additions invités après l'installation de la VM Windows 11](#installer-les-additions-invités-après-linstallation-de-la-vm-windows-11)
-    - [Activer le copier coller entre l'hôte et la VM Windows 11](#activer-le-copier-coller-entre-lhôte-et-la-vm-windows-11)
-  - [Création d'une machine virtuel MacOS Ventura](#création-dune-machine-virtuel-macos-ventura)
-    - [Création de la machine virtuel MacOS Ventura](#création-de-la-machine-virtuel-macos-ventura)
-    - [Configuration matériel de la machine virtuel MacOS Ventura](#configuration-matériel-de-la-machine-virtuel-macos-ventura)
-  - [Création d'une machine virtuel Mac OS X Mountain Lion](#création-dune-machine-virtuel-mac-os-x-mountain-lion)
-    - [Création de la machine virtuel Mac OS X Mountain Lion](#création-de-la-machine-virtuel-mac-os-x-mountain-lion)
-    - [Configuration matériel de la machine virtuel Mac OS X Mountain Lion](#configuration-matériel-de-la-machine-virtuel-mac-os-x-mountain-lion)
-  - [Création d'une machine virtuel Ubuntu server 16.04](#création-dune-machine-virtuel-ubuntu-server-1604)
-    - [Création de la machine virtuel Ubuntu server 16.04](#création-de-la-machine-virtuel-ubuntu-server-1604)
-    - [Pré-configuration du système d'exploitation (si vous n'avez pas cocher la case '`Skip Unattended Installation`' uniquement)](#pré-configuration-du-système-dexploitation-si-vous-navez-pas-cocher-la-case-skip-unattended-installation-uniquement)
-    - [Configuration matériel de la machine virtuel Ubuntu server 16.04](#configuration-matériel-de-la-machine-virtuel-ubuntu-server-1604)
-    - [configuration logiciel de Ubuntu server 16.04 (si vous avez cocher la case '`Skip Unattended Installation`' uniquement)](#configuration-logiciel-de-ubuntu-server-1604-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement)
-    - [Instruction tirer de l'installation échoué de Ubuntu server 22.04 sur une machine physique](#instruction-tirer-de-linstallation-échoué-de-ubuntu-server-2204-sur-une-machine-physique)
-      - [Configurer la connexion réseau](#configurer-la-connexion-réseau)
-      - [Connexion au réseau (Wifi)](#connexion-au-réseau-wifi)
-      - [Suite de la configuration](#suite-de-la-configuration)
-      - [Création de l'utilisateur](#création-de-lutilisateur)
-      - [Configuration SSH](#configuration-ssh)
-  - [Création d'une machine virtuel Debian 12](#création-dune-machine-virtuel-debian-12)
-    - [Création de la machine virtuel Debian 12](#création-de-la-machine-virtuel-debian-12)
-    - [Configuration matériel de la machine virtuel Debian 12](#configuration-matériel-de-la-machine-virtuel-debian-12)
-      - [Configuration du processeur, de la mémoire RAM et du BIOS](#configuration-du-processeur-de-la-mémoire-ram-et-du-bios)
-      - [Configuration du disque dur](#configuration-du-disque-dur)
-    - [configuration logiciel de Debian 12 (si vous avez cocher la case '`Skip Unattended Installation`' uniquement)](#configuration-logiciel-de-debian-12-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Installation de VirtualBox](#installation-de-virtualbox)
+    - [Création d'une machine virtuel Ubuntu desktop dans VirtualBox](#création-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox)
+        - [Création de la machine virtuel](#création-de-la-machine-virtuel)
+        - [Création du profil utilisateur](#création-du-profil-utilisateur)
+        - [Configuration matériel de la machine virtuel](#configuration-matériel-de-la-machine-virtuel)
+        - [Installer les additions invités après l'installation de la VM](#installer-les-additions-invités-après-linstallation-de-la-vm)
+        - [Activer le copier coller entre l'hôte et la VM](#activer-le-copier-coller-entre-lhôte-et-la-vm)
+    - [Création d'une machine virtuel Windows 11](#création-dune-machine-virtuel-windows-11)
+        - [Création de la machine virtuel Windows 11](#création-de-la-machine-virtuel-windows-11)
+        - [Configuration matériel de la machine virtuel Windows 11](#configuration-matériel-de-la-machine-virtuel-windows-11)
+        - [Installation et configuration de Windows 10/11](#installation-et-configuration-de-windows-1011)
+        - [Installer les additions invités après l'installation de la VM Windows 11](#installer-les-additions-invités-après-linstallation-de-la-vm-windows-11)
+        - [Activer le copier coller entre l'hôte et la VM Windows 11](#activer-le-copier-coller-entre-lhôte-et-la-vm-windows-11)
+    - [Création d'une machine virtuel MacOS Ventura](#création-dune-machine-virtuel-macos-ventura)
+        - [Création de la machine virtuel MacOS Ventura](#création-de-la-machine-virtuel-macos-ventura)
+        - [Configuration matériel de la machine virtuel MacOS Ventura](#configuration-matériel-de-la-machine-virtuel-macos-ventura)
+    - [Création d'une machine virtuel Mac OS X Mountain Lion](#création-dune-machine-virtuel-mac-os-x-mountain-lion)
+        - [Création de la machine virtuel Mac OS X Mountain Lion](#création-de-la-machine-virtuel-mac-os-x-mountain-lion)
+        - [Configuration matériel de la machine virtuel Mac OS X Mountain Lion](#configuration-matériel-de-la-machine-virtuel-mac-os-x-mountain-lion)
+    - [Création d'une machine virtuel Ubuntu server 16.04](#création-dune-machine-virtuel-ubuntu-server-1604)
+        - [Création de la machine virtuel Ubuntu server 16.04](#création-de-la-machine-virtuel-ubuntu-server-1604)
+        - [Pré-configuration du système d'exploitation (si vous n'avez pas cocher la case '`Skip Unattended Installation`' uniquement)](#pré-configuration-du-système-dexploitation-si-vous-navez-pas-cocher-la-case-skip-unattended-installation-uniquement)
+        - [Configuration matériel de la machine virtuel Ubuntu server 16.04](#configuration-matériel-de-la-machine-virtuel-ubuntu-server-1604)
+        - [configuration logiciel de Ubuntu server 16.04 (si vous avez cocher la case '`Skip Unattended Installation`' uniquement)](#configuration-logiciel-de-ubuntu-server-1604-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement)
+        - [Instruction tirer de l'installation échoué de Ubuntu server 22.04 sur une machine physique](#instruction-tirer-de-linstallation-échoué-de-ubuntu-server-2204-sur-une-machine-physique)
+            - [Configurer la connexion réseau](#configurer-la-connexion-réseau)
+            - [Connexion au réseau (Wifi)](#connexion-au-réseau-wifi)
+            - [Suite de la configuration](#suite-de-la-configuration)
+            - [Création de l'utilisateur](#création-de-lutilisateur)
+            - [Configuration SSH](#configuration-ssh)
+    - [Création d'une machine virtuel Debian 12](#création-dune-machine-virtuel-debian-12)
+        - [Création de la machine virtuel Debian 12](#création-de-la-machine-virtuel-debian-12)
+        - [Configuration matériel de la machine virtuel Debian 12](#configuration-matériel-de-la-machine-virtuel-debian-12)
+            - [Configuration du processeur, de la mémoire RAM et du BIOS](#configuration-du-processeur-de-la-mémoire-ram-et-du-bios)
+            - [Configuration du disque dur](#configuration-du-disque-dur)
+        - [configuration logiciel de Debian 12 (si vous avez cocher la case '`Skip Unattended Installation`' uniquement)](#configuration-logiciel-de-debian-12-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement)
+    - [Licence](#licence)
 
 ## Installation de VirtualBox
 
-[Installation de VirtualBox](../../06_systemes_et_os/doc_installation_et_utilisation.md#installation-de-virtualbox)
+[Installation de VirtualBox](../../02_applications/installation_usage.md#installation-de-virtualbox-sur-linux-ubuntu)
 
 ## Création d'une machine virtuel Ubuntu desktop dans VirtualBox
 
 ### Création de la machine virtuel
 
 - Télécharger l'image iso d'Ubuntu desktop sur :
-  > <https://ubuntu.com/download/desktop>
+    > <https://ubuntu.com/download/desktop>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-  mv ~/Téléchargements/ubuntu-22.04.2-desktop-amd64.iso /OS/Mon_Drive/ISO/ubuntu-22.04.2-desktop-amd64.iso
-  ```
+    ```shell
+    mv ~/Téléchargements/ubuntu-22.04.2-desktop-amd64.iso /OS/Mon_Drive/ISO/ubuntu-22.04.2-desktop-amd64.iso
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`Ubuntu desktop 22.04 LTS`"
-  - Type : '`Linux`'
-  - Version : '`Ubuntu (64-bit)`'
+    - Nom : "`Ubuntu desktop 22.04 LTS`"
+    - Type : '`Linux`'
+    - Version : '`Ubuntu (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, c'est à dire le dossier `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso d'Ubuntu desktop téléchargé précédement
 - laisser la case à cocher '`Skip Unattended Installation`' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)
@@ -79,11 +75,11 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 **Attention, il est important de modifier ces valeurs car les valeurs par défaut créeront un utilisateur sans accès sudo**
 
 - Entrer les informations suivantes :
-  - Username : "`floris`"
-  - Passeword : "`floris`"
-  - Repeat Passeword : "`floris`"
-  - Hostname : "`floris-vm-ubuntu`" **Attention à ne pas mettre d'espace ni de caractères spéciaux dans ce champ**
-  - Domain name : "`floris.virtualbox.org`"
+    - Username : "`floris`"
+    - Passeword : "`floris`"
+    - Repeat Passeword : "`floris`"
+    - Hostname : "`floris-vm-ubuntu`" **Attention à ne pas mettre d'espace ni de caractères spéciaux dans ce champ**
+    - Domain name : "`floris.virtualbox.org`"
 - Cocher la case '`Guest Additions`' pour installer automatiquement les additions invités
 - Cliquer sur '`Suivant`'
 
@@ -96,7 +92,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - laisser la case à cocher '`Enable EFI (Special OSes only)`' décocher
 - Cliquer sur '`Suivant`'
 - Sélectionner '`Create a virtual hard disk now`'
-  - en français : '`Créer un disque dur virtuel maintenant`'
+    - en français : '`Créer un disque dur virtuel maintenant`'
 - Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "`30`" Gio
 - laisser la case à cocher '`Pre-allocate Full Size`' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte
 - laisser les deux autres cases à cocher décocher
@@ -125,18 +121,18 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 ### Création de la machine virtuel Windows 11
 
 - Télécharger l'image iso de Windows sur :
-  > <https://www.microsoft.com/fr-fr/software-download>
+    > <https://www.microsoft.com/fr-fr/software-download>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-    mv ~/Téléchargements/Win11_22H2_French_x64v2.iso /OS/Mon_Drive/ISO/Win11_22H2_French_x64v2.iso
-  ```
+    ```shell
+        mv ~/Téléchargements/Win11_22H2_French_x64v2.iso /OS/Mon_Drive/ISO/Win11_22H2_French_x64v2.iso
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`Windows 11`"
-  - Type : '`Microsoft Windows`'
-  - Version : '`Windows 11 (64-bit)`'
+    - Nom : "`Windows 11`"
+    - Type : '`Microsoft Windows`'
+    - Version : '`Windows 11 (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, c'est à dire le dossier `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso de windows 11 téléchargé précédement
 - laisser la case à cocher '`Skip Unattended Installation`' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)
@@ -161,20 +157,20 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 
 - Une fenêtre s'ouvre avec le message suivant : `Press any key to boot from CD or DVD...`
 - Appuyer sur une touche du clavier pour démarrer l'installation de Windows 11
-  - Si vous n'appuyer pas sur une touche du clavier, un message d'erreur sera afficher. Appuyer sur '`Ok`' (ou sur '`Redémarrer`'). la machine virtuel va redémarrer, patienter quelque minute puis vous devrez répéter l'étape précédente
+    - Si vous n'appuyer pas sur une touche du clavier, un message d'erreur sera afficher. Appuyer sur '`Ok`' (ou sur '`Redémarrer`'). la machine virtuel va redémarrer, patienter quelque minute puis vous devrez répéter l'étape précédente
 - Sélectionner les information de langage suivant :
-  - Langue à installer : '`Français (France)`'
-  - Format horaire et monétaire : '`Français (France)`'
-  - Clavier ou méthode d'entré : '`Français`'
+    - Langue à installer : '`Français (France)`'
+    - Format horaire et monétaire : '`Français (France)`'
+    - Clavier ou méthode d'entré : '`Français`'
 - Cliquer sur '`Suivant`'
 - Cliquer sur '`Installer maintenant`'
 - Une clé de produit est demander, pour contourner cette étape il faut ouvrir un invite de commande en appuyant sur :
-  > Maj + F10
+    > Maj + F10
 - Dans l'invite de commande saisir la commande suivante :
 
-  ```batch
-    regedit
-  ```
+    ```batch
+        regedit
+    ```
 
 - Une fenêtre `Éditeur du Registre` s'ouvre, selectionner `HKEY_LOCAL_MACHINE\SYSTEM\Setup`
 - Clique droit sur le dossier `Setup` puis cliquer sur '`Nouveau`' > '`Clé`'
@@ -189,7 +185,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Nommer la valeur "`BypassRamCheck`"
 - Double cliquer sur la valeur '`BypassRamCheck`' puis saisir "`1`" dans le champ `Données de la valeur`
 - Vous devriez avoir ceci :
-  !["Image editeur du registre windows 11"](../../images/virtualbox_installation_windows_11.png "Image de l'éditeur du registre de Windows 11")
+    !["Image editeur du registre windows 11"](../../images/virtualbox_installation_windows_11.png "Image de l'éditeur du registre de Windows 11")
 - Fermez l'éditeur du registre et l'invite de commande pour continuer l'installation de Windows 11
 - Cliquer sur '`Je n'ai pas de clé de produit (Product Key)`'
 - Sélectionner la version de Windows 11 que vous voulez installer, dans mon cas j'ai sélectionner '`Windows 11 Famille`'
@@ -197,8 +193,8 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Accepter les termes du contrat de licence logiciel Microsoft.
 - Cliquer sur '`Suivant`'
 - Sélectionner le type d'installation que vous voulez effectuer (dans mon cas j'ai sélectionner '`Personnalisée : installer uniquement Windows (avancé)`') :
-  - '`Personnalisée : installer uniquement Windows (avancé)`' : Permet de choisir l'emplacement d'installation de Windows 11
-  - '`Mise à niveau : installer Windows et conserver les fichiers, les paramètres et les applications`' : Permet de mettre à jour Windows 10 vers Windows 11
+    - '`Personnalisée : installer uniquement Windows (avancé)`' : Permet de choisir l'emplacement d'installation de Windows 11
+    - '`Mise à niveau : installer Windows et conserver les fichiers, les paramètres et les applications`' : Permet de mettre à jour Windows 10 vers Windows 11
 - Sélectionner le disque dur virtuel sur lequel vous voulez installer Windows 11 (Normalement il n'y a qu'un seul disque dur virtuel puisqu'on en a créer qu'un seul)
 - Cliquer sur '`Suivant`'
 - Patienter le temps que Windows 11 s'installe
@@ -216,7 +212,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Cliquer sur '`Installer`'
 - Cliquer sur '`Redémarrer maintenant`'
 - Si le redimensionnement de l'écran ne fonctionne pas, il faut activer le '`Mode intégré`' puis le désactiver avec le racourci clavier :
-  > Ctrl (droite) + C
+    > Ctrl (droite) + C
 
 ### Activer le copier coller entre l'hôte et la VM Windows 11
 
@@ -231,18 +227,18 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 ### Création de la machine virtuel MacOS Ventura
 
 - Télécharger l'image iso de MacOS Ventura sur :
-  > <https://www.mediafire.com/file/dcji26zay7s3p8r/macOS+Ventura+ISO+for+VM+by+techrechard.com.iso/file>
+    > <https://www.mediafire.com/file/dcji26zay7s3p8r/macOS+Ventura+ISO+for+VM+by+techrechard.com.iso/file>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-    mv ~/Téléchargements/macOS_Ventura_ISO_for_VM.iso /OS/Mon_Drive/ISO/macOS_Ventura_ISO_for_VM.iso
-  ```
+    ```shell
+        mv ~/Téléchargements/macOS_Ventura_ISO_for_VM.iso /OS/Mon_Drive/ISO/macOS_Ventura_ISO_for_VM.iso
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`MacOS Ventura`"
-  - Type : '`Mac OS X`'
-  - Version : '`Mac OS X (64-bit)`'
+    - Nom : "`MacOS Ventura`"
+    - Type : '`Mac OS X`'
+    - Version : '`Mac OS X (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, c'est à dire le dossier `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso de MacOS Ventura téléchargé précédement
 - laisser la case à cocher '`Skip Unattended Installation`' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)
@@ -257,7 +253,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - laisser la case à cocher '`Enable EFI (Special OSes only)`' décocher
 - Cliquer sur '`Suivant`'
 - Sélectionner '`Create a virtual hard disk now`'
-  - en français : '`Créer un disque dur virtuel maintenant`'
+    - en français : '`Créer un disque dur virtuel maintenant`'
 - Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "`30`" Gio
 - laisser la case à cocher '`Pre-allocate Full Size`' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte
 - Cliquer sur '`Suivant`'
@@ -272,18 +268,18 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 ### Création de la machine virtuel Mac OS X Mountain Lion
 
 - Télécharger l'image iso de Mac OS X Mountain Lion sur :
-  > <https://www.malekal.com/telecharger-iso-macos-x/>
+    > <https://www.malekal.com/telecharger-iso-macos-x/>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-    mv ~/Téléchargements/MAC_OS_X_Mountain_Lion_10.8.5_french.iso /OS/Mon_Drive/ISO/MAC_OS_X_Mountain_Lion_10.8.5_french.iso
-  ```
+    ```shell
+        mv ~/Téléchargements/MAC_OS_X_Mountain_Lion_10.8.5_french.iso /OS/Mon_Drive/ISO/MAC_OS_X_Mountain_Lion_10.8.5_french.iso
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`MacOS Ventura`"
-  - Type : '`Mac OS X`'
-  - Version : '`Mac OS X 10.8 Mountain Lion (64-bit)`'
+    - Nom : "`MacOS Ventura`"
+    - Type : '`Mac OS X`'
+    - Version : '`Mac OS X 10.8 Mountain Lion (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, c'est à dire le dossier `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso de MacOS Ventura téléchargé précédement
 - laisser la case à cocher '`Skip Unattended Installation`' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)
@@ -298,7 +294,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - laisser la case à cocher '`Enable EFI (Special OSes only)`' décocher
 - Cliquer sur '`Suivant`'
 - Sélectionner '`Create a virtual hard disk now`'
-  - en français : '`Créer un disque dur virtuel maintenant`'
+    - en français : '`Créer un disque dur virtuel maintenant`'
 - Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "`30`" Gio
 - laisser la case à cocher '`Pre-allocate Full Size`' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte
 - Cliquer sur '`Suivant`'
@@ -313,18 +309,18 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 ### Création de la machine virtuel Ubuntu server 16.04
 
 - Télécharger l'image iso de de Ubuntu server 16.04 sur :
-  > <https://releases.ubuntu.com/xenial/>
+    > <https://releases.ubuntu.com/xenial/>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-    mv ~/Téléchargements/ubuntu-16.04.7-server-amd64.iso /OS/Mon_Drive/ISO/ubuntu-16.04.7-server-amd64.iso
-  ```
+    ```shell
+        mv ~/Téléchargements/ubuntu-16.04.7-server-amd64.iso /OS/Mon_Drive/ISO/ubuntu-16.04.7-server-amd64.iso
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`Ubuntu server 16.04`"
-  - Type : '`Linux`'
-  - Version : '`Ubuntu (64-bit)`'
+    - Nom : "`Ubuntu server 16.04`"
+    - Type : '`Linux`'
+    - Version : '`Ubuntu (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, dans mon cas `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso de Ubuntu server 16.04 téléchargé précédement, dans mon cas `/OS/Mon_Drive/ISO/ubuntu-16.04.7-server-amd64.iso`
 - Cocher la case '`Skip Unattended Installation`' pour installer le système d'exploitation manuellement, comme si vous l'installiez sur un ordinateur physique. Si vous voulez installer le système d'exploitation automatiquement décocher cette case
@@ -348,7 +344,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - laisser la case à cocher '`Enable EFI (Special OSes only)`' décocher
 - Cliquer sur '`Suivant`'
 - Sélectionner '`Create a virtual hard disk now`'
-  - en français : '`Créer un disque dur virtuel maintenant`'
+    - en français : '`Créer un disque dur virtuel maintenant`'
 - Définisser la taille du disque dur virtuel. J'ai mis seulement "`20`" Gio car c'est une machine virtuel de test
 - laisser la case à cocher '`Pre-allocate Full Size`' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte
 - Cliquer sur '`Suivant`'
@@ -387,11 +383,11 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - La table de partitionnement du disque dur va être écrite sur le disque dur, confirmer en sélectionnant '`Terminer le partitionnement et appliquer les changements`'
 - Confirmer l'application des changements sur le disque en sélectionnant '`Oui`'
 - Si le message d'erreur réapparait sélectionner '`Revenir en arrière`'
-  - Sélectionner '`Revenir en arrière`' à nouveau
-  - Sélectionner '`Partitionner le disque`'
-  - A la question '`Démonter les partitions en cours d'utilisation ?`' je sélectionne '`Oui`'
-  - Je sélectionne '`Terminer le partitionnement et appliquer les changements`'
-  - Confirmer l'application des changements sur le disque en sélectionnant '`Oui`'
+    - Sélectionner '`Revenir en arrière`' à nouveau
+    - Sélectionner '`Partitionner le disque`'
+    - A la question '`Démonter les partitions en cours d'utilisation ?`' je sélectionne '`Oui`'
+    - Je sélectionne '`Terminer le partitionnement et appliquer les changements`'
+    - Confirmer l'application des changements sur le disque en sélectionnant '`Oui`'
 - Entrer le mandataire HTTP, dans mon cas je laisse le champ vide parce que je n'en ai pas
 - Séléctionner '`Continuer`'
 - Sélectionner le système de mise à jour, dans mon cas j'ai sélectionner '`Pas de mise à jour automatique`' parce que c'est une VM mais sur un vrai serveur il est recommander de sélectionner '`Installer les mises à jour de sécurité automatiquement`'
@@ -408,7 +404,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 #### Configurer la connexion réseau
 
 - Si la configuration automatique du réseau échoue clique sur '`Configurer vous-même le réseau`'
-  > <https://ubuntu.com/tutorials/install-ubuntu-server-1604>
+    > <https://ubuntu.com/tutorials/install-ubuntu-server-1604>
 - Sélectionner la première carte réseau, dans mon cas '`enp3s0`'
 - Sélectionner '`Edit IPv4`'
 - Dans `IPv4 Method`, sélectionner '`Manuel`'
@@ -431,7 +427,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Laisser le champs `Proxy adress` vide
 - Cliquer sur '`Continuer`'
 - Laisser le champs `Mirror address` avec la valeur par defaut, pour moi c'est :
-  > <http://fr.archive.ubuntu.com/ubuntu>
+    > <http://fr.archive.ubuntu.com/ubuntu>
 - Cliquer sur '`Continuer`'
 - Lancer la mise à jour puis attendez que tous s'installent
 - Une fenêtre vas apparaître (pour moi elle indique une erreur), cliquer sur '`Continuer`'
@@ -465,18 +461,18 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 ### Création de la machine virtuel Debian 12
 
 - Télécharger l'image iso de de Debian 12 sur :
-  > <https://www.debian.org/download.fr.html>
+    > <https://www.debian.org/download.fr.html>
 - Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier `/OS/Mon_Drive/ISO/` :
 
-  ```shell
-  mv ~/Téléchargements/debian-12.1.0-amd64-netinst.iso /OS/Mon_Drive/ISO/
-  ```
+    ```shell
+    mv ~/Téléchargements/debian-12.1.0-amd64-netinst.iso /OS/Mon_Drive/ISO/
+    ```
 
 - Dans VirtualBox Cliquer sur '`Nouvelle`' pour créer une nouvelle machine virtuel
 - Ajouter les informations suivantes :
-  - Nom : "`Debian 12`"
-  - Type : '`Linux`'
-  - Version : '`Debian (64-bit)`'
+    - Nom : "`Debian 12`"
+    - Type : '`Linux`'
+    - Version : '`Debian (64-bit)`'
 - Laisser le paramètre '`Folder`' par défaut, c'est à dire le dossier `/home/floris/VirtualBox VMs`
 - Dans le champ `ISO Image` saisisser le fichier iso de debien 12 téléchargé précédement
 - Cocher la case '`Skip Unattended Installation`' pour installer le système d'exploitation manuellement, comme si vous l'installiez sur un ordinateur physique.
@@ -496,7 +492,7 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 #### Configuration du disque dur
 
 - Sélectionner '`Create a virtual hard disk now`'
-  - en français : '`Créer un disque dur virtuel maintenant`'
+    - en français : '`Créer un disque dur virtuel maintenant`'
 - Définisser la taille du disque dur virtuel. J'ai mis "`20`" Gio parce que c'est une machine virtuel de test
 - laisser la case à cocher '`Pre-allocate Full Size`' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte
 - Cliquer sur '`Suivant`'
@@ -515,10 +511,10 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Configuration du nom de domaine, dans mon cas j'ai laissé le champ vide
 - Configuration du mot de passe du super utilisateur `root`, dans mon cas "`root`"
 - Création d'un utilisateur, dans mon cas :
-  - Nom complet : "`Floris VM`"
-  - Identifiant pour le compte utilisateur : "`floris`"
-  - Mot de passe : "`floris`"
-  - Confirmer le mot de passe
+    - Nom complet : "`Floris VM`"
+    - Identifiant pour le compte utilisateur : "`floris`"
+    - Mot de passe : "`floris`"
+    - Confirmer le mot de passe
 - Choisissez le partitionnement du disque '`Assisté - utiliser tout un disque avec LVM`'
 - Sélectionner le disque dur sur lequel vous voulez installer Debian 12, dans mon cas il n'y a qu'un seul disque qui se nomme '`SCSI3 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK`'
 - Sélectionner le type de partitionnement, dans mon cas j'ai sélectionner '`Tout dans une seule partition (recommandé pour les débutants)`'
@@ -536,8 +532,6 @@ Si vous avez cocher la case '`Skip Unattended Installation`' vous pouvez passer 
 - Sélectionner '`Continuer`' pour redémarrer la machine virtuel
 
 ## Licence
-
-doc_VM_et_OS.md
 
 Copyright (C) 2024 Floris Robart
 

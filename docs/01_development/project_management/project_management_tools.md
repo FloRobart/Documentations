@@ -1,48 +1,27 @@
 # Documentation sur la mise en place d'outils de gestion de projet
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Documentation sur la mise en place d'outils de gestion de projet](#documentation-sur-la-mise-en-place-doutils-de-gestion-de-projet)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Présentation](#présentation)
-  - [Listes des besoins pour la gestion de projet](#listes-des-besoins-pour-la-gestion-de-projet)
-  - [Gestionnaire de version](#gestionnaire-de-version)
-    - [GitHub](#github)
-    - [GitLab](#gitlab)
-  - [Gestionnaire de tâches](#gestionnaire-de-tâches)
-    - [Github Project](#github-project)
-    - [Trello](#trello)
-    - [ClickUp](#clickup)
-    - [Jira](#jira)
-    - [Notion pour la gestion de tâches](#notion-pour-la-gestion-de-tâches)
-  - [Gestionnaire de documentation](#gestionnaire-de-documentation)
-    - [Notion pour la documentation](#notion-pour-la-documentation)
-    - [Github page](#github-page)
-  - [Gestionnaire de communication](#gestionnaire-de-communication)
-    - [Discord](#discord)
-  - [Conclusion](#conclusion)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Présentation](#présentation)
+    - [Listes des besoins pour la gestion de projet](#listes-des-besoins-pour-la-gestion-de-projet)
+    - [Gestionnaire de version](#gestionnaire-de-version)
+        - [GitHub](#github)
+        - [GitLab](#gitlab)
+    - [Gestionnaire de tâches](#gestionnaire-de-tâches)
+        - [Github Project](#github-project)
+        - [Trello](#trello)
+        - [ClickUp](#clickup)
+        - [Jira](#jira)
+        - [Notion pour la gestion de tâches](#notion-pour-la-gestion-de-tâches)
+    - [Gestionnaire de documentation](#gestionnaire-de-documentation)
+        - [Notion pour la documentation](#notion-pour-la-documentation)
+        - [Github page](#github-page)
+    - [Gestionnaire de communication](#gestionnaire-de-communication)
+        - [Discord](#discord)
+    - [Conclusion](#conclusion)
+    - [Licence](#licence)
 
 ## Présentation
 
@@ -68,28 +47,28 @@ Il existe plusieurs gestionnaires de version comme [GitHub](https://github.com/)
 Pour moi GitHub est le meilleur gestionnaire de version. Je n'ai jamais cherché d'alternative car GitHub est parfait.
 
 - Les points positif
-  - La version gratuite est largement suffisante
-  - L'interface est simple et intuitive
-  - Large communauté (Plus de 90 % des entreprises du classement Fortune 100 utilisent GitHub)
-  - Fiable
-  - Sécurisé
-  - La version payante permet d'avoir Github copilot
+    - La version gratuite est largement suffisante
+    - L'interface est simple et intuitive
+    - Large communauté (Plus de 90 % des entreprises du classement Fortune 100 utilisent GitHub)
+    - Fiable
+    - Sécurisé
+    - La version payante permet d'avoir Github copilot
 - Les points négatif
-  - Les dépôts privés (non accessible par microsoft) sont payants
+    - Les dépôts privés (non accessible par microsoft) sont payants
 
 ### GitLab
 
 GitLab est un outils très performant et très complet mais est surtout utilisé par les entreprises qui veulent auto-héberger leur gestionnaire de version. Si on ne veut pas auto-héberger son gestionnaire de version, je recommande de se tourné vers GitHub.
 
 - Les points positif
-  - Il peut être auto-hébergé
-  - Il est gratuit
-  - Il est open source
-  - Il est complet
+    - Il peut être auto-hébergé
+    - Il est gratuit
+    - Il est open source
+    - Il est complet
 - Les points négatif
-  - L'interface est moins intuitive que GitHub
-  - La communauté est moins grande que GitHub
-  - Il est moins fiable que GitHub (sauf en auto-hébergé)
+    - L'interface est moins intuitive que GitHub
+    - La communauté est moins grande que GitHub
+    - Il est moins fiable que GitHub (sauf en auto-hébergé)
 
 ## Gestionnaire de tâches
 
@@ -126,3 +105,23 @@ Il existe plusieurs gestionnaires de communication comme Slack, Discord, Microso
 ### Discord
 
 ## Conclusion
+
+## Licence
+
+Copyright (C) 2024 Floris Robart
+
+Authors: Floris Robart
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.

@@ -1,44 +1,22 @@
 # Exécution de logiciel Windows sur Linux
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Exécution de logiciel Windows sur Linux](#exécution-de-logiciel-windows-sur-linux)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux](#présentation-des-différentes-solutions-pour-exécuter-des-logiciels-windows-sur-linux)
-  - [Wine](#wine)
-    - [Installation de Wine - Linux](#installation-de-wine---linux)
-    - [configurer de Wine comme programme par défaut pour charger les applications Windows](#configurer-de-wine-comme-programme-par-défaut-pour-charger-les-applications-windows)
-  - [Proton](#proton)
-  - [PlayOnLinux](#playonlinux)
-  - [Lutris](#lutris)
-  - [Installation de League of Legends à l'aide de Lutris - Linux](#installation-de-league-of-legends-à-laide-de-lutris---linux)
-    - [Prérequit](#prérequit)
-    - [Installation de Wine](#installation-de-wine)
-      - [Utilisation d'applications Windows sur Ubuntu grâce à Wine](#utilisation-dapplications-windows-sur-ubuntu-grâce-à-wine)
-    - [Installtion de Lutris](#installtion-de-lutris)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux](#présentation-des-différentes-solutions-pour-exécuter-des-logiciels-windows-sur-linux)
+    - [Wine](#wine)
+        - [Installation de Wine - Linux](#installation-de-wine---linux)
+        - [configurer de Wine comme programme par défaut pour charger les applications Windows](#configurer-de-wine-comme-programme-par-défaut-pour-charger-les-applications-windows)
+    - [Proton](#proton)
+    - [PlayOnLinux](#playonlinux)
+    - [Lutris](#lutris)
+    - [Installation de League of Legends à l'aide de Lutris - Linux](#installation-de-league-of-legends-à-laide-de-lutris---linux)
+        - [Prérequit](#prérequit)
+        - [Installation de Wine](#installation-de-wine)
+            - [Utilisation d'applications Windows sur Ubuntu grâce à Wine](#utilisation-dapplications-windows-sur-ubuntu-grâce-à-wine)
+        - [Installtion de Lutris](#installtion-de-lutris)
+    - [Licence](#licence)
 
 ## Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux
 
@@ -59,44 +37,44 @@ Il est fortement recommandé parce qu'il est très efficace, stable et permet d'
 
 - Installer le paquet `wine` depuis le dépot `apt`
 
-  ```shell
-  sudo apt install wine
-  ```
+    ```shell
+    sudo apt install wine
+    ```
 
 - Installer le paquet `wine32` depuis le dépot `apt` ainsi que l'architecture 32 bits `i386`
-  - Ce paquet est nécessaire pour le bon fonctionnement de wine, même si vous avez un système 64 bits et n'utiliser que des applications 64 bits
+    - Ce paquet est nécessaire pour le bon fonctionnement de wine, même si vous avez un système 64 bits et n'utiliser que des applications 64 bits
 
-  ```shell
-  sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32:i386
-  ```
+    ```shell
+    sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32:i386
+    ```
 
 - Tester le bon fonctionnement de wine en installant le logiciel `notepad++` :
-  - Télécharger le fichier d'installation de notepad++
+    - Télécharger le fichier d'installation de notepad++
 
-    ```shell
-    wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8/npp.8.0.Installer.x64.exe
-    ```
+        ```shell
+        wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8/npp.8.0.Installer.x64.exe
+        ```
 
-  - Installer notepad++ avec wine
+    - Installer notepad++ avec wine
 
-    ```shell
-    wine npp.8.0.Installer.x64.exe
-    ```
+        ```shell
+        wine npp.8.0.Installer.x64.exe
+        ```
 
-  - Suiver les instructions d'installation de notepad++
-  - Créer un raccourci de notepad++ sur le bureau
-  - Pour que le raccourci fonctionne, il faut faire clique droit dessus > '`Autoriser l'exécution`'
+    - Suiver les instructions d'installation de notepad++
+    - Créer un raccourci de notepad++ sur le bureau
+    - Pour que le raccourci fonctionne, il faut faire clique droit dessus > '`Autoriser l'exécution`'
 
 ### configurer de Wine comme programme par défaut pour charger les applications Windows
 
 - Créer un lien symbolique de `wine.desktop` dans le dossier `/usr/share/applications` :
 
-  ```shell
-  sudo ln -s /usr/share/doc/wine/examples/wine.desktop /usr/share/applications
-  ```
+    ```shell
+    sudo ln -s /usr/share/doc/wine/examples/wine.desktop /usr/share/applications
+    ```
 
 - Faite un clique droit sur l'application Windows que vous voulez lancer > Ouvrir avec > Autre application > Wine - Chargeur de programmes Windows
-  - Penser à bien cocher la case '`Toujours utiliser pour ce type de fichier`'
+    - Penser à bien cocher la case '`Toujours utiliser pour ce type de fichier`'
 - Vous pouvez maintenant lancer l'application Windows en double cliquant dessus
 
 ## Proton
@@ -134,9 +112,9 @@ Lutris peut gérer des jeux provenant de diverses sources, notamment Steam, GOG 
 
 - Installer le paquet du dépot `apt` :
 
-  ```shell
-  sudo apt install wine
-  ```
+    ```shell
+    sudo apt install wine
+    ```
 
 #### Utilisation d'applications Windows sur Ubuntu grâce à Wine
 
@@ -144,9 +122,9 @@ Lutris peut gérer des jeux provenant de diverses sources, notamment Steam, GOG 
 - Installer l'exécutable de l'application Windows
 - Lancer l'exécutable avec `Wine`
 
-  ```shell
-  wine <nom_du_fichier>.exe
-  ```
+    ```shell
+    wine <nom_du_fichier>.exe
+    ```
 
 - Vous pouvez maintenant utiliser l'application Windows sur Ubuntu
 
@@ -154,9 +132,9 @@ Lutris peut gérer des jeux provenant de diverses sources, notamment Steam, GOG 
 
 - Installer le paquet du dépot `apt` :
 
-  ```shell
-  sudo apt install lutris
-  ```
+    ```shell
+    sudo apt install lutris
+    ```
 
 - Ouvrez Lutris
 - Cliquer sur le bouton '`+`' en haut à gauche de la fenêtre
@@ -170,8 +148,6 @@ Lutris peut gérer des jeux provenant de diverses sources, notamment Steam, GOG 
 - OSerror
 
 ## Licence
-
-doc_windows_on_linux.md
 
 Copyright (C) 2024 Floris Robart
 
@@ -190,7 +166,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

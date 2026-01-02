@@ -2,14 +2,10 @@
 
 ## Table des matières
 
-****
-
 - [Flashing Android OS](#flashing-android-os)
-  - [Table des matières](#table-des-matières)
-  - [Information générale](#information-générale)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Information générale](#information-générale)
+    - [Licence](#licence)
 
 ## Information générale
 
@@ -19,8 +15,6 @@ L'installation de ROM (Read Only Memory, Mémoire en lecture seul) personnalisé
 > <https://source.android.com/docs/core/architecture/bootloader/locking_unlocking?hl=fr>
 
 ## Licence
-
-doc_flashing_Android_OS.md
 
 Copyright (C) 2024 Floris Robart
 
@@ -39,7 +33,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

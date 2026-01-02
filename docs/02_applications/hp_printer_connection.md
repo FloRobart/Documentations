@@ -11,8 +11,6 @@
 
 ## Licence
 
-doc_connexion_imprimante_hp.md
-
 Copyright (C) 2024 Floris Robart
 
 Authors: Floris Robart

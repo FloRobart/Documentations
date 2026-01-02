@@ -3,26 +3,26 @@
 ## Table des matières
 
 - [Bonne pratique de code](#bonne-pratique-de-code)
-  - [Table des matières](#table-des-matières)
-  - [Base de données](#base-de-données)
-    - [🧭 Guide des conventions de nommage — Base de données PostgreSQL](#-guide-des-conventions-de-nommage--base-de-données-postgresql)
-      - [🎯 Objectif](#-objectif)
-      - [🧱 1. Règles générales](#-1-règles-générales)
-      - [🧮 2. Tables](#-2-tables)
-        - [Exemples :](#exemples-)
-      - [🔑 3. Colonnes](#-3-colonnes)
-        - [Exemple :](#exemple-)
-      - [🔗 4. Clés primaires \& étrangères](#-4-clés-primaires--étrangères)
-        - [Clé primaire](#clé-primaire)
-        - [Clé étrangère](#clé-étrangère)
-      - [🧩 5. Contraintes](#-5-contraintes)
-      - [⚙️ 6. Index](#️-6-index)
-      - [🔭 7. Vues](#-7-vues)
-      - [🧠 8. Fonctions \& procédures](#-8-fonctions--procédures)
-      - [📦 9. Séquences](#-9-séquences)
-      - [🧹 10. Bonnes pratiques complémentaires](#-10-bonnes-pratiques-complémentaires)
-      - [💡 Exemple complet](#-exemple-complet)
-  - [API](#api)
+    - [Table des matières](#table-des-matières)
+    - [Base de données](#base-de-données)
+        - [🧭 Guide des conventions de nommage — Base de données PostgreSQL](#-guide-des-conventions-de-nommage--base-de-données-postgresql)
+            - [🎯 Objectif](#-objectif)
+            - [🧱 1. Règles générales](#-1-règles-générales)
+            - [🧮 2. Tables](#-2-tables)
+                - [Exemples :](#exemples-)
+            - [🔑 3. Colonnes](#-3-colonnes)
+                - [Exemple :](#exemple-)
+            - [🔗 4. Clés primaires \& étrangères](#-4-clés-primaires--étrangères)
+                - [Clé primaire](#clé-primaire)
+                - [Clé étrangère](#clé-étrangère)
+            - [🧩 5. Contraintes](#-5-contraintes)
+            - [⚙️ 6. Index](#️-6-index)
+            - [🔭 7. Vues](#-7-vues)
+            - [🧠 8. Fonctions \& procédures](#-8-fonctions--procédures)
+            - [📦 9. Séquences](#-9-séquences)
+            - [🧹 10. Bonnes pratiques complémentaires](#-10-bonnes-pratiques-complémentaires)
+            - [💡 Exemple complet](#-exemple-complet)
+    - [API](#api)
 
 ## Base de données
 
@@ -40,7 +40,7 @@ Ces conventions s’appliquent à tous les objets SQL : **tables**, **colonnes**
 #### 🧱 1. Règles générales
 
 * Utiliser uniquement des **minuscules**.
-  PostgreSQL convertit par défaut les identifiants non-quotés en minuscules.
+    PostgreSQL convertit par défaut les identifiants non-quotés en minuscules.
 * Utiliser le **snake_case** (`user_account`, `created_at`).
 * Éviter les mots réservés (comme `user`, `order`, `group`).
 * Tous les noms doivent être **clairs, courts et significatifs**.
@@ -85,12 +85,12 @@ CREATE TABLE product_categories (...);
 
 ```sql
 CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  is_active BOOLEAN DEFAULT TRUE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
 );
 ```
 
@@ -169,7 +169,7 @@ GROUP BY u.id;
 ```sql
 CREATE FUNCTION get_user_by_email(p_email TEXT)
 RETURNS users AS $$
-  SELECT * FROM users WHERE email = p_email;
+    SELECT * FROM users WHERE email = p_email;
 $$ LANGUAGE sql;
 ```
 
@@ -197,21 +197,21 @@ $$ LANGUAGE sql;
 
 ```sql
 CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  is_active BOOLEAN DEFAULT TRUE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
 );
 
 CREATE TABLE orders (
-  id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  total_amount NUMERIC(10, 2) NOT NULL,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW(),
-  CONSTRAINT orders_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id)
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    total_amount NUMERIC(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    CONSTRAINT orders_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE INDEX orders_user_id_created_at_idx ON orders(user_id, created_at);

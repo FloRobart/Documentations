@@ -1,44 +1,22 @@
 # Documentation de Java et des outils de développement Java
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Documentation de Java et des outils de développement Java](#documentation-de-java-et-des-outils-de-développement-java)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Java](#java)
-    - [Installation de Java - Linux](#installation-de-java---linux)
-    - [Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux](#réparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code---linux)
-  - [Maven](#maven)
-    - [Installation de Maven - Linux](#installation-de-maven---linux)
-    - [Utilisation de Maven](#utilisation-de-maven)
-  - [Wildfly](#wildfly)
-    - [Installation de Wildfly - Linux](#installation-de-wildfly---linux)
-    - [Suppressions de la sécurité SSL de Java pour Wildfly - Linux](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---linux)
-    - [Suppressions de la sécurité SSL de Java pour Wildfly - Windows](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---windows)
-    - [Lancement de Wildfly - Linux](#lancement-de-wildfly---linux)
-    - [Lancement de Wildfly - Windows](#lancement-de-wildfly---windows)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Java](#java)
+        - [Installation de Java - Linux](#installation-de-java---linux)
+        - [Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux](#réparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code---linux)
+    - [Maven](#maven)
+        - [Installation de Maven - Linux](#installation-de-maven---linux)
+        - [Utilisation de Maven](#utilisation-de-maven)
+    - [Wildfly](#wildfly)
+        - [Installation de Wildfly - Linux](#installation-de-wildfly---linux)
+        - [Suppressions de la sécurité SSL de Java pour Wildfly - Linux](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---linux)
+        - [Suppressions de la sécurité SSL de Java pour Wildfly - Windows](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---windows)
+        - [Lancement de Wildfly - Linux](#lancement-de-wildfly---linux)
+        - [Lancement de Wildfly - Windows](#lancement-de-wildfly---windows)
+    - [Licence](#licence)
 
 ## Java
 
@@ -49,38 +27,38 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
 
 - Installer les paquets du dépot `apt` :
 
-  ```shell
-  sudo apt install openjdk-<version>-jdk openjdk-<version>-jre
-  ```
+    ```shell
+    sudo apt install openjdk-<version>-jdk openjdk-<version>-jre
+    ```
 
 - pour vérifier la version et l'installation de java :
 
-  ```shell
-  java --version
-  ```
+    ```shell
+    java --version
+    ```
 
 ### Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux
 
 - Éditer le fichier `.bashrc` :
 
-  ```shell
-  code /home/${USER}/.bashrc
-  ```
+    ```shell
+    code /home/${USER}/.bashrc
+    ```
 
 - Ajouter les lignes suivantes à la fin du fichier `.bashrc` :
-  - Dans mon cas le chemin vers le JDK est `/usr/lib/jvm/java-17-openjdk-amd64`
+    - Dans mon cas le chemin vers le JDK est `/usr/lib/jvm/java-17-openjdk-amd64`
 
-  ```shell
-  # Ajout de la variable JAVA_HOME pour vs code
-  export JAVA_HOME='<path to jdk>'
-  export PATH="${PATH}:${JAVA_HOME}/bin"
-  ```
+    ```shell
+    # Ajout de la variable JAVA_HOME pour vs code
+    export JAVA_HOME='<path to jdk>'
+    export PATH="${PATH}:${JAVA_HOME}/bin"
+    ```
 
 - Mettre à jour le fichier `.bashrc` :
 
-  ```shell
-  source /home/${USER}/.bashrc
-  ```
+    ```shell
+    source /home/${USER}/.bashrc
+    ```
 
 - Fermer puis réouvrir vs code
 - Aller dans les paramètres de vs code
@@ -88,47 +66,47 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
 - Vous devrier voir '`Java › Configuration: Runtimes`'
 - Cliquer sur '`Modifier dans setting.json`'
 
-  !["Image des paramètres de vs code"](../../images/java_config_jdk.png "Image des paramètres de vs code")
+    !["Image des paramètres de vs code"](../../images/java_config_jdk.png "Image des paramètres de vs code")
 
 - Ajouter la valeur de java home dans le fichier `settings.json` comme montrer ci-dessous :
 
-  ```json
-    ...
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "workbench.colorTheme": "GitHub Dark Perso",
-    "java.jdt.ls.java.home": "<add JAVA_HOME here>",
-    "explorer.confirmDelete": false,
-      "java.configuration.runtimes": [
-        {
-          "name": "JavaSE-17",
-          "path": "<add JAVA_HOME here>",
-          "default": true
-        }
-      ],
-      "diffEditor.ignoreTrimWhitespace": false,
-      ...
-  ```
-
-  - Dans mon cas :
-
     ```json
-      ...
-      "git.autofetch": true,
-      "git.confirmSync": false,
-      "workbench.colorTheme": "GitHub Dark Perso",
-      "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
-      "explorer.confirmDelete": false,
-        "java.configuration.runtimes": [
-          {
-            "name": "JavaSE-17",
-            "path": "/usr/lib/jvm/java-17-openjdk-amd64",
-            "default": true
-          }
-        ],
-        "diffEditor.ignoreTrimWhitespace": false,
         ...
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "workbench.colorTheme": "GitHub Dark Perso",
+        "java.jdt.ls.java.home": "<add JAVA_HOME here>",
+        "explorer.confirmDelete": false,
+            "java.configuration.runtimes": [
+                {
+                    "name": "JavaSE-17",
+                    "path": "<add JAVA_HOME here>",
+                    "default": true
+                }
+            ],
+            "diffEditor.ignoreTrimWhitespace": false,
+            ...
     ```
+
+    - Dans mon cas :
+
+        ```json
+            ...
+            "git.autofetch": true,
+            "git.confirmSync": false,
+            "workbench.colorTheme": "GitHub Dark Perso",
+            "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+            "explorer.confirmDelete": false,
+                "java.configuration.runtimes": [
+                    {
+                        "name": "JavaSE-17",
+                        "path": "/usr/lib/jvm/java-17-openjdk-amd64",
+                        "default": true
+                    }
+                ],
+                "diffEditor.ignoreTrimWhitespace": false,
+                ...
+        ```
 
 ## Maven
 
@@ -136,45 +114,45 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
 
 - Installer le paquet du dépot `apt` :
 
-  ```shell
-  sudo apt install maven
-  ```
+    ```shell
+    sudo apt install maven
+    ```
 
 ### Utilisation de Maven
 
 - Créer un projet Maven
 
-  ```shell
-  mvn archetype:generate -DgroupId=<groupId> -DartifactId=<artifactId> -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-  ```
+    ```shell
+    mvn archetype:generate -DgroupId=<groupId> -DartifactId=<artifactId> -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+    ```
 
-  - `<groupId>` : package du projet, par exemple `com.mycompany.app`
-  - `<artifactId>` : nom du projet, par exemple `my-app`
-  - Dans l'exemple ci-dessus le projet sera créer dans le dossier `my-app`. Dans ce dossier il y aura le fichier `pom.xml` et un dossier `src` qui contiendra un dossier `main/java/com/mycompany/app` qui contiendra un fichier `App.java` et un dossier `test/java/com/mycompany/app` qui contiendra un fichier `AppTest.java`.
+    - `<groupId>` : package du projet, par exemple `com.mycompany.app`
+    - `<artifactId>` : nom du projet, par exemple `my-app`
+    - Dans l'exemple ci-dessus le projet sera créer dans le dossier `my-app`. Dans ce dossier il y aura le fichier `pom.xml` et un dossier `src` qui contiendra un dossier `main/java/com/mycompany/app` qui contiendra un fichier `App.java` et un dossier `test/java/com/mycompany/app` qui contiendra un fichier `AppTest.java`.
 
 - Compiler le projet :
-  
-  ```shell
-  mvn clean install
-  ```
+
+    ```shell
+    mvn clean install
+    ```
 
 - Pour compiler et déployer le projet sur un serveur Wildfly (préalablement lancé) :
 
-  ```shell
-  mvn package wildfly:deploy
-  ```
+    ```shell
+    mvn package wildfly:deploy
+    ```
 
 ## Wildfly
 
 ### Installation de Wildfly - Linux
 
 - Télécharger le fichier tar.gz disponible sur :
-  > <https://www.wildfly.org/downloads/>
+    > <https://www.wildfly.org/downloads/>
 - Extraire le fichier tar.gz dans le dossier `/opt`
 
-  ```shell
-  sudo tar -xf wildfly-*.Final.tar.gz -C /opt
-  ```
+    ```shell
+    sudo tar -xf wildfly-*.Final.tar.gz -C /opt
+    ```
 
 ### Suppressions de la sécurité SSL de Java pour Wildfly - Linux
 
@@ -213,11 +191,11 @@ si votre algorithmes est dans l'une de ces listes ou les deux, il faut normaleme
 - lancer la commande : `./standalone.sh -b=192.168.1.223 -DruntimeEnvironment=portable -DpathServerConfig=path/to/serveur.config.xml`
 - `-b` : permet de spécifier l'adresse ip du serveur dans mon cas : `192.168.1.223`
 - `-DruntimeEnvironment` : permet de spécifier l'environnement d'exécution du serveur
-  - `dev` : Serveur de développement de l'entreprise
-  - `prod` : Serveur de production de l'entreprise
-  - `portable` : Serveur sur mon pc portable
+    - `dev` : Serveur de développement de l'entreprise
+    - `prod` : Serveur de production de l'entreprise
+    - `portable` : Serveur sur mon pc portable
 - `-DpathServerConfig` : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)
-  - Dans mon cas : `/OS/Mon_Drive/IUT/TP/s4/stage/SuiviProblemes/ServerHTTP/Server/src/main/resources/serveur.config.xml`
+    - Dans mon cas : `/OS/Mon_Drive/IUT/TP/s4/stage/SuiviProblemes/ServerHTTP/Server/src/main/resources/serveur.config.xml`
 
 ### Lancement de Wildfly - Windows
 
@@ -225,14 +203,12 @@ si votre algorithmes est dans l'une de ces listes ou les deux, il faut normaleme
 - lancer la commande : `.\standalone.bat -b="192.168.1.223" "-Djsse.enableCBCProtection=false" - DruntimeEnvironment="dev" -DpathServerConfig="C:\Mon_Drive\IUT\TP\s4\stage\SuiviProblemes\ServerHTTP\Server\src\main\resources\serveur.config.xml"`
 - `-b` : permet de spécifier l'adresse ip du serveur dans mon cas : `192.168.1.223`
 - `-DruntimeEnvironment` : permet de spécifier l'environnement d'exécution du serveur
-  - `dev` : Serveur de développement de l'entreprise
-  - `prod` : Serveur de production de l'entreprise
-  - `portable` : Serveur sur mon pc portable
+    - `dev` : Serveur de développement de l'entreprise
+    - `prod` : Serveur de production de l'entreprise
+    - `portable` : Serveur sur mon pc portable
 - `-DpathServerConfig` : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)
 
 ## Licence
-
-doc_java.md
 
 Copyright (C) 2024 Floris Robart
 
@@ -251,7 +227,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>

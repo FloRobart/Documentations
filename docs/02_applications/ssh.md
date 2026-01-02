@@ -1,44 +1,22 @@
 # Documentation complète pour SSH
 
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
-
-## Règles
-
-- "`Saisie utilisateur`"
-- '`Elément cliquable/sélectionnable`'
-- `Nom de fichier, dossier ou autre`
-- <Élément à remplacer>
-
-> lien, raccourci clavier et phrase de demande de saisie
-
-```txt
-commande, extrait code et extrait de fichier
-```
-
-<div class="page"></div>
-
 ## Table des matières
 
-****
-
 - [Documentation complète pour SSH](#documentation-complète-pour-ssh)
-  - [Règles](#règles)
-  - [Table des matières](#table-des-matières)
-  - [Installation de SSH](#installation-de-ssh)
-    - [Installation du client SSH](#installation-du-client-ssh)
-    - [Installation du serveur SSH](#installation-du-serveur-ssh)
-    - [Installation de SSH FileSystem (SSHFS)](#installation-de-ssh-filesystem-sshfs)
-  - [Configuration de SSH](#configuration-de-ssh)
-    - [Configuration du client SSH](#configuration-du-client-ssh)
-    - [Configuration du serveur SSH](#configuration-du-serveur-ssh)
-  - [Utilisation de SSH](#utilisation-de-ssh)
-    - [Mise en place d'un serveur SSH](#mise-en-place-dun-serveur-ssh)
-    - [Connexion à un serveur](#connexion-à-un-serveur)
-    - [Transfert de fichier](#transfert-de-fichier)
-    - [Monter un système de fichier distant](#monter-un-système-de-fichier-distant)
-  - [Licence](#licence)
-
-<div class="page"></div>
+    - [Table des matières](#table-des-matières)
+    - [Installation de SSH](#installation-de-ssh)
+        - [Installation du client SSH](#installation-du-client-ssh)
+        - [Installation du serveur SSH](#installation-du-serveur-ssh)
+        - [Installation de SSH FileSystem (SSHFS)](#installation-de-ssh-filesystem-sshfs)
+    - [Configuration de SSH](#configuration-de-ssh)
+        - [Configuration du client SSH](#configuration-du-client-ssh)
+        - [Configuration du serveur SSH](#configuration-du-serveur-ssh)
+    - [Utilisation de SSH](#utilisation-de-ssh)
+        - [Mise en place d'un serveur SSH](#mise-en-place-dun-serveur-ssh)
+        - [Connexion à un serveur](#connexion-à-un-serveur)
+        - [Transfert de fichier](#transfert-de-fichier)
+        - [Monter un système de fichier distant](#monter-un-système-de-fichier-distant)
+    - [Licence](#licence)
 
 ## Installation de SSH
 
@@ -46,17 +24,17 @@ commande, extrait code et extrait de fichier
 
 - Installer le paquet du dépot `apt` :
 
-  ```bash
-  sudo apt install openssh-client
-  ```
+    ```bash
+    sudo apt install openssh-client
+    ```
 
 ### Installation du serveur SSH
 
 - Installer le paquet du dépot `apt` :
 
-  ```bash
-  sudo apt install openssh-server
-  ```
+    ```bash
+    sudo apt install openssh-server
+    ```
 
 ### Installation de SSH FileSystem (SSHFS)
 
@@ -64,9 +42,9 @@ commande, extrait code et extrait de fichier
 
 - Installer le paquet du dépot `apt` :
 
-  ```bash
-  sudo apt install sshfs
-  ```
+    ```bash
+    sudo apt install sshfs
+    ```
 
 ## Configuration de SSH
 
@@ -74,17 +52,17 @@ commande, extrait code et extrait de fichier
 
 - Générer une clé SSH :
 
-  ```shell
-  ssh-keygen -t rsa -b 4096 -C "votre adresse mail"
-  ```
+    ```shell
+    ssh-keygen -t rsa -b 4096 -C "votre adresse mail"
+    ```
 
 - laisser vide les trois champs suivant :
 
-  > Enter file in which to save the key (/home/$USER/.ssh/id_rsa):
+    > Enter file in which to save the key (/home/$USER/.ssh/id_rsa):
 
-  > Enter passphrase (empty for no passphrase):
+    > Enter passphrase (empty for no passphrase):
 
-  > Enter same passphrase again:
+    > Enter same passphrase again:
 
 - Ajouter la clé public (présente dans le fichier `~/.ssh/id_rsa.pub`) sur le serveur SSH.
 
@@ -96,98 +74,96 @@ commande, extrait code et extrait de fichier
 
 - Autoriser le trafic SSH sur le port 22 :
 
-  ```bash
-  sudo ufw allow ssh
-  ```
+    ```bash
+    sudo ufw allow ssh
+    ```
 
 - Éxecuter la commande suivante pour démarrer le serveur SSH :
 
-  ```bash
-  sudo systemctl start ssh
-  ```
+    ```bash
+    sudo systemctl start ssh
+    ```
 
 - Pour démarrer le serveur SSH au démarrage du système :
 
-  ```bash
-  sudo systemctl enable ssh
-  ```
+    ```bash
+    sudo systemctl enable ssh
+    ```
 
 - Pour vérifier l'état du serveur SSH :
 
-  ```bash
-  sudo systemctl status ssh
-  ```
+    ```bash
+    sudo systemctl status ssh
+    ```
 
 - Pour redémarrer le serveur SSH :
 
-  ```bash
-  sudo systemctl restart ssh
-  ```
+    ```bash
+    sudo systemctl restart ssh
+    ```
 
 - Pour arrêter le serveur SSH :
 
-  ```bash
-  sudo systemctl stop ssh
-  ```
+    ```bash
+    sudo systemctl stop ssh
+    ```
 
 ### Connexion à un serveur
 
 - Se connecter à un serveur SSH :
 
-  ```bash
-  ssh <user>@<host>
-  ```
+    ```bash
+    ssh <user>@<host>
+    ```
 
-  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
-  - `<host>` : Adresse IP ou nom de domaine
+    - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+    - `<host>` : Adresse IP ou nom de domaine
 
 ### Transfert de fichier
 
 - Transférer un fichier depuis l'hôte vers un serveur SSH :
 
-  ```sh
-  scp <fichier> <user>@<host>:<destination> -P <port>
-  ```
+    ```sh
+    scp <fichier> <user>@<host>:<destination> -P <port>
+    ```
 
-  - `<fichier>` : Fichier local à transférer
-  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
-  - `<host>` : Adresse IP ou nom de domaine
-  - `<destination>` : Destination du fichier sur le serveur
+    - `<fichier>` : Fichier local à transférer
+    - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+    - `<host>` : Adresse IP ou nom de domaine
+    - `<destination>` : Destination du fichier sur le serveur
 - Transférer un fichier depuis un serveur SSH vers l'hôte :
 
-  ```sh
-  scp -P 7518 <user>@<host>:<fichier> <destination>
-  ```
+    ```sh
+    scp -P 7518 <user>@<host>:<fichier> <destination>
+    ```
 
-  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
-  - `<host>` : Adresse IP ou nom de domaine
-  - `<fichier>` : Fichier distant à transférer sur l'hôte
-  - `<destination>` : Destination du fichier en local
+    - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+    - `<host>` : Adresse IP ou nom de domaine
+    - `<fichier>` : Fichier distant à transférer sur l'hôte
+    - `<destination>` : Destination du fichier en local
 
 ### Monter un système de fichier distant
 
 - [Installer SSHFS](#installation-de-ssh-filesystem-sshfs)
 - Créer un dossier dans lequel sera monter le système de fichier distant :
 
-  ```bash
-  mkdir <dossier>
-  ```
+    ```bash
+    mkdir <dossier>
+    ```
 
-  - `<dossier>` : Nom du dossier
+    - `<dossier>` : Nom du dossier
 - Monter le système de fichier distant :
 
-  ```bash
-  sshfs <user>@<host>:/path/to/distant/folder /local/empty/folder
-  ```
+    ```bash
+    sshfs <user>@<host>:/path/to/distant/folder /local/empty/folder
+    ```
 
-  - `<user>` : Nom d'utilisateur à utiliser sur le serveur
-  - `<host>` : Adresse IP ou nom de domaine du serveur
-  - `/path/to/distant/folder` : Chemin du dossier distant à monter
-  - `/local/folder` : Chemin du dossier local (créé précédemment)
+    - `<user>` : Nom d'utilisateur à utiliser sur le serveur
+    - `<host>` : Adresse IP ou nom de domaine du serveur
+    - `/path/to/distant/folder` : Chemin du dossier distant à monter
+    - `/local/folder` : Chemin du dossier local (créé précédemment)
 
 ## Licence
-
-doc_ssh.md
 
 Copyright (C) 2024 Floris Robart
 
@@ -206,7 +182,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with this program; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-
-****
-
-<a href="https://florobart.github.io/Documentations/"><button type="button">Retour à toute les documentations</button></a>
