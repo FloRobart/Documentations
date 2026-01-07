@@ -7,13 +7,14 @@
     - [Sources](#sources)
     - [Introduction](#introduction)
     - [Installation de Docker engine sur Ubuntu 24.XX](#installation-de-docker-engine-sur-ubuntu-24xx)
-    - [créer votre premier conteneur Docker](#créer-votre-premier-conteneur-docker)
+    - [Utilisation de docker](#utilisation-de-docker)
     - [Licence](#licence)
 
 ## Sources
 
 - [Documentation officiel d'installation de Docker engine](https://docs.docker.com/engine/install/ubuntu/)
 - [Documentation officiel de post installation de Docker engine](https://docs.docker.com/engine/install/linux-postinstall/)
+- [Documentation officiel complète de Docker engine](https://docs.docker.com/engine/)
 
 ## Introduction
 
@@ -124,9 +125,15 @@
         https://docs.docker.com/get-started/
         ```
 
-## créer votre premier conteneur Docker
+## Utilisation de docker
 
-> <https://docs.docker.com/get-started/workshop/>
+- Créer un projet docker et mettez le en production en suivant ce tutoriel
+
+    > [Production avec docker](../01_development/deployment/production_with_docker.md)
+
+- créer votre premier conteneur Docker
+
+    > <https://docs.docker.com/get-started/workshop/>
 
 ## Licence
 

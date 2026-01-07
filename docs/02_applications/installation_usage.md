@@ -5,6 +5,7 @@
 - [Documentation d'installation, de configuration et d'utilisation de différents logiciels](#documentation-dinstallation-de-configuration-et-dutilisation-de-différents-logiciels)
     - [Table des matières](#table-des-matières)
     - [Installation Ventoy (Multi-boot USB) - Linux](#installation-ventoy-multi-boot-usb---linux)
+    - [Installation de Docker engine - Linux](#installation-de-docker-engine---linux)
     - [Installation de Chrome - Linux](#installation-de-chrome---linux)
     - [Installation de Qdirstat - Linux](#installation-de-qdirstat---linux)
     - [Installation de Ticktick - Linux](#installation-de-ticktick---linux)
@@ -59,6 +60,10 @@
 ## Installation Ventoy (Multi-boot USB) - Linux
 
 [Documentation complète de Ventoy](./ventoy.md)
+
+## Installation de Docker engine - Linux
+
+[Documentation complète de l'installation de Docker engine](./docker_installation.md)
 
 ## Installation de Chrome - Linux
 

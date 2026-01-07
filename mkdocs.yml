@@ -71,7 +71,7 @@ nav:
         - Front-end:
             - React : 01_development/frontend/react.md
         - Déploiement:
-            - Docker : 01_development/deployment/docker.md
+            - Mise en production d'une application dockerisée : 01_development/deployment/production_with_docker.md
             - Creation de packets Debian : 01_development/deployment/debian_package_creation.md
             - Mise sous licence d'un projet open source: 01_development/deployment/open_source_licensing_gnu_gpl.md
         - Autres:
@@ -79,6 +79,7 @@ nav:
             - Developpement web en PHP: 01_development/others/web_development_php.md
     - Applications:
         - Installation d'applications Linux divers: 02_applications/installation_usage.md
+        - Installation de Docker : 02_applications/docker_installation.md
         - Git: 02_applications/git.md
         - SSH: 02_applications/ssh.md
         - Visual Studio Code: 02_applications/vscode.md
