@@ -340,6 +340,89 @@ Tous les exemples de se guide sont basés sur mon API open-source : [Econoris A
 
 Dans le dossier `src` nous allons opter pour une architecture modulaire par feature aussi appeler `domain-driven design (DDD)` qui permet de mieux organiser le code en regroupant les fonctionnalités par domaine métier.
 
+- Image complète de l'architecture du projet à la fin du guide (Pour l'exemple d'[Econoris](https://github.com/FloRobart/Econoris_server)).
+
+```txt
+Econoris_server
+├── Database
+│   ├── Dockerfile
+│   ├── functions
+│   │   └── 001-update_updated_at.sql
+│   ├── migrations
+│   ├── schema
+│   │   └── 102-operations.sql
+│   ├── seed
+│   ├── triggers
+│   │   └── 201-update_updated_at.sql
+│   └── views
+├── public
+│   ├── econoris_logo-1024.png
+│   ├── econoris_logo-144.png
+│   ├── econoris_logo-16.png
+│   ├── econoris_logo-192.png
+│   ├── econoris_logo-512.png
+│   ├── econoris_logo-72.png
+│   ├── econoris_logo-96.png
+│   ├── favicon.ico
+│   └── favicon.png
+├── src
+│   ├── app.ts
+│   ├── config
+│   │   └── AppConfig.ts
+│   ├── core
+│   │   ├── cron
+│   │   │   ├── generate_subscription_operations.job.ts
+│   │   │   └── validate_operations.job.ts
+│   │   ├── email
+│   │   │   ├── error.email.ts
+│   │   │   ├── mailer.ts
+│   │   │   └── mailTemplate.ts
+│   │   ├── middlewares
+│   │   │   ├── default_route.middleware.ts
+│   │   │   ├── error.middleware.ts
+│   │   │   ├── helmet_http_headers.middleware.ts
+│   │   │   ├── rate_limiter.middleware.ts
+│   │   │   └── validators
+│   │   │       ├── auth_validator.middleware.ts
+│   │   │       ├── body_validator.middleware.ts
+│   │   │       └── params_query_validator.middleware.ts
+│   │   ├── models
+│   │   │   ├── AppError.model.ts
+│   │   │   └── Database.model.ts
+│   │   └── utils
+│   │       └── logger.ts
+│   ├── modules
+│   │   ├── auth
+│   │   │   ├── auth.schema.ts
+│   │   │   └── auth.types.ts
+│   │   ├── operations
+│   │   │   ├── operations.controller.ts
+│   │   │   ├── operations.repository.ts
+│   │   │   ├── operations.routes.ts
+│   │   │   ├── operations.schema.ts
+│   │   │   ├── operations.service.ts
+│   │   │   ├── operations.swagger.ts
+│   │   │   └── operations.types.ts
+│   ├── server.ts
+│   └── swagger
+│       └── swagger.ts
+├── tests
+│   ├── modules
+│   │   ├── auth
+│   │   │   └── auth.spec.ts
+│   │   └── operations
+│   │       └── operations.spec.ts
+│   └── setup.ts
+├── docker-compose.dev.yml
+├── docker-compose.yml
+├── Dockerfile
+├── tsconfig.json
+├── jest.config.ts
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
 ### Config
 
 Dans le dossier `config`, il y aura tous se qui concerne la configuration de l'application, au minimum il y aura un object qui contiendra les variables d'environnement inscrites dans le fichier `.env`.

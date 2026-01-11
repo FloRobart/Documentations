@@ -28,6 +28,7 @@
         - [Creation de packets Debian](01_development/deployment/debian_package_creation.md)
         - [Mise sous licence d'un projet open source](01_development/deployment/open_source_licensing_gnu_gpl.md)
     - Autres*
+        - [Clean code (Codé proprement)](01_development/others/clean_code.md)
         - [Developpement web en micro-services (Recommandé)](01_development/others/web_development_micro_service.md)
         - [Bonne pratiques de développement by ChatGPT](01_development/others/coding_best_practices_by_chatgpt.md)
         - [Developpement web en PHP](01_development/others/web_development_php.md)
