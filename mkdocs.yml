@@ -65,16 +65,19 @@ nav:
             - Migration Laravel : 01_development/database/migrations_and_seeders_by_tanvir.md
         - Back-end:
             - Java : 01_development/backend/java.md
+            - TypeScript (Node.js/Express) : 01_development/backend/create_api_typescript.md
             - Laravel : 01_development/backend/laravel.md
             - Symfony : 01_development/backend/symfony.md
             - CodeIgniter: 01_development/backend/codeigniter.md
         - Front-end:
+            - Flutter : 01_development/frontend/flutter.md
             - React : 01_development/frontend/react.md
         - Déploiement:
             - Mise en production d'une application dockerisée : 01_development/deployment/production_with_docker.md
             - Creation de packets Debian : 01_development/deployment/debian_package_creation.md
             - Mise sous licence d'un projet open source: 01_development/deployment/open_source_licensing_gnu_gpl.md
-        - Autres:
+        - Autres*:
+            - Developpement web en micro-services (Recommandé): 01_development/others/web_development_micro_service.md
             - Bonne pratiques de développement by ChatGPT : 01_development/others/coding_best_practices_by_chatgpt.md
             - Developpement web en PHP: 01_development/others/web_development_php.md
     - Applications:
