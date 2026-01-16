@@ -44,7 +44,7 @@
 
 Ce document a pour but de rassembler toutes les informations nécessaires pour développer des applications web avec PHP.
 
-Il n'est pas fait pour la production mais pour le développement local. Si vous voulez déployer une application en production, il est conseillé de suivre des [tutoriels spécifiques à la mise en production](../../03_system/server/php_web_server_creation.md).
+Il n'est pas fait pour la production mais pour le développement local. Si vous voulez déployer une application en production, il est conseillé de suivre des [tutoriels spécifiques à la mise en production](../deployment/php_web_server_creation.md).
 
 ## PHP
 

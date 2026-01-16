@@ -27,6 +27,7 @@
         - [Mise en production d'une application dockerisée](01_development/deployment/production_with_docker.md)
         - [Creation de packets Debian](01_development/deployment/debian_package_creation.md)
         - [Mise sous licence d'un projet open source](01_development/deployment/open_source_licensing_gnu_gpl.md)
+        - [Création d'un serveur web PHP](01_development/deployment/php_web_server_creation.md)
     - Autres*
         - [Clean code (Codé proprement)](01_development/others/clean_code.md)
         - [Developpement web en micro-services (Recommandé)](01_development/others/web_development_micro_service.md)
@@ -44,7 +45,7 @@
     - [Configuration de Thunderbird pour l'IUT du Havre](02_applications/thunderbird_iut_le_havre.md)
 - Systèmes
     - Server
-        - [Création d'un serveur web PHP](03_system/server/php_web_server_creation.md)
+        - [Création d'un serveur](03_system/server/server_creation.md)
     - Linux
         - [Création d'un dual boot](03_system/linux/dual_boot.md)
         - [Utilisation d'outils windows sous Linux](03_system/linux/windows_on_linux.md)
