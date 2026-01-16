@@ -11,6 +11,7 @@
         - [Avec le script d'installation](#avec-le-script-dinstallation)
         - [Manuellement](#manuellement)
     - [Configuration de VS Code et des ses extensions](#configuration-de-vs-code-et-des-ses-extensions)
+        - [Paramètres de Visual Studio Code pour Docker avec node.js et typescript](#paramètres-de-visual-studio-code-pour-docker-avec-nodejs-et-typescript)
         - [Header et footer de l'extension `Markdown PDF` de vs code](#header-et-footer-de-lextension-markdown-pdf-de-vs-code)
         - [Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux](#réparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code---linux)
     - [Licence](#licence)
@@ -128,6 +129,12 @@
 - Vous pouvez maintenant choisir le thème nommer '`GitHub Dark Perso`' dans les paramètres de vscode
 
 ## Configuration de VS Code et des ses extensions
+
+### Paramètres de Visual Studio Code pour Docker avec node.js et typescript
+
+Pour un confort de développement avec Visual Studio Code, vous pouvez télécharger le fichier de profil suivant : [Node.js.code-profile](../files/Node.js.code-profile) puis l'importer dans les paramètres utilisateur de Visual Studio Code.
+
+Ce profil contient les extensions et les paramètres pour le développement avec Docker, Node.js et TypeScript.
 
 ### Header et footer de l'extension `Markdown PDF` de vs code
 
