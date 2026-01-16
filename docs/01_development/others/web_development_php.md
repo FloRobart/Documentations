@@ -4,6 +4,7 @@
 
 - [Documentation complète pour le développement web avec PHP](#documentation-complète-pour-le-développement-web-avec-php)
     - [Table des matières](#table-des-matières)
+    - [Préambule](#préambule)
     - [PHP](#php)
         - [Installation de la dernière version de PHP - Linux](#installation-de-la-dernière-version-de-php---linux)
     - [Composer](#composer)
@@ -38,6 +39,12 @@
         - [React](#react)
         - [CodeIgniter](#codeigniter)
     - [Licence](#licence)
+
+## Préambule
+
+Ce document a pour but de rassembler toutes les informations nécessaires pour développer des applications web avec PHP.
+
+Il n'est pas fait pour la production mais pour le développement local. Si vous voulez déployer une application en production, il est conseillé de suivre des [tutoriels spécifiques à la mise en production](../../03_system/server/php_web_server_creation.md).
 
 ## PHP
 
@@ -324,7 +331,7 @@
         ```shell
         sudo nano /opt/lampp/etc/php.ini
         ```
-    
+
     - Changer les valeurs de `post_max_size` et `upload_max_filesize` pour remplacer `8M` par la taille maximale que vous voulez, par exemple `20M` pour 20 Mo :
 
         ```conf
