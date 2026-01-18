@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Java - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Java</a>
+</li>
+            
+<li>
+    <a href="../create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../database/migrations_and_seeders_by_tanvir/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../create_api_typescript/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/backend/java.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-de-java-et-des-outils-de-developpement-java" class="nav-link">Documentation de Java et des outils de développement Java</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#java" class="nav-link">Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#maven" class="nav-link">Maven</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wildfly" class="nav-link">Wildfly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-de-java-et-des-outils-de-developpement-java">Documentation de Java et des outils de développement Java<a class="headerlink" href="#documentation-de-java-et-des-outils-de-developpement-java" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-de-java-et-des-outils-de-développement-java">Documentation de Java et des outils de développement Java</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#java">Java</a><ul>
+<li><a href="#installation-de-java---linux">Installation de Java - Linux</a></li>
+<li><a href="#réparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code---linux">Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux</a></li>
+</ul>
+</li>
+<li><a href="#maven">Maven</a><ul>
+<li><a href="#installation-de-maven---linux">Installation de Maven - Linux</a></li>
+<li><a href="#utilisation-de-maven">Utilisation de Maven</a></li>
+</ul>
+</li>
+<li><a href="#wildfly">Wildfly</a><ul>
+<li><a href="#installation-de-wildfly---linux">Installation de Wildfly - Linux</a></li>
+<li><a href="#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---linux">Suppressions de la sécurité SSL de Java pour Wildfly - Linux</a></li>
+<li><a href="#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---windows">Suppressions de la sécurité SSL de Java pour Wildfly - Windows</a></li>
+<li><a href="#lancement-de-wildfly---linux">Lancement de Wildfly - Linux</a></li>
+<li><a href="#lancement-de-wildfly---windows">Lancement de Wildfly - Windows</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-java-linux">Installation de Java - Linux<a class="headerlink" href="#installation-de-java-linux" title="Permanent link">&para;</a></h3>
+<p>La dernière version LTS (Long terme support) de Java est la 17, je conseille donc d'installer la version 17.
+La version du jdk et du jre doit être la même, sinon il y aura des problèmes de compatibilité.</p>
+<ul>
+<li>
+<p>Installer les paquets du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-&lt;version&gt;-jdk<span class="w"> </span>openjdk-&lt;version&gt;-jre
+</code></pre></div>
+</li>
+<li>
+<p>pour vérifier la version et l'installation de java :</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>--version
+</code></pre></div>
+</li>
+</ul>
+<h3 id="reparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code-linux">Réparer l'erreur de JDK introuvable sur Visual Studio Code (vs code) - Linux<a class="headerlink" href="#reparer-lerreur-de-jdk-introuvable-sur-visual-studio-code-vs-code-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Éditer le fichier <code>.bashrc</code> :</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les lignes suivantes à la fin du fichier <code>.bashrc</code> :</p>
+<ul>
+<li>Dans mon cas le chemin vers le JDK est <code>/usr/lib/jvm/java-17-openjdk-amd64</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ajout de la variable JAVA_HOME pour vs code</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s1">&#39;&lt;path to jdk&gt;&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour le fichier <code>.bashrc</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Fermer puis réouvrir vs code</p>
+</li>
+<li>Aller dans les paramètres de vs code</li>
+<li>Rechercher "<code>java runtime</code>"</li>
+<li>Vous devrier voir '<code>Java › Configuration: Runtimes</code>'</li>
+<li>
+<p>Cliquer sur '<code>Modifier dans setting.json</code>'</p>
+<p><img alt="&quot;Image des paramètres de vs code&quot;" src="../../../images/java_config_jdk.png" title="Image des paramètres de vs code" /></p>
+</li>
+<li>
+<p>Ajouter la valeur de java home dans le fichier <code>settings.json</code> comme montrer ci-dessous :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">...</span>
+<span class="w">    </span><span class="nt">&quot;git.autofetch&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;git.confirmSync&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;workbench.colorTheme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GitHub Dark Perso&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;java.jdt.ls.java.home&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;add JAVA_HOME here&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;explorer.confirmDelete&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;java.configuration.runtimes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JavaSE-17&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;add JAVA_HOME here&gt;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;diffEditor.ignoreTrimWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="err">...</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Dans mon cas :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">...</span>
+<span class="w">    </span><span class="nt">&quot;git.autofetch&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;git.confirmSync&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;workbench.colorTheme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GitHub Dark Perso&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;java.jdt.ls.java.home&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/usr/lib/jvm/java-17-openjdk-amd64&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;explorer.confirmDelete&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;java.configuration.runtimes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JavaSE-17&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/usr/lib/jvm/java-17-openjdk-amd64&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;diffEditor.ignoreTrimWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="err">...</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="maven">Maven<a class="headerlink" href="#maven" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-maven-linux">Installation de Maven - Linux<a class="headerlink" href="#installation-de-maven-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>maven
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-maven">Utilisation de Maven<a class="headerlink" href="#utilisation-de-maven" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer un projet Maven</p>
+<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>archetype:generate<span class="w"> </span>-DgroupId<span class="o">=</span>&lt;groupId&gt;<span class="w"> </span>-DartifactId<span class="o">=</span>&lt;artifactId&gt;<span class="w"> </span>-DarchetypeArtifactId<span class="o">=</span>maven-archetype-quickstart<span class="w"> </span>-DinteractiveMode<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;groupId&gt;</code> : package du projet, par exemple <code>com.mycompany.app</code></li>
+<li><code>&lt;artifactId&gt;</code> : nom du projet, par exemple <code>my-app</code></li>
+<li>Dans l'exemple ci-dessus le projet sera créer dans le dossier <code>my-app</code>. Dans ce dossier il y aura le fichier <code>pom.xml</code> et un dossier <code>src</code> qui contiendra un dossier <code>main/java/com/mycompany/app</code> qui contiendra un fichier <code>App.java</code> et un dossier <code>test/java/com/mycompany/app</code> qui contiendra un fichier <code>AppTest.java</code>.</li>
+</ul>
+</li>
+<li>
+<p>Compiler le projet :</p>
+<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>install
+</code></pre></div>
+</li>
+<li>
+<p>Pour compiler et déployer le projet sur un serveur Wildfly (préalablement lancé) :</p>
+<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>package<span class="w"> </span>wildfly:deploy
+</code></pre></div>
+</li>
+</ul>
+<h2 id="wildfly">Wildfly<a class="headerlink" href="#wildfly" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-wildfly-linux">Installation de Wildfly - Linux<a class="headerlink" href="#installation-de-wildfly-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger le fichier tar.gz disponible sur :
+    &gt; <a href="https://www.wildfly.org/downloads/">https://www.wildfly.org/downloads/</a></li>
+<li>
+<p>Extraire le fichier tar.gz dans le dossier <code>/opt</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-xf<span class="w"> </span>wildfly-*.Final.tar.gz<span class="w"> </span>-C<span class="w"> </span>/opt
+</code></pre></div>
+</li>
+</ul>
+<h3 id="suppressions-de-la-securite-ssl-de-java-pour-wildfly-linux">Suppressions de la sécurité SSL de Java pour Wildfly - Linux<a class="headerlink" href="#suppressions-de-la-securite-ssl-de-java-pour-wildfly-linux" title="Permanent link">&para;</a></h3>
+<p>Pour que Wildfly puisse se connecter à une base de données ancienne qui utilise un protocole de sécurité obsolète, il faut supprimé le protocole utilisé par la base de la liste des protocoles de sécurité interdit de Java.
+Dans mon cas, la base de données utilise l'algorithme <code>SSLv1</code>, donc je vais le supprimer ainsi que tout les algorithmes <code>SSL</code> de version supérieur présent dans la liste.</p>
+<p>Je ne peux pas utiliser la méthode <code>System.setProperty();</code> car il semblerait que Wildfly ne prenne pas en compte les changements de propriétés système après le lancement du serveur.</p>
+<p>Je suis donc obliger de modifier directement le fichier de configuration de Java.</p>
+<ul>
+<li>Pour ce faire allez dans le fichier <code>/etc/java-17-openjdk/security/java.security</code></li>
+<li>Rechercher la ligne <code>jdk.tls.disabledAlgorithms=</code></li>
+<li>Supprimer <code>SSLv1</code> et tout les SSL de version supérieur de la liste des algorithmes interdits</li>
+</ul>
+<p><strong>Attention</strong>, il existe deux autres listes d'algorithmes interdits :</p>
+<ul>
+<li><code>jdk.jar.disabledAlgorithms</code></li>
+<li><code>jdk.certpath.disabledAlgorithms</code></li>
+</ul>
+<p>si votre algorithmes est dans l'une de ces listes ou les deux, il faut normalement aussi le supprimer.</p>
+<ul>
+<li>Ajouter le paramètre <code>"-Djsse.enableCBCProtection=false"</code> dans la ligne de commande pour lancer le serveur <strong>(Obligatoire)</strong></li>
+</ul>
+<h3 id="suppressions-de-la-securite-ssl-de-java-pour-wildfly-windows">Suppressions de la sécurité SSL de Java pour Wildfly - Windows<a class="headerlink" href="#suppressions-de-la-securite-ssl-de-java-pour-wildfly-windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ouvrir un powershell ou un cmd en administrateur <strong>(Obligatoire)</strong></li>
+<li>aller dans le dossier 'security' de java : <code>cd "path\to\jdk\conf\security"</code> dans mon cas <code>cd "C:\Program Files\Java\jdk-17.0.3.7-hotspot\conf\security"</code></li>
+<li>ouvrir le fichier 'java.security' : <code>notepad java.security</code></li>
+<li>Rechercher la ligne <code>jdk.tls.disabledAlgorithms=</code></li>
+<li>Supprimer <code>SSLv1</code> et tout les SSL de version supérieur de la liste des algorithmes interdits</li>
+<li>Ajouter le paramètre <code>"-Djsse.enableCBCProtection=false"</code> dans la ligne de commande pour lancer le serveur <strong>(Obligatoire)</strong></li>
+</ul>
+<h3 id="lancement-de-wildfly-linux">Lancement de Wildfly - Linux<a class="headerlink" href="#lancement-de-wildfly-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>aller dans le dossier bin de Wildfly qui se trouve normalement dans <code>/opt/wildfly-&lt;version&gt;.Final/bin</code> dans mon cas <code>/opt/wildfly-27.0.1.Final/bin</code></li>
+<li>lancer la commande : <code>./standalone.sh -b=192.168.1.223 -DruntimeEnvironment=portable -DpathServerConfig=path/to/serveur.config.xml</code></li>
+<li><code>-b</code> : permet de spécifier l'adresse ip du serveur dans mon cas : <code>192.168.1.223</code></li>
+<li><code>-DruntimeEnvironment</code> : permet de spécifier l'environnement d'exécution du serveur<ul>
+<li><code>dev</code> : Serveur de développement de l'entreprise</li>
+<li><code>prod</code> : Serveur de production de l'entreprise</li>
+<li><code>portable</code> : Serveur sur mon pc portable</li>
+</ul>
+</li>
+<li><code>-DpathServerConfig</code> : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)<ul>
+<li>Dans mon cas : <code>/OS/Mon_Drive/IUT/TP/s4/stage/SuiviProblemes/ServerHTTP/Server/src/main/resources/serveur.config.xml</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="lancement-de-wildfly-windows">Lancement de Wildfly - Windows<a class="headerlink" href="#lancement-de-wildfly-windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>aller dans le dossier bin de Wildfly qui se trouve normalement dans <code>C:\wildfly-&lt;version&gt;.Final\bin</code> dans mon cas <code>C:\wildfly-27.0.1.Final\bin</code></li>
+<li>lancer la commande : <code>.\standalone.bat -b="192.168.1.223" "-Djsse.enableCBCProtection=false" - DruntimeEnvironment="dev" -DpathServerConfig="C:\Mon_Drive\IUT\TP\s4\stage\SuiviProblemes\ServerHTTP\Server\src\main\resources\serveur.config.xml"</code></li>
+<li><code>-b</code> : permet de spécifier l'adresse ip du serveur dans mon cas : <code>192.168.1.223</code></li>
+<li><code>-DruntimeEnvironment</code> : permet de spécifier l'environnement d'exécution du serveur<ul>
+<li><code>dev</code> : Serveur de développement de l'entreprise</li>
+<li><code>prod</code> : Serveur de production de l'entreprise</li>
+<li><code>portable</code> : Serveur sur mon pc portable</li>
+</ul>
+</li>
+<li><code>-DpathServerConfig</code> : permet de spécifier le chemin vers le fichier de configuration du serveur, c'est dans ce fichier que seront les informations sur la base de données (adresse IP, numéro de port et nom de la base)</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

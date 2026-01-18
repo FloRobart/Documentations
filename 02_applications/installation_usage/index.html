@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Installation d'applications Linux divers - Documentation Floris</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../01_development/others/web_development_php/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../docker_installation/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/02_applications/installation_usage.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels" class="nav-link">Documentation d'installation, de configuration et d'utilisation de différents logiciels</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-ventoy-multi-boot-usb-linux" class="nav-link">Installation Ventoy (Multi-boot USB) - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-docker-engine-linux" class="nav-link">Installation de Docker engine - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-chrome-linux" class="nav-link">Installation de Chrome - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-qdirstat-linux" class="nav-link">Installation de Qdirstat - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-ticktick-linux" class="nav-link">Installation de Ticktick - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-dandroid-studio-linux" class="nav-link">Installation d'android studio - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-netbeans-linux" class="nav-link">Installation de Netbeans - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-postman-linux" class="nav-link">Installation de Postman - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-trello-desktop-linux" class="nav-link">Installation de Trello desktop - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-slack-linux" class="nav-link">Installation de Slack - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-curl-linux" class="nav-link">Installation de curl - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-wget" class="nav-link">Installation de wget</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-gcc-linux" class="nav-link">Installation de gcc - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-pip-linux" class="nav-link">Installation de pip - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-gpt-cli-linux" class="nav-link">Installation de gpt-cli - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#usrbinenv-python" class="nav-link">!/usr/bin/env python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#usrbinenv-python3" class="nav-link">!/usr/bin/env python3</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-cmake-linux" class="nav-link">Installation de CMake - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-wps-office-linux" class="nav-link">Installation de WPS Office - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-smartmontools-linux" class="nav-link">Installation de Smartmontools - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-flatpak-gestionnaire-de-paquets-linux" class="nav-link">Installation de Flatpak (gestionnaire de paquets) - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-mission-center-linux" class="nav-link">Installation de Mission center - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-zsh-interpreteur-de-commandes-shell-linux" class="nav-link">Installation de ZSH (interpréteur de commandes shell) - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-du-gestionnaire-de-packet-snap-linux" class="nav-link">Installation du gestionnaire de packet Snap - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-thunderbird-linux" class="nav-link">Installation de Thunderbird - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-filezilla-linux" class="nav-link">Installation de FileZilla - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-testdisk-linux" class="nav-link">Installation de TestDisk - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-txt2man-linux" class="nav-link">Installation de Txt2man - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-neofetch-linux" class="nav-link">Installation de neofetch - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-scoop-windows" class="nav-link">Installation de Scoop - Windows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-jekyll-linux" class="nav-link">Installation de Jekyll - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-discord-linux" class="nav-link">Installation de Discord - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-virtualbox-sur-linux-ubuntu" class="nav-link">Installation de VirtualBox sur Linux (Ubuntu)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gparted" class="nav-link">GParted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dconf-editor" class="nav-link">Dconf-Editor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pandoc" class="nav-link">Pandoc</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#melonds-emulateur-de-nintendo-ds-linux" class="nav-link">MelonDS (émulateur de Nintendo DS) - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels">Documentation d'installation, de configuration et d'utilisation de différents logiciels<a class="headerlink" href="#documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-dinstallation-de-configuration-et-dutilisation-de-différents-logiciels">Documentation d'installation, de configuration et d'utilisation de différents logiciels</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#installation-ventoy-multi-boot-usb---linux">Installation Ventoy (Multi-boot USB) - Linux</a></li>
+<li><a href="#installation-de-docker-engine---linux">Installation de Docker engine - Linux</a></li>
+<li><a href="#installation-de-chrome---linux">Installation de Chrome - Linux</a></li>
+<li><a href="#installation-de-qdirstat---linux">Installation de Qdirstat - Linux</a></li>
+<li><a href="#installation-de-ticktick---linux">Installation de Ticktick - Linux</a></li>
+<li><a href="#installation-dandroid-studio---linux">Installation d'android studio - Linux</a></li>
+<li><a href="#installation-de-netbeans---linux">Installation de Netbeans - Linux</a></li>
+<li><a href="#installation-de-postman---linux">Installation de Postman - Linux</a></li>
+<li><a href="#installation-de-trello-desktop---linux">Installation de Trello desktop - Linux</a></li>
+<li><a href="#installation-de-slack---linux">Installation de Slack - Linux</a></li>
+<li><a href="#installation-de-curl---linux">Installation de curl - Linux</a></li>
+<li><a href="#installation-de-wget">Installation de wget</a></li>
+<li><a href="#installation-de-gcc---linux">Installation de gcc - Linux</a></li>
+<li><a href="#installation-de-pip---linux">Installation de pip - Linux</a></li>
+<li><a href="#installation-de-gpt-cli---linux">Installation de gpt-cli - Linux</a></li>
+<li><a href="#installation-de-cmake---linux">Installation de CMake - Linux</a></li>
+<li><a href="#installation-de-wps-office---linux">Installation de WPS Office - Linux</a></li>
+<li><a href="#installation-de-smartmontools---linux">Installation de Smartmontools - Linux</a></li>
+<li><a href="#installation-de-flatpak-gestionnaire-de-paquets---linux">Installation de Flatpak (gestionnaire de paquets) - Linux</a></li>
+<li><a href="#installation-de-mission-center---linux">Installation de Mission center - Linux</a></li>
+<li><a href="#installation-de-zsh-interpréteur-de-commandes-shell---linux">Installation de ZSH (interpréteur de commandes shell) - Linux</a></li>
+<li><a href="#installation-du-gestionnaire-de-packet-snap---linux">Installation du gestionnaire de packet Snap - Linux</a></li>
+<li><a href="#installation-de-thunderbird---linux">Installation de Thunderbird - Linux</a></li>
+<li><a href="#installation-de-filezilla---linux">Installation de FileZilla - Linux</a></li>
+<li><a href="#installation-de-testdisk---linux">Installation de TestDisk - Linux</a></li>
+<li><a href="#installation-de-txt2man---linux">Installation de Txt2man - Linux</a></li>
+<li><a href="#installation-de-neofetch---linux">Installation de neofetch - Linux</a></li>
+<li><a href="#installation-de-scoop---windows">Installation de Scoop - Windows</a></li>
+<li><a href="#installation-de-jekyll---linux">Installation de Jekyll - Linux</a></li>
+<li><a href="#installation-de-discord---linux">Installation de Discord - Linux</a></li>
+<li><a href="#installation-de-virtualbox-sur-linux-ubuntu">Installation de VirtualBox sur Linux (Ubuntu)</a><ul>
+<li><a href="#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt">Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets <code>apt</code></a></li>
+<li><a href="#installation-en-téléchargeant-le-fichier-deb">Installation en téléchargeant le fichier deb</a></li>
+<li><a href="#activer-virtualbox-avec-le-secure-boot">Activer VirtualBox avec le secure boot</a></li>
+</ul>
+</li>
+<li><a href="#gparted">GParted</a><ul>
+<li><a href="#installation-de-gparted---linux">Installation de GParted - Linux</a></li>
+<li><a href="#allouée-la-partition-grace-à-gparted---linux">Allouée la partition grace à GParted - Linux</a></li>
+</ul>
+</li>
+<li><a href="#dconf-editor">Dconf-Editor</a><ul>
+<li><a href="#installation-de-dconf-editor---linux">Installation de Dconf-Editor - Linux</a></li>
+<li><a href="#utilisation-de-dconf-editor">Utilisation de Dconf-Editor</a><ul>
+<li><a href="#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome">Modifier le comportement du dock (barre de tâche) de Gnome</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#pandoc">Pandoc</a><ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#installation-de-pandoc---linux">Installation de Pandoc - Linux</a></li>
+<li><a href="#utilisation-de-pandoc">Utilisation de Pandoc</a></li>
+</ul>
+</li>
+<li><a href="#melonds-émulateur-de-nintendo-ds---linux">MelonDS (émulateur de Nintendo DS) - Linux</a><ul>
+<li><a href="#installation-de-la-version-091-de-melonds">Installation de la version 0.9.1 de MelonDS</a></li>
+<li><a href="#configuration-de-melonds">Configuration de MelonDS</a></li>
+<li><a href="#lancer-un-jeu-avec-melonds">Lancer un jeu avec MelonDS</a></li>
+<li><a href="#améliorer-les-graphismes-de-melonds">Améliorer les graphismes de MelonDS</a></li>
+<li><a href="#configurer-les-touches-de-melonds">Configurer les touches de MelonDS</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-ventoy-multi-boot-usb-linux">Installation Ventoy (Multi-boot USB) - Linux<a class="headerlink" href="#installation-ventoy-multi-boot-usb-linux" title="Permanent link">&para;</a></h2>
+<p><a href="../ventoy/">Documentation complète de Ventoy</a></p>
+<h2 id="installation-de-docker-engine-linux">Installation de Docker engine - Linux<a class="headerlink" href="#installation-de-docker-engine-linux" title="Permanent link">&para;</a></h2>
+<p><a href="../docker_installation/">Documentation complète de l'installation de Docker engine</a></p>
+<h2 id="installation-de-chrome-linux">Installation de Chrome - Linux<a class="headerlink" href="#installation-de-chrome-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet deb disponible sur</p>
+<blockquote>
+<p><a href="https://www.google.fr/chrome/">https://www.google.fr/chrome/</a></p>
+</blockquote>
+</li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>google-chrome-stable_*_amd64.deb
+</code></pre></div>
+</li>
+<li>
+<p>Si chrome ne se lance pas, redémarrer l'ordinateur</p>
+<div class="highlight"><pre><span></span><code>reboot
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-qdirstat-linux">Installation de Qdirstat - Linux<a class="headerlink" href="#installation-de-qdirstat-linux" title="Permanent link">&para;</a></h2>
+<p>Equivalent de <code>Windirstat</code> qui permet d'analyser les disques pour savoir quel dossier et quel fichier prend le plus de place.</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>qdirstat
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-ticktick-linux">Installation de Ticktick - Linux<a class="headerlink" href="#installation-de-ticktick-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Installer le fichier deb disponible sur :
+    &gt; <a href="https://ticktick.com/about/download">https://ticktick.com/about/download</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>ticktick_*_amd64.deb
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-dandroid-studio-linux">Installation d'android studio - Linux<a class="headerlink" href="#installation-dandroid-studio-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Télécharger le fichier tar.gz disponible sur :
+    &gt; <a href="https://developer.android.com/studio">https://developer.android.com/studio</a></p>
+</li>
+<li>
+<p>Aller dans le dossier <code>/opt</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt
+</code></pre></div>
+</li>
+<li>
+<p>Déplacer le fichier tar.gz dans le dossier <code>/opt</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>/home/floris/Téléchargements/android-studio-&lt;version&gt;-linux.tar.gz<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Extraire le fichier tar.gz dans le dossier <code>/opt</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Supprimer le fichier tar.gz</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Installer les bibliothèques requises pour ordinateurs 64 bits</p>
+<p><strong>Uniquement pour Ubuntu 22.04 LTS (et peut être version antérieur)</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libc6:i386<span class="w"> </span>libncurses5:i386<span class="w"> </span>libstdc++6:i386<span class="w"> </span>lib32z1<span class="w"> </span>libbz2-1.0:i386
+</code></pre></div>
+<p><strong>Uniquement pour Fedora</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>zlib.i686<span class="w"> </span>ncurses-libs.i686<span class="w"> </span>bzip2-libs.i686
+</code></pre></div>
+</li>
+<li>
+<p>Lancer Android Studio</p>
+<div class="highlight"><pre><span></span><code>/opt/android-studio/bin/studio.sh
+</code></pre></div>
+</li>
+<li>
+<p>Suiver les instructions d'installation</p>
+</li>
+<li>
+<p>Pour afficher Android Studio dans la liste d'applications, sélectionnez '<code>Tools</code>' &gt; '<code>Create Desktop Entry</code>' dans la barre de menu d'Android Studio. En français : '<code>Outils</code>' &gt; '<code>Créer une entrée de bureau</code>'</p>
+</li>
+</ul>
+<h2 id="installation-de-netbeans-linux">Installation de Netbeans - Linux<a class="headerlink" href="#installation-de-netbeans-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le fichier deb disponible sur :
+    &gt; <a href="https://netbeans.apache.org/download/index.html">https://netbeans.apache.org/download/index.html</a></p>
+</li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>netbeans*-bin.deb
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-postman-linux">Installation de Postman - Linux<a class="headerlink" href="#installation-de-postman-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>postman
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-trello-desktop-linux">Installation de Trello desktop - Linux<a class="headerlink" href="#installation-de-trello-desktop-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>trello-desktop
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-slack-linux">Installation de Slack - Linux<a class="headerlink" href="#installation-de-slack-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>slack
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-curl-linux">Installation de curl - Linux<a class="headerlink" href="#installation-de-curl-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-wget">Installation de wget<a class="headerlink" href="#installation-de-wget" title="Permanent link">&para;</a></h2>
+<p>wget est un utilitaire en ligne de commande pour télécharger de fichiers depuis le Web. Il supporte les protocoles HTTP, HTTPS et FTP ainsi que le téléchargement sur des serveurs HTTP à travers des proxies.</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wget
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-gcc-linux">Installation de gcc - Linux<a class="headerlink" href="#installation-de-gcc-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gcc
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-pip-linux">Installation de pip - Linux<a class="headerlink" href="#installation-de-pip-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+</code></pre></div>
+</li>
+<li>
+<p>erreur possible avec pip :</p>
+<div class="highlight"><pre><span></span><code>error:<span class="w"> </span>externally-managed-environment
+×<span class="w"> </span>This<span class="w"> </span>environment<span class="w"> </span>is<span class="w"> </span>externally<span class="w"> </span>managed
+╰─&gt;<span class="w"> </span>To<span class="w"> </span>install<span class="w"> </span>Python<span class="w"> </span>packages<span class="w"> </span>system-wide,<span class="w"> </span>try<span class="w"> </span>apt<span class="w"> </span>install
+<span class="w">        </span>python3-xyz,<span class="w"> </span>where<span class="w"> </span>xyz<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>package<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>trying<span class="w"> </span>to
+<span class="w">        </span>install.
+
+<span class="w">        </span>If<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>a<span class="w"> </span>non-Debian-packaged<span class="w"> </span>Python<span class="w"> </span>package,
+<span class="w">        </span>create<span class="w"> </span>a<span class="w"> </span>virtual<span class="w"> </span>environment<span class="w"> </span>using<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>path/to/venv.
+<span class="w">        </span>Then<span class="w"> </span>use<span class="w"> </span>path/to/venv/bin/python<span class="w"> </span>and<span class="w"> </span>path/to/venv/bin/pip.<span class="w"> </span>Make
+<span class="w">        </span>sure<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>python3-full<span class="w"> </span>installed.
+
+<span class="w">        </span>If<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>a<span class="w"> </span>non-Debian<span class="w"> </span>packaged<span class="w"> </span>Python<span class="w"> </span>application,
+<span class="w">        </span>it<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>easiest<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>pipx<span class="w"> </span>install<span class="w"> </span>xyz,<span class="w"> </span>which<span class="w"> </span>will<span class="w"> </span>manage<span class="w"> </span>a
+<span class="w">        </span>virtual<span class="w"> </span>environment<span class="w"> </span><span class="k">for</span><span class="w"> </span>you.<span class="w"> </span>Make<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>pipx<span class="w"> </span>installed.
+
+<span class="w">        </span>See<span class="w"> </span>/usr/share/doc/python3.11/README.venv<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+
+note:<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>believe<span class="w"> </span>this<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>mistake,<span class="w"> </span>please<span class="w"> </span>contact<span class="w"> </span>your<span class="w"> </span>Python<span class="w"> </span>installation<span class="w"> </span>or<span class="w"> </span>OS<span class="w"> </span>distribution<span class="w"> </span>provider.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>override<span class="w"> </span>this,<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>risk<span class="w"> </span>of<span class="w"> </span>breaking<span class="w"> </span>your<span class="w"> </span>Python<span class="w"> </span>installation<span class="w"> </span>or<span class="w"> </span>OS,<span class="w"> </span>by<span class="w"> </span>passing<span class="w"> </span>--break-system-packages.
+hint:<span class="w"> </span>See<span class="w"> </span>PEP<span class="w"> </span><span class="m">668</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>detailed<span class="w"> </span>specification.
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Pour résoudre ce problème, ouvrez le fichier <code>/home/${USER}/.config/pip/pip.conf</code></strong></p>
+<ul>
+<li>Il est possible que ce fichier n'éxisite pas, dans ce cas créer le fichier puis ouvrez le</li>
+</ul>
+<div class="highlight"><pre><span></span><code>open<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.config/pip/pip.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les lignes suivantes à la fin du fichier :</p>
+<div class="highlight"><pre><span></span><code>[global]
+break-system-packages = true
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder le fichier</p>
+</li>
+<li>
+<p>Relancer la commande qui à échoué ou tester en installant le paquet <code>mouse</code></p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mouse
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-gpt-cli-linux">Installation de gpt-cli - Linux<a class="headerlink" href="#installation-de-gpt-cli-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Cloner le repertoire Github :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/kharvd/gpt-cli
+</code></pre></div>
+</li>
+<li>
+<p>Aller dans le dossier du projet :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gpt-cli
+</code></pre></div>
+</li>
+<li>
+<p>Installer les dépendances :</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+</li>
+<li>
+<p>Trouver la clé d'API OpenIA (l'adresse mail que j'utilise est <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#111;&#114;&#116;&#103;&#97;&#115;&#100;&#46;&#97;&#99;&#101;&#52;&#57;&#49;&#56;&#48;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#111;&#114;&#116;&#103;&#97;&#115;&#100;&#46;&#97;&#99;&#101;&#52;&#57;&#49;&#56;&#48;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>) sur le site :
+    &gt; <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
+</li>
+<li>
+<p>Ajouter la clé d'API OpenIA dans le fichier <code>.bashrc</code> :</p>
+<p><strong>Attention, la clé d'API doit permettre d'utiliser l'API</strong></p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>~/.bashrc
+</code></pre></div>
+<ul>
+<li>
+<p>Ajouter la ligne suivante à la fin du fichier <code>.bashrc</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ajout de la clé d&#39;API OpenAI pour gpt-cli</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s1">&#39;&lt;votre clé d\&#39;</span>api&gt;<span class="err">&#39;</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Modifier le script python <code>gpt.py</code> :</p>
+<p>Remplacer cette ligne :</p>
+<p>```python</p>
+<h1 id="usrbinenv-python">!/usr/bin/env python<a class="headerlink" href="#usrbinenv-python" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>```
+</code></pre></div>
+<p>Par cette ligne :</p>
+<p>```python</p>
+<h1 id="usrbinenv-python3">!/usr/bin/env python3<a class="headerlink" href="#usrbinenv-python3" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>```
+</code></pre></div>
+</li>
+<li>
+<p>Executer le script python :</p>
+<div class="highlight"><pre><span></span><code>./gpt.py
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-cmake-linux">Installation de CMake - Linux<a class="headerlink" href="#installation-de-cmake-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>--classic<span class="w"> </span>cmake
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-wps-office-linux">Installation de WPS Office - Linux<a class="headerlink" href="#installation-de-wps-office-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>wps-office
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-smartmontools-linux">Installation de Smartmontools - Linux<a class="headerlink" href="#installation-de-smartmontools-linux" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><a href="https://doc.ubuntu-fr.org/smartmontools">https://doc.ubuntu-fr.org/smartmontools</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>smartmontools
+</code></pre></div>
+</li>
+<li>
+<p>Installer l'interface graphique de smartmontools du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gsmartcontrol
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-flatpak-gestionnaire-de-paquets-linux">Installation de Flatpak (gestionnaire de paquets) - Linux<a class="headerlink" href="#installation-de-flatpak-gestionnaire-de-paquets-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-mission-center-linux">Installation de Mission center - Linux<a class="headerlink" href="#installation-de-mission-center-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>flatpak</code> :</p>
+<div class="highlight"><pre><span></span><code>flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>io.missioncenter.MissionCenter
+</code></pre></div>
+</li>
+<li>
+<p>Allez voir le site ci-dessous pour la fin de l'installation
+    &gt; <a href="https://dl.flathub.org/repo/appstream/io.missioncenter.MissionCenter.flatpakref">https://dl.flathub.org/repo/appstream/io.missioncenter.MissionCenter.flatpakref</a></p>
+</li>
+</ul>
+<h2 id="installation-de-zsh-interpreteur-de-commandes-shell-linux">Installation de ZSH (interpréteur de commandes shell) - Linux<a class="headerlink" href="#installation-de-zsh-interpreteur-de-commandes-shell-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>zsh
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-du-gestionnaire-de-packet-snap-linux">Installation du gestionnaire de packet Snap - Linux<a class="headerlink" href="#installation-du-gestionnaire-de-packet-snap-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet principale du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
+</code></pre></div>
+</li>
+<li>
+<p>Installer le packet <code>core</code> du dépot <code>snap</code> :
+    <strong>Cette action peut prendre quelque minutes</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>core
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-thunderbird-linux">Installation de Thunderbird - Linux<a class="headerlink" href="#installation-de-thunderbird-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>thunderbird
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-filezilla-linux">Installation de FileZilla - Linux<a class="headerlink" href="#installation-de-filezilla-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>filezilla
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-testdisk-linux">Installation de TestDisk - Linux<a class="headerlink" href="#installation-de-testdisk-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>testdisk
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-txt2man-linux">Installation de Txt2man - Linux<a class="headerlink" href="#installation-de-txt2man-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>txt2man
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-neofetch-linux">Installation de neofetch - Linux<a class="headerlink" href="#installation-de-neofetch-linux" title="Permanent link">&para;</a></h2>
+<p>script d’information sur le système, en ligne de commande</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>neofetch
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-scoop-windows">Installation de Scoop - Windows<a class="headerlink" href="#installation-de-scoop-windows" title="Permanent link">&para;</a></h2>
+<p><strong>Scoop est un gestionnaire de paquets pour Windows. Il permet d'installer des logiciels en ligne de commande.</strong></p>
+<ul>
+<li>Ouvrir un terminal <code>PowerShell</code></li>
+<li>
+<p>Exécuter la commande suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
+</li>
+<li>
+<p>Exécuter la commande suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">get</span><span class="p">.</span><span class="n">scoop</span><span class="p">.</span><span class="n">sh</span> <span class="p">|</span> <span class="nb">Invoke-Expression</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-jekyll-linux">Installation de Jekyll - Linux<a class="headerlink" href="#installation-de-jekyll-linux" title="Permanent link">&para;</a></h2>
+<p><strong>Jekyll est un générateur de site statique écrit en Ruby. Jekyll est compatible avec GitHub Pages.</strong></p>
+<ul>
+<li>
+<p>Installer le paquet ruby du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ruby-full<span class="w"> </span>build-essential<span class="w"> </span>zlib1g-dev
+</code></pre></div>
+</li>
+<li>
+<p>Configurer les variables d'environnement pour ruby</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;# Install Ruby Gems to ~/gems&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export GEM_HOME=&quot;$HOME/gems&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Recharger le fichier <code>.bashrc</code></p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Installer Jekyll et Bundler</p>
+<div class="highlight"><pre><span></span><code>gem<span class="w"> </span>install<span class="w"> </span>jekyll<span class="w"> </span>bundler
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-discord-linux">Installation de Discord - Linux<a class="headerlink" href="#installation-de-discord-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installation de Discord avec le dépot <code>snap</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>discord
+</code></pre></div>
+</li>
+<li>
+<p>Installation de Discord avec un fichier deb</p>
+<ul>
+<li>Télecharger le fichier deb de la dernière version sur :
+    &gt; <a href="https://discord.com/download">https://discord.com/download</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>discord-*.deb
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-virtualbox-sur-linux-ubuntu">Installation de VirtualBox sur Linux (Ubuntu)<a class="headerlink" href="#installation-de-virtualbox-sur-linux-ubuntu" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt">Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets <code>apt</code><a class="headerlink" href="#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>récupérer les clés de signature du dépôt de VirtualBox :</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter le dépôt de VirtualBox à la liste des sources de paquets :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://download.virtualbox.org/virtualbox/debian </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+<p><strong>Attention, la commande suivante est valable uniquement pour Ubuntu 22.04.1 LTS et supérieur</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/etc/apt/trusted.gpg] http://download.virtualbox.org/virtualbox/debian jammy contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+<p><strong>Pour la version 20.04.1 LTS d'ubuntu utiliser la ligne suivante</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour la liste des paquets disponibles :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+</li>
+<li>
+<p>Pour connaître la dernière version de virtualbox installable :</p>
+<div class="highlight"><pre><span></span><code>apt-cache<span class="w"> </span>madison<span class="w"> </span>virtualbox
+</code></pre></div>
+</li>
+<li>
+<p>Installer la dernière version de virtualbox (dans mon cas la version 6.1) :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>virtualbox-&lt;version&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter votre compte dans le groupe <code>vboxusers</code> pour avoir accès à l'USB dans vos machines virtuelles.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-G<span class="w"> </span>vboxusers<span class="w"> </span>-a<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
+</li>
+<li>
+<p>il peut-être nécessaire de mettre à jour le module DKMS, même si moi je n'ai pas eu à le faire :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>/etc/init.d/vboxdrv<span class="w"> </span>setup
+</code></pre></div>
+</li>
+</ul>
+<h3 id="installation-en-telechargeant-le-fichier-deb">Installation en téléchargeant le fichier deb<a class="headerlink" href="#installation-en-telechargeant-le-fichier-deb" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger le fichier deb disponible sur :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/">https://download.virtualbox.org/virtualbox/</a></li>
+<li>Vérifier la dernière version disponible sur :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/LATEST.TXT">https://download.virtualbox.org/virtualbox/LATEST.TXT</a></li>
+<li>
+<p>Dans mon cas la dernière version est la 7.0.8, disponible ici :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb">https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb</a></p>
+</li>
+<li>
+<p>Executez le fichier deb télécharger :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>virtualbox-*.deb
+</code></pre></div>
+</li>
+</ul>
+<h3 id="activer-virtualbox-avec-le-secure-boot">Activer VirtualBox avec le secure boot<a class="headerlink" href="#activer-virtualbox-avec-le-secure-boot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Si vous recevez se message d'erreur</p>
+<div class="highlight"><pre><span></span><code>Kernel driver not installed (rc=-1908)
+
+The VirtualBox Linux kernel driver is either not loaded or not set up correctly. Please try setting it up again by executing
+
+&#39;/sbin/vboxconfig&#39; as root.
+
+If your system has EFI Secure Boot enabled you may also need to sign the kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) before you can load them. Please see your Linux system&#39;s documentation for more information.
+
+where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT.
+</code></pre></div>
+<ul>
+<li>Cela signifi que probablement que le secure boot est activé. Vous devrez donc recompiler certains modules de VirtualBox ainsi que les signées</li>
+<li>Mettez à jour vos paquet</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>at<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+</li>
+<li>
+<p>Créer un dossier pour stocker les clés de signature</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/root/module-signing
+</code></pre></div>
+</li>
+<li>
+<p>Connecter vous en tant que root et acceder au dossier que vous venez de créer</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su
+<span class="nb">cd</span><span class="w"> </span>/root/module-signing
+</code></pre></div>
+</li>
+<li>
+<p>Générer une clé de signature</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-x509<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>MOK.priv<span class="w"> </span>-outform<span class="w"> </span>DER<span class="w"> </span>-out<span class="w"> </span>MOK.der<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">36500</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">&quot;/CN=Module Sign Key/&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enregistrer les clés auprès du secure boot</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mokutil<span class="w"> </span>--import<span class="w"> </span>MOK.der
+</code></pre></div>
+</li>
+<li>
+<p>Choisir un mot de passe (préférer un mot de passe sans majuscule ni chiffre)</p>
+</li>
+<li>Redémarrer votre ordinateur</li>
+<li>Une page bleu apparait</li>
+<li>Selectionner l'option <code>Enroll MOK</code></li>
+<li>Selectionner <code>Continuer</code></li>
+<li>Selectionner <code>Yes</code></li>
+<li>Entrer le mot de passe précédemment créer</li>
+<li>Selectionner <code>Reboot</code></li>
+<li>Une fois l'ordinateur redémarrer</li>
+<li>Ouvrer un terminal</li>
+<li>
+<p>Compiler et signer les modules VirtualBox</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.der<span class="w"> </span><span class="se">\</span>
+<span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxdrv<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span>/root/module-signing/MOK.der<span class="w"> </span><span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxnetflt<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span>/root/module-signing/MOK.der<span class="w"> </span><span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxnetadp<span class="k">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Recharger les modules</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>modprobe<span class="w"> </span>vboxdrv
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier que les modules existes bien</p>
+<div class="highlight"><pre><span></span><code>lsmod<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>vbox
+</code></pre></div>
+<ul>
+<li>
+<p>Résultat attendu</p>
+<div class="highlight"><pre><span></span><code>vboxdrv               696320  0
+</code></pre></div>
+</li>
+<li>
+<p>Si rien n'est affiché c'est qu'aucun module n'a été trouver</p>
+</li>
+<li>Vous pouvez maintenant lancer votre Machine Virtuel</li>
+</ul>
+</li>
+</ul>
+<h2 id="gparted">GParted<a class="headerlink" href="#gparted" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-gparted-linux">Installation de GParted - Linux<a class="headerlink" href="#installation-de-gparted-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gparted
+</code></pre></div>
+</li>
+</ul>
+<h3 id="allouee-la-partition-grace-a-gparted-linux">Allouée la partition grace à GParted - Linux<a class="headerlink" href="#allouee-la-partition-grace-a-gparted-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#installation-de-gparted---linux">Installer GParted</a></li>
+<li>Ouvrez GParted</li>
+<li>Dans la liste déroulante en haut à droite, sélectionnez la clé USB</li>
+<li>Clique droit sur la partition non allouée</li>
+<li>Sélectionnez '<code>Nouvelle</code>'</li>
+<li>Dans 'Espace libre précédent (Mio)', entrez le minimum, dans mon cas "<code>1</code>"</li>
+<li>Laisser tout les autres champs par défaut</li>
+<li>Sélectionnez le système de fichier de votre choix, dans mon cas "<code>ext4</code>"</li>
+<li>Cliquez sur '<code>Ajouter</code>'</li>
+</ul>
+<h2 id="dconf-editor">Dconf-Editor<a class="headerlink" href="#dconf-editor" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-dconf-editor-linux">Installation de Dconf-Editor - Linux<a class="headerlink" href="#installation-de-dconf-editor-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>dconf-editor
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-dconf-editor">Utilisation de Dconf-Editor<a class="headerlink" href="#utilisation-de-dconf-editor" title="Permanent link">&para;</a></h3>
+<h4 id="modifier-le-comportement-du-dock-barre-de-tache-de-gnome">Modifier le comportement du dock (barre de tâche) de Gnome<a class="headerlink" href="#modifier-le-comportement-du-dock-barre-de-tache-de-gnome" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ouvrir Dconf-Editor</li>
+<li>Allez dans <code>/org/gnome/shell/extensions/dash-to-dock</code></li>
+<li>Cliquez sur '<code>click-action</code>'</li>
+<li>Décochez la case '<code>Utiliser la valeur par défaut</code>'</li>
+<li>Sélectionnez l'option que vous voulez, dans mon cas '<code>minimize-or-previews</code>'</li>
+</ul>
+<h2 id="pandoc">Pandoc<a class="headerlink" href="#pandoc" title="Permanent link">&para;</a></h2>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>Pandoc est un logiciel qui permet de convertir des fichiers dans d'autres formats.
+Il permet par exemple de convertir un fichier markdown en fichier pdf, html, docx, latex, etc... et inversement, il peux également convertir un fichier pdf en fichier markdown, html, docx, latex, etc...</p>
+<h3 id="installation-de-pandoc-linux">Installation de Pandoc - Linux<a class="headerlink" href="#installation-de-pandoc-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger le fichier deb disponible sur :
+    &gt; <a href="https://github.com/jgm/pandoc/releases/latest">https://github.com/jgm/pandoc/releases/latest</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>pandoc-*-amd64.deb
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-pandoc">Utilisation de Pandoc<a class="headerlink" href="#utilisation-de-pandoc" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="https://pandoc.org/MANUAL.html">https://pandoc.org/MANUAL.html</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Pour convertir un fichier</p>
+<div class="highlight"><pre><span></span><code>pandoc<span class="w"> </span>-s<span class="w"> </span>input.&lt;extention&gt;<span class="w"> </span>-o<span class="w"> </span>output.&lt;extention&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="melonds-emulateur-de-nintendo-ds-linux">MelonDS (émulateur de Nintendo DS) - Linux<a class="headerlink" href="#melonds-emulateur-de-nintendo-ds-linux" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-la-version-091-de-melonds">Installation de la version 0.9.1 de MelonDS<a class="headerlink" href="#installation-de-la-version-091-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>melonds
+</code></pre></div>
+</li>
+</ul>
+<h3 id="configuration-de-melonds">Configuration de MelonDS<a class="headerlink" href="#configuration-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Emu settings</code>' &gt; '<code>DS-mode</code>'</li>
+<li>Séléctionner la case '<code>Use external BIOS/firmware files</code>'</li>
+<li>Dans l'emplacement '<code>DS ARM9 BIOS</code>', séléctionner le fichier <code>biosnds9.rom</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Dans l'emplacement '<code>DS ARM7 BIOS</code>', séléctionner le fichier <code>biosnds7.rom</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Dans l'emplacement '<code>DS firmware</code>', séléctionner le fichier <code>firmware.bin</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Séléctionner '<code>OK</code>'</li>
+<li>Lorsque le message '<code>Problematic firmware dump</code>' apparait, séléctionner '<code>OK</code>'</li>
+</ul>
+<h3 id="lancer-un-jeu-avec-melonds">Lancer un jeu avec MelonDS<a class="headerlink" href="#lancer-un-jeu-avec-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>File</code>' &gt; '<code>Open ROM</code>'</li>
+<li>Séléctionner le fichier <code>.nds</code> du jeu que vous voulez lancer</li>
+</ul>
+<h3 id="ameliorer-les-graphismes-de-melonds">Améliorer les graphismes de MelonDS<a class="headerlink" href="#ameliorer-les-graphismes-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Video settings</code>'</li>
+<li>Dans la section '<code>3D renderer</code>' Séléctionner '<code>OpenGL</code>' à la place de '<code>Software</code>'</li>
+<li>Dans la section '<code>OpenGL renderer</code>' Séléctionner '<code>4x native (1024x768)</code>' à la place de '<code>1x native (256x192)</code>'</li>
+</ul>
+<h3 id="configurer-les-touches-de-melonds">Configurer les touches de MelonDS<a class="headerlink" href="#configurer-les-touches-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Input and hotkeys</code>'</li>
+<li>Séléctionner la touche que vous voulez configurer</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

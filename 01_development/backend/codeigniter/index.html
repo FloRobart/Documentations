@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>CodeIgniter - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../symfony/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../frontend/flutter/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/backend/codeigniter.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation-et-configuration-dun-environnement-de-developpement-pour-codeingniter-et-composer-sur-ubuntu-2310-mantic-minotaur" class="nav-link">Installation et configuration d'un environnement de développement pour CodeIngniter et Composer sur Ubuntu 23.10 Mantic Minotaur</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#description" class="nav-link">description</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequis" class="nav-link">Prérequis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-du-serveur-web-apache-pour-php" class="nav-link">Installation du serveur web Apache pour php</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-la-derniere-version-php" class="nav-link">Installation de la dernière version PHP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-wget" class="nav-link">Installation de wget</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-composer" class="nav-link">Installation de Composer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installation-et-configuration-dun-environnement-de-developpement-pour-codeingniter-et-composer-sur-ubuntu-2310-mantic-minotaur">Installation et configuration d'un environnement de développement pour CodeIngniter et Composer sur Ubuntu 23.10 Mantic Minotaur<a class="headerlink" href="#installation-et-configuration-dun-environnement-de-developpement-pour-codeingniter-et-composer-sur-ubuntu-2310-mantic-minotaur" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#installation-et-configuration-dun-environnement-de-développement-pour-codeingniter-et-composer-sur-ubuntu-2310-mantic-minotaur">Installation et configuration d'un environnement de développement pour CodeIngniter et Composer sur Ubuntu 23.10 Mantic Minotaur</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#description">description</a></li>
+<li><a href="#prérequis">Prérequis</a></li>
+<li><a href="#installation-du-serveur-web-apache-pour-php">Installation du serveur web Apache pour php</a></li>
+<li><a href="#installation-de-la-dernière-version-php">Installation de la dernière version PHP</a></li>
+<li><a href="#installation-de-wget">Installation de wget</a></li>
+<li><a href="#installation-de-composer">Installation de Composer</a><ul>
+<li><a href="#installation-simple-dune-version-récente-de-composer">Installation simple d'une version récente de Composer</a></li>
+<li><a href="#installation-de-la-dernière-version-de-composer">Installation de la dernière version de Composer</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="description">description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>CodeIgniter :</strong> est un framework PHP rapide, léger et open source utilisé pour développer des applications Web. Il suit le modèle architectural modèle-vue-contrôleur (MVC), qui sépare la logique de l'application en trois composants interconnectés : le modèle, la vue et le contrôleur. Les applications développées à l'aide de CodeIgniter peuvent fonctionner sur n'importe quel serveur capable d'exécuter le langage de script PHP 5.6 ou supérieur. CodeIgniter étant un franmework il ne s'install pas globalement sur la machine comme le ferai un langage mais dans le projet que vous développer.</li>
+<li><strong>Composer :</strong> est un gestionnaire de dépendances PHP qui permet d'installer et de mettre à jour facilement des bibliothèques tierces ou des frameworks comme CodeIgniter.</li>
+</ul>
+<h2 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Disposez des droits d'administration sur votre machine si vous faite une installation global (pour tous les utilisateurs).</li>
+<li>Si vous l'installer pour un utilisateur spécifique vous n'avez pas besoin de droit d'administration.</li>
+</ul>
+<h2 id="installation-du-serveur-web-apache-pour-php">Installation du serveur web Apache pour php<a class="headerlink" href="#installation-du-serveur-web-apache-pour-php" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libapache2-mod-php
+</code></pre></div>
+</li>
+<li>
+<p>Voici quelque commande utile pour gérer le serveur web Apache :</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
+systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+systemctl<span class="w"> </span>stop<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-la-derniere-version-php">Installation de la dernière version PHP<a class="headerlink" href="#installation-de-la-derniere-version-php" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer php ainsi que toute ces dépendances et outils de développement depuis le dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-common<span class="w"> </span>php-cli<span class="w"> </span>php-pgsql<span class="w"> </span>php-curl<span class="w"> </span>php-xml<span class="w"> </span>php-json
+</code></pre></div>
+<ul>
+<li><strong>php-common :</strong> Fournit les fichiers communs pour la dernière version stable de PHP</li>
+<li><strong>php-cli :</strong> Fournit l'interface de ligne de commande pour PHP</li>
+<li><strong>php-pgsql :</strong> Fournit un module de support pour l'extension PostgreSQL de PHP</li>
+<li><strong>php-curl :</strong> Fournit un module de support pour l'extension CURL de PHP</li>
+<li><strong>php-json :</strong> Fournit un module de support pour l'extension JSON de PHP</li>
+<li>
+<p><strong>php-xml :</strong> Fournit un module de support pour l'extension XML de PHP</p>
+</li>
+<li>
+<p>Si l'extension <code>php-pgsql</code> ne fonctionne pas il peut être nécessaire de l'activer dans les fichiers de configuration '<code>/etc/php/&lt;version&gt;/cli/php.ini</code>' et '<code>/etc/php/&lt;version&gt;/apache2/php.ini</code>' :</p>
+<div class="highlight"><pre><span></span><code><span class="nv">extension</span><span class="o">=</span>php_pgsql.so
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Pour voir les autres paquets disponibles pour php :</p>
+<div class="highlight"><pre><span></span><code>apt-cache<span class="w"> </span>search<span class="w"> </span>php
+</code></pre></div>
+</li>
+<li>
+<p>Pour vérifier que php est bien installé avec la bonne version tapé la commande suivante dans un terminal :</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-v
+</code></pre></div>
+<ul>
+<li>
+<p>Sortie attendu de la commande :</p>
+<div class="highlight"><pre><span></span><code>PHP<span class="w"> </span><span class="m">8</span>.1.12-1ubuntu4.3<span class="w"> </span><span class="o">(</span>cli<span class="o">)</span><span class="w"> </span><span class="o">(</span>built:<span class="w"> </span>Aug<span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">2023</span><span class="w"> </span><span class="m">17</span>:37:48<span class="o">)</span><span class="w"> </span><span class="o">(</span>NTS<span class="o">)</span>
+Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span>The<span class="w"> </span>PHP<span class="w"> </span>Group
+Zend<span class="w"> </span>Engine<span class="w"> </span>v4.1.12,<span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span>Zend<span class="w"> </span>Technologies
+<span class="w">        </span>with<span class="w"> </span>Zend<span class="w"> </span>OPcache<span class="w"> </span>v8.1.12-1ubuntu4.3,<span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span>,<span class="w"> </span>by<span class="w"> </span>Zend<span class="w"> </span>Technologies
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-wget">Installation de wget<a class="headerlink" href="#installation-de-wget" title="Permanent link">&para;</a></h2>
+<p>wget est un utilitaire en ligne de commande pour télécharger de fichiers depuis le Web. Il supporte les protocoles HTTP, HTTPS et FTP ainsi que le téléchargement sur des serveurs HTTP à travers des proxies.</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wget
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-composer">Installation de Composer<a class="headerlink" href="#installation-de-composer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>À la date ou j'écris ce document la dernière version de <code>Composer</code> disponible est la version <code>2.6.5</code> et la dernière version disponible dans les dépots <code>apt</code> est la version <code>2.5.8</code>.</li>
+</ul>
+<h3 id="installation-simple-dune-version-recente-de-composer">Installation simple d'une version récente de Composer<a class="headerlink" href="#installation-simple-dune-version-recente-de-composer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>composer
+</code></pre></div>
+</li>
+</ul>
+<h3 id="installation-de-la-derniere-version-de-composer">Installation de la dernière version de Composer<a class="headerlink" href="#installation-de-la-derniere-version-de-composer" title="Permanent link">&para;</a></h3>
+<p><strong>Composer est un gestionnaire de dépendances PHP qui permet d'installer et de mettre à jour facilement des bibliothèques tierces ou des frameworks comme CodeIgniter.</strong></p>
+<ul>
+<li>
+<p>Vous pouvez trouver la documentation officielle de <code>Composer</code> à l'adresse suivante :
+    &gt;<a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a></p>
+</li>
+<li>
+<p>Placez vous dans le repertoire de votre choix, dans cas <code>/home/${USER}</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier <code>InstallComposer.sh</code> :</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>InstallComposer.sh
+</code></pre></div>
+</li>
+<li>
+<p>Donnez les droits d'exécution au fichier <code>InstallComposer.sh</code> :</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>InstallComposer.sh
+</code></pre></div>
+</li>
+<li>
+<p>Ouvrez le fichier <code>InstallComposer.sh</code> avec votre éditeur de texte favoris :</p>
+<div class="highlight"><pre><span></span><code>open<span class="w"> </span>InstallComposer.sh
+</code></pre></div>
+</li>
+<li>
+<p>Ajourter le code suivant dans le fichier <code>InstallComposer.sh</code> puis sauvegarder le :</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Télécharge le fichier d&#39;intalation de composer via le lien &#39;https://getcomposer.org/installer&#39; et le place dans le fichier &#39;composer-setup.php&#39;</span>
+php<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;copy(&#39;https://getcomposer.org/installer&#39;, &#39;composer-setup.php&#39;);&quot;</span>
+
+<span class="c1"># Vérifie que le fichier &#39;composer-setup.php&#39; est bien le bon</span>
+php<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;if (hash_file(&#39;sha384&#39;, &#39;composer-setup.php&#39;) === &#39;e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02&#39;) { echo &#39;Installateur vérifié&#39;; } else { echo &#39;Installateur corrompu&#39;; unlink(&#39;composer-setup.php&#39;); } echo PHP_EOL;&quot;</span>
+
+<span class="c1"># Exécute le fichier d&#39;installation &#39;composer-setup.php&#39;</span>
+php<span class="w"> </span>composer-setup.php
+
+<span class="c1"># Efface le fichier d&#39;installation &#39;composer-setup.php&#39;</span>
+php<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;unlink(&#39;composer-setup.php&#39;);&quot;</span>
+</code></pre></div>
+<ul>
+<li>Pour plus de détails<ul>
+<li><strong>php -r :</strong> Exécute du code PHP depuis la ligne de commande</li>
+<li><strong>copy :</strong> Copie un fichier depuis un emplacement (même en ligne) vers un autre</li>
+<li><strong>hash_file :</strong> Calcule le hachage d'un fichier en utilisant l'algorithme de hachage choisi</li>
+<li><strong>echo :</strong> Affiche une chaîne de caractères</li>
+<li><strong>unlink :</strong> Efface un fichier</li>
+<li><strong>PHP_EOL :</strong> Constante de fin de ligne</li>
+<li><strong>php composer-setup.php :</strong> Exécute le fichier <code>composer-setup.php</code></li>
+<li><strong>unlink('composer-setup.php') :</strong> Efface le fichier <code>composer-setup.php</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Exécuter le fichier <code>InstallComposer.sh</code> :</p>
+<div class="highlight"><pre><span></span><code>./InstallComposer.sh
+</code></pre></div>
+</li>
+<li>
+<p>Pour tout les utilisateurs (Besoin de droit d'administration)</p>
+<ul>
+<li>
+<p>Pour que tout les utilisateur profite de la commande '<code>composer</code>' dans le terminal déplacer le fichier <code>composer.phar</code> dans le fichier '<code>/usr/bin/composer</code>' :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>composer.phar<span class="w"> </span>/usr/bin/composer
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Pour un utilisateur spécifique (Pas besoin de droit d'administration)</p>
+<ul>
+<li>
+<p>Pour que seul l'utilisateur courant profite de la commande '<code>composer</code>' dans le terminal déplacer le fichier <code>composer.phar</code> dans le fichier '<code>/home/${USER}/.local/bin/composer</code>' :</p>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>composer.phar<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.local/bin/composer
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Créer un projet en utilisant CodeIgniter et Composer :</p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>codeigniter4/appstarter<span class="w"> </span>&lt;nameApp&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

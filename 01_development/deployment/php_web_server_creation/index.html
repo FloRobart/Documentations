@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Création d'un serveur web PHP - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../open_source_licensing_gnu_gpl/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../others/clean_code/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/deployment/php_web_server_creation.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-sur-mise-en-service-dun-serveur-web-php-apache-mysql" class="nav-link">Documentation sur mise en service d'un serveur web PHP Apache MySQL</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequis" class="nav-link">Prérequis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#preambule" class="nav-link">Préambule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#php" class="nav-link">PHP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#apache" class="nav-link">Apache</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mysql" class="nav-link">MySQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#composer" class="nav-link">Composer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#deploiement-dun-projet-laravel" class="nav-link">Déploiement d'un projet Laravel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-sur-mise-en-service-dun-serveur-web-php-apache-mysql">Documentation sur mise en service d'un serveur web PHP Apache MySQL<a class="headerlink" href="#documentation-sur-mise-en-service-dun-serveur-web-php-apache-mysql" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-sur-mise-en-service-dun-serveur-web-php-apache-mysql">Documentation sur mise en service d'un serveur web PHP Apache MySQL</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#prérequis">Prérequis</a></li>
+<li><a href="#préambule">Préambule</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#apache">Apache</a><ul>
+<li><a href="#installation-de-apache">Installation de Apache</a></li>
+<li><a href="#utilisation-dapache-aide-mémoire">Utilisation d'Apache (Aide mémoire)</a></li>
+<li><a href="#création-et-déploiement-dun-site-web-avec-apache">Création et déploiement d'un site web avec Apache</a></li>
+</ul>
+</li>
+<li><a href="#mysql">MySQL</a></li>
+<li><a href="#composer">Composer</a></li>
+<li><a href="#déploiement-dun-projet-laravel">Déploiement d'un projet Laravel</a></li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../03_system/server/server_creation_2026/">Avoir un serveur</a> (de préférence Debian) sur lequel vous avez les droits administrateurs.</li>
+</ul>
+<h2 id="preambule">Préambule<a class="headerlink" href="#preambule" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Source</p>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=cfJh8vdKuQU&amp;list=PLjwdMgw5TTLUnvhOKLcpCG8ORQsfE7uB4">Playlist Youtube de Grafikart</a></p>
+</blockquote>
+</li>
+</ul>
+<p>Certains passages de la playlist de Grafikart sont obsolètes (Janvier 2025), j'ai donc pris d'autre source pour les parties qui ne fonctionnaient pas. Les autres sources seront indiquées de la même façon que celle-ci dans les parties concernées.</p>
+<p>Le maître mot de ce tutoriel est la <strong>sécurité</strong>. Faire un serveur c'est bien mais faire un serveur sécurisé c'est mieux. C'est pourquoi, en plus de faire les étapes de base pour créer un serveur web, je vais vous montrer comment sécuriser votre serveur.</p>
+<p>Dans ce tutoriel couvrira :</p>
+<ul>
+<li>L'installation d'Apache</li>
+<li>La configuration du serveur Apache</li>
+<li>L'installation de PHP</li>
+<li>L'installation de MySQL</li>
+<li>La configuration du serveur MySQL</li>
+<li>L'installation de Composer</li>
+<li>La création d'un projet Laravel<ul>
+<li>La configuration du serveur Apache pour le projet Laravel</li>
+<li>La configuration de la base de données pour le projet Laravel</li>
+<li>La configuration des permissions pour le projet Laravel</li>
+</ul>
+</li>
+<li>Le déploiement du projet Laravel sur le serveur apache</li>
+</ul>
+<h2 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer PHP ainsi que les extensions nécessaires.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-common<span class="w"> </span>php-cli<span class="w"> </span>php-mysql<span class="w"> </span>php-curl<span class="w"> </span>php-xml<span class="w"> </span>php-json<span class="w"> </span>php-dev<span class="w"> </span>php-pear<span class="w"> </span>php-gd
+</code></pre></div>
+<ul>
+<li><strong>php-common :</strong> Fournit les fichiers communs pour la dernière version stable de PHP</li>
+<li><strong>php-cli :</strong> Fournit l'interface de ligne de commande pour PHP</li>
+<li><strong>php-mysql :</strong> Fournit un module de support pour l'extension MySQL de PHP</li>
+<li><strong>php-curl :</strong> Fournit un module de support pour l'extension CURL de PHP</li>
+<li><strong>php-xml :</strong> Fournit un module de support pour l'extension XML de PHP</li>
+<li><strong>php-json :</strong> Fournit un module de support pour l'extension JSON de PHP</li>
+<li><strong>php-dev :</strong> Fournit les fichiers de développement pour la dernière version stable de PHP</li>
+<li><strong>php-pear :</strong> Fournit un gestionnaire de paquets pour PHP</li>
+<li><strong>php-gd :</strong> Fournit un module de support pour l'extension GD de PHP qui permet de manipuler dynamiquement des images</li>
+</ul>
+</li>
+<li>
+<p>Installer le module PHP pour Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libapache2-mod-php
+</code></pre></div>
+</li>
+<li>
+<p>Activer des module PHP comme GD si nécessaire.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/php/8.2/apache2/php.ini<span class="w"> </span>
+sudo<span class="w"> </span>vim<span class="w"> </span>/etc/php/8.2/cli/php.ini
+</code></pre></div>
+<ul>
+<li>
+<p>Modifier la ligne <code>;extension=gd</code> pour qu'elle soit égale à <code>extension=gd</code>.</p>
+<div class="highlight"><pre><span></span><code>;extension=curl
+;extension=ffi
+
+...
+
+extension=gd
+
+...
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Source</p>
+<blockquote>
+<p><a href="https://friendhosting.net/en/blog/install-apache-on-debian-11.php">https://friendhosting.net/en/blog/install-apache-on-debian-11.php</a>
+<a href="https://youtu.be/arVwa7jvp5M?si=MwPq8noTIiIgu2iV">https://youtu.be/arVwa7jvp5M?si=MwPq8noTIiIgu2iV</a></p>
+</blockquote>
+</li>
+</ul>
+<p>Je choisie d'installer Apache plutôt que Nginx car c'est un peu plus simple à configurer et c'est plus modulaire. Nginx est plus performant mais mon serveur n'est pas destiné à être utilisé par des milliers de personnes.</p>
+<h3 id="installation-de-apache">Installation de Apache<a class="headerlink" href="#installation-de-apache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer Apache</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier si Apache est bien installé.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter votre utilisateur au groupe <code>www-data</code>.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>www-data<span class="w"> </span>&lt;nom_utilisateur&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Changer les permissions du dossier <code>/var</code> si vous le souhaitez.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-dapache-aide-memoire">Utilisation d'Apache (Aide mémoire)<a class="headerlink" href="#utilisation-dapache-aide-memoire" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Démarrer Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Arrêter Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrer Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Activer Apache au démarrage.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Désactiver Apache au démarrage.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier si Apache est bien lancé.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+<li>
+<p>Activer un module Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>&lt;module&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;module&gt;</code> par le nom du module.</li>
+<li>Désactiver un module Apache.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dismod<span class="w"> </span>&lt;module&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;module&gt;</code> par le nom du module.</li>
+<li>Activer un site web.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>&lt;site&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;site&gt;</code> par le nom du site web.</li>
+<li>Désactiver un site web.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span>&lt;site&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;site&gt;</code> par le nom du site web.</li>
+<li>Voir les sites web disponibles.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/etc/apache2/sites-available
+</code></pre></div>
+</li>
+<li>
+<p>Voir les sites web actifs.</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/etc/apache2/sites-enabled
+</code></pre></div>
+</li>
+<li>
+<p>Voir les modules disponibles.</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/etc/apache2/mods-available
+</code></pre></div>
+</li>
+<li>
+<p>Voir les modules actifs.</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/etc/apache2/mods-enabled
+</code></pre></div>
+</li>
+</ul>
+<h3 id="creation-et-deploiement-dun-site-web-avec-apache">Création et déploiement d'un site web avec Apache<a class="headerlink" href="#creation-et-deploiement-dun-site-web-avec-apache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Source</p>
+<blockquote>
+<p><a href="https://friendhosting.net/en/blog/install-apache-on-debian-11.php">https://friendhosting.net/en/blog/install-apache-on-debian-11.php</a></p>
+</blockquote>
+</li>
+</ul>
+<p>Dans cette partie nous allons créer un site web rapide et le déployer avec Apache. Le but est à la fois de vous montrer comment déployer un site web avec Apache et de vérifier que le serveur fonctionne correctement.</p>
+<ul>
+<li>
+<p>Créer un dossier pour le site web.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/&lt;nom_site&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Changer les permissions et le groupe du dossier.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/&lt;nom_site&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier <code>index.php</code> dans le dossier du site web.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/&lt;nom_site&gt;/index.php
+</code></pre></div>
+<ul>
+<li>
+<p>Ajouter le code suivant.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">phpinfo</span><span class="p">();</span> <span class="cp">?&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder et quitter.</p>
+</li>
+<li>Créer un fichier de configuration pour le site web.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/001-&lt;nom_site&gt;.conf
+</code></pre></div>
+<ul>
+<li>
+<p>Il est fortement recommandé de commencer le nom du fichier de configuration par un numéro pour que les fichiers soient chargés dans l'ordre.</p>
+</li>
+<li>
+<p>Ajouter le code suivant.</p>
+<div class="highlight"><pre><span></span><code>&lt;VirtualHost *:80&gt;
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/&lt;nom_site&gt;
+        ServerName &lt;nom_site&gt;
+        ServerAlias www.&lt;nom_site&gt;
+
+        &lt;Directory /var/www/&lt;nom_site&gt;&gt;
+                Options +Indexes +FollowSymLinks 
+                AllowOverride All
+                Require all granted
+        &lt;/Directory&gt;
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;nom_site&gt;</code> par le nom du site web.</li>
+<li><code>ServerAdmin</code> : Adresse email de l'administrateur du site.</li>
+<li><code>DocumentRoot</code> : Chemin du dossier du site web.</li>
+<li><code>ServerName</code> : Nom du site web.</li>
+<li><strong>Conseils et astuces</strong><ul>
+<li><strong>Attention :</strong> Sur un site en production, il faudra changer <code>+Indexes</code> par <code>-Indexes</code> pour désactiver l'indexation des dossiers</li>
+<li><em>Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache</em></li>
+<li>Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.</li>
+<li>Vous devrez également ajouter en première ligne du fichier de configuration apache <code>listen &lt;port&gt;</code> pour chaque site web ainsi que <code>&lt;VirtualHost *:&lt;port&gt;&gt;</code> à la place de <code>&lt;VirtualHost *:80&gt;</code>.</li>
+</ul>
+</li>
+<li><em>Pour plus de détails sur les informations du fichier de configuration, voir la source de se cette documentation et/ou la documentation officielle d'Apache.</em><ul>
+<li>Sauvegarder et quitter.</li>
+</ul>
+</li>
+<li>Activer le site web.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span><span class="m">001</span>-&lt;nom_site&gt;.conf
+</code></pre></div>
+</li>
+<li>
+<p>Désactiver le site par défaut.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span><span class="m">000</span>-default.conf
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrer Apache.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>apache2<span class="w"> </span>restart
+</code></pre></div>
+</li>
+<li>
+<p>Rendez-vous sur votre navigateur et entrez l'adresse IP de votre serveur <code>http://&lt;adresse_ip&gt;</code>.</p>
+<ul>
+<li>Vous devriez voir la page d'information de PHP.</li>
+</ul>
+</li>
+</ul>
+<h2 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Source</p>
+<blockquote>
+<p><a href="https://docs.vultr.com/how-to-install-mysql-on-debian-12">https://docs.vultr.com/how-to-install-mysql-on-debian-12</a></p>
+</blockquote>
+</li>
+<li>
+<p>Télécharger le paquet d'installation de MySQL</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w">  </span>https://dev.mysql.com/get/mysql-apt-config_0.8.33-1_all.deb
+</code></pre></div>
+<ul>
+<li>Vérifier la version la plus récente sur le site de MySQL.
+    &gt; <a href="https://dev.mysql.com/downloads/repo/apt/">https://dev.mysql.com/downloads/repo/apt/</a></li>
+</ul>
+</li>
+<li>
+<p>Installer le paquet</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>mysql-apt-config_0.8.33-1_all.deb
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour les paquets <code>apt</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w">  </span>apt<span class="w">  </span>install<span class="w">  </span>mysql-server<span class="w">  </span>-y
+</code></pre></div>
+</li>
+<li>
+<p>Lancer l'installation sécurisé de MySQL</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql_secure_installation
+</code></pre></div>
+<ul>
+<li>Entrer le mot de passe de l'utilisateur <code>root</code> de MySQL.</li>
+<li>Activer <code>VALIDATE PASSWORD COMPONENT</code> et choisir le niveau de sécurité du mot de passe.</li>
+<li>Changer le mot de passe de l'utilisateur <code>root</code> de MySQL si vous le souhaitez.</li>
+<li>Supprimer les utilisateurs anonymes.</li>
+<li>Désactiver l'accès à distance à l'utilisateur <code>root</code> de la base de données.</li>
+<li>Supprimer la base de données de test.</li>
+<li>Recharger les privilèges pour que les modifications prennent effet.</li>
+</ul>
+</li>
+<li>
+<p>Vérifier si MySQL est bien installé et lancé (il doit être actif).</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mysql
+</code></pre></div>
+</li>
+<li>
+<p>Se connecter à MySQL en tant que root.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div>
+</li>
+<li>
+<p>Créer un nouvel utilisateur.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;db_user&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;Strong@@password123&#39;</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Donner les droits à l'utilisateur aux bases de données et tables que vous souhaitez.</p>
+<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="k">database</span><span class="o">&gt;</span><span class="p">.</span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;db_user&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;database&gt;</code> par le nom de la base de données (ou <code>*</code> pour toutes les bases de données).</li>
+<li>Remplacer <code>&lt;table&gt;</code> par le nom de la table (ou <code>*</code> pour toutes les tables).</li>
+<li><em>Je vous recommande de ne pas donner tous les privilèges à l'utilisateur pour des raisons de sécurité.</em></li>
+<li><em>Vous pouvez donner seulement certains privilèges à l'utilisateur en remplaçant <code>ALL PRIVILEGES</code> par les privilèges que vous souhaitez donner à l'utilisateur.</em></li>
+</ul>
+</li>
+<li>
+<p>Mettre à jour les privilèges.</p>
+<div class="highlight"><pre><span></span><code><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Quitter MySQL.</p>
+<div class="highlight"><pre><span></span><code><span class="n">exit</span>
+</code></pre></div>
+</li>
+<li>
+<p>Connecter en tant qu'utilisateur pour tester la connexion à la base de données.</p>
+<div class="highlight"><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>db_user<span class="w"> </span>-p
+</code></pre></div>
+</li>
+<li>
+<p>Entrer le mot de passe de l'utilisateur.</p>
+</li>
+<li>
+<p>Afficher les bases de données.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Quitter MySQL.</p>
+<div class="highlight"><pre><span></span><code><span class="n">exit</span>
+</code></pre></div>
+</li>
+</ul>
+<p><strong>Pour des raisons de sécurité, il est recommandé de créer un utilisateur pour chaque base de données et de ne pas utiliser l'utilisateur <code>root</code> pour les connexions à la base de données.</strong></p>
+<h2 id="composer">Composer<a class="headerlink" href="#composer" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://florobart.github.io/Documentations/src/doc_developpement_web.html#installation-de-la-derni%C3%A8re-version-stable-de-composer---linux">Installation de la dernière version de Composer</a></li>
+</ul>
+<h2 id="deploiement-dun-projet-laravel">Déploiement d'un projet Laravel<a class="headerlink" href="#deploiement-dun-projet-laravel" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Source</p>
+<blockquote>
+<p><a href="https://www.gekkode.com/developpement/installation-de-laravel-et-configuration-apache/">https://www.gekkode.com/developpement/installation-de-laravel-et-configuration-apache/</a>
+<a href="https://codewithsusan.com/notes/multiple-laravel-apps-on-apache-server">https://codewithsusan.com/notes/multiple-laravel-apps-on-apache-server</a></p>
+</blockquote>
+</li>
+<li>
+<p>Créer un nouveau projet Laravel</p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>--prefer-dist<span class="w"> </span>laravel/laravel<span class="w"> </span>&lt;nom_projet&gt;
+</code></pre></div>
+<ul>
+<li>En cas de problème de droits, vous pouvez sois ajouter <code>sudo</code> devant la commande ou lancez la commande dans votre répertoire personnel (<code>/home/${USER}</code>) puis déplacer le projet dans le dossier <code>/var/www/</code></li>
+<li>Créer un fichier <code>.env</code> à la racine du projet Laravel</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+</code></pre></div>
+</li>
+<li>
+<p>Modifier le fichier <code>.env</code> pour qu'il corresponde à votre base de données</p>
+<div class="highlight"><pre><span></span><code>...
+
+DB_CONNECTION=mysql
+DB_HOST=&lt;adresse_ip&gt;
+DB_PORT=&lt;port&gt;
+DB_DATABASE=&lt;nom_base_de_données&gt;
+DB_USERNAME=&lt;nom_utilisateur&gt;
+DB_PASSWORD=&lt;mot_de_passe&gt;
+
+...
+</code></pre></div>
+</li>
+<li>
+<p>Modifier les permissions du dossier du projet Laravel</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/&lt;nom_projet&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Modifier les permissions du dossier de <code>stockage</code> et <code>bootstrap/cache</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>/var/www/&lt;nom_projet&gt;/storage
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>/var/www/&lt;nom_projet&gt;/bootstrap/cache
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour les dépendances <code>Composer</code> et <code>NPM</code></p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>update
+npm<span class="w"> </span>update
+</code></pre></div>
+</li>
+<li>
+<p>Installer les dépendances du projet Laravel</p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>install
+npm<span class="w"> </span>install
+</code></pre></div>
+</li>
+<li>
+<p>Générer une clé pour le projet Laravel</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>key:generate
+</code></pre></div>
+</li>
+<li>
+<p>Migrer les tables de la base de données</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div>
+</li>
+<li>
+<p>Activer le module Apache rewrite qui permet de gérer la réécriture d'URL</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+</code></pre></div>
+</li>
+<li>
+<p>Changer le propriétaire et le groupe du dossier de votre projet Laravel</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/&lt;nom_projet&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier de configuration apache pour le projet Laravel</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/002-&lt;nom_projet&gt;.conf
+</code></pre></div>
+<ul>
+<li>
+<p>Ajouter le code suivant</p>
+<div class="highlight"><pre><span></span><code>&lt;VirtualHost *:80&gt;
+        ServerAdmin admin@mail.com
+        DocumentRoot /var/www/&lt;nom_projet&gt;/public
+        ServerName &lt;nom_projet&gt;
+        ServerAlias www.&lt;nom_projet&gt;
+
+        &lt;Directory /var/www/&lt;nom_projet&gt;/public&gt;
+                Options +Indexes +FollowSymLinks 
+                AllowOverride All
+                Require all granted
+        &lt;/Directory&gt;
+
+        ErrorLog ${APACHE_LOG_DIR}/error.&lt;nom_projet&gt;.log
+        CustomLog ${APACHE_LOG_DIR}/access.&lt;nom_projet&gt;.log combined
+&lt;/VirtualHost&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;nom_projet&gt;</code> par le nom du site web</li>
+<li><code>ServerAdmin</code> : Adresse email de l'administrateur du site</li>
+<li><code>DocumentRoot</code> : Chemin du dossier du site web</li>
+<li><code>ServerName</code> : Nom du site web</li>
+<li><strong>Conseils et astuces</strong><ul>
+<li><strong>Attention :</strong> Sur un site en production, il faudra changer <code>+Indexes</code> par <code>-Indexes</code> pour désactiver l'indexation des dossiers</li>
+<li><em>Pour plus de détails sur les informations du fichier de configuration, voir la source et/ou la documentation officielle d'Apache</em></li>
+<li>Dans le cas où vous avez plusieurs sites web, vous pouvez créer un fichier de configuration pour chaque site web en incrémentant le numéro du fichier de configuration.</li>
+<li>Vous devrez également ajouter en première ligne du fichier de configuration apache <code>listen &lt;port&gt;</code> pour chaque site web ainsi que <code>&lt;VirtualHost *:&lt;port&gt;&gt;</code> à la place de <code>&lt;VirtualHost *:80&gt;</code>.</li>
+</ul>
+</li>
+<li><em>Pour plus de détails sur les informations du fichier de configuration, voir la source de se cette documentation et/ou la documentation officielle d'Apache.</em><ul>
+<li>Sauvegarder et quitter</li>
+</ul>
+</li>
+<li>Activer le site web</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span><span class="m">002</span>-&lt;nom_projet&gt;.conf
+</code></pre></div>
+</li>
+<li>
+<p>Désactiver le site actuellement actif</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span><span class="m">001</span>-&lt;nom_site&gt;.conf
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrer Apache</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

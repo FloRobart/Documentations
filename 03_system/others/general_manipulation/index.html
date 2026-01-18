@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Resolution de problèmes divers sous Linux - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../virtual_machine/virtual_machines/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../04_entrepreneuriat/company_creation_for_development/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/03_system/others/general_manipulation.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-dexplications-de-manipulations-diverses" class="nav-link">Documentation d'explications de manipulations diverses</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reinitialiser-une-cle-usb-ou-un-disque-dur" class="nav-link">Réinitialiser une clé USB ou un disque dur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#changer-le-point-de-montage-de-la-partition-windows-sous-ubuntu-desktop-2204-et-superieur" class="nav-link">Changer le point de montage de la partition Windows sous Ubuntu desktop 22.04 et supérieur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#monter-uniquement-un-dossier" class="nav-link">Monter uniquement un dossier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#executer-un-script-shell-au-demarrage-dubuntu-2204-ou-superieur" class="nav-link">Exécuter un script shell au démarrage d'Ubuntu 22.04 ou supérieur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mettre-a-jour-ubuntu-2304-lunar-lobster-vers-ubuntu-2310-mantic-minotaur" class="nav-link">Mettre à jour Ubuntu 23.04 Lunar Lobster vers Ubuntu 23.10 Mantic Minotaur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reinstallation-de-lenvirronement-graphique-de-ubuntu-gnome" class="nav-link">Réinstallation de l'envirronement graphique de Ubuntu (gnome)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mode-terminal-de-ubuntu" class="nav-link">Mode Terminal de Ubuntu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modifier-laction-du-click-sur-une-licone-de-lapplication" class="nav-link">Modifier l'action du click sur une l'icone de l'application</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#desinstallation-de-fichier-deb" class="nav-link">Désinstallation de fichier deb</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reinstallation-de-windows-a-partir-dune-image-systeme" class="nav-link">Réinstallation de windows à partir d'une image système</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mettre-a-jour-snap-store-dubuntu" class="nav-link">Mettre à jour snap store d'Ubuntu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#probleme-avec-le-gestionnaire-de-paquets-apt-linux" class="nav-link">Problème avec le gestionnaire de paquets apt - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#rendre-ladresse-ip-statique-sur-ubuntu-linux" class="nav-link">Rendre l'adresse IP statique sur Ubuntu - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modifier-les-noms-de-domaine" class="nav-link">Modifier les noms de domaine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#convertir-les-doubles-espaces-en-4-espaces-dans-un-fichier-avec-vscode" class="nav-link">Convertir les doubles espaces en 4 espaces dans un fichier avec vscode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-dexplications-de-manipulations-diverses">Documentation d'explications de manipulations diverses<a class="headerlink" href="#documentation-dexplications-de-manipulations-diverses" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-dexplications-de-manipulations-diverses">Documentation d'explications de manipulations diverses</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#réinitialiser-une-clé-usb-ou-un-disque-dur">Réinitialiser une clé USB ou un disque dur</a></li>
+<li><a href="#changer-le-point-de-montage-de-la-partition-windows-sous-ubuntu-desktop-2204-et-supérieur">Changer le point de montage de la partition Windows sous Ubuntu desktop 22.04 et supérieur</a></li>
+<li><a href="#monter-uniquement-un-dossier">Monter uniquement un dossier</a></li>
+<li><a href="#exécuter-un-script-shell-au-démarrage-dubuntu-2204-ou-supérieur">Exécuter un script shell au démarrage d'Ubuntu 22.04 ou supérieur</a><ul>
+<li><a href="#exécuter-le-script-en-tant-que-super-administrateur-pour-les-commandes-sudo">Exécuter le script en tant que super administrateur (pour les commandes sudo)</a></li>
+<li><a href="#exécuter-le-script-en-tant-que-lutilisateur-de-la-session-en-cours-dutilisation">Exécuter le script en tant que l'utilisateur de la session en cours d'utilisation</a></li>
+</ul>
+</li>
+<li><a href="#mettre-à-jour-ubuntu-2304-lunar-lobster-vers-ubuntu-2310-mantic-minotaur">Mettre à jour Ubuntu 23.04 Lunar Lobster vers Ubuntu 23.10 Mantic Minotaur</a></li>
+<li><a href="#réinstallation-de-lenvirronement-graphique-de-ubuntu-gnome">Réinstallation de l'envirronement graphique de Ubuntu (gnome)</a></li>
+<li><a href="#mode-terminal-de-ubuntu">Mode Terminal de Ubuntu</a></li>
+<li><a href="#modifier-laction-du-click-sur-une-licone-de-lapplication">Modifier l'action du click sur une l'icone de l'application</a><ul>
+<li><a href="#avec-le-terminal">Avec le terminal</a></li>
+<li><a href="#avec-une-application-tierce">Avec une application tierce</a></li>
+</ul>
+</li>
+<li><a href="#désinstallation-de-fichier-deb">Désinstallation de fichier deb</a></li>
+<li><a href="#réinstallation-de-windows-à-partir-dune-image-système">Réinstallation de windows à partir d'une image système</a><ul>
+<li><a href="#création-dune-image-de-la-partition-windows">Création d'une image de la partition windows</a></li>
+<li><a href="#réinstallation-de-windows">Réinstallation de windows</a></li>
+</ul>
+</li>
+<li><a href="#mettre-à-jour-snap-store-dubuntu">Mettre à jour snap store d'Ubuntu</a></li>
+<li><a href="#problème-avec-le-gestionnaire-de-paquets-apt---linux">Problème avec le gestionnaire de paquets apt - Linux</a></li>
+<li><a href="#rendre-ladresse-ip-statique-sur-ubuntu---linux">Rendre l'adresse IP statique sur Ubuntu - Linux</a></li>
+<li><a href="#modifier-les-noms-de-domaine">Modifier les noms de domaine</a><ul>
+<li><a href="#modifier-les-noms-de-domaine-de-façon-temporaire">Modifier les noms de domaine de façon temporaire</a></li>
+<li><a href="#modifier-les-noms-de-domaine-de-façon-permanente">Modifier les noms de domaine de façon permanente</a></li>
+</ul>
+</li>
+<li><a href="#convertir-les-doubles-espaces-en-4-espaces-dans-un-fichier-avec-vscode">Convertir les doubles espaces en 4 espaces dans un fichier avec vscode</a></li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="reinitialiser-une-cle-usb-ou-un-disque-dur">Réinitialiser une clé USB ou un disque dur<a class="headerlink" href="#reinitialiser-une-cle-usb-ou-un-disque-dur" title="Permanent link">&para;</a></h2>
+<p><strong>Supprimme toutes les données et toute les partitions de la clé USB</strong></p>
+<ul>
+<li>fermet tout les gestionnaires de fichiers et terminaux ouverts sur la clé USB.</li>
+<li>Ouvrez un terminal</li>
+<li>
+<p>Passez en mode admin :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su
+</code></pre></div>
+</li>
+<li>
+<p>Listez les lecteurs :</p>
+<div class="highlight"><pre><span></span><code>fdisk<span class="w"> </span>-l
+</code></pre></div>
+</li>
+<li>
+<p>Administrez le lecteur de votre choix :</p>
+<p>X est la lettre de la clé USB</p>
+<div class="highlight"><pre><span></span><code>fdisk<span class="w"> </span>/dev/sdX
+</code></pre></div>
+<p>dans mon cas :</p>
+<div class="highlight"><pre><span></span><code>fdisk<span class="w"> </span>/dev/sda
+</code></pre></div>
+</li>
+<li>
+<p>Supprimez toutes les partitions : "<code>d X</code>"</p>
+<p>X est le numéro de la partition, dans mon cas : "<code>d 1</code>" et "<code>d 2</code>"</p>
+</li>
+<li>
+<p>Créez une nouvelle partition : "<code>n</code>"</p>
+</li>
+<li>Choisissez le type de partition : "<code>p</code>"</li>
+<li>Choisissez le numéro de la partition : "<code>1</code>"</li>
+<li>Choisissez le premier cylindre, laisser la valeur par defaut et appuyer sur entrer</li>
+<li>Choisissez le dernier cylindre, laisser la valeur par defaut et appuyer sur entrer</li>
+<li>Sauvegardez les modifications : "<code>w</code>"</li>
+<li>Quittez fdisk : "<code>q</code>"</li>
+</ul>
+<p>Vous avez maintenant une clé USB vierge avec 1 partition non allouée</p>
+<h2 id="changer-le-point-de-montage-de-la-partition-windows-sous-ubuntu-desktop-2204-et-superieur">Changer le point de montage de la partition Windows sous Ubuntu desktop 22.04 et supérieur<a class="headerlink" href="#changer-le-point-de-montage-de-la-partition-windows-sous-ubuntu-desktop-2204-et-superieur" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Récupérer le nom de la partition windows :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>fdisk<span class="w"> </span>-l
+</code></pre></div>
+<ul>
+<li>
+<p>Sortie de la commande :</p>
+<div class="highlight"><pre><span></span><code>...
+
+Périphérique<span class="w">       </span>Début<span class="w">        </span>Fin<span class="w">  </span>Secteurs<span class="w"> </span>Taille<span class="w"> </span>Type
+/dev/nvme0n1p1<span class="w">      </span><span class="m">2048</span><span class="w">     </span><span class="m">309247</span><span class="w">    </span><span class="m">307200</span><span class="w">   </span>150M<span class="w"> </span>Système<span class="w"> </span>EFI
+/dev/nvme0n1p2<span class="w">    </span><span class="m">309248</span><span class="w">     </span><span class="m">571391</span><span class="w">    </span><span class="m">262144</span><span class="w">   </span>128M<span class="w"> </span>Réservé<span class="w"> </span>Microsoft
+/dev/nvme0n1p3<span class="w">    </span><span class="m">571392</span><span class="w">  </span><span class="m">629715869</span><span class="w"> </span><span class="m">629144478</span><span class="w">   </span>300G<span class="w"> </span>Données<span class="w"> </span>de<span class="w"> </span>base<span class="w"> </span>Microsoft
+/dev/nvme0n1p4<span class="w"> </span><span class="m">629716992</span><span class="w">  </span><span class="m">632066047</span><span class="w">   </span><span class="m">2349056</span><span class="w">   </span><span class="m">1</span>,1G<span class="w"> </span>Environnement<span class="w"> </span>de<span class="w"> </span>récupérati
+/dev/nvme0n1p5<span class="w"> </span><span class="m">632066048</span><span class="w">  </span><span class="m">962566143</span><span class="w"> </span><span class="m">330500096</span><span class="w"> </span><span class="m">157</span>,6G<span class="w"> </span>Système<span class="w"> </span>de<span class="w"> </span>fichiers<span class="w"> </span>Linux
+/dev/nvme0n1p6<span class="w"> </span><span class="m">962566600</span><span class="w">  </span><span class="m">998334463</span><span class="w">  </span><span class="m">35767864</span><span class="w">  </span><span class="m">17</span>,1G<span class="w"> </span>Environnement<span class="w"> </span>de<span class="w"> </span>récupérati
+/dev/nvme0n1p7<span class="w"> </span><span class="m">998334464</span><span class="w"> </span><span class="m">1000214527</span><span class="w">   </span><span class="m">1880064</span><span class="w">   </span>918M<span class="w"> </span>Environnement<span class="w"> </span>de<span class="w"> </span>récupérati
+
+...
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Démonter la partition windows qui se nomme dans mon cas <code>/dev/nvme0n1p3</code> mais ça peut être différent :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>umount<span class="w"> </span>/dev/nvme0n1p3
+</code></pre></div>
+</li>
+<li>
+<p>Créer le dossier dans lequel sera monté la partition :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/OS
+</code></pre></div>
+</li>
+<li>
+<p>Donner les droits d'accès au dossier sinon la partition ne pourra pas être monté dans ce dossier :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/OS
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier que la partition peut être monté dans le dossier :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mount<span class="w"> </span>/dev/nvme0n1p3<span class="w"> </span>/OS
+</code></pre></div>
+<ul>
+<li>
+<p>Si cette opération à fonctionner, vous pouvez démonter la partition à nouveau puis passer à l'étape suivante</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>umount<span class="w"> </span>/dev/nvme0n1p3
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Copier le fichier <code>/etc/fstab</code> dans le dossier <code>/etc/fstab_sauvegarde</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/fstab<span class="w"> </span>/etc/fstab_sauvegarde
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter ces lignes au fichier <code>/etc/fstab</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Montage de la partition Windows</span>
+/dev/nvme0n1p3<span class="w">  </span>/OS<span class="w"> </span>ntfs3<span class="w">   </span>rw,user,auto,exec,gid<span class="o">=</span><span class="m">1000</span>,uid<span class="o">=</span><span class="m">1000</span>,umask<span class="o">=</span><span class="m">002</span>,<span class="w"> </span>utf8,codepage<span class="o">=</span><span class="m">850</span>,shortname<span class="o">=</span>mixed<span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span>
+</code></pre></div>
+<ul>
+<li>Chaque champs est séparé par une tabulation</li>
+<li>"<code># Montage de la partition Windows</code>" : commentaire optionnel</li>
+<li>"<code>/dev/nvme0n1p3</code>" : nom de la partition</li>
+<li>"<code>/OS</code>" : dossier dans lequel sera monté la partition</li>
+<li>"<code>ntfs3</code>" : système de fichiers de la partition</li>
+<li>"<code>rw,user,auto,exec,gid=1000,uid=1000,umask=002, utf8,codepage=850,shortname=mixed</code>" : options de montage</li>
+<li>"<code>0</code>" : 0 pour ne pas faire de sauvegarde de la partition, 1 pour faire une sauvegarde de la partition</li>
+<li>"<code>0</code>" : 0 pour ne pas vérifier la partition au démarrage, 1 pour vérifier la partition au démarrage</li>
+</ul>
+</li>
+<li>
+<p>Redémarrer l'ordinateur (cela peut prendre quelque minutes) :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>reboot
+</code></pre></div>
+</li>
+</ul>
+<h2 id="monter-uniquement-un-dossier">Monter uniquement un dossier<a class="headerlink" href="#monter-uniquement-un-dossier" title="Permanent link">&para;</a></h2>
+<p><strong>Attention, un dossier peut être monter uniquement si la partition sur laquelle il se trouve est monté au préalable</strong></p>
+<ul>
+<li>
+<p>Créer le dossier dans lequel sera monté le dossier :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/&lt;nom_du_dossier&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Executer la commande suivant pour monter le dossier</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mount<span class="w"> </span>--bind<span class="w"> </span>/&lt;chemin_du_dossier_a_monte&gt;<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/&lt;nom_du_dossier&gt;
+</code></pre></div>
+<ul>
+<li>
+<p>Dans mon cas</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mount<span class="w"> </span>--bind<span class="w"> </span>/OS/Mon_Drive/<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/Mon_Drive/
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="executer-un-script-shell-au-demarrage-dubuntu-2204-ou-superieur">Exécuter un script shell au démarrage d'Ubuntu 22.04 ou supérieur<a class="headerlink" href="#executer-un-script-shell-au-demarrage-dubuntu-2204-ou-superieur" title="Permanent link">&para;</a></h2>
+<h3 id="executer-le-script-en-tant-que-super-administrateur-pour-les-commandes-sudo">Exécuter le script en tant que super administrateur (pour les commandes sudo)<a class="headerlink" href="#executer-le-script-en-tant-que-super-administrateur-pour-les-commandes-sudo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Ouvrer le fichier <code>crontab</code> en administrateur grace à la commande suivante :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>crontab<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-e
+</code></pre></div>
+</li>
+<li>
+<p>Si c'est la première fois que vous éditer ce fichier un choix d'éditeur vous sera demander. Choisissez celui que vous voulez mais je vous conseil fortement d'utiliser <strong><code>nano</code></strong> qui doit être en numéro <strong><code>1</code></strong></p>
+</li>
+<li>
+<p>Ajouter la ligne suivante à la fin du fichier</p>
+<p><strong>Surtout n'utiliser pas de variable d'environnement comme <code>${USER}</code> parce qu'il est lancer en tant que root et que la variable ${USER} est vide lors de l'éxecution du script</strong></p>
+<div class="highlight"><pre><span></span><code>@reboot<span class="w"> </span>/path/to/script.sh
+</code></pre></div>
+<ul>
+<li>
+<p>Dans mon cas</p>
+<div class="highlight"><pre><span></span><code>@reboot<span class="w"> </span>/home/floris/.scripts_on_boot/mount_mon_drive.sh
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Sauvegarder le fichier
+    &gt; Ctrl + X</p>
+</li>
+<li>Confirmer la sauvegarde</li>
+<li>Ne modifier surtout pas pas le nom du fichier, appuyer sur entrer pour confirmer le nom qui entrer par défaut</li>
+<li>
+<p>Redémarrer l'ordinateur pour vérifier que le script s'exécute bien au démarrage</p>
+<div class="highlight"><pre><span></span><code>reboot
+</code></pre></div>
+</li>
+</ul>
+<h3 id="executer-le-script-en-tant-que-lutilisateur-de-la-session-en-cours-dutilisation">Exécuter le script en tant que l'utilisateur de la session en cours d'utilisation<a class="headerlink" href="#executer-le-script-en-tant-que-lutilisateur-de-la-session-en-cours-dutilisation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Ouvrer le fichier <code>crontab</code> grace à la commande suivante :</p>
+<div class="highlight"><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div>
+</li>
+<li>
+<p>Si c'est la première fois que vous éditer ce fichier un choix d'éditeur vous sera demander. Choisissez celui que vous voulez mais je vous conseil fortement d'utiliser <strong><code>nano</code></strong> qui doit être en numéro <strong><code>1</code></strong></p>
+</li>
+<li>
+<p>Ajouter la ligne suivante à la fin du fichier</p>
+<div class="highlight"><pre><span></span><code>@reboot<span class="w"> </span>/path/to/script.sh
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder le fichier
+    &gt; Ctrl + X</p>
+</li>
+<li>Confirmer la sauvegarde</li>
+<li>Ne modifier surtout pas pas le nom du fichier, appuyer sur entrer pour confirmer le nom qui entrer par défaut</li>
+<li>
+<p>Redémarrer l'ordinateur pour vérifier que le script s'exécute bien au démarrage</p>
+<div class="highlight"><pre><span></span><code>reboot
+</code></pre></div>
+</li>
+</ul>
+<h2 id="mettre-a-jour-ubuntu-2304-lunar-lobster-vers-ubuntu-2310-mantic-minotaur">Mettre à jour Ubuntu 23.04 Lunar Lobster vers Ubuntu 23.10 Mantic Minotaur<a class="headerlink" href="#mettre-a-jour-ubuntu-2304-lunar-lobster-vers-ubuntu-2310-mantic-minotaur" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Vérifier que vous êtes bien sur Ubuntu 23.04 grâce à la commande suivante</p>
+<p><strong>Il peut être nécessaire de l'installer (via <a href="../../../02_applications/installation_usage/#installation-de-neofetch---linux">le packet apt neofetch</a>)</strong></p>
+<div class="highlight"><pre><span></span><code>neofetch
+</code></pre></div>
+<ul>
+<li>
+<p>Vous pouvez voir dans la sortie de la commande qu'en face de <code>OS</code> il y a écrit <code>Ubuntu 23.04</code> avec l'architecture de votre système, dans mon cas <code>x86_64</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">                        </span>.-/+oossssoo+/-.<span class="w">               </span>floris@floris-Inspiron-5402<span class="w"> </span>
+<span class="w">                </span><span class="sb">`</span>:+ssssssssssssssssss+:<span class="sb">`</span><span class="w">           </span>---------------------------<span class="w"> </span>
+<span class="w">            </span>-+ssssssssssssssssssyyssss+-<span class="w">         </span>OS:<span class="w"> </span>Ubuntu<span class="w"> </span><span class="m">23</span>.04<span class="w"> </span>x86_64<span class="w"> </span>
+<span class="w">        </span>.ossssssssssssssssssdMMMNysssso.<span class="w">       </span>Host:<span class="w"> </span>Inspiron<span class="w"> </span><span class="m">5402</span><span class="w"> </span>
+<span class="w">     </span>/ssssssssssshdmmNNmmyNMMMMhssssss/<span class="w">      </span>Kernel:<span class="w"> </span><span class="m">6</span>.2.0-34-generic<span class="w"> </span>
+<span class="w">    </span>+ssssssssshmydMMMMMMMNddddyssssssss+<span class="w">     </span>Uptime:<span class="w"> </span><span class="m">16</span><span class="w"> </span>hours,<span class="w"> </span><span class="m">5</span><span class="w"> </span>mins<span class="w"> </span>
+<span class="w"> </span>/sssssssshNMMMyhhyyyyhmNMMMNhssssssss/<span class="w">    </span>Packages:<span class="w"> </span><span class="m">1893</span><span class="w"> </span><span class="o">(</span>dpkg<span class="o">)</span>,<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="o">(</span>snap<span class="o">)</span><span class="w"> </span>
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.<span class="w">   </span>Shell:<span class="w"> </span>bash<span class="w"> </span><span class="m">5</span>.2.15<span class="w"> </span>
++sssshhhyNMMNyssssssssssssyNMMMysssssss+<span class="w">   </span>Resolution:<span class="w"> </span>3840x2160<span class="w"> </span>
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso<span class="w">   </span>DE:<span class="w"> </span>GNOME<span class="w"> </span><span class="m">44</span>.3<span class="w"> </span>
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso<span class="w">   </span>WM:<span class="w"> </span>Mutter<span class="w"> </span>
++sssshhhyNMMNyssssssssssssyNMMMysssssss+<span class="w">   </span>WM<span class="w"> </span>Theme:<span class="w"> </span>Adwaita<span class="w"> </span>
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.<span class="w">   </span>Theme:<span class="w"> </span>Yaru-dark<span class="w"> </span><span class="o">[</span>GTK2/3<span class="o">]</span><span class="w"> </span>
+<span class="w"> </span>/sssssssshNMMMyhhyyyyhdNMMMNhssssssss/<span class="w">    </span>Icons:<span class="w"> </span>Yaru<span class="w"> </span><span class="o">[</span>GTK2/3<span class="o">]</span><span class="w"> </span>
+<span class="w">    </span>+sssssssssdmydMMMMMMMMddddyssssssss+<span class="w">     </span>Terminal:<span class="w"> </span>gnome-terminal<span class="w"> </span>
+<span class="w">     </span>/ssssssssssshdmNNNNmyNMMMMhssssss/<span class="w">      </span>CPU:<span class="w"> </span>11th<span class="w"> </span>Gen<span class="w"> </span>Intel<span class="w"> </span>i7-1165G7<span class="w"> </span><span class="o">(</span><span class="m">8</span><span class="o">)</span><span class="w"> </span>@<span class="w"> </span><span class="m">4</span>.700GHz<span class="w"> </span>
+<span class="w">        </span>.ossssssssssssssssssdMMMNysssso.<span class="w">       </span>GPU:<span class="w"> </span>Intel<span class="w"> </span>TigerLake-LP<span class="w"> </span>GT2<span class="w"> </span><span class="o">[</span>Iris<span class="w"> </span>Xe<span class="w"> </span>Graphics<span class="o">]</span><span class="w"> </span>
+<span class="w">            </span>-+sssssssssssssssssyyyssss+-<span class="w">         </span>Memory:<span class="w"> </span>4175MiB<span class="w"> </span>/<span class="w"> </span>15712MiB<span class="w"> </span>
+<span class="w">                </span><span class="sb">`</span>:+ssssssssssssssssss+:<span class="sb">`</span>
+<span class="w">                        </span>.-/+oossssoo+/-.
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Ouvrez le logiciel <code>Logiciels et mise à jour</code> (en anglais <code>Software &amp; Updates</code>)</p>
+<p><img alt="&quot;Image de l'icon du logiciel de mise à jour de Ubuntu&quot;" src="../../../images/icon_ubuntu_software_and_update.png" title="Image de l'icon du logiciel de mise à jour de Ubuntu" /></p>
+</li>
+<li>
+<p>Allez dans l'onglet '<code>Mise à jour</code>'</p>
+<p><img alt="&quot;Image du logiciel de mise à jour de Ubuntu&quot;" src="../../../images/logiciel_ubuntu_software_and_update.png" title="Image du logiciel de mise à jour de Ubuntu" /></p>
+</li>
+<li>
+<p>Changer la valeur de '<code>Me prévenir lorsqu'une nouvelle version d'Ubuntu est disponible</code>' en '<code>Pour chaque nouvelle version</code>'</p>
+<p><img alt="&quot;Image de la section mise à jour du logiciel de mise à jour de Ubuntu&quot;" src="../../../images/a_changer_dans_ubuntu_software_and_update.png" title="Image de la section mise à jour du logiciel de mise à jour de Ubuntu" /></p>
+</li>
+<li>
+<p>Fermer le logiciel de mise à jour</p>
+</li>
+<li>Ouvrer un terminal</li>
+<li>
+<p>Exécuter la commande suivante pour chercher les mises à jour de paquet à faire :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+</li>
+<li>
+<p>Exécuter la commande suivante pour mettre à jour les paquets :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+</li>
+<li>
+<p>Ouvrer le fichier <code>/etc/update-manager/release-upgrades</code> avec un éditeur de texte :</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>/etc/update-manager/release-upgrades
+</code></pre></div>
+<ul>
+<li>Vérifier que la dernière ligne est la même que celle ci-dessous et que la valeur de <code>Prompt</code> est bien <code>normal</code>, si se n'est pas le cas modifier votre fichier</li>
+<li>
+<p>Résultat attendu :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Default behavior for the release upgrader.</span>
+
+<span class="o">[</span>DEFAULT<span class="o">]</span>
+<span class="c1"># Default prompting and upgrade behavior, valid options:</span>
+<span class="c1">#</span>
+<span class="c1">#  never  - Never check for, or allow upgrading to, a new release.</span>
+<span class="c1">#  normal - Check to see if a new release is available.  If more than one new</span>
+<span class="c1">#           release is found, the release upgrader will attempt to upgrade to</span>
+<span class="c1">#           the supported release that immediately succeeds the</span>
+<span class="c1">#           currently-running release.</span>
+<span class="c1">#  lts    - Check to see if a new LTS release is available.  The upgrader</span>
+<span class="c1">#           will attempt to upgrade to the first LTS release available after</span>
+<span class="c1">#           the currently-running one.  Note that if this option is used and</span>
+<span class="c1">#           the currently-running release is not itself an LTS release the</span>
+<span class="c1">#           upgrader will assume prompt was meant to be normal.</span>
+<span class="nv">Prompt</span><span class="o">=</span>normal
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Vous pouvez maintenant fermer l'éditeur de texte</p>
+</li>
+<li>
+<p>Vous pouvez maintenant forcer le processus de mise à jour dans le terminal grâce à la commande suivante :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span><span class="k">do</span>-release-upgrade
+</code></pre></div>
+</li>
+<li>
+<p>Si il vous affiche '<code>No new release found</code>' il existe deux solution :</p>
+<ul>
+<li>
+<p>Réessayer la commande <code>sudo do-release-upgrade</code> avec l'option <code>-d</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span><span class="k">do</span>-release-upgrade<span class="w"> </span>-d
+</code></pre></div>
+</li>
+<li>
+<p>Sinon attendez quelque jour puis recommencer. Cela peux être du au fait que votre ordinateur n'est pas supporter par la nouvelle la version 23.10 de Ubuntu</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="reinstallation-de-lenvirronement-graphique-de-ubuntu-gnome">Réinstallation de l'envirronement graphique de Ubuntu (gnome)<a class="headerlink" href="#reinstallation-de-lenvirronement-graphique-de-ubuntu-gnome" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>pour réinstaller l'envirronement graphique lancer la commande</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--reinstall<span class="w"> </span>ubuntu-desktop
+</code></pre></div>
+</li>
+<li>
+<p>redémarer l'ordinateur</p>
+<div class="highlight"><pre><span></span><code>reboot
+</code></pre></div>
+</li>
+</ul>
+<h2 id="mode-terminal-de-ubuntu">Mode Terminal de Ubuntu<a class="headerlink" href="#mode-terminal-de-ubuntu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pour ouvrir le mode terminal d'ubuntu
+    &gt; Ctrl + Alt + F3</li>
+<li>Pour quitter le mode terminal d'ubuntu
+    &gt; Alt + F2</li>
+</ul>
+<h2 id="modifier-laction-du-click-sur-une-licone-de-lapplication">Modifier l'action du click sur une l'icone de l'application<a class="headerlink" href="#modifier-laction-du-click-sur-une-licone-de-lapplication" title="Permanent link">&para;</a></h2>
+<h3 id="avec-le-terminal">Avec le terminal<a class="headerlink" href="#avec-le-terminal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Ouvrez un terminal</p>
+<div class="highlight"><pre><span></span><code>gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>org.gnome.shell.extensions.dash-to-dock<span class="w"> </span>click-action<span class="w"> </span><span class="s1">&#39;minimize-or-previews&#39;</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="avec-une-application-tierce">Avec une application tierce<a class="headerlink" href="#avec-une-application-tierce" title="Permanent link">&para;</a></h3>
+<p><a href="../../../02_applications/installation_usage/#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome">Modifier l'action du click avec une application tierce</a></p>
+<h2 id="desinstallation-de-fichier-deb">Désinstallation de fichier deb<a class="headerlink" href="#desinstallation-de-fichier-deb" title="Permanent link">&para;</a></h2>
+<ul>
+<li>source
+    &gt;<a href="https://www.baeldung.com/linux/apt-uninstall-dpkg-deb-package">https://www.baeldung.com/linux/apt-uninstall-dpkg-deb-package</a></li>
+<li>
+<p>Pour désinstaller un fichier deb, il faut utiliser la commande <code>dpkg</code> avec l'option <code>-r</code> ou <code>--remove</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-r<span class="w"> </span>&lt;nom_du_fichier_deb&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Pour désinstaller et supprimer tout les fichiers de configuration d'un fichier deb, il faut utiliser la commande <code>dpkg</code> avec l'option <code>--purge</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--purge<span class="w"> </span>&lt;nom_du_fichier_deb&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="reinstallation-de-windows-a-partir-dune-image-systeme">Réinstallation de windows à partir d'une image système<a class="headerlink" href="#reinstallation-de-windows-a-partir-dune-image-systeme" title="Permanent link">&para;</a></h2>
+<p>La réinstallation de windows à partir d'une image système permet de réinstaller windows sans perdre les données de la partition windows. Cette action est très longue, il faut compter plusieurs heures.</p>
+<h3 id="creation-dune-image-de-la-partition-windows">Création d'une image de la partition windows<a class="headerlink" href="#creation-dune-image-de-la-partition-windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir le logiciel <code>Panneau de configuration</code></li>
+<li>Aller dans <code>Système et sécurité</code> &gt; <code>Sauvegarder et restaurer (Windows 7)</code></li>
+<li>Cliquer sur <code>Créer une image système</code></li>
+<li>Sélectionner le disque dur sur lequel vous voulez créer l'image système</li>
+<li>Cliquer sur <code>Suivant</code></li>
+<li>Patienter pendant la création de l'image système, cela peut prendre entre 30 minutes et 2 heures (environs)</li>
+</ul>
+<h3 id="reinstallation-de-windows">Réinstallation de windows<a class="headerlink" href="#reinstallation-de-windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Boot sur la clé USB Ventoy</li>
+<li>Sélectionner le dossier correspondant à Windows</li>
+<li>Sélectionner les information de langage suivant :<ul>
+<li>Langue à installer : '<code>Français (France)</code>'</li>
+<li>Format horaire et monétaire : '<code>Français (France)</code>'</li>
+<li>Clavier ou méthode d'entré : '<code>Français</code>'</li>
+</ul>
+</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Au moment de l'installation cliquer sur '<code>Réparer l'ordinateur</code>'</li>
+<li>Cliquer sur '<code>Dépannage</code>'</li>
+<li>Cliquer sur '<code>Récupération de l'image système</code>'</li>
+<li>Cliquez sur votre image, normalement il y en a qu'une</li>
+<li>Sélectionner '<code>utiliser la dernière image système (recommendé)</code>'</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner '<code>Formater et répartionner les disques</code>'</li>
+<li><strong>Attention très important</strong><ul>
+<li>Sélectionner les disques à exclure de la réinstallation de windows, dans mon cas j'ai sélectionner tout les disques sauf celui sur lequel je veux réinstaller windows</li>
+</ul>
+</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Laisser les options <code>Date et heure</code>, <code>Ordinateur</code> et <code>Lecteurs à restaurer</code> par défaut</li>
+<li>Cliquer sur '<code>Terminer</code>'</li>
+<li>Confirmer la réinstallation de windows en cliquant sur '<code>Oui</code>'</li>
+<li>Patienter pendant la réinstallation de windows, cela est très long (plusieurs heures)</li>
+<li>de retour sur l'affichage de ventoy, redémarrer l'ordinateur</li>
+</ul>
+<h2 id="mettre-a-jour-snap-store-dubuntu">Mettre à jour snap store d'Ubuntu<a class="headerlink" href="#mettre-a-jour-snap-store-dubuntu" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>snap-store<span class="w"> </span>--quit<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>snap-store
+</code></pre></div>
+<h2 id="probleme-avec-le-gestionnaire-de-paquets-apt-linux">Problème avec le gestionnaire de paquets apt - Linux<a class="headerlink" href="#probleme-avec-le-gestionnaire-de-paquets-apt-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Si vous avez un problème avec le gestionnaire de paquets apt, lancer la commande :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>--fix-broken<span class="w"> </span>install
+</code></pre></div>
+<ul>
+<li>
+<p>Si se message d'erreur s'affiche :</p>
+<div class="highlight"><pre><span></span><code>Lecture des listes de paquets... Fait
+Construction de l&#39;arbre des dépendances... Fait
+Lecture des informations d&#39;état... Fait      
+E: Le paquet &lt;package_name&gt; doit être réinstallé, mais il est impossible de trouver son archive.
+</code></pre></div>
+<ul>
+<li>C'est que le paquet est cassé et qu'il faut le supprimer de la façon décrite ci-dessous</li>
+<li>Si un paquet est cassé et en état de réinstallation obligatoire (reinstreq), vous pouvez le supprimer avec la commande suivante :</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--remove<span class="w"> </span>--force-remove-reinstreq<span class="w"> </span>&lt;package_name&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="rendre-ladresse-ip-statique-sur-ubuntu-linux">Rendre l'adresse IP statique sur Ubuntu - Linux<a class="headerlink" href="#rendre-ladresse-ip-statique-sur-ubuntu-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Source
+    &gt; <a href="https://freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/">https://freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/</a></p>
+</li>
+<li>
+<p>Récupérer l'adresse IP, le nom de votre interface réseau, le masque de sous-réseau et la passerelle par défaut</p>
+<ul>
+<li>
+<p>Pour récupérer l'adresse IP, le nom de votre interface réseau et le masque de sous-réseau lancer la commande :</p>
+<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
+</li>
+<li>
+<p>Pour récupérer la passerelle par défaut lancer la commande :</p>
+<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>route
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Créer un fichier de configuration pour votre interface réseau :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>touch<span class="w"> </span>/etc/netplan/01-network-manager-all.yaml
+</code></pre></div>
+</li>
+<li>
+<p>Ouvrir le fichier de configuration avec un éditeur de texte :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>open<span class="w"> </span>/etc/netplan/01-network-manager-all.yaml
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les lignes suivantes au fichier :</p>
+<div class="highlight"><pre><span></span><code><span class="nt">network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">renderer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkManager</span>
+<span class="w">    </span><span class="nt">ethernets</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">eth0</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">dhcp4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span>
+<span class="w">            </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">&lt;ip_fixe&gt;/&lt;netmask&gt;</span><span class="p p-Indicator">]</span>
+<span class="w">            </span><span class="nt">gateway4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;gateway_ip&gt;</span>
+<span class="w">            </span><span class="nt">nameservers</span><span class="p">:</span>
+<span class="w">                    </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8.8.8.8</span><span class="p p-Indicator">,</span><span class="nv">8.8.8.4</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;ip_fixe&gt;</code> : adresse IP statique</li>
+<li><code>&lt;netmask&gt;</code> : masque de sous-réseau</li>
+<li><code>&lt;gateway_ip&gt;</code> : passerelle par défaut</li>
+</ul>
+</li>
+<li>
+<p>Tester la configuration :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>netplan<span class="w"> </span>try
+</code></pre></div>
+</li>
+<li>
+<p>Appliquer la configuration :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>netplan<span class="w"> </span>apply
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier que la configuration est bien appliquée :</p>
+<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
+</li>
+<li>
+<p>Votre adresse IP doit être celle que vous avez rentré dans le fichier de configuration</p>
+</li>
+<li><strong>Ça n'a pas fonctionné, je suis passé par l'inteface graphique de Ubuntu pour configurer l'adresse IP statique, c'est beaucoup plus simple et ça a fonctionné parfaitement</strong><ul>
+<li>
+<p>Voici le fichier génére par l'interface graphique :</p>
+<div class="highlight"><pre><span></span><code><span class="nt">network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">ethernets</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">enp3s0</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">renderer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkManager</span>
+<span class="w">            </span><span class="nt">match</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">            </span><span class="nt">addresses</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;192.168.1.250/24&quot;</span>
+<span class="w">            </span><span class="nt">networkmanager</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">uuid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;uuid&gt;&quot;</span>
+<span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;netplan-&lt;nom_carte_reseau&gt;&quot;</span>
+<span class="w">                </span><span class="nt">passthrough</span><span class="p">:</span>
+<span class="w">                    </span><span class="nt">connection.timestamp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1720295850&quot;</span>
+<span class="w">                    </span><span class="nt">ipv4.address1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;192.168.1.250/24,&lt;gateway&gt;&quot;</span>
+<span class="w">                    </span><span class="nt">ipv4.method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+<span class="w">                    </span><span class="nt">ipv6.method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;disabled&quot;</span>
+<span class="w">                    </span><span class="nt">ipv6.ip6-privacy</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-1&quot;</span>
+<span class="w">                    </span><span class="nt">proxy._</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="modifier-les-noms-de-domaine">Modifier les noms de domaine<a class="headerlink" href="#modifier-les-noms-de-domaine" title="Permanent link">&para;</a></h2>
+<h3 id="modifier-les-noms-de-domaine-de-facon-temporaire">Modifier les noms de domaine de façon temporaire<a class="headerlink" href="#modifier-les-noms-de-domaine-de-facon-temporaire" title="Permanent link">&para;</a></h3>
+<p><strong>Attention, cette modification est temporaire, elle sera perdu après un redémarrage de l'ordinateur. Si vous voulez une solution définitive passé à <a href="#modifier-les-noms-de-domaine-de-façon-permanente">la prochaine étape</a></strong></p>
+<ul>
+<li>Ouvrir un terminal</li>
+<li>
+<p>Modifier le fichier <code>/etc/resolv.conf</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/resolv.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les lignes suivantes à la fin du fichier :</p>
+<div class="highlight"><pre><span></span><code>...
+nameserver &lt;nouvelle_adresse_ip&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;nouvelle_adresse_ip&gt;</code> : nouvelle adresse IP du serveur DNS</li>
+<li>
+<p>Exemple avec les serveurs DNS de Google :</p>
+<div class="highlight"><pre><span></span><code>...
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Sauvegarder le fichier
+    &gt; Ctrl + X</p>
+</li>
+<li>Confirmer la sauvegarde</li>
+<li>Ne modifier surtout pas pas le nom du fichier, appuyer sur entrer pour confirmer le nom qui est entrer par défaut</li>
+<li>
+<p>Vérifier que la modification est bien prise en compte</p>
+<div class="highlight"><pre><span></span><code>ping<span class="w"> </span>google.com
+</code></pre></div>
+</li>
+</ul>
+<h3 id="modifier-les-noms-de-domaine-de-facon-permanente">Modifier les noms de domaine de façon permanente<a class="headerlink" href="#modifier-les-noms-de-domaine-de-facon-permanente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>source :
+    &gt; <a href="https://www.baeldung.com/linux/permanent-etc-resolv-conf">https://www.baeldung.com/linux/permanent-etc-resolv-conf</a></p>
+</li>
+<li>
+<p>Faite le <a href="#modifier-les-noms-de-domaine-de-façon-temporaire">changement de DNS de façon temporaire</a></p>
+</li>
+<li>
+<p>Modifier le fichier <code>/etc/NetworkManager/NetworkManager.conf</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/NetworkManager/NetworkManager.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter <code>dns=none</code> sous la section <code>[main]</code></p>
+<div class="highlight"><pre><span></span><code>[main]
+dns=none
+...
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrer le service NetworkManager</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>NetworkManager.service
+</code></pre></div>
+</li>
+<li>
+<p>Désactiver le service systemd-resolved pour éviter qu'il écrase les modifications apportées au fichier <code>/etc/resolv.conf</code> au prochain redémarrage</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>--now<span class="w"> </span>systemd-resolved.service
+</code></pre></div>
+</li>
+<li>
+<p>Désactiver également tout les autres services qui pourraient modifier le fichier <code>/etc/resolv.conf</code> si vous en avez.</p>
+</li>
+</ul>
+<h2 id="convertir-les-doubles-espaces-en-4-espaces-dans-un-fichier-avec-vscode">Convertir les doubles espaces en 4 espaces dans un fichier avec vscode<a class="headerlink" href="#convertir-les-doubles-espaces-en-4-espaces-dans-un-fichier-avec-vscode" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ouvrir le fichier avec vscode</li>
+<li>Cliquer sur l'icone en bas à droite qui indique le nombre d'espaces par tabulation</li>
+<li>Sélectionner <code>Convertir les retraits en tabulations</code></li>
+<li>Cliquer sur l'icone en bas à droite qui indique le nombre d'espaces par tabulation</li>
+<li>Sélectionner <code>Mettre en retrait avec des espaces</code></li>
+<li>Sélectionner le nombre d'espaces par tabulation (en l'occurrence <code>4</code>)</li>
+<li>Cliquer sur <code>Convertir les retraits en espaces</code></li>
+<li>Sauvegarder le fichier
+    &gt; Ctrl + S</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

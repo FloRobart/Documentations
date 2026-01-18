@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Mise en production d'une application dockerisée - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../frontend/react/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../debian_package_creation/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/deployment/production_with_docker.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-sur-la-mise-en-production-avec-docker" class="nav-link">Documentation sur la mise en production avec Docker</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequis" class="nav-link">Prérequis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parametres-de-visual-studio-code-pour-docker-avec-nodejs-et-typescript" class="nav-link">Paramètres de Visual Studio Code pour Docker avec node.js et typescript</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-image-docker-pour-la-production" class="nav-link">Création d'une image Docker pour la production</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-du-container-docker" class="nav-link">Création du container Docker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mise-a-jour-et-maintenance-des-conteneurs-en-production" class="nav-link">Mise à jour et maintenance des conteneurs en production</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-sur-la-mise-en-production-avec-docker">Documentation sur la mise en production avec Docker<a class="headerlink" href="#documentation-sur-la-mise-en-production-avec-docker" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-sur-la-mise-en-production-avec-docker">Documentation sur la mise en production avec Docker</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#prérequis">Prérequis</a></li>
+<li><a href="#paramètres-de-visual-studio-code-pour-docker-avec-nodejs-et-typescript">Paramètres de Visual Studio Code pour Docker avec node.js et typescript</a></li>
+<li><a href="#création-dune-image-docker-pour-la-production">Création d'une image Docker pour la production</a></li>
+<li><a href="#création-du-container-docker">Création du container Docker</a></li>
+<li><a href="#mise-à-jour-et-maintenance-des-conteneurs-en-production">Mise à jour et maintenance des conteneurs en production</a></li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Avoir un projet fonctionnel (application web, API, etc.) prêt à être déployé en production.</li>
+<li>Avoir Docker installé sur votre machine pour pouvoir tester localement avant le déploiement.<ul>
+<li>Si vous n'avez pas encore Docker installé, vous pouvez suivre la <a href="../../../02_applications/docker_installation/">documentation d'installation de Docker engine</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Dans ce guide, nous allons prendre pour exemple une API RESTful développée avec Node.js et Express.</p>
+<p>Voici l'arborescence de notre projet exemple :</p>
+<div class="highlight"><pre><span></span><code>my_api
+├── src
+│   ├── fichiers_source.js
+│   └── ...
+├── public
+│   ├── fichiers_publics.png
+│   └── ...
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── docker-compose.yml
+└── docker-compose.dev.yml
+</code></pre></div>
+<h2 id="parametres-de-visual-studio-code-pour-docker-avec-nodejs-et-typescript">Paramètres de Visual Studio Code pour Docker avec node.js et typescript<a class="headerlink" href="#parametres-de-visual-studio-code-pour-docker-avec-nodejs-et-typescript" title="Permanent link">&para;</a></h2>
+<p>Pour un confort de développement avec Visual Studio Code, vous pouvez télécharger le fichier de profil suivant : <a href="../../../files/Node.js.code-profile">Node.js.code-profile</a> puis l'importer dans les paramètres utilisateur de Visual Studio Code.</p>
+<h2 id="creation-dune-image-docker-pour-la-production">Création d'une image Docker pour la production<a class="headerlink" href="#creation-dune-image-docker-pour-la-production" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Documentation officielle de Docker file : <a href="https://docs.docker.com/build/">https://docs.docker.com/build/</a></li>
+<li>Créer un fichier <code>.dockerignore</code> à la racine de votre projet.</li>
+<li>Dans ce fichier, nous allons spécifier les fichiers et dossiers à ignorer lors de la construction de l'image Docker. Cela permet d'être sûr de ne pas inclure des fichiers sensibles dans l'image finale.</li>
+<li>
+<p>Copier ce texte dans le fichier <code>.dockerignore</code> à la racine de votre projet.</p>
+<div class="highlight"><pre><span></span><code>.git
+.env
+.env.*
+node_modules
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier <code>Dockerfile</code> à la racine de votre projet.</p>
+<ul>
+<li>Dans ce fichier, nous allons définir les étapes nécessaires pour construire une image Docker optimisée pour la production. Pour cela nous utiliserons un build multi-étapes afin de réduire la taille finale de l'image ainsi que d'améliorer la sécurité en n'incluant pas les fichiers sources et les dépendances de développement dans l'image finale.</li>
+</ul>
+</li>
+<li>
+<p>Copier ce texte dans le fichier <code>Dockerfile</code> à la racine de votre projet.</p>
+<ul>
+<li>Chaque étape est commentée pour expliquer son rôle.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c"># Étape 1 : Build avec TypeScript | Nous allons compiler le projet TypeScript en JavaScript pour la production</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">node:24-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span><span class="w"> </span>#<span class="w"> </span>Choix<span class="w"> </span>de<span class="w"> </span>l<span class="err">&#39;</span>image<span class="w"> </span>de<span class="w"> </span>base<span class="w"> </span><span class="o">(</span>plus<span class="w"> </span>de<span class="w"> </span>détails<span class="w"> </span>sur<span class="w"> </span>https://hub.docker.com/_/node<span class="o">)</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app # Repertoire de travail dans le conteneur (par convention, on utilise /app)</span>
+
+<span class="c"># Copier le code source, les fichiers de configuration et les fichiers publics</span>
+<span class="k">COPY</span><span class="w"> </span>tsconfig.json<span class="w"> </span>./
+<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
+<span class="k">COPY</span><span class="w"> </span>./src<span class="w"> </span>./src
+<span class="k">COPY</span><span class="w"> </span>./public<span class="w"> </span>./public
+
+<span class="c"># Supprimer les fichiers sensibles s&#39;ils existent. Ils ne sont de toute façon pas copiés grâce au .dockerignore mais c&#39;est une sécurité supplémentaire.</span>
+<span class="k">RUN</span><span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>.env*<span class="w"> </span>public/.env*<span class="w"> </span>src/.env*
+
+<span class="c"># Installation des dépendances</span>
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci
+
+<span class="c"># Build TypeScript → JavaScript</span>
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
+
+<span class="c"># À ce stade, le code est compilé et prêt pour la production dans le dossier /app/dist.</span>
+<span class="s2">&quot; Mais vous avez encore les dépendances de développement et le code source dans l&#39;image.</span>
+
+<span class="c"># Étape 2 : Image finale | Nous allons créer une image légère et sécurisée pour exécuter l&#39;application en production</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">node:24-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">runner</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Copie des fichiers nécessaires à l&#39;exécution uniquement</span>
+<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
+
+<span class="c"># Installation des dépendances de production uniquement</span>
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span>--omit<span class="o">=</span>dev
+
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/dist<span class="w"> </span>./dist<span class="w"> </span>#<span class="w"> </span>Copie<span class="w"> </span>du<span class="w"> </span>code<span class="w"> </span>compilé<span class="w"> </span>depuis<span class="w"> </span>l<span class="err">&#39;</span>étape<span class="w"> </span>de<span class="w"> </span>build
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>/app/public<span class="w"> </span>./public<span class="w"> </span>#<span class="w"> </span>Copie<span class="w"> </span>des<span class="w"> </span>fichiers<span class="w"> </span>publics<span class="w"> </span>depuis<span class="w"> </span>l<span class="err">&#39;</span>étape<span class="w"> </span>de<span class="w"> </span>build
+
+<span class="c"># Ajout d&#39;un utilisateur non-root avec UID/GID fixes</span>
+<span class="c"># Utiliser les options longues pour éviter les ambiguïtés entre différentes variantes d&#39;adduser/addgroup</span>
+<span class="k">RUN</span><span class="w"> </span>addgroup<span class="w"> </span>--gid<span class="w"> </span><span class="m">1800</span><span class="w"> </span>--system<span class="w"> </span>myapigroup<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>adduser<span class="w"> </span>--uid<span class="w"> </span><span class="m">1800</span><span class="w"> </span>--system<span class="w"> </span>--ingroup<span class="w"> </span>myapigroup<span class="w"> </span>--disabled-password<span class="w"> </span>--gecos<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>--no-create-home<span class="w"> </span>myapiuser
+
+<span class="c"># Utilisation de l&#39;utilisateur non-root créée précédemment</span>
+<span class="k">USER</span><span class="w"> </span><span class="s">myapiuser</span>
+
+<span class="c"># lance le serveur Node.js (Lance le fichier principal de votre application)</span>
+<span class="c"># /!\ Attention /!\ lancer directement avec node et pas avec un script npm pour éviter d&#39;exécuter des sous-processus inutiles en production</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist/server.js&quot;</span><span class="p">]</span>
+</code></pre></div>
+<ul>
+<li>Noter que dans l'image finale produite par ce Dockerfile, seul se qui est présent dans l'étape 2 ("runner") sera inclus. Tous se qui se passe dans l'étape 1 ("builder") sera supprimé, donc le code source TypeScript et les dépendances de développement ne seront pas présents, ce qui réduit la taille de l'image et améliore la sécurité.</li>
+</ul>
+</li>
+</ul>
+<h2 id="creation-du-container-docker">Création du container Docker<a class="headerlink" href="#creation-du-container-docker" title="Permanent link">&para;</a></h2>
+<p>Pour la création du container Docker en production, nous allons utiliser un fichier <code>docker-compose.yml</code>. Nous pourrions utiliser des commandes <code>docker run</code>, mais l'utilisation de Docker Compose facilite la gestion des configurations et des services multiples.</p>
+<ul>
+<li>Documentation officielle de Docker Compose : <a href="https://docs.docker.com/compose/">https://docs.docker.com/compose/</a></li>
+<li>Créer un fichier <code>docker-compose.yml</code> à la racine de votre projet.</li>
+<li>
+<p>Copier ce texte dans le fichier <code>docker-compose.yml</code> à la racine de votre projet.</p>
+<ul>
+<li>Chaque étape est commentée pour expliquer son rôle.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span><span class="w"> </span><span class="c1"># il y a uniquement un service dans cet exemple, mais vous pouvez en ajouter d&#39;autres (base de données, cache, etc.)</span>
+<span class="w">    </span><span class="nt">myapi-server</span><span class="p">:</span><span class="w"> </span><span class="c1"># Nom du service (choix libre)</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapi-server:latest</span><span class="w"> </span><span class="c1"># Nom de l&#39;image Docker (remplacer par le vôtre)</span>
+<span class="w">        </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="c1"># Construit l&#39;image Docker automatiquement si elle n&#39;existe pas</span>
+<span class="w">            </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span><span class="w"> </span><span class="c1"># Dossier de contexte (la racine du projet)</span>
+<span class="w">            </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span><span class="w"> </span><span class="c1"># Chemin vers le Dockerfile</span>
+<span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span><span class="w"> </span><span class="c1"># Redémarre le conteneur automatiquement en cas de plantage ou de redémarrage du serveur hôte</span>
+<span class="w">        </span><span class="nt">env_file</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span><span class="w"> </span><span class="c1"># Fichier d&#39;environnement spécifique au service (ne pas oublier de le créer et de le configurer)</span>
+<span class="w">        </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapi-net</span><span class="w"> </span><span class="c1"># Réseau Docker dédié (à créer plus bas dans le fichier)</span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${APP_PORT:-}:80</span><span class="w"> </span><span class="c1"># Mappe le port 80 du conteneur au port spécifié dans la variable d&#39;environnement APP_PORT (ou aucun port spécifique si non défini)</span>
+<span class="w">        </span><span class="nt">security_opt</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-new-privileges:true</span><span class="w"> </span><span class="c1"># Empêche l&#39;élévation de privilèges dans le conteneur</span>
+<span class="w">        </span><span class="nt">cap_drop</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALL</span><span class="w"> </span><span class="c1"># Supprime toutes les capacités Linux du conteneur pour renforcer la sécurité</span>
+<span class="w">        </span><span class="nt">cap_add</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NET_BIND_SERVICE</span><span class="w"> </span><span class="c1"># Ajoute uniquement la capacité nécessaire pour lier des ports</span>
+<span class="w">        </span><span class="nt">read_only</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Monte le système de fichiers du conteneur en lecture seule pour améliorer la sécurité</span>
+<span class="w">        </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1800:1800&quot;</span><span class="w"> </span><span class="c1"># Exécute le conteneur avec l&#39;utilisateur non-root créé dans le Dockerfile</span>
+<span class="w">        </span><span class="nt">tmpfs</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp:exec,nosuid,nodev</span><span class="w"> </span><span class="c1"># Monte /tmp en tmpfs avec des options sécurisées (obligatoire si read_only est true)</span>
+<span class="w">        </span><span class="nt">healthcheck</span><span class="p">:</span><span class="w"> </span><span class="c1"># Vérifie que le service est opérationnel</span>
+<span class="w">            </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD-SHELL&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;wget</span><span class="nv"> </span><span class="s">-q</span><span class="nv"> </span><span class="s">--spider</span><span class="nv"> </span><span class="s">http://myapi-server:80/</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">exit</span><span class="nv"> </span><span class="s">1&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">            </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">            </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+<span class="w">            </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+
+<span class="nt">networks</span><span class="p">:</span><span class="w"> </span><span class="c1"># Définition des réseaux Docker</span>
+<span class="w">    </span><span class="nt">myapi-net</span><span class="p">:</span><span class="w"> </span><span class="c1"># Nom du réseau (choix libre)</span>
+<span class="w">        </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"> </span><span class="c1"># Type de réseau (bridge est le plus courant et sécurisé pour les applications simples)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Pour le développement local, vous pouvez utiliser un fichier <code>docker-compose.dev.yml</code> avec des configurations adaptées au développement (montage de volumes, ports différents, etc.). Assurez-vous de ne pas utiliser ce fichier en production.</p>
+<ul>
+<li>Pour le développement local, nous n'utiliserons pas l'image construite précédemment. En réalité nous allons utiliser l'image officielle de Node.js et monter le code source en volume pour pouvoir le modifier sans reconstruire l'image à chaque fois. Donc se qui vas se passer c'est que le code sera lancer avec nodemon pour le rechargement automatique et le container utilisera les fichiers et les dépendances présents sur la machine hôte.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">myapi-server</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:24-alpine</span><span class="w"> </span><span class="c1"># Utilisation de l&#39;image officielle de Node.js (la même version que dans le Dockerfile de production)</span>
+<span class="w">    </span><span class="nt">working_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app</span><span class="w"> </span><span class="c1"># Repertoire de travail dans le conteneur (par convention, on utilise /app)</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span><span class="w"> </span><span class="c1"># Fichier d&#39;environnement spécifique au service (ne pas oublier de le créer et de le configurer)</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./:/app/</span><span class="w"> </span><span class="c1"># Monte le code source local dans le conteneur</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./node_modules:/app/node_modules</span><span class="w"> </span><span class="c1"># Monte les dépendances installées localement pour éviter de les réinstaller dans le conteneur</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sh -c &quot;cd /app &amp;&amp; nodemon --watch &#39;src/**/*.ts&#39; --exec &#39;ts-node&#39; src/server.ts&quot;</span><span class="w"> </span><span class="c1"># Commande pour lancer le serveur avec nodemon et ts-node (permet le rechargement automatique)</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapi-net</span><span class="w"> </span><span class="c1"># Réseau Docker dédié (à créer plus bas dans le fichier)</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${APP_PORT}:80</span><span class="w"> </span><span class="c1"># Mappe le port 80 du conteneur au port spécifié dans la variable d&#39;environnement APP_PORT</span>
+<span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1800:1800&quot;</span><span class="w"> </span><span class="c1"># Exécute le conteneur avec un utilisateur non-root</span>
+<span class="w">    </span><span class="nt">tmpfs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp:exec,nosuid,nodev</span><span class="w"> </span><span class="c1"># Monte /tmp en tmpfs avec des options sécurisées</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app/src/swagger/json:rw,uid=1800,gid=1800</span><span class="w"> </span><span class="c1"># Monte le dossier swagger/json en tmpfs pour permettre l&#39;écriture des fichiers générés par l&#39;API</span>
+
+<span class="nt">networks</span><span class="p">:</span><span class="w"> </span><span class="c1"># Définition des réseaux Docker</span>
+<span class="w">    </span><span class="nt">myapi-net</span><span class="p">:</span><span class="w"> </span><span class="c1"># Nom du réseau (choix libre)</span>
+<span class="w">        </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span><span class="w"> </span><span class="c1"># Type de réseau (bridge est le plus courant et sécurisé pour les applications simples)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Les réseaux Docker permettent aux conteneurs de communiquer entre eux de manière isolée et sécurisée. En définissant un réseau dédié pour votre application, vous pouvez contrôler quels conteneurs peuvent communiquer entre eux et limiter l'exposition aux autres conteneurs sur le même hôte Docker.</p>
+</li>
+</ul>
+<h2 id="mise-a-jour-et-maintenance-des-conteneurs-en-production">Mise à jour et maintenance des conteneurs en production<a class="headerlink" href="#mise-a-jour-et-maintenance-des-conteneurs-en-production" title="Permanent link">&para;</a></h2>
+<p>Vous pouvez mettre à jour votre application en suivant ces étapes :</p>
+<ol>
+<li>Apporter les modifications nécessaires à votre code source.</li>
+<li>Mettre à jour le fichier <code>.env</code> si nécessaire.</li>
+<li>Rebuild l'image Docker avec la commande :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>build
+</code></pre></div>
+<ol>
+<li>Faire une sauvegarde de vos données si nécessaire (base de données, fichiers, etc.).<ul>
+<li>Si vous avez une base de données postgresql dans un autre conteneur, vous pouvez vous référer à la documentation suivante pour faire une sauvegarde : <a href="../../database/postgresql/#backup-dune-base-de-données-postgresql-depuis-un-conteneur-docker">Sauvegarde et restauration de bases de données PostgreSQL avec Docker</a></li>
+</ul>
+</li>
+<li>Stopper le conteneur en cours d'exécution :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>down
+</code></pre></div>
+<ol>
+<li>Redémarrer le conteneur avec la nouvelle image :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<ol>
+<li>Restaurer les données si nécessaire.<ul>
+<li>Si vous avez une base de données postgresql dans un autre conteneur, vous pouvez vous référer à la documentation suivante pour faire une sauvegarde : <a href="../../database/postgresql/#backup-dune-base-de-données-postgresql-depuis-un-conteneur-docker">Sauvegarde et restauration de bases de données PostgreSQL avec Docker</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
