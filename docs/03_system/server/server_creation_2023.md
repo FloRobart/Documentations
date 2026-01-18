@@ -1,8 +1,11 @@
-# Documentation sur la création d'un serveur
+# Documentation sur la création d'un serveur (Obselète - 2023)
+
+## Veillez consulter la documentation plus récente pour la création d'un serveur : [Création d'un serveur (2026)](server_creation_2026.md)
 
 ## Table des matières
 
-- [Documentation sur la création d'un serveur](#documentation-sur-la-création-dun-serveur)
+- [Documentation sur la création d'un serveur (Obselète - 2023)](#documentation-sur-la-création-dun-serveur-obselète---2023)
+    - [Veillez consulter la documentation plus récente pour la création d'un serveur : Création d'un serveur (2026)](#veillez-consulter-la-documentation-plus-récente-pour-la-création-dun-serveur--création-dun-serveur-2026)
     - [Table des matières](#table-des-matières)
     - [Préambule](#préambule)
     - [Récupération du matériel](#récupération-du-matériel)

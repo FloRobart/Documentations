@@ -45,7 +45,8 @@
     - [Configuration de Thunderbird pour l'IUT du Havre](02_applications/thunderbird_iut_le_havre.md)
 - Systèmes
     - Server
-        - [Création d'un serveur](03_system/server/server_creation.md)
+        - [Création d'un serveur (2026)](03_system/server/server_creation_2026.md)
+        - [Création d'un serveur (Obsolète - 2023)](03_system/server/server_creation_2023.md)
     - Linux
         - [Création d'un dual boot](03_system/linux/dual_boot.md)
         - [Utilisation d'outils windows sous Linux](03_system/linux/windows_on_linux.md)

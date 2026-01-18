@@ -18,7 +18,7 @@
 
 ## Prérequis
 
-- [Avoir un serveur](../../03_system/server/server_creation.md) (de préférence Debian) sur lequel vous avez les droits administrateurs.
+- [Avoir un serveur](../../03_system/server/server_creation_2026.md) (de préférence Debian) sur lequel vous avez les droits administrateurs.
 
 ## Préambule
 
