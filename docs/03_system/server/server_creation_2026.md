@@ -399,6 +399,8 @@ Si vous n'avez pas défini de mot de passe pour l'utilisateur `root` lors de l'i
     sudo service ssh restart
     ```
 
+Plus d'informations sur la configuration de SSH sont disponibles dans la documentation dédiée à [SSH](../../02_applications/ssh.md)
+
 Vous avez maintenant un serveur Debian fonctionnel avec `sudo` et SSH configurés correctement et de manière sécurisée. Seul l'utilisateur courant peut se connecter en SSH en utilisant la clé SSH précédemment générée. Dans les fait cela veux dire que seul quelqu'un possédant la clé privée correspondante à la clé publique présente dans le fichier `authorized_keys` pourra se connecter en SSH et que même si cette clé est compromise, l'utilisateur `root` ne pourra jamais être utilisé et que toutes les commandes nécessitant des privilèges administrateur devront être exécutées via `sudo` qui nécessite la saisie du mot de passe de l'utilisateur qui n'est enregistrer nul part.
 
 ## Connexion à distance via SSH
@@ -423,6 +425,10 @@ Vous avez maintenant un serveur Debian fonctionnel, bien protégé et accessible
 Dans cette section, nous allons voir comment installer et configurer des services supplémentaires pour rendre votre serveur plus utile.
 
 ### Installation et configuration de Docker et Docker Compose
+
+Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications dans des conteneurs légers et portables. Docker Compose est un outil qui permet de définir et de gérer des applications multi-conteneurs Docker. Voici comment les installer et les configurer sur votre serveur Debian.
+
+Pour installer Docker engine, vous pouvez suivre la [documentation d'installation de Docker engine](../../02_applications/docker_installation.md)
 
 ### Installation et configuration de Prometheus
 
