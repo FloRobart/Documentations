@@ -6,7 +6,7 @@
     - [Table des matières](#table-des-matières)
     - [Sources](#sources)
     - [Introduction](#introduction)
-    - [Installation de Docker engine sur Ubuntu 24.XX](#installation-de-docker-engine-sur-ubuntu-24xx)
+    - [Installation de Docker engine](#installation-de-docker-engine)
     - [Utilisation de docker](#utilisation-de-docker)
     - [Licence](#licence)
 
@@ -22,7 +22,9 @@
 - **Docker desktop :** Docker desktop est une interface graphique optionnel pour Docker engine. Lors de l'installation de docker desktop docker engine est automatiquement installée.
     - Si vous voulez installer docker desktop, vous pouvez suivre la [documentation officiel d'installation de Docker desktop](https://docs.docker.com/desktop/setup/install/linux/).
 
-## Installation de Docker engine sur Ubuntu 24.XX
+## Installation de Docker engine
+
+Testé et fonctionnel sur Ubuntu 24.04 et Debian 13
 
 - Pour commencer désinstaller les anciennes versions de Docker
 
