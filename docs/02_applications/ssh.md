@@ -92,7 +92,7 @@
     nano ~/.ssh/config
     ```
 
-- Ajouter une entrée pour le serveur SSH :
+- Ajouter une entrée pour le serveur SSH
 
     ```plaintext
     Host <nom_du_raccourci>
@@ -108,6 +108,7 @@
     - `<user>` : Nom d'utilisateur à utiliser sur le serveur
     - `<port>` : Port SSH (par défaut 22)
     - `<nom_de_la_clé>` : Nom du fichier de la clé privée (généralement `id_rsa` ou `id_rsa_<custom_name>`)
+
 - Sauvegarder et fermer le fichier
 - Utiliser le raccourci pour se connecter au serveur distant avec SSH
 
@@ -191,6 +192,7 @@
         ```
 
     - Sauvegarder et quitter.
+
 - Redémarrer le service SSH.
 
     ```bash
@@ -237,6 +239,7 @@
         ```
 
     - Sauvegarder et quitter.
+
 - Redémarrer le service SSH.
 
     ```bash
@@ -250,6 +253,7 @@
     ```
 
     - Les deux lignes retournées doivent être `passwordauthentication no` et `usepam no`.
+
 - Vérifier que la connexion SSH fonctionne toujours avec la clé SSH.
 
     ```bash
@@ -316,6 +320,7 @@
     ```
 
     - `<dossier>` : Nom du dossier
+
 - Monter le système de fichier distant :
 
     ```bash
