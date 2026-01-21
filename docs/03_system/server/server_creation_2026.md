@@ -11,7 +11,8 @@
     - [Installation et configuration des dépendances de base](#installation-et-configuration-des-dépendances-de-base)
         - [Sudo](#sudo)
         - [SSH](#ssh)
-    - [Connexion à distance via SSH](#connexion-à-distance-via-ssh)
+            - [Connexion à distance via SSH](#connexion-à-distance-via-ssh)
+        - [Git](#git)
     - [Configuration supplémentaire (optionnelle)](#configuration-supplémentaire-optionnelle)
         - [Installation et configuration de Docker et Docker Compose](#installation-et-configuration-de-docker-et-docker-compose)
         - [Installation et configuration de Prometheus](#installation-et-configuration-de-prometheus)
@@ -403,7 +404,7 @@ Plus d'informations sur la configuration de SSH sont disponibles dans la documen
 
 Vous avez maintenant un serveur Debian fonctionnel avec `sudo` et SSH configurés correctement et de manière sécurisée. Seul l'utilisateur courant peut se connecter en SSH en utilisant la clé SSH précédemment générée. Dans les fait cela veux dire que seul quelqu'un possédant la clé privée correspondante à la clé publique présente dans le fichier `authorized_keys` pourra se connecter en SSH et que même si cette clé est compromise, l'utilisateur `root` ne pourra jamais être utilisé et que toutes les commandes nécessitant des privilèges administrateur devront être exécutées via `sudo` qui nécessite la saisie du mot de passe de l'utilisateur qui n'est enregistrer nul part.
 
-## Connexion à distance via SSH
+#### Connexion à distance via SSH
 
 Pour plus d'informations sur l'installation et l'utilisation de SSH, vous pouvez consulter la documentation dédiée à [SSH](../../02_applications/ssh.md)
 
@@ -417,6 +418,16 @@ Pour plus d'informations sur l'installation et l'utilisation de SSH, vous pouvez
     - Remplacer `<adresse_ip>` par l'adresse IP fixe configurée précédemment ou l'adresse IP actuelle du serveur.
     - Remplacer `<port>` par le numéro de port configuré précédemment pour SSH.
     - Entrer la passphrase de la clé SSH si vous en avez mis une.
+
+### Git
+
+- Installer Git.
+
+    ```bash
+    sudo apt update && sudo apt install git
+    ```
+
+Plus d'informations sur l'installation et l'utilisation de Git sont disponibles dans la documentation dédiée à [Git](../../02_applications/git.md)
 
 ## Configuration supplémentaire (optionnelle)
 
