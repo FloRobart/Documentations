@@ -12,11 +12,11 @@
         - [Sudo](#sudo)
         - [SSH](#ssh)
             - [Connexion à distance via SSH](#connexion-à-distance-via-ssh)
-        - [Git](#git)
     - [Configuration supplémentaire (optionnelle)](#configuration-supplémentaire-optionnelle)
-        - [Installation et configuration de Docker et Docker Compose](#installation-et-configuration-de-docker-et-docker-compose)
-        - [Installation et configuration de Prometheus](#installation-et-configuration-de-prometheus)
-        - [Installation et configuration de Grafana](#installation-et-configuration-de-grafana)
+        - [Git](#git)
+        - [Docker et Docker Compose](#docker-et-docker-compose)
+        - [Prometheus](#prometheus)
+        - [Grafana](#grafana)
     - [Licence](#licence)
 
 ## Prérequis
@@ -419,6 +419,12 @@ Pour plus d'informations sur l'installation et l'utilisation de SSH, vous pouvez
     - Remplacer `<port>` par le numéro de port configuré précédemment pour SSH.
     - Entrer la passphrase de la clé SSH si vous en avez mis une.
 
+## Configuration supplémentaire (optionnelle)
+
+Vous avez maintenant un serveur Debian fonctionnel, bien protégé et accessible à distance via SSH. Mais pour l'instant il n'a pas encore de fonctionnalités spécifiques.
+
+Dans cette section, nous allons voir comment installer et configurer des services supplémentaires pour rendre votre serveur plus utile.
+
 ### Git
 
 - Installer Git.
@@ -429,23 +435,17 @@ Pour plus d'informations sur l'installation et l'utilisation de SSH, vous pouvez
 
 Plus d'informations sur l'installation et l'utilisation de Git sont disponibles dans la documentation dédiée à [Git](../../02_applications/git.md)
 
-## Configuration supplémentaire (optionnelle)
-
-Vous avez maintenant un serveur Debian fonctionnel, bien protégé et accessible à distance via SSH. Mais pour l'instant il n'a pas encore de fonctionnalités spécifiques.
-
-Dans cette section, nous allons voir comment installer et configurer des services supplémentaires pour rendre votre serveur plus utile.
-
-### Installation et configuration de Docker et Docker Compose
+### Docker et Docker Compose
 
 Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications dans des conteneurs légers et portables. Docker Compose est un outil qui permet de définir et de gérer des applications multi-conteneurs Docker. Voici comment les installer et les configurer sur votre serveur Debian.
 
 Pour installer Docker engine, vous pouvez suivre la [documentation d'installation de Docker engine](../../02_applications/docker_installation.md)
 
-### Installation et configuration de Prometheus
+### Prometheus
 
 Prometheus est un système de surveillance et d'alerte open-source conçu pour collecter et stocker des métriques en temps réel. Voici comment l'installer et le configurer sur votre serveur Debian.
 
-### Installation et configuration de Grafana
+### Grafana
 
 Grafana est une plateforme open-source de visualisation et d'analyse de données qui permet de créer des tableaux de bord interactifs. Voici comment l'installer et le configurer sur votre serveur Debian.
 
