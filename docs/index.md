@@ -71,8 +71,7 @@
 
 ## Mes Applications
 
-- [Econoris - Application de gestion financière personnelle](https://econoris.florobart.fr)
-- [FlollyList - Application de gestion de cadeaux de noël](https://flollylist.florobart.fr)
+- [Liste automatisé de mes projets](https://flower-garden.florobart.fr)
 
 ****
 
