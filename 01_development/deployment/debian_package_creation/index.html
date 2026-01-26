@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Creation de packets Debian - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../production_with_docker/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../open_source_licensing_gnu_gpl/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/deployment/debian_package_creation.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#creation-dun-fichier-deb-pour-un-projet-et-deploiement-sur-apt" class="nav-link">Création d'un fichier deb pour un projet et déploiement sur APT</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#preparation-du-projet" class="nav-link">Préparation du projet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#deploiement-du-projet" class="nav-link">Déploiement du projet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-de-pages-de-manuel-linux" class="nav-link">Création de pages de manuel - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="creation-dun-fichier-deb-pour-un-projet-et-deploiement-sur-apt">Création d'un fichier deb pour un projet et déploiement sur APT<a class="headerlink" href="#creation-dun-fichier-deb-pour-un-projet-et-deploiement-sur-apt" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#création-dun-fichier-deb-pour-un-projet-et-déploiement-sur-apt">Création d'un fichier deb pour un projet et déploiement sur APT</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#préparation-du-projet">Préparation du projet</a><ul>
+<li><a href="#création-dun-fichier-deb">Création d'un fichier deb</a></li>
+</ul>
+</li>
+<li><a href="#déploiement-du-projet">Déploiement du projet</a></li>
+<li><a href="#création-de-pages-de-manuel---linux">Création de pages de manuel - Linux</a></li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="preparation-du-projet">Préparation du projet<a class="headerlink" href="#preparation-du-projet" title="Permanent link">&para;</a></h2>
+<p>Vous devez tous d'abord créer un fichier deb pour votre projet. Pour cela vous devez suivre les étapes de <a href="#création-dun-fichier-deb">création d'un fichier deb</a>.</p>
+<h3 id="creation-dun-fichier-deb">Création d'un fichier deb<a class="headerlink" href="#creation-dun-fichier-deb" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tutoriel source
+    &gt;<a href="https://www.iodigital.com/nl/history/intracto/creating-debianubuntu-deb-packages">https://www.iodigital.com/nl/history/intracto/creating-debianubuntu-deb-packages</a></li>
+<li>
+<p>Créer un dossier pour le projet</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>&lt;nom_du_projet&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Créer un dossier <code>DEBIAN</code> dans le dossier du projet</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>&lt;nom_du_projet&gt;/DEBIAN
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier <code>control</code> dans le dossier <code>DEBIAN</code></p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>&lt;nom_du_projet&gt;/DEBIAN/control
+</code></pre></div>
+</li>
+<li>
+<p>Ouvrir le fichier <code>control</code> avec un éditeur de texte</p>
+<div class="highlight"><pre><span></span><code>open<span class="w"> </span>&lt;nom_du_projet&gt;/DEBIAN/control
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les informations suivantes dans le fichier <code>control</code></p>
+<div class="highlight"><pre><span></span><code>Package:<span class="w"> </span>&lt;nom_du_projet&gt;
+Version:<span class="w"> </span>&lt;version_du_projet&gt;
+Architecture:<span class="w"> </span>all<span class="w"> </span>&lt;<span class="o">(</span>ou<span class="w"> </span>amd64,<span class="w"> </span>arm64,<span class="w"> </span>i386,<span class="w"> </span>...<span class="o">)</span>&gt;
+Depends:<span class="w"> </span>&lt;dépendance_1&gt;,<span class="w"> </span>&lt;dépendance_2&gt;,<span class="w"> </span>...
+Maintainer:<span class="w"> </span>&lt;nom_de_l<span class="se">\&#39;</span>auteur&gt;
+Description:<span class="w"> </span>&lt;description_du_projet&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Copier les fichiers du projet dans le dossier du projet.</p>
+<ul>
+<li>Veillez à bien copier les fichiers dans le dossier du projet et non dans le dossier <code>DEBIAN</code></li>
+<li>Créer les dossiers nécessaires dans le dossier du projet, par exemple si vous voulez créer une commande <code>mvnl</code> il faut que le fichier de commande est pour nom <code>mvnl</code> et qu'il soit dans le dossier <code>/usr/bin/</code>. Donc il faut créer le dossier <code>usr/bin/</code> dans le dossier du projet et y mettre le fichier <code>mvnl</code>. Ceci est du au fait que quand le fichier deb sera installer, les fichiers seront copier dans le système de fichier de l'ordinateur en respectant l'arborescence du dossier du projet.</li>
+</ul>
+</li>
+<li>
+<p>Exemple d'arborescence de dossier du projet</p>
+<p><img alt="Arborescence de dossier du projet" src="../../../images/maven_lite_arbo.png" /></p>
+</li>
+<li>
+<p>Créer le fichier deb</p>
+<div class="highlight"><pre><span></span><code>dpkg-deb<span class="w"> </span>--build<span class="w"> </span>&lt;nom_du_projet&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="deploiement-du-projet">Déploiement du projet<a class="headerlink" href="#deploiement-du-projet" title="Permanent link">&para;</a></h2>
+<h2 id="creation-de-pages-de-manuel-linux">Création de pages de manuel - Linux<a class="headerlink" href="#creation-de-pages-de-manuel-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tutoriel source
+    &gt;<a href="https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/">https://www.cyberciti.biz/faq/linux-unix-creating-a-manpage/</a></li>
+<li><a href="../../../02_applications/installation_usage/#installation-de-txt2man---linux">Installer le paquet <code>txt2man</code></a></li>
+<li>
+<p>Créer un fichier texte ou markdown avec les informations de la page de manuel</p>
+<ul>
+<li>
+<p>Exemple de fichier markdown avec Maven Lite</p>
+<ul>
+<li>Les titres de niveau 1 sont obligatoires. Ce sont des conventions des pages de manuel.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>---
+date: Janvier 2024
+section: 1
+<span class="gu">title: Maven Lite</span>
+<span class="gu">---</span>
+
+<span class="gh"># NOM</span>
+
+mvnl - Gestionnaire de projet Java simple et léger inspiré du gestionnaire de projet <span class="sb">`Maven`</span>.
+
+<span class="gh"># SYNOPSIS</span>
+
+mvnl \[OPTION\]\... \[ARGUMENT\]\...
+
+<span class="gh"># DESCRIPTION</span>
+
+description du programme
+
+<span class="gh"># EXEMPLES</span>
+
+<span class="k">-</span><span class="w"> </span>  <span class="sb">`mvnl -s src -o bin -c -e UTF-8`</span> \--\&gt; compile le projet Java avec
+        l\&#39;encodage UTF-8 qui se trouve dans le dossier src et met les
+        fichiers compilés dans le dossier bin.
+
+<span class="gh"># COMPORTEMENT PAR DÉFAUT</span>
+
+Par défaut, si aucune option n\&#39;est spécifiée, la commande <span class="sb">`mvnl`</span>
+affiche la page d\&#39;aide qui est affichée avec l\&#39;option <span class="sb">`-h`</span> ou
+<span class="sb">`--help`</span>. Cette page d\&#39;aide est différente et plus simple que la page
+de manuel qui est affichée avec la commande <span class="sb">`man mvnl`</span>.
+
+<span class="gh"># OPTIONS</span>
+
+<span class="gu">## Toutes les options</span>
+
+-v , \--version Affiche la version et quitter.
+
+-h , \--help Affiche l\&#39;aide et quitter.
+
+<span class="gu">## Les options obligatoires pour la compilation sont :</span>
+
+-s , \--source Dossier racine du projet à compiler.
+
+-o , \--output Dossier de sortie des fichiers compilés.
+
+-c , \--compilation Compile le projet.
+
+<span class="gu">## Les options obligatoires pour le lancement sont :</span>
+
+-m , \--main Classe principale à lancer.
+
+-l , \--launch Lance le projet.
+
+-cp , \--classpath Voir l\&#39;option -cp dans la liste des options
+ci-dessus.
+
+<span class="gu">## Les options obligatoires pour la compilation et le lancement sont :</span>
+
+-s , \--source Dossier racine du projet à compiler.
+
+-o , \--output Dossier de sortie des fichiers compilés.
+
+-m , \--main Classe principale à lancer.
+
+-cl , \--compile-launch Compile et lance le projet. (équivalent à -c -l)
+
+<span class="gh"># CODES DE RETOUR</span>
+
+0 : Tout s\&#39;est bien passé.
+
+1 : Une erreur est survenue.
+
+<span class="gh"># FICHIERS</span>
+
+Maven Lite est constitué uniquement de 3 fichiers.
+
+<span class="k">-</span><span class="w"> </span>  <span class="sb">`&#39;mvnl&#39;`</span>, le fichier principal qui se situe dans le dossier
+        \&#39;/usr/bin/\&#39;.
+
+<span class="k">-</span><span class="w"> </span>  <span class="sb">`&#39;mvnl.1.gz&#39;`</span>, le fichier d\&#39;aide contenant la page de manuel française
+        affichée avec la commande <span class="sb">`man mvnl`</span> qui se situe dans le dossier
+        <span class="sb">`&#39;/usr/local/man/fr/man1/&#39;`</span>.
+
+<span class="k">-</span><span class="w"> </span>  <span class="sb">`&#39;mvnl.1.gz&#39;`</span>, le fichier d\&#39;aide contenant la page de manuel anglaise
+        affichée avec la commande <span class="sb">`man mvnl`</span> qui se situe dans le dossier
+        <span class="sb">`&#39;/usr/local/man/en/man1/&#39;`</span>.
+
+<span class="gh"># BOGUES</span>
+
+Bogues connu
+
+<span class="gh"># AUTEUR</span>
+
+Écrit par Robart Floris.
+
+<span class="gh"># RAPPORT DE BOGUES</span>
+
+Reporter les bogues par mail à l\&#39;adresse \&lt;email@gmail.com\&gt;
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Convertissez votre fichier texte ou markdown en fichier Roff avec txt2man</p>
+<div class="highlight"><pre><span></span><code>txt2man<span class="w"> </span>-t<span class="w"> </span>&lt;nom_du_fichier&gt;<span class="w"> </span>&gt;<span class="w"> </span>&lt;nom_du_fichier&gt;.1
+</code></pre></div>
+<ul>
+<li>ou avec pandoc</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pandoc<span class="w"> </span>‐-from<span class="w"> </span>markdown<span class="w"> </span>‐-to<span class="w"> </span>roff<span class="w"> </span>&lt;nom_fichier_source&gt;<span class="w"> </span>-o<span class="w"> </span>&lt;nom_fichier_destination&gt;.1
+</code></pre></div>
+</li>
+<li>
+<p>Il peut être nécessaire d'ajouter la ligne suivante au début votre fichier <code>.1</code></p>
+<div class="highlight"><pre><span></span><code>.TH &quot;&lt;Nom&gt;&quot; &quot;&lt;section&gt;&quot; &quot;&lt;Date&gt;&quot; &quot;&lt;Nom&gt; Version &lt;version format X.X.X&gt;&quot; &quot;&lt;type de l&#39;application&gt;&quot;
+</code></pre></div>
+<ul>
+<li>
+<p>Exemple avec Maven Lite</p>
+<div class="highlight"><pre><span></span><code>.TH &quot;Maven Lite&quot; &quot;1&quot; &quot;Janvier 2024&quot; &quot;Maven Lite Version 1.2.0&quot; &quot;Commandes Utilisateur&quot;
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Convertissez votre fichier <code>Roff</code> en fichier conpresser <code>.1.gz</code>.</p>
+<ul>
+<li>Attention, le nom du fichier <code>.1.gz</code> doit obligatoirement être le nom de la commande que vous avez créer. Dans mon cas le nom de la commande est <code>mvnl</code> donc le nom du fichier <code>.1.gz</code> doit être <code>mvnl.1.gz</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>gzip<span class="w"> </span>-k<span class="w"> </span>&lt;nom_du_fichier&gt;.1<span class="w"> </span>&gt;<span class="w"> </span>&lt;nom_du_fichier&gt;.1.gz
+</code></pre></div>
+</li>
+<li>
+<p>Pour que la commande <code>man</code> fonctionne il faut placer le fichier <code>.1.gz</code> dans le dossier <code>/usr/local/man/&lt;langue&gt;/man1/</code>.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>mvnl.1.gz<span class="w"> </span>/usr/local/man/fr/man1/mvnl.1.gz
+</code></pre></div>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

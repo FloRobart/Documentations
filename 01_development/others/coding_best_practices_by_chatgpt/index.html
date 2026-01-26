@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Bonne pratiques de développement by ChatGPT - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../web_development_micro_service/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../web_development_php/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/others/coding_best_practices_by_chatgpt.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#bonne-pratique-de-code" class="nav-link">Bonne pratique de code</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#base-de-donnees" class="nav-link">Base de données</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#api" class="nav-link">API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="bonne-pratique-de-code">Bonne pratique de code<a class="headerlink" href="#bonne-pratique-de-code" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#bonne-pratique-de-code">Bonne pratique de code</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#base-de-données">Base de données</a><ul>
+<li><a href="#-guide-des-conventions-de-nommage--base-de-données-postgresql">🧭 Guide des conventions de nommage — Base de données PostgreSQL</a><ul>
+<li><a href="#-objectif">🎯 Objectif</a></li>
+<li><a href="#-1-règles-générales">🧱 1. Règles générales</a></li>
+<li><a href="#-2-tables">🧮 2. Tables</a><ul>
+<li><a href="#exemples-">Exemples :</a></li>
+</ul>
+</li>
+<li><a href="#-3-colonnes">🔑 3. Colonnes</a><ul>
+<li><a href="#exemple-">Exemple :</a></li>
+</ul>
+</li>
+<li><a href="#-4-clés-primaires--étrangères">🔗 4. Clés primaires \&amp; étrangères</a><ul>
+<li><a href="#clé-primaire">Clé primaire</a></li>
+<li><a href="#clé-étrangère">Clé étrangère</a></li>
+</ul>
+</li>
+<li><a href="#-5-contraintes">🧩 5. Contraintes</a></li>
+<li><a href="#️-6-index">⚙️ 6. Index</a></li>
+<li><a href="#-7-vues">🔭 7. Vues</a></li>
+<li><a href="#-8-fonctions--procédures">🧠 8. Fonctions \&amp; procédures</a></li>
+<li><a href="#-9-séquences">📦 9. Séquences</a></li>
+<li><a href="#-10-bonnes-pratiques-complémentaires">🧹 10. Bonnes pratiques complémentaires</a></li>
+<li><a href="#-exemple-complet">💡 Exemple complet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="base-de-donnees">Base de données<a class="headerlink" href="#base-de-donnees" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Généré par <a href="https://chat.openai.com/">ChatGPT</a> non corrigé.</li>
+</ul>
+<h3 id="guide-des-conventions-de-nommage-base-de-donnees-postgresql">🧭 Guide des conventions de nommage — Base de données PostgreSQL<a class="headerlink" href="#guide-des-conventions-de-nommage-base-de-donnees-postgresql" title="Permanent link">&para;</a></h3>
+<h4 id="objectif">🎯 Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h4>
+<p>Garantir une <strong>cohérence</strong>, une <strong>lisibilité</strong> et une <strong>interopérabilité</strong> maximales dans la structure de la base de données, quel que soit le nombre de contributeurs.
+Ces conventions s’appliquent à tous les objets SQL : <strong>tables</strong>, <strong>colonnes</strong>, <strong>clés</strong>, <strong>index</strong>, <strong>contraintes</strong>, <strong>vues</strong>, <strong>fonctions</strong>, etc.</p>
+<hr />
+<h4 id="1-regles-generales">🧱 1. Règles générales<a class="headerlink" href="#1-regles-generales" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Utiliser uniquement des <strong>minuscules</strong>.
+    PostgreSQL convertit par défaut les identifiants non-quotés en minuscules.</li>
+<li>Utiliser le <strong>snake_case</strong> (<code>user_account</code>, <code>created_at</code>).</li>
+<li>Éviter les mots réservés (comme <code>user</code>, <code>order</code>, <code>group</code>).</li>
+<li>Tous les noms doivent être <strong>clairs, courts et significatifs</strong>.</li>
+</ul>
+<hr />
+<h4 id="2-tables">🧮 2. Tables<a class="headerlink" href="#2-tables" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Élément</th>
+<th style="text-align: left;">Convention</th>
+<th style="text-align: left;">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Nom</td>
+<td style="text-align: left;"><strong>snake_case</strong>, au <strong>pluriel</strong></td>
+<td style="text-align: left;"><code>users</code>, <code>user_roles</code>, <code>order_items</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Table de liaison (n:n)</td>
+<td style="text-align: left;">combinaison des 2 tables reliées, en ordre <strong>alphabétique</strong></td>
+<td style="text-align: left;"><code>product_categories</code> (pour <code>products</code> ↔ <code>categories</code>)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 Les tables représentent un ensemble d’éléments → pluriel.</p>
+</blockquote>
+<h5 id="exemples">Exemples :<a class="headerlink" href="#exemples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(...);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(...);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">order_items</span><span class="w"> </span><span class="p">(...);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">product_categories</span><span class="w"> </span><span class="p">(...);</span>
+</code></pre></div>
+<hr />
+<h4 id="3-colonnes">🔑 3. Colonnes<a class="headerlink" href="#3-colonnes" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>snake_case</strong></li>
+<li>Noms explicites</li>
+<li>Types cohérents entre tables similaires</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type de donnée</th>
+<th style="text-align: left;">Convention</th>
+<th style="text-align: left;">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Identifiant primaire</td>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;"><code>id SERIAL PRIMARY KEY</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Clé étrangère</td>
+<td style="text-align: left;"><code>&lt;table_singulier&gt;_id</code></td>
+<td style="text-align: left;"><code>user_id</code>, <code>order_id</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Booléen</td>
+<td style="text-align: left;">préfixe <code>is_</code>, <code>has_</code>, <code>can_</code></td>
+<td style="text-align: left;"><code>is_active</code>, <code>has_paid</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date/heure</td>
+<td style="text-align: left;">suffixes <code>_at</code> ou <code>_on</code></td>
+<td style="text-align: left;"><code>created_at</code>, <code>updated_at</code>, <code>deleted_at</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Montants</td>
+<td style="text-align: left;">suffixe <code>_amount</code></td>
+<td style="text-align: left;"><code>total_amount</code>, <code>tax_amount</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="exemple">Exemple :<a class="headerlink" href="#exemple" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">is_active</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">TRUE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h4 id="4-cles-primaires-etrangeres">🔗 4. Clés primaires &amp; étrangères<a class="headerlink" href="#4-cles-primaires-etrangeres" title="Permanent link">&para;</a></h4>
+<h5 id="cle-primaire">Clé primaire<a class="headerlink" href="#cle-primaire" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Toujours nommée <code>id</code></li>
+<li>De type <code>SERIAL</code>, <code>BIGSERIAL</code> ou <code>UUID</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span>
+</code></pre></div>
+<h5 id="cle-etrangere">Clé étrangère<a class="headerlink" href="#cle-etrangere" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Nom de colonne : <code>&lt;table_singulier&gt;_id</code></li>
+<li>Nom de contrainte : <code>&lt;table&gt;_&lt;colonne&gt;_fkey</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span>
+<span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">orders_user_id_fkey</span>
+<span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h4 id="5-contraintes">🧩 5. Contraintes<a class="headerlink" href="#5-contraintes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Clé primaire</td>
+<td style="text-align: left;"><code>&lt;table&gt;_pkey</code></td>
+<td style="text-align: left;"><code>users_pkey</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Clé étrangère</td>
+<td style="text-align: left;"><code>&lt;table&gt;_&lt;colonne&gt;_fkey</code></td>
+<td style="text-align: left;"><code>orders_user_id_fkey</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Unique</td>
+<td style="text-align: left;"><code>&lt;table&gt;_&lt;colonne&gt;_key</code></td>
+<td style="text-align: left;"><code>users_email_key</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Check</td>
+<td style="text-align: left;"><code>&lt;table&gt;_&lt;colonne&gt;_check</code></td>
+<td style="text-align: left;"><code>users_age_check</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="6-index">⚙️ 6. Index<a class="headerlink" href="#6-index" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Index simple</td>
+<td style="text-align: left;"><code>&lt;table&gt;_&lt;colonne&gt;_idx</code></td>
+<td style="text-align: left;"><code>users_email_idx</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Index multiple</td>
+<td style="text-align: left;"><code>&lt;table&gt;_&lt;colonne1&gt;_&lt;colonne2&gt;_idx</code></td>
+<td style="text-align: left;"><code>orders_user_id_created_at_idx</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">users_email_idx</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">email</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h4 id="7-vues">🔭 7. Vues<a class="headerlink" href="#7-vues" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nommer en <strong>snake_case</strong></li>
+<li>Préfixer par <code>v_</code> ou <code>view_</code></li>
+<li>Décrire clairement la finalité</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">v_user_statistics</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">order_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">u</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h4 id="8-fonctions-procedures">🧠 8. Fonctions &amp; procédures<a class="headerlink" href="#8-fonctions-procedures" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Utiliser des <strong>verbes d’action</strong> au <strong>présent</strong></li>
+<li>En <strong>snake_case</strong></li>
+<li>Préfixer par le domaine si nécessaire (ex : <code>user_</code>, <code>order_</code>…)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">get_user_by_email</span><span class="p">(</span><span class="n">p_email</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">)</span>
+<span class="k">RETURNS</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_email</span><span class="p">;</span>
+<span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="k">sql</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h4 id="9-sequences">📦 9. Séquences<a class="headerlink" href="#9-sequences" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Convention</th>
+<th style="text-align: left;">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Séquence associée à un id</td>
+<td style="text-align: left;"><code>&lt;table&gt;_id_seq</code></td>
+<td style="text-align: left;"><code>users_id_seq</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>PostgreSQL les crée automatiquement pour les colonnes <code>SERIAL</code>.</p>
+</blockquote>
+<hr />
+<h4 id="10-bonnes-pratiques-complementaires">🧹 10. Bonnes pratiques complémentaires<a class="headerlink" href="#10-bonnes-pratiques-complementaires" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Toujours inclure des colonnes <code>created_at</code> et <code>updated_at</code> dans les tables principales.</li>
+<li>Utiliser <code>deleted_at</code> pour la <strong>suppression logique</strong> (soft delete).</li>
+<li>Grouper les tables par <strong>domaine fonctionnel</strong> si le projet grossit (ex : <code>auth.users</code>, <code>billing.invoices</code> avec des <strong>schemas</strong> PostgreSQL).</li>
+</ul>
+<hr />
+<h4 id="exemple-complet">💡 Exemple complet<a class="headerlink" href="#exemple-complet" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">is_active</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">TRUE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">total_amount</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+<span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">orders_user_id_fkey</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">orders_user_id_created_at_idx</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">orders</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

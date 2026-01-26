@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Création d'un serveur (2026) - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../../02_applications/thunderbird_iut_le_havre/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../server_creation_2023/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/03_system/server/server_creation_2026.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-sur-la-creation-dun-serveur" class="nav-link">Documentation sur la création d'un serveur</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequis" class="nav-link">Prérequis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuration-du-demarrage-a-distance-wake-on-lan-wol" class="nav-link">Configuration du démarrage à distance Wake-on-LAN (WOL)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-du-systeme-dexploitation-debian" class="nav-link">Installation du système d'exploitation Debian</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuration-de-ladresse-ip-fixe" class="nav-link">Configuration de l'adresse IP fixe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-et-configuration-des-dependances-de-base" class="nav-link">Installation et configuration des dépendances de base</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuration-supplementaire-optionnelle" class="nav-link">Configuration supplémentaire (optionnelle)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-sur-la-creation-dun-serveur">Documentation sur la création d'un serveur<a class="headerlink" href="#documentation-sur-la-creation-dun-serveur" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-sur-la-création-dun-serveur">Documentation sur la création d'un serveur</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#prérequis">Prérequis</a></li>
+<li><a href="#configuration-du-démarrage-à-distance-wake-on-lan-wol">Configuration du démarrage à distance Wake-on-LAN (WOL)</a></li>
+<li><a href="#installation-du-système-dexploitation-debian">Installation du système d'exploitation Debian</a></li>
+<li><a href="#configuration-de-ladresse-ip-fixe">Configuration de l'adresse IP fixe</a></li>
+<li><a href="#installation-et-configuration-des-dépendances-de-base">Installation et configuration des dépendances de base</a><ul>
+<li><a href="#sudo">Sudo</a></li>
+<li><a href="#ssh">SSH</a><ul>
+<li><a href="#connexion-à-distance-via-ssh">Connexion à distance via SSH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#configuration-supplémentaire-optionnelle">Configuration supplémentaire (optionnelle)</a><ul>
+<li><a href="#git">Git</a></li>
+<li><a href="#docker-et-docker-compose">Docker et Docker Compose</a></li>
+<li><a href="#prometheus">Prometheus</a></li>
+<li><a href="#grafana">Grafana</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Du matériel pour faire le serveur<ul>
+<li>Un ordinateur (ancien PC de bureau, Raspberry Pi, etc.)</li>
+<li>Une connexion internet (Ethernet recommandé, préférable au Wi-Fi)</li>
+<li><em>Un câble Ethernet</em> (Optionnel)</li>
+</ul>
+</li>
+<li>Une clé USB bootable avec le fichier d'installation de Debian<ul>
+<li>Si vous ne savez pas comment faire une clé USB bootable, suivez ce guide : <a href="../../../02_applications/ventoy/">Créer une clé USB bootable</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-du-demarrage-a-distance-wake-on-lan-wol">Configuration du démarrage à distance Wake-on-LAN (WOL)<a class="headerlink" href="#configuration-du-demarrage-a-distance-wake-on-lan-wol" title="Permanent link">&para;</a></h2>
+<p><strong>Wake-on-LAN</strong> permet de rallumer un PC éteint via Ethernet, en envoyant un <strong>magic packet</strong>. le Wake-on-LAN ne fonctionne que si le PC est éteint mais toujours alimenté (c'est-à-dire en mode veille ou éteint via le système d'exploitation, mais pas débranché ou coupé de l'alimentation).</p>
+<p>Noté que vous n'aurez pas forcément toutes les options décrites ci-dessous dans votre BIOS / UEFI, cela dépend du fabricant de la carte mère et du BIOS / UEFI utilisé.</p>
+<ul>
+<li>Éteindre le PC que vous souhaitez utiliser comme serveur.</li>
+<li>
+<p>Brancher un clavier et un écran à l'ordinateur (ils pourront être retirés après l'étape de <a href="#connexion-à-distance-via-ssh">Connexion à distance via SSH</a>, mais sont obligatoires pour l'installation initiale).</p>
+</li>
+<li>
+<p>Démarrer l'ordinateur et accéder au menu de démarrage <strong>BIOS</strong> / <strong>UEFI</strong> (généralement en appuyant sur une touche comme F12, F2, DEL, etc. au démarrage).</p>
+</li>
+<li>Dans le BIOS / UEFI, naviguer jusqu'à la section <strong>Power Management</strong> ou <strong>Advanced Settings --&gt; APM</strong> (le nom peut varier selon les fabricants).</li>
+<li>Rechercher une option nommée <strong>Wake-on-LAN</strong>, <strong>Power on by PCI-E</strong>, <strong>Resume by LAN</strong>, <strong>Wake Up by LAN</strong> ou similaire. Cette permet le réveil du PC via la carte réseau.</li>
+<li>Sélectionner cette option et la définir sur <strong>Enabled</strong>.</li>
+<li>Rechercher une option nommée <strong>ERP Ready</strong>, <strong>Power Off Energy Saving</strong> ou <strong>Deep Power Off</strong> ou similaire. Cette option permet de réduire la consommation d'énergie lorsque le PC est éteint mais empêche le réveil via la carte réseau (le gain de consommation d'énergie est généralement très faible, voir négligeable, quelques milliwatts).</li>
+<li>Rechercher une option nommée <strong>ASPM</strong> ou <strong>Energy Efficient Ethernet</strong> ou similaire.</li>
+<li>Sélectionner cette option et la définir sur <strong>Disabled</strong>. Cette option permet de définir le mode d'économie d'énergie des services PCIe (dont la carte réseau, le GPU, la NVMe fait partie), ce qui peut interférer avec le Wake-on-LAN si l'option est activée.</li>
+<li>
+<p>Sauvegarder les modifications et quitter le <strong>BIOS</strong> / <strong>UEFI</strong> (souvent <code>F10</code>).</p>
+</li>
+<li>
+<p>L'ordinateur devrait redémarrer normalement.</p>
+</li>
+<li>Maintenant, le Wake-on-LAN est activé sur votre PC, mais il y a encore quelques étapes à faire dans le système d'exploitation pour que cela fonctionne correctement.</li>
+<li>Si ce n'est pas déjà fait, installer Debian sur le PC en suivant les étapes de la section <a href="#installation-du-système-dexploitation-debian">Installation du système d'exploitation Debian</a>.</li>
+<li>Si ce n'est pas déjà fait, installer les dépendances de base en suivant les étapes de la section <a href="#installation-et-configuration-des-dépendances-de-base">Installation et configuration des dépendances de base</a>.</li>
+<li>Ouvrir un terminal sur le serveur (soit directement sur le PC, soit en SSH depuis un autre ordinateur).</li>
+<li>
+<p>Installer le paquet <code>ethtool</code> qui permet de configurer les options de la carte réseau.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ethtool
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer le nom de l'interface réseau.</p>
+<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
+</li>
+<li>
+<p>Dans la liste des interfaces, repérer celle qui correspond à la connexion Ethernet (généralement nommée <code>eth0</code>, <code>enpXsY</code> ou similaire, où <code>X</code> et <code>Y</code> sont des chiffres). Noter ce nom pour l'utiliser dans la commande suivante.</p>
+<ul>
+<li>Vous pouvez vérifier que c'est la bonne interface en regardant le champ <code>inet</code> qui doit contenir l'adresse IP de votre serveur.</li>
+</ul>
+</li>
+<li>
+<p>Noté l'adresse MAC de l'interface réseau (champ <code>link/ether</code>), elle sera utile plus tard.</p>
+<div class="highlight"><pre><span></span><code>X: enpXsY: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+link/ether XX:XX:XX:XX:XX:XX brd XX:XX:XX:XX:XX:XX
+inet 192.168.1.XXX/XX brd 192.168.1.XXX scope global dynamic enpXsY
+   valid_lft 85343sec preferred_lft 85343sec
+inet6 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/XX scope global dynamic mngtmpaddr 
+   valid_lft 86371sec preferred_lft 14371sec
+inet6 XXXX::XXXX:XXXX:XXXX:XXXX/XX scope link 
+   valid_lft forever preferred_lft forever
+</code></pre></div>
+<ul>
+<li>Dans cet exemple, l'interface est <code>enpXsY</code> et l'adresse MAC est <code>XX:XX:XX:XX:XX:XX</code> noté après <code>link/ether</code>.</li>
+<li>Vérifier que le Wake-on-LAN est activé sur l'interface réseau.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ethtool<span class="w"> </span>enpXsY
+</code></pre></div>
+<ul>
+<li>
+<p>Dans la sortie de la commande, vérifier que la ligne <code>Wake-on:</code> est bien suivie de la lettre <code>g</code>, ce qui indique que le Wake-on-LAN est activé.</p>
+<div class="highlight"><pre><span></span><code>...
+Supports Wake-on: pumbg
+Wake-on: g
+...
+</code></pre></div>
+<ul>
+<li>Si la ligne <code>Wake-on:</code> n'est pas suivie de la lettre <code>g</code> (souvent se sera un <code>d</code> pour <code>disabled</code>), c'est qu'il est désactivé.</li>
+<li>Activer le Wake-on-LAN sur l'interface réseau (N'oubliez pas de remplacer <code>enpXsY</code> par le nom de votre interface réseau).</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ethtool<span class="w"> </span>-s<span class="w"> </span>enpXsY<span class="w"> </span>wol<span class="w"> </span>g
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier à nouveau que le Wake-on-LAN est activé (N'oubliez pas de remplacer <code>enpXsY</code> par le nom de votre interface réseau).</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ethtool<span class="w"> </span>enpXsY
+</code></pre></div>
+<ul>
+<li>
+<p>La ligne <code>Wake-on:</code> doit maintenant être suivie de la lettre <code>g</code>.</p>
+<div class="highlight"><pre><span></span><code>...
+Supports Wake-on: pumbg
+Wake-on: g
+...
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Rendre cette modification permanente en créant un script qui sera exécuté au démarrage (si vous ne faites pas cela, votre modification sera perdue après un redémarrage).</p>
+<ul>
+<li>
+<p>Créer un nouveau service systemd.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/wol.service
+</code></pre></div>
+</li>
+<li>
+<p>Coller le contenu suivant dans le fichier (en remplaçant <code>enpXsY</code> par le nom de votre interface réseau).</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Enable Wake-on-LAN</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/sbin/ethtool -s enpXsY wol g</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<ul>
+<li>N'oubliez pas de remplacer <code>enpXsY</code> par le nom de votre interface réseau.<ul>
+<li>Sauvegarder et fermer le fichier (<code>Ctrl + X</code> puis <code>O</code> puis <code>Entrée</code>).</li>
+<li>Activer le service pour qu'il se lance au démarrage.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reexec
+</code></pre></div>
+</li>
+<li>
+<p>Activer le service WOL.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wol
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Vérifier que le service est bien activé.</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>is-enabled<span class="w"> </span>wol
+</code></pre></div>
+<ul>
+<li>Résultat attendu : <code>enabled</code></li>
+</ul>
+</li>
+</ul>
+<p>Nous allons maintenant vérifier que le Wake-on-LAN fonctionne en éteignant le serveur et en envoyant un magic packet depuis un autre ordinateur.</p>
+<ul>
+<li>
+<p>Éteindre le serveur.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>shutdown<span class="w"> </span>now
+</code></pre></div>
+</li>
+</ul>
+<p>Sur un autre ordinateur (avec n'importe quel OS mais cette doc ne couvre que Linux) connecté au même réseau local que le serveur :</p>
+<ul>
+<li>
+<p>Installer l'outil <code>wakeonlan</code>.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wakeonlan
+</code></pre></div>
+</li>
+<li>
+<p>Envoyer le magic packet en utilisant l'adresse MAC notée précédemment.</p>
+<div class="highlight"><pre><span></span><code>wakeonlan<span class="w"> </span>XX:XX:XX:XX:XX:XX
+</code></pre></div>
+<ul>
+<li>Remplacer <code>XX:XX:XX:XX:XX:XX</code> par l'adresse MAC de votre serveur que vous avez notée précédemment.</li>
+<li>Le serveur devrait s'allumer après l'envoi du magic packet.</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-du-systeme-dexploitation-debian">Installation du système d'exploitation Debian<a class="headerlink" href="#installation-du-systeme-dexploitation-debian" title="Permanent link">&para;</a></h2>
+<p>/!\ Attention : Cette étape effacera toutes les données présentes sur le disque dur de l'ordinateur que vous utilisez comme serveur. Assurez-vous d'avoir sauvegardé toutes les données importantes avant de continuer. /!\</p>
+<ul>
+<li>Éteindre le PC que vous souhaitez utiliser comme serveur.</li>
+<li>Brancher un clavier et un écran à l'ordinateur (ils pourront être retirés après l'étape de <a href="#connexion-à-distance-via-ssh">Connexion à distance via SSH</a>, mais sont obligatoires pour l'installation initiale).</li>
+<li>Insérer la clé USB bootable dans un port USB de l'ordinateur.</li>
+<li>Démarrer l'ordinateur et accéder au menu de démarrage <strong>BIOS</strong> / <strong>UEFI</strong> (généralement en appuyant sur une touche comme F12, F2, DEL, etc. au démarrage).</li>
+<li>Dans la liste des périphériques de démarrage, sélectionner la clé USB et placer-la en première position.</li>
+<li>Sauvegarder les modifications et quitter le <strong>BIOS</strong> / <strong>UEFI</strong> (souvent <code>F10</code>).</li>
+<li>L'ordinateur devrait redémarrer et démarrer à partir de la clé USB.</li>
+<li>Un écran avec toutes les images disponibles sur la clé USB devrait apparaître.</li>
+<li>Sélectionner l'image d'installation de <strong>Debian</strong> ou de l'OS que vous voulez installer.</li>
+<li>Sélectionner <code>boot in normal mode</code>.</li>
+<li>Sélectionner le mode d'installation (<code>install</code> recommandé).</li>
+<li>L'installateur de Debian devrait se lancer.</li>
+<li>Sélectionner la langue.</li>
+<li>Sélectionner le pays.</li>
+<li>Sélectionner la disposition du clavier.</li>
+<li>Sélectionner l'interface réseau principale (généralement <code>enp2s0</code>).</li>
+<li>Entrer le nom de la machine</li>
+<li>Entrer le domaine (laisser par défaut si vous n'en avez pas). Si vous en avez un c'est ici qu'il entrer votre nom de domaine.</li>
+<li>Entrer le mot de passe de l'utilisateur <code>root</code>. Je recommande de le laisser vide pour désactiver le compte root et utiliser <code>sudo</code> à la place.</li>
+<li>Confirmer le mot de passe (laisser vide si vous avez laissé le mot de passe vide précédemment).</li>
+<li>Entrer le nom de l'utilisateur courant. Ce sera l'utilisateur principal du serveur auquel vous vous connecterez en SSH.</li>
+<li>Entrer l'identifiant de l'utilisateur courant. Je recommande de mettre le même que le nom de l'utilisateur.</li>
+<li>Entrer le mot de passe de l'utilisateur courant. Je recommande de mettre un mot de passe fort.</li>
+<li>Confirmer le mot de passe.</li>
+<li>SÉlectionner le partitionnement du disque dur. Si tous les données du disque dur peuvent être effacées, je recommande de sélectionner <code>Assisté - utiliser un disque entier</code> pour une installation simple.</li>
+<li>Sélectionner le disque dur à utiliser. <strong>Attention</strong> à ne pas sélectionner votre clé USB bootable.</li>
+<li>Sélectionner le schéma de partitionnement. Je recommande de sélectionner <code>Tous les fichiers dans une seule partition</code> pour une installation simple.</li>
+<li>Sélectionner <code>Terminer le partitionnement et appliquer les changements</code>. <strong>Attention</strong>, Cette étape effacera toutes les données présentes sur le disque dur sélectionné.</li>
+<li>Confirmer l'application des changements sur le disque dur.</li>
+<li>Sélectionner <code>oui</code> si vous voulez utiliser un miroir réseau pour installer des paquets supplémentaires.</li>
+<li>Selectionner le pays pour le miroir des paquets.</li>
+<li>Selectionner le miroir des paquets <code>deb.debian.org</code>.</li>
+<li>Entrer le proxy (laisser vide si vous n'en avez pas).</li>
+<li>Selectionner si vous voulez participer à l'envoi de données anonymes.</li>
+<li>Selectionner les paquets à installer.<ul>
+<li>Serveur SSH</li>
+<li>utilitaires usuels du système</li>
+</ul>
+</li>
+<li>Appuyer sur <code>tab</code> pour sélectionner le bouton <code>Continuer</code>, puis appuyer sur <code>Entrée</code>.</li>
+<li>Installer le programme de démarrage GRUB. (Si vous avez déjà GRUB, il ne vous sera pas demandé de l'installer)</li>
+<li>Sélectionner le disque dur où installer GRUB. Généralement le même que celui où vous avez installé Debian. <strong>Attention</strong> à ne pas sélectionner votre clé USB bootable.</li>
+<li>Vous avez terminé l'installation de Debian.</li>
+<li>Si vous y êtes invité, retirer la clé USB bootable.</li>
+<li>Cliquer sur <code>continuer</code> pour redémarrer l'ordinateur.</li>
+<li>Cliquer sur <code>Debian/GNU</code> pour démarrer l'ordinateur sur le système installé.</li>
+<li>Entrer le nom d'utilisateur créé précédemment.</li>
+<li>Entrer le mot de passe.</li>
+</ul>
+<p>Vous avez maintenant un serveur Debian fonctionnel sur lequel vous êtes connecté en tant qu'utilisateur courant.</p>
+<h2 id="configuration-de-ladresse-ip-fixe">Configuration de l'adresse IP fixe<a class="headerlink" href="#configuration-de-ladresse-ip-fixe" title="Permanent link">&para;</a></h2>
+<p>Vous pouvez configurer une adresse IP fixe pour votre serveur afin de faciliter son accès en réseau local.</p>
+<p>Vous pouvez faire cette étape plus tard mais il est recommandé de la faire maintenant pour éviter d'avoir à reconfigurer des services plus tard.</p>
+<p>Cette partie va se faire sur le panel administrateur de votre routeur / box internet.</p>
+<ul>
+<li>
+<p>Accéder à l'interface d'administration de votre routeur / box internet</p>
+<ul>
+<li>adresse IP courante de votre routeur</li>
+</ul>
+<div class="highlight"><pre><span></span><code>192.168.1.1
+192.168.0.1
+192.168.1.254
+</code></pre></div>
+</li>
+<li>
+<p>Accéder aux paramètres avancés.</p>
+</li>
+<li>Accéder à la section de configuration du DHCP IPv4 (Dynamic Host Configuration Protocol version 4).</li>
+<li>Accéder à la section de <code>Attribution d'adresse IP statique</code> ou <code>Réservation d'adresse IP</code>.</li>
+<li>Ajouter une nouvelle réservation d'adresse IP.</li>
+<li>Sélectionner l'appareil correspondant à votre serveur (généralement identifié par son nom (nom de la machine lors de l'installation de l'OS)).</li>
+<li>Entrer l'adresse IP fixe que vous souhaitez attribuer à votre serveur (par exemple <code>192.168.1.200</code>).<ul>
+<li>/!\ Attention, éviter les adresses IP qui sont dans la plage DHCP de votre routeur (généralement entre <code>192.168.1.1</code> et <code>192.168.1.199</code>). Préférer une adresse IP en dehors de cette plage (par exemple <code>192.168.1.200</code>).</li>
+</ul>
+</li>
+<li>Les autres champs (masque de sous-réseau, passerelle, DNS, adresse mac, etc) devraient se remplir automatiquement avec les bonnes valeurs.</li>
+<li>Sauvegarder la réservation d'adresse IP.</li>
+<li>Il peut être nécessaire de redémarrer le serveur pour que l'adresse IP fixe soit prise en compte.</li>
+</ul>
+<h2 id="installation-et-configuration-des-dependances-de-base">Installation et configuration des dépendances de base<a class="headerlink" href="#installation-et-configuration-des-dependances-de-base" title="Permanent link">&para;</a></h2>
+<p>Vous avez maintenant un serveur Debian fonctionnel sur lequel vous êtes connecté en tant qu'utilisateur courant.</p>
+<h3 id="sudo">Sudo<a class="headerlink" href="#sudo" title="Permanent link">&para;</a></h3>
+<p>nous allons maintenant installer et configurer <code>sudo</code> pour permettre à l'utilisateur courant d'exécuter des commandes avec les privilèges administrateur.</p>
+<p>Si vous n'avez pas défini de mot de passe pour l'utilisateur <code>root</code> lors de l'installation de Debian, <code>sudo</code> est déjà installé et configuré pour l'utilisateur courant. Vous pouvez vérifier cela en essayant d'exécuter une commande <code>sudo date</code>. Si cela fonctionne, vous pouvez passer directement à la section <a href="#ssh">SSH</a>.</p>
+<ul>
+<li>
+<p>Passer en mode super utilisateur.</p>
+<div class="highlight"><pre><span></span><code>su<span class="w"> </span>root
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour les paquets.</p>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>update
+</code></pre></div>
+</li>
+<li>
+<p>Installer sudo.</p>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>sudo
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter l'utilisateur courant au groupe sudo.</p>
+<div class="highlight"><pre><span></span><code>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>&lt;nom_utilisateur&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Se connecter en tant qu'utilisateur courant.</p>
+<div class="highlight"><pre><span></span><code>su<span class="w"> </span>&lt;nom_utilisateur&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Testez si sudo fonctionne.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>date
+</code></pre></div>
+<ul>
+<li>Résultat attendu : <code>la date actuelle</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Changer la configuration de SSH pour plus de sécurité.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+</code></pre></div>
+<ul>
+<li>Modifier la ligne <code>Port</code> pour changer le numéro de port par défaut.<ul>
+<li>Vous pouvez choisir presque n'importe quel numéro de port entre 1024 et 65535.</li>
+</ul>
+</li>
+<li>
+<p>Modifier la ligne <code>PermitRootLogin</code> pour qu'elle soit égale à <code>no</code>.</p>
+<div class="highlight"><pre><span></span><code># This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+...
+Port &lt;port&gt;
+...
+...
+PermitRootLogin no
+...
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder et quitter.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Redémarrer le service SSH.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>ssh<span class="w"> </span>restart
+</code></pre></div>
+</li>
+<li>
+<p>Créer une clé SSH <strong>sur votre ordinateur.</strong></p>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;&lt;email&gt;&quot;</span>
+</code></pre></div>
+<ul>
+<li>Entrer le nom du fichier de la clé (laisser vide pour utiliser le nom par défaut).</li>
+<li>Entrer une passphrase (optionnel mais plus sécurisé).</li>
+<li>Confirmer la passphrase.</li>
+</ul>
+</li>
+<li>
+<p>Connectez-vous au serveur en SSH.</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;nom_utilisateur&gt;@&lt;adresse_ip&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li>Entrer le mot de passe de l'utilisateur.</li>
+<li>Tous ce qui suit va être fait sur le serveur (vous serez physiquement sur votre ordinateur mais vous serez connecté en SSH à votre serveur, les instructions suivantes seront donc exécutées sur le serveur. attention, ne vous trompez pas de terminal).</li>
+<li>Créer le dossier <code>.ssh</code> dans le dossier de l'utilisateur.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">700</span><span class="w">  </span>~/.ssh
+</code></pre></div>
+</li>
+<li>
+<p>Créer le fichier <code>authorized_keys</code> dans le dossier <code>.ssh</code>.</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div>
+</li>
+<li>
+<p>Modifier les permissions du fichier <code>authorized_keys</code>.</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div>
+</li>
+<li>
+<p>Copier la clé publique de votre ordinateur précédemment générée dans le fichier <code>authorized_keys</code>.</p>
+</li>
+<li>
+<p>Modifier la ligne <code>PasswordAuthentication</code> pour qu'elle soit égale à <code>no</code> (cela désactive l'authentification par mot de passe, vous devrez utiliser une clé SSH pour vous connecter).</p>
+<div class="highlight"><pre><span></span><code># This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+...
+PasswordAuthentication no
+...
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrer le service SSH.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>ssh<span class="w"> </span>restart
+</code></pre></div>
+</li>
+</ul>
+<p>Plus d'informations sur la configuration de SSH sont disponibles dans la documentation dédiée à <a href="../../../02_applications/ssh/">SSH</a></p>
+<p>Vous avez maintenant un serveur Debian fonctionnel avec <code>sudo</code> et SSH configurés correctement et de manière sécurisée. Seul l'utilisateur courant peut se connecter en SSH en utilisant la clé SSH précédemment générée. Dans les fait cela veux dire que seul quelqu'un possédant la clé privée correspondante à la clé publique présente dans le fichier <code>authorized_keys</code> pourra se connecter en SSH et que même si cette clé est compromise, l'utilisateur <code>root</code> ne pourra jamais être utilisé et que toutes les commandes nécessitant des privilèges administrateur devront être exécutées via <code>sudo</code> qui nécessite la saisie du mot de passe de l'utilisateur qui n'est enregistrer nul part.</p>
+<h4 id="connexion-a-distance-via-ssh">Connexion à distance via SSH<a class="headerlink" href="#connexion-a-distance-via-ssh" title="Permanent link">&para;</a></h4>
+<p>Pour plus d'informations sur l'installation et l'utilisation de SSH, vous pouvez consulter la documentation dédiée à <a href="../../../02_applications/ssh/">SSH</a></p>
+<ul>
+<li>
+<p>Connectez-vous au serveur en SSH depuis un autre ordinateur connecté au même réseau local.</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;nom_utilisateur&gt;@&lt;adresse_ip&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li>Remplacer <code>&lt;nom_utilisateur&gt;</code> par le nom d'utilisateur créé lors de l'installation de Debian.</li>
+<li>Remplacer <code>&lt;adresse_ip&gt;</code> par l'adresse IP fixe configurée précédemment ou l'adresse IP actuelle du serveur.</li>
+<li>Remplacer <code>&lt;port&gt;</code> par le numéro de port configuré précédemment pour SSH.</li>
+<li>Entrer la passphrase de la clé SSH si vous en avez mis une.</li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-supplementaire-optionnelle">Configuration supplémentaire (optionnelle)<a class="headerlink" href="#configuration-supplementaire-optionnelle" title="Permanent link">&para;</a></h2>
+<p>Vous avez maintenant un serveur Debian fonctionnel, bien protégé et accessible à distance via SSH. Mais pour l'instant il n'a pas encore de fonctionnalités spécifiques.</p>
+<p>Dans cette section, nous allons voir comment installer et configurer des services supplémentaires pour rendre votre serveur plus utile.</p>
+<h3 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer Git.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div>
+</li>
+</ul>
+<p>Plus d'informations sur l'installation et l'utilisation de Git sont disponibles dans la documentation dédiée à <a href="../../../02_applications/git/">Git</a></p>
+<h3 id="docker-et-docker-compose">Docker et Docker Compose<a class="headerlink" href="#docker-et-docker-compose" title="Permanent link">&para;</a></h3>
+<p>Docker est une plateforme de conteneurisation qui permet de créer, déployer et exécuter des applications dans des conteneurs légers et portables. Docker Compose est un outil qui permet de définir et de gérer des applications multi-conteneurs Docker. Voici comment les installer et les configurer sur votre serveur Debian.</p>
+<p>Pour installer Docker engine, vous pouvez suivre la <a href="../../../02_applications/docker_installation/">documentation d'installation de Docker engine</a></p>
+<h3 id="prometheus">Prometheus<a class="headerlink" href="#prometheus" title="Permanent link">&para;</a></h3>
+<p>Prometheus est un système de surveillance et d'alerte open-source conçu pour collecter et stocker des métriques en temps réel. Voici comment l'installer et le configurer sur votre serveur Debian.</p>
+<h3 id="grafana">Grafana<a class="headerlink" href="#grafana" title="Permanent link">&para;</a></h3>
+<p>Grafana est une plateforme open-source de visualisation et d'analyse de données qui permet de créer des tableaux de bord interactifs. Voici comment l'installer et le configurer sur votre serveur Debian.</p>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

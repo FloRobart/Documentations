@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>SSH - Documentation Floris</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../git/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../vscode/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/02_applications/ssh.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-complete-pour-ssh" class="nav-link">Documentation complète pour SSH</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ssh-client" class="nav-link">SSH Client</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ssh-server" class="nav-link">SSH Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ssh-filesystem-sshfs" class="nav-link">SSH FileSystem (SSHFS)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-complete-pour-ssh">Documentation complète pour SSH<a class="headerlink" href="#documentation-complete-pour-ssh" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-complète-pour-ssh">Documentation complète pour SSH</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#ssh-client">SSH Client</a><ul>
+<li><a href="#installation-de-ssh-client">Installation de SSH Client</a></li>
+<li><a href="#création-et-utilisation-de-clé-ssh">Création et utilisation de clé SSH</a></li>
+<li><a href="#ajout-de-la-clé-ssh-à-lagent-ssh">Ajout de la clé SSH à l'agent SSH</a></li>
+<li><a href="#ajout-de-raccourci-pour-la-connexion-ssh">Ajout de raccourci pour la connexion SSH</a></li>
+<li><a href="#utilisation-de-ssh-client">Utilisation de SSH Client</a><ul>
+<li><a href="#connexion-à-un-serveur-distant">Connexion à un serveur distant</a></li>
+<li><a href="#transfert-de-fichier">Transfert de fichier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ssh-server">SSH Server</a><ul>
+<li><a href="#installation-de-ssh-server">Installation de SSH Server</a></li>
+<li><a href="#configuration-de-ssh-server">Configuration de SSH Server</a></li>
+<li><a href="#utilisation-de-ssh-server">Utilisation de SSH Server</a></li>
+</ul>
+</li>
+<li><a href="#ssh-filesystem-sshfs">SSH FileSystem (SSHFS)</a><ul>
+<li><a href="#installation-de-ssh-filesystem-sshfs">Installation de SSH FileSystem (SSHFS)</a></li>
+<li><a href="#monter-un-système-de-fichier-distant">Monter un système de fichier distant</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ssh-client">SSH Client<a class="headerlink" href="#ssh-client" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-ssh-client">Installation de SSH Client<a class="headerlink" href="#installation-de-ssh-client" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-client
+</code></pre></div>
+</li>
+</ul>
+<h3 id="creation-et-utilisation-de-cle-ssh">Création et utilisation de clé SSH<a class="headerlink" href="#creation-et-utilisation-de-cle-ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Générer une clé SSH :</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;commentaire&quot;</span>
+</code></pre></div>
+<ul>
+<li>Il est recommandé de mettre un commentaire pour identifier la clé (par exemple l'utilisation qui va être faite de la clé)</li>
+</ul>
+</li>
+<li>
+<p>Entrer le nom du fichier dans lequel sauvegarder la clé (il est recommandé de mettre le dossier par défaut mais de changer le nom du fichier par l'utilisation qui va être faite de la clé) :</p>
+<blockquote>
+<p>Enter file in which to save the key ($HOME/.ssh/id_rsa): <code>~/.ssh/id_rsa_&lt;custom_name&gt;</code></p>
+</blockquote>
+</li>
+<li>
+<p>Entrer une passphrase pour sécuriser la clé. C'est un mot de passe qui sera demandé à chaque utilisation de la clé privée. Il est possible de laisser vide pour ne pas mettre de passphrase</p>
+<blockquote>
+<p>Enter passphrase (empty for no passphrase):</p>
+</blockquote>
+</li>
+<li>
+<p>Confirmer la passphrase en la retapant</p>
+<blockquote>
+<p>Enter same passphrase again:</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Ajouter la clé public (présente dans le fichier <code>~/.ssh/id_rsa_&lt;custom_name&gt;.pub</code>) dans le fichier <code>~/.ssh/authorized_keys</code> du serveur distant.</strong></p>
+</li>
+</ul>
+<h3 id="ajout-de-la-cle-ssh-a-lagent-ssh">Ajout de la clé SSH à l'agent SSH<a class="headerlink" href="#ajout-de-la-cle-ssh-a-lagent-ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Vérifier que l'agent SSH est en cours d'exécution :</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$SSH_AUTH_SOCK</span>
+</code></pre></div>
+<ul>
+<li>Si la commande ne retourne rien, cela signifie que l'agent SSH n'est pas en cours d'exécution</li>
+</ul>
+</li>
+<li>
+<p>Si l'agent SSH n'est pas en cours d'exécution, démarrer l'agent SSH</p>
+<div class="highlight"><pre><span></span><code><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter la clé privée à l'agent SSH</p>
+<div class="highlight"><pre><span></span><code>ssh-add<span class="w"> </span>~/.ssh/&lt;nom_de_la_clé&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;nom_de_la_clé&gt;</code> : Nom du fichier de la clé privée (généralement <code>id_rsa</code> ou <code>id_rsa_&lt;custom_name&gt;</code>)</li>
+<li>Vérifier que la clé a bien été ajoutée à l'agent SSH</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ssh-add<span class="w"> </span>-l
+</code></pre></div>
+</li>
+</ul>
+<h3 id="ajout-de-raccourci-pour-la-connexion-ssh">Ajout de raccourci pour la connexion SSH<a class="headerlink" href="#ajout-de-raccourci-pour-la-connexion-ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Éditer (ou créer) le fichier de configuration SSH <code>~/.ssh/config</code> :</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.ssh/config
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter une entrée pour le serveur SSH</p>
+<div class="highlight"><pre><span></span><code>Host &lt;nom_du_raccourci&gt;
+    HostName &lt;host&gt;
+    User &lt;user&gt;
+    Port &lt;port&gt;
+    IdentityFile ~/.ssh/&lt;nom_de_la_clé&gt;
+    IdentitiesOnly yes
+</code></pre></div>
+<ul>
+<li><code>&lt;nom_du_raccourci&gt;</code> : Nom du raccourci pour la connexion SSH</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine du serveur</li>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;port&gt;</code> : Port SSH (par défaut 22)</li>
+<li><code>&lt;nom_de_la_clé&gt;</code> : Nom du fichier de la clé privée (généralement <code>id_rsa</code> ou <code>id_rsa_&lt;custom_name&gt;</code>)</li>
+</ul>
+</li>
+<li>
+<p>Sauvegarder et fermer le fichier</p>
+</li>
+<li>
+<p>Utiliser le raccourci pour se connecter au serveur distant avec SSH</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;nom_du_raccourci&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Normalement, la connexion SSH devrait s'établir sans demander de mot de passe si la clé SSH a été correctement configurée</p>
+</li>
+</ul>
+<h3 id="utilisation-de-ssh-client">Utilisation de SSH Client<a class="headerlink" href="#utilisation-de-ssh-client" title="Permanent link">&para;</a></h3>
+<h4 id="connexion-a-un-serveur-distant">Connexion à un serveur distant<a class="headerlink" href="#connexion-a-un-serveur-distant" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Se connecter à un serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;user&gt;@&lt;host&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine</li>
+<li><code>&lt;port&gt;</code> : Port SSH (par défaut 22)</li>
+</ul>
+</li>
+</ul>
+<h4 id="transfert-de-fichier">Transfert de fichier<a class="headerlink" href="#transfert-de-fichier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Transférer un fichier depuis l'hôte vers un serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>scp<span class="w"> </span>&lt;fichier&gt;<span class="w"> </span>&lt;user&gt;@&lt;host&gt;:&lt;destination&gt;<span class="w"> </span>-P<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;fichier&gt;</code> : Fichier local à transférer</li>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine</li>
+<li><code>&lt;destination&gt;</code> : Destination du fichier sur le serveur</li>
+</ul>
+</li>
+<li>
+<p>Transférer un fichier depuis un serveur SSH vers l'hôte :</p>
+<div class="highlight"><pre><span></span><code>scp<span class="w"> </span>-P<span class="w"> </span><span class="m">7518</span><span class="w"> </span>&lt;user&gt;@&lt;host&gt;:&lt;fichier&gt;<span class="w"> </span>&lt;destination&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine</li>
+<li><code>&lt;fichier&gt;</code> : Fichier distant à transférer sur l'hôte</li>
+<li><code>&lt;destination&gt;</code> : Destination du fichier en local</li>
+</ul>
+</li>
+</ul>
+<h2 id="ssh-server">SSH Server<a class="headerlink" href="#ssh-server" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-ssh-server">Installation de SSH Server<a class="headerlink" href="#installation-de-ssh-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-server
+</code></pre></div>
+</li>
+</ul>
+<h3 id="configuration-de-ssh-server">Configuration de SSH Server<a class="headerlink" href="#configuration-de-ssh-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cette section n'est pas obligatoire, mais est fortement recommandée pour sécuriser le serveur SSH.</li>
+<li>
+<p>Éditer le fichier de configuration SSH <code>/etc/ssh/sshd_config</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+</code></pre></div>
+<ul>
+<li>Modifier la ligne <code>Port</code> pour changer le numéro de port par défaut.<ul>
+<li>Vous pouvez choisir presque n'importe quel numéro de port entre 1024 et 65535.</li>
+</ul>
+</li>
+<li>
+<p>Modifier la ligne <code>PermitRootLogin</code> pour qu'elle soit égale à <code>no</code>.</p>
+<div class="highlight"><pre><span></span><code># This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+...
+Port &lt;port&gt;
+...
+...
+PermitRootLogin no
+...
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder et quitter.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Redémarrer le service SSH.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>ssh<span class="w"> </span>restart
+</code></pre></div>
+</li>
+<li>
+<p>Créer une clé SSH pour se connecter au serveur (voir <a href="#création-et-utilisation-de-clé-ssh">Création et utilisation de clé SSH</a>).</p>
+</li>
+<li>Ajouter la clé publique dans le fichier <code>~/.ssh/authorized_keys</code> (Normalement vous l'avez déjà fait lors de l'étape précédente).</li>
+<li>
+<p>Redémarrer le service SSH.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>ssh<span class="w"> </span>restart
+</code></pre></div>
+</li>
+<li>
+<p>Essayer de se connecter au serveur SSH en utilisant la clé SSH</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/&lt;nom_de_la_clé&gt;<span class="w"> </span>&lt;user&gt;@&lt;host&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;nom_de_la_clé&gt;</code> : Nom du fichier de la clé privée (généralement <code>id_rsa</code> ou <code>id_rsa_&lt;custom_name&gt;</code>)</li>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine</li>
+<li><code>&lt;port&gt;</code> : Port SSH (celui que vous avez configuré précédemment)</li>
+<li>Si la connexion fonctionne correctement, vous pouvez désactiver l'authentification par mot de passe pour renforcer la sécurité.</li>
+<li><strong>/!\ Attention /!\</strong> : Avant de désactiver l'authentification par mot de passe, assurez-vous que vous pouvez vous connecter au serveur SSH avec la clé SSH. Sinon, vous risquez de vous retrouver bloqué hors du serveur.</li>
+<li>Éditer le fichier de configuration SSH <code>/etc/ssh/sshd_config</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+</code></pre></div>
+<ul>
+<li>
+<p>Modifier la ligne <code>PasswordAuthentication</code> pour qu'elle soit égale à <code>no</code>.</p>
+<div class="highlight"><pre><span></span><code># This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+...
+PasswordAuthentication no
+...
+UsePAM no
+...
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder et quitter.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Redémarrer le service SSH.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>ssh<span class="w"> </span>restart
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier que l'authentification par mot de passe est désactivée</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sshd<span class="w"> </span>-T<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;passwordauthentication|usepam&quot;</span>
+</code></pre></div>
+<ul>
+<li>Les deux lignes retournées doivent être <code>passwordauthentication no</code> et <code>usepam no</code>.</li>
+</ul>
+</li>
+<li>
+<p>Vérifier que la connexion SSH fonctionne toujours avec la clé SSH.</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/&lt;nom_de_la_clé&gt;<span class="w"> </span>&lt;user&gt;@&lt;host&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-ssh-server">Utilisation de SSH Server<a class="headerlink" href="#utilisation-de-ssh-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Autoriser le trafic SSH sur le port 22 :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>ssh
+</code></pre></div>
+</li>
+<li>
+<p>Éxecuter la commande suivante pour démarrer le serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>ssh
+</code></pre></div>
+</li>
+<li>
+<p>Pour démarrer le serveur SSH au démarrage du système :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ssh
+</code></pre></div>
+</li>
+<li>
+<p>Pour vérifier l'état du serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>ssh
+</code></pre></div>
+</li>
+<li>
+<p>Pour redémarrer le serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</code></pre></div>
+</li>
+<li>
+<p>Pour arrêter le serveur SSH :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>ssh
+</code></pre></div>
+</li>
+</ul>
+<h2 id="ssh-filesystem-sshfs">SSH FileSystem (SSHFS)<a class="headerlink" href="#ssh-filesystem-sshfs" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-ssh-filesystem-sshfs">Installation de SSH FileSystem (SSHFS)<a class="headerlink" href="#installation-de-ssh-filesystem-sshfs" title="Permanent link">&para;</a></h3>
+<p><strong>SSHFS permet de monter un système de fichier distant sur son système local via SSH.</strong></p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sshfs
+</code></pre></div>
+</li>
+</ul>
+<h3 id="monter-un-systeme-de-fichier-distant">Monter un système de fichier distant<a class="headerlink" href="#monter-un-systeme-de-fichier-distant" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#installation-de-ssh-filesystem-sshfs">Installer SSHFS</a></li>
+<li>
+<p>Créer un dossier dans lequel sera monter le système de fichier distant :</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>&lt;dossier&gt;
+</code></pre></div>
+<ul>
+<li><code>&lt;dossier&gt;</code> : Nom du dossier</li>
+</ul>
+</li>
+<li>
+<p>Monter le système de fichier distant :</p>
+<div class="highlight"><pre><span></span><code>sshfs<span class="w"> </span>&lt;user&gt;@&lt;host&gt;:/path/to/distant/folder<span class="w"> </span>/local/empty/folder
+</code></pre></div>
+<ul>
+<li><code>&lt;user&gt;</code> : Nom d'utilisateur à utiliser sur le serveur</li>
+<li><code>&lt;host&gt;</code> : Adresse IP ou nom de domaine du serveur</li>
+<li><code>/path/to/distant/folder</code> : Chemin du dossier distant à monter</li>
+<li><code>/local/folder</code> : Chemin du dossier local (créé précédemment)</li>
+</ul>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

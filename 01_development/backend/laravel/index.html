@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Laravel - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Laravel</a>
+</li>
+            
+<li>
+    <a href="../symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../../03_system/linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../03_system/others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../create_api_typescript/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../symfony/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/01_development/backend/laravel.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentation-laravel" class="nav-link">Documentation Laravel</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-laravel" class="nav-link">Installation de Laravel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#utilisation-de-laravel" class="nav-link">Utilisation de Laravel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuration-de-votre-projet-laravel" class="nav-link">Configuration de votre projet Laravel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentation-laravel">Documentation Laravel<a class="headerlink" href="#documentation-laravel" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-laravel">Documentation Laravel</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#installation-de-laravel">Installation de Laravel</a><ul>
+<li><a href="#installation-de-laravel-cli">Installation de Laravel CLI</a></li>
+</ul>
+</li>
+<li><a href="#utilisation-de-laravel">Utilisation de Laravel</a><ul>
+<li><a href="#création-dun-projet-laravel">Création d'un projet Laravel</a></li>
+<li><a href="#gestion-de-la-base-de-données">Gestion de la base de données</a></li>
+<li><a href="#intégration-de-plusieurs-base-de-données">Intégration de plusieurs base de données</a></li>
+<li><a href="#migrations">Migrations</a></li>
+<li><a href="#seeders">Seeders</a></li>
+<li><a href="#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache">Lancement d'un projet Laravel en local grâce au serveur web Apache</a></li>
+<li><a href="#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel">Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel</a></li>
+<li><a href="#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local">Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local</a></li>
+</ul>
+</li>
+<li><a href="#configuration-de-votre-projet-laravel">Configuration de votre projet Laravel</a><ul>
+<li><a href="#configuration-du-env">Configuration du .env</a><ul>
+<li><a href="#configuration-de-lapplication">Configuration de l'application</a></li>
+<li><a href="#langue-et-localisation">Langue et localisation</a></li>
+<li><a href="#maintenance">Maintenance</a></li>
+<li><a href="#sécurité">Sécurité</a></li>
+<li><a href="#logs">Logs</a></li>
+<li><a href="#base-de-données">Base de données</a></li>
+<li><a href="#sessions">Sessions</a></li>
+<li><a href="#diffusion-broadcast">Diffusion (Broadcast)</a></li>
+<li><a href="#filesystems">Filesystems</a></li>
+<li><a href="#file-dattente">File d'attente</a></li>
+<li><a href="#cache">Cache</a></li>
+<li><a href="#memcached">Memcached</a></li>
+<li><a href="#redis">Redis</a></li>
+<li><a href="#email">Email</a></li>
+<li><a href="#vitejs">ViteJS</a></li>
+</ul>
+</li>
+<li><a href="#intégration-de-tailwind-css">Intégration de Tailwind CSS</a></li>
+<li><a href="#intégration-de-livewire">Intégration de Livewire</a></li>
+<li><a href="#ajout-de-livewire-à-un-projet-laravel">Ajout de Livewire à un projet Laravel</a></li>
+<li><a href="#création-dun-composant-livewire">Création d'un composant Livewire</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-laravel">Installation de Laravel<a class="headerlink" href="#installation-de-laravel" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Documentation officiel, complète et très bien expliqué
+    &gt; <a href="https://laravel.com/docs/10.x">https://laravel.com/docs/10.x</a></li>
+<li>
+<p>Source
+    &gt; <a href="https://www.webhi.com/how-to/how-to-install-laravel-on-ubuntu-debian-apache-nginx/">https://www.webhi.com/how-to/how-to-install-laravel-on-ubuntu-debian-apache-nginx/</a></p>
+</li>
+<li>
+<p>Installer les différentes dépendances PHP dont Laravel à besoin</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>php-cli<span class="w"> </span>php-common<span class="w"> </span>php-mbstring<span class="w"> </span>php-xml<span class="w"> </span>php-zip<span class="w"> </span>php-mysql<span class="w"> </span>php-pgsql<span class="w"> </span>php-sqlite3<span class="w"> </span>php-json<span class="w"> </span>php-bcmath<span class="w"> </span>php-gd<span class="w"> </span>php-tokenizer<span class="w"> </span>php-xmlwriter
+</code></pre></div>
+</li>
+<li>
+<p><a href="../../others/web_development_php/#composer">Installer Composer</a></p>
+</li>
+<li><a href="../../others/web_development_php/#apache">Installer le serveur web Apache pour php</a></li>
+</ul>
+<h3 id="installation-de-laravel-cli">Installation de Laravel CLI<a class="headerlink" href="#installation-de-laravel-cli" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installation de Laravel CLI grâce à <code>Composer</code></p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>global<span class="w"> </span>require<span class="w"> </span>laravel/installer
+</code></pre></div>
+</li>
+</ul>
+<h2 id="utilisation-de-laravel">Utilisation de Laravel<a class="headerlink" href="#utilisation-de-laravel" title="Permanent link">&para;</a></h2>
+<h3 id="creation-dun-projet-laravel">Création d'un projet Laravel<a class="headerlink" href="#creation-dun-projet-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer un projet Laravel grâce à <code>Composer</code></p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>--prefer-dist<span class="w"> </span>laravel/laravel<span class="w"> </span>your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un projet Laravel grâce à la commande <code>laravel</code></p>
+<div class="highlight"><pre><span></span><code>laravel<span class="w"> </span>new<span class="w"> </span>your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un projet Laravel avec une version spécifique</p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>--prefer-dist<span class="w"> </span>laravel/laravel<span class="w"> </span>your-project-name<span class="w"> </span><span class="s2">&quot;8.*&quot;</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="gestion-de-la-base-de-donnees">Gestion de la base de données<a class="headerlink" href="#gestion-de-la-base-de-donnees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer une migration</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:migration<span class="w"> </span>create_&lt;table-name&gt;_table
+</code></pre></div>
+</li>
+<li>
+<p>Créer un modèle</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:model<span class="w"> </span>&lt;ModelName&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Créer un modèle et une migration</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:model<span class="w"> </span>&lt;ModelName&gt;<span class="w"> </span>-m
+</code></pre></div>
+<ul>
+<li>
+<p>Modifier le fichier de Model pour ajouter le nom de la table</p>
+<div class="highlight"><pre><span></span><code><span class="x">protected $fillable = [</span>
+<span class="x">&#39;name&#39;,</span>
+<span class="x">&#39;email&#39;,</span>
+<span class="x">];</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Éxécuter les migrations</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div>
+</li>
+<li>
+<p>Éxécuter une migration spécifique</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate<span class="w"> </span>--path<span class="o">=</span>/path/to/migration.php
+</code></pre></div>
+</li>
+<li>
+<p>Créer un contrôleur</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:controller<span class="w"> </span>&lt;ControllerName&gt;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="integration-de-plusieurs-base-de-donnees">Intégration de plusieurs base de données<a class="headerlink" href="#integration-de-plusieurs-base-de-donnees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Source
+    &gt; <a href="https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223">https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223</a></li>
+</ul>
+<h3 id="migrations">Migrations<a class="headerlink" href="#migrations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../database/migrations_and_seeders_by_tanvir/">Source</a></li>
+</ul>
+<p>Les migrations sont des fichiers qui permettent de creer, modifier ou supprimer des tables dans une base de donnees. Les migrations sont executees en premier lieu pour configurer la base de donnees de l'application.</p>
+<p>Si vous voulez modifier une table existante, il ne faut pas modifier la migration existante. Il faut créer une nouvelle migration pour ajouter ou modifier des colonnes. le but étant que vous ayez toujours la possibilité de revenir en arrière et que vous puissiez les utiliser sans supprimer les données de la base de données.</p>
+<ul>
+<li>
+<p>Créer une migration</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:migration<span class="w"> </span>&lt;nom_de_la_migration&gt;
+</code></pre></div>
+<ul>
+<li><strong>Convention de nommage</strong> : Lorsque l'on nomme un fichier de migration dans le terminal bash, il est recommandé de le créer de la forme suivante <code>create_&lt;nom_de_la_table&gt;_table</code></li>
+</ul>
+</li>
+<li>
+<p>Ouvrez le fichier créé dans le dossier <code>/database/migrations</code> et ajoutez le code qui permet de créer la table. L'aspect du fichier de migration est déjà configuré, il contient déjà les méthodes <code>up</code> et <code>down</code> qui permettent de lancer et d'annuler la migration. Utilisez ce template pour compléter le code en remplaçant les <code>&lt;&gt;</code> par les valeurs appropriées :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="err">&lt;</span><span class="nc">nom_de_la_migration</span><span class="o">&gt;</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="nv">$connection</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">connection_name</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Run the migrations.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;&lt;nom_de_la_table&gt;&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;&lt;</span><span class="nx">type</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&lt;column_name&gt;&#39;</span><span class="p">)</span><span class="o">-&gt;&lt;</span><span class="nx">attribute</span><span class="o">&gt;</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;exemple&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">nullable</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="s1">&#39;default_value&#39;</span><span class="p">);</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Reverse the migrations.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">dropIfExists</span><span class="p">(</span><span class="s1">&#39;&lt;nom_de_la_table&gt;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>nom_de_la_migration</code> : Nom de la migration (Laravel le complète automatiquement)</li>
+<li><code>connection_name</code> : Nom de la connexion à la base de données (Par défaut <code>mysql</code>)</li>
+<li><code>nom_de_la_table</code> : Nom de la table à créer (Laravel le complète automatiquement mais vérifiez que le nom est correct)</li>
+<li><code>id()</code> : Crée une colonne <code>id</code> de type <code>bigIncrements</code> (Vous pouvez utiliser <code>id('id_name')</code> pour changer le nom de la colonne de l'id)</li>
+<li><code>type</code> : Type de la colonne (integer, string, text, etc.)</li>
+<li><code>column_name</code> : Nom de la colonne</li>
+<li><code>attribute</code> : Attribut de la colonne (nullable, default, etc.)</li>
+<li><code>string('exemple')-&gt;nullable()-&gt;default('default_value')</code> : Crée une colonne <code>exemple</code> de type <code>string</code> qui peut être <code>null</code> et qui a une valeur par défaut <code>default_value</code></li>
+<li><code>timestamps()</code> : Crée deux colonnes <code>created_at</code> et <code>updated_at</code> de type <code>timestamp</code></li>
+</ul>
+</li>
+<li>
+<p>Exécuter les migrations</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div>
+</li>
+</ul>
+<h3 id="seeders">Seeders<a class="headerlink" href="#seeders" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../database/migrations_and_seeders_by_tanvir/">Source</a></li>
+</ul>
+<p>Un seeder est un fichier qui permet de remplir les tables de la base de donnees avec des donnees. Les seeders sont executees apres les migrations pour fournir des donnees a l'application.</p>
+<ul>
+<li>
+<p>Créer un seeder</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:seeder<span class="w"> </span>&lt;nom_du_seeder&gt;
+</code></pre></div>
+<ul>
+<li><strong>Convention de nommage</strong> : Lorsque l'on nomme un fichier seeder dans le terminal bash, il est recommandé de le créer de la forme suivante <code>&lt;NomDeLaTable&gt;Seeder</code>. S'il y a un <code>s</code> avant <code>Seeder</code>, il est conseillé de supprimer ce <code>s</code>.</li>
+</ul>
+</li>
+<li>
+<p>Ouvrez le fichier de seeder situé dans le dossier <code>/database/seeders</code> et ajoutez le code nécessaire pour remplir la table de la base de données. Le fichier de seeder contient deja la classe <code>&lt;nom_du_seeder&gt;</code> qui contient la méthode <code>run</code> qui permet de lancer le remplissage de la table. Utilisez ce template pour compléter le code en remplaçant les <code>&lt;&gt;</code> par les valeurs appropriées :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Database\Seeders</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Console\Seeds\WithoutModelEvents</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\DB</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="err">&lt;</span><span class="nc">nom_du_seeder</span><span class="o">&gt;</span> <span class="k">extends</span> <span class="nx">Seeder</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Run the database seeds.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="nx">DB</span><span class="o">::</span><span class="na">connection</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">connection_name</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">table</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">nom_de_la_table</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span>
+            <span class="p">[</span>
+                <span class="o">&lt;</span><span class="nx">nom_du_primaire</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">valeur_du_primaire</span><span class="o">&gt;</span><span class="p">,</span>
+                <span class="o">&lt;</span><span class="nx">nom_de_la_colonne</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">valeur_de_la_colonne</span><span class="o">&gt;</span><span class="p">,</span>
+                <span class="o">...</span>
+            <span class="p">]</span>
+        <span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>nom_du_seeder</code> : Nom du seeder (Laravel le complète automatiquement)</li>
+<li><code>connection_name</code> : Nom de la connexion à la base de données (Par défaut <code>mysql</code>)</li>
+<li><code>nom_de_la_table</code> : Nom de la table à remplir</li>
+<li><code>nom_du_primaire</code> : Nom de la colonne de la clé primaire</li>
+<li><code>valeur_du_primaire</code> : Valeur de la clé primaire</li>
+<li><code>nom_de_la_colonne</code> : Nom de la colonne à remplir</li>
+<li><code>valeur_de_la_colonne</code> : Valeur de la colonne</li>
+</ul>
+</li>
+<li>
+<p>Exécuter les seeders</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>db:seed
+</code></pre></div>
+</li>
+</ul>
+<h3 id="lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache">Lancement d'un projet Laravel en local grâce au serveur web Apache<a class="headerlink" href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Si vous n'avez pas créer le projet Laravel dans le dossier <code>/var/www/html</code> il faut créer un lien symbolique entre le dossier du projet Laravel et le dossier <code>/var/www/html</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/path/to/your-project-name<span class="w"> </span>/var/www/html/your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier de configuration pour le projet Laravel</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/your-project-name.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter le code suivant dans le fichier de configuration</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="err">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span>ServerName<span class="w"> </span>your-domain-or-ip
+<span class="w">    </span>DocumentRoot<span class="w"> </span>/var/www/html/your-project-name/public
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="err">/var/www/html/your-project-name</span><span class="nt">&gt;</span>
+<span class="w">        </span>AllowOverride<span class="w"> </span>All
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Activez le module de réécriture Apache :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+</code></pre></div>
+</li>
+<li>
+<p>Activez l'hôte virtuel :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>your-project-name.conf
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrez Apache pour que les modifications prennent effet :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+</ul>
+<h3 id="lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel">Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel<a class="headerlink" href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Lancez le serveur web de développement de Laravel</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve
+</code></pre></div>
+<ul>
+<li>
+<p>Si vous avez cette erreur <code>The stream or file "/path/to/your-project-name/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied</code> il faut modifier le créateur du dossier <code>storage</code> et de son contenu</p>
+<ul>
+<li>
+<p>Source de la solution
+    &gt; <a href="https://stackoverflow.com/questions/30639174/laravel-5-ubuntu-14-04-permission-denied-on-storage-log">https://stackoverflow.com/questions/30639174/laravel-5-ubuntu-14-04-permission-denied-on-storage-log</a></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>:www-data<span class="w"> </span>/path/to/your-project-name/storage
+</code></pre></div>
+</li>
+<li>
+<p>Redonnez les droits au dossier <code>storage</code> si nécessaire</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">775</span><span class="w"> </span>/path/to/your-project-name/storage
+</code></pre></div>
+</li>
+<li>
+<p>Relancez le serveur web de développement de Laravel</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local">Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local<a class="headerlink" href="#rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Lancer le serveur laravel avec la commande suivante</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve<span class="w"> </span>--host<span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="o">=</span><span class="m">8000</span>
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP ou le nom de la machine sur laquel le serveur laravel est lancé</p>
+<ul>
+<li>
+<p>Récupérer l'adresse IP sous Linux</p>
+<div class="highlight"><pre><span></span><code>hostname<span class="w"> </span>-I
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer le nom de la machine sous Linux</p>
+<div class="highlight"><pre><span></span><code>hostname
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP sous Windows</p>
+<div class="highlight"><pre><span></span><code>ipconfig
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP sous Windows grâce à l'inteface graphique</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9">https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Ouvrir un navigateur sur un autre appareil connecté au même réseau</p>
+</li>
+<li>
+<p>Entrer l'adresse IP de la machine sur lequel le serveur laravel est lancé suivi du numéro de port, en l'occurence "<code>:8000</code>"</p>
+<div class="highlight"><pre><span></span><code>&lt;adresse_ip&gt;:8000
+</code></pre></div>
+<p>OU</p>
+<div class="highlight"><pre><span></span><code>&lt;nom&gt;:8000
+</code></pre></div>
+<ul>
+<li>
+<p>En règle général l'adresse IP est de la forme <code>192.168.1.XX</code></p>
+<div class="highlight"><pre><span></span><code><span class="m">192</span>.168.1.XX:8000
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-de-votre-projet-laravel">Configuration de votre projet Laravel<a class="headerlink" href="#configuration-de-votre-projet-laravel" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Configuration des permissions dans votre projet Laravel (normalement vous n'avez pas besoin de faire cette étape)</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/path/to/your-project-name
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/path/to/your-project-name
+</code></pre></div>
+</li>
+</ul>
+<h3 id="configuration-du-env">Configuration du .env<a class="headerlink" href="#configuration-du-env" title="Permanent link">&para;</a></h3>
+<p>Voici une explication détaillée des différentes variables du fichier <code>.env</code> et leur utilité dans une application Laravel :</p>
+<h4 id="configuration-de-lapplication">Configuration de l'application<a class="headerlink" href="#configuration-de-lapplication" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>APP_NAME</code></strong> : Nom de l'application. Utilisé dans les notifications, les emails, ou dans certaines parties du frontend pour afficher le nom de l'application.</li>
+<li><strong><code>APP_ENV</code></strong> : Environnement de l'application (<code>local</code>, <code>production</code>, <code>staging</code>, etc.). Permet d'ajuster le comportement de l'application en fonction de l'environnement.</li>
+<li><strong><code>APP_KEY</code></strong> : Clé utilisée pour chiffrer des données sensibles. Générée par Laravel avec la commande <code>php artisan key:generate</code>.</li>
+<li><strong><code>APP_DEBUG</code></strong> : Active ou désactive le mode débogage (<code>true</code> ou <code>false</code>). En mode débogage, les erreurs s'affichent directement dans le navigateur.</li>
+<li><strong><code>APP_TIMEZONE</code></strong> : Définit le fuseau horaire de l'application, comme <code>UTC</code>, <code>Europe/Paris</code>, etc.</li>
+<li><strong><code>APP_URL</code></strong> : URL de base de l'application. Utilisée pour générer des liens absolus dans l'application.</li>
+</ul>
+<h4 id="langue-et-localisation">Langue et localisation<a class="headerlink" href="#langue-et-localisation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>APP_LOCALE</code></strong> : Langue par défaut de l'application, comme <code>en</code> pour l'anglais ou <code>fr</code> pour le français.</li>
+<li><strong><code>APP_FALLBACK_LOCALE</code></strong> : Langue utilisée si la traduction dans <code>APP_LOCALE</code> n'est pas disponible.</li>
+<li><strong><code>APP_FAKER_LOCALE</code></strong> : Langue utilisée par la librairie <code>Faker</code> pour générer des données fictives (noms, adresses, etc.).</li>
+</ul>
+<h4 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h4>
+<p>La maintenance dans Laravel fait référence à un mode spécial où l'application devient temporairement inaccessible aux utilisateurs finaux. Cela permet aux développeurs d'effectuer des tâches comme des mises à jour, des modifications ou des réparations sans interrompre l'expérience utilisateur avec des erreurs ou des bugs.</p>
+<ul>
+<li><strong><code>APP_MAINTENANCE_DRIVER</code></strong> : Détermine comment l'état de maintenance est géré (fichier, base de données, etc.).</li>
+<li>
+<p><strong><code>APP_MAINTENANCE_STORE</code></strong> : Emplacement pour stocker les données de maintenance (si nécessaire).</p>
+</li>
+<li>
+<p><strong>Fonctionnement :</strong></p>
+<ul>
+<li>En mode maintenance, Laravel affiche une page par défaut ou personnalisée indiquant que le site est temporairement hors service.</li>
+<li>Les commandes comme <code>php artisan down</code> activent le mode maintenance, tandis que <code>php artisan up</code> le désactive.</li>
+<li>Tu peux spécifier des utilisateurs ou des IP autorisés à contourner ce mode avec <code>--allow</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Ce n'est pas obligatoire. Cependant, c'est une bonne pratique dans les environnements de production pour éviter que les utilisateurs ne rencontrent des bugs ou des incohérences pendant des opérations critiques.</p>
+<h4 id="securite">Sécurité<a class="headerlink" href="#securite" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong><code>BCRYPT_ROUNDS</code></strong> : Nombre de tours pour hacher les mots de passe avec bcrypt. Plus la valeur est élevée, plus le processus est sécurisé mais gourmand en ressources.</p>
+</li>
+<li>
+<p><strong>Valeur de référence :</strong></p>
+<ul>
+<li>Laravel utilise une valeur par défaut de 10. Cette valeur offre un bon compromis entre sécurité et performances.</li>
+<li>Dans des environnements nécessitant une sécurité accrue (par exemple, avec des serveurs puissants), tu peux augmenter ce nombre à 12 ou 14.</li>
+<li>Éviter des valeurs trop élevées (comme 20+), car elles ralentiront considérablement le processus de connexion.</li>
+</ul>
+</li>
+</ul>
+<h4 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>LOG_CHANNEL</code></strong> : Définit le canal de journalisation principal (fichier, stack, daily, etc.).</li>
+<li><strong><code>LOG_STACK</code></strong> : Permet d'activer une pile de canaux de journalisation.</li>
+<li><strong><code>LOG_DEPRECATIONS_CHANNEL</code></strong> : Canal pour capturer les messages d'obsolescence de code.</li>
+</ul>
+<h4 id="base-de-donnees">Base de données<a class="headerlink" href="#base-de-donnees" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>DB_CONNECTION</code></strong> : Type de base de données utilisé (<code>mysql</code>, <code>sqlite</code>, <code>pgsql</code>, etc.).</li>
+<li><strong><code>DB_HOST</code></strong> : Adresse du serveur de base de données.</li>
+<li><strong><code>DB_PORT</code></strong> : Port utilisé pour la connexion à la base de données.</li>
+<li><strong><code>DB_DATABASE</code></strong> : Nom de la base de données.</li>
+<li><strong><code>DB_USERNAME</code></strong> : Nom d'utilisateur pour se connecter à la base.</li>
+<li><strong><code>DB_PASSWORD</code></strong> : Mot de passe pour la connexion.</li>
+</ul>
+<h4 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>SESSION_DRIVER</code></strong> : Méthode de gestion des sessions (<code>file</code>, <code>cookie</code>, <code>database</code>, <code>redis</code>, etc.).</li>
+<li><strong><code>SESSION_LIFETIME</code></strong> : Durée de vie des sessions en minutes.</li>
+<li><strong><code>SESSION_ENCRYPT</code></strong> : Détermine si les sessions doivent être chiffrées (<code>true</code> ou <code>false</code>).</li>
+<li><strong><code>SESSION_PATH</code></strong> : Chemin où les cookies de session sont accessibles.<ul>
+<li>Définit le chemin sur lequel les cookies de session sont valides.</li>
+<li><strong>Exemple :</strong><ul>
+<li>Si la valeur est /app, les cookies ne seront accessibles que pour les URLs commençant par /app.</li>
+</ul>
+</li>
+<li>Par défaut, Laravel utilise /, ce qui signifie que les cookies sont valides pour toutes les routes de ton domaine.</li>
+</ul>
+</li>
+<li><strong><code>SESSION_DOMAIN</code></strong> : Domaine associé aux cookies de session.<ul>
+<li>Définit le domaine pour lequel les cookies de session sont valides.</li>
+<li><strong>Exemple :</strong><ul>
+<li>Si ton site est <code>example.com</code> et que tu as un sous-domaine <code>admin.example.com</code> :<ul>
+<li>Valeur par défaut (vide) : Les sessions sont spécifiques à chaque sous-domaine.</li>
+<li>Valeur <code>.example.com</code> : Partage les sessions entre <code>example.com</code> et <code>admin.example.com</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Utilité :</strong><ul>
+<li>Ces paramètres sont utiles pour gérer les sessions dans des applications multi-domaines ou ayant des chemins spécifiques nécessitant des restrictions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="diffusion-broadcast">Diffusion (Broadcast)<a class="headerlink" href="#diffusion-broadcast" title="Permanent link">&para;</a></h4>
+<p>Le broadcasting est un mécanisme utilisé pour envoyer des mises à jour en temps réel aux utilisateurs sans qu'ils aient besoin de recharger la page.</p>
+<p>Laravel propose le broadcasting pour diffuser des événements via des canaux comme <code>WebSocket</code>, <code>Pusher</code>, ou d'autres services compatibles.</p>
+<ul>
+<li>Exemple d’utilisation :<ul>
+<li><strong>Une application de chat</strong> : Quand un utilisateur envoie un message, tous les autres utilisateurs dans la même discussion voient ce message en temps réel.</li>
+<li><strong>Notifications en direct</strong> : Quand une commande est validée dans un e-commerce, l'administrateur est notifié en direct.</li>
+</ul>
+</li>
+<li>Configurations courantes :<ul>
+<li><strong><code>pusher</code></strong> : Utilise le service Pusher pour diffuser les événements.</li>
+<li><strong><code>log</code></strong> : Enregistre les événements dans les logs pour déboguer (utile pour tester sans configurer un service).</li>
+<li><strong><code>null</code></strong> : Désactive complètement le broadcasting.</li>
+</ul>
+</li>
+</ul>
+<p>Utilisé cette configuration uniquement si l'application a des fonctionnalités en temps réel.</p>
+<ul>
+<li><strong><code>BROADCAST_CONNECTION</code></strong> : Connexion utilisée pour le la diffusion (broadcasting) en temps réel.</li>
+</ul>
+<h4 id="filesystems">Filesystems<a class="headerlink" href="#filesystems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>FILESYSTEM_DISK</code></strong> : Disque utilisé par défaut pour le stockage de fichiers (<code>local</code>, <code>s3</code>, etc.).</li>
+</ul>
+<h4 id="file-dattente">File d'attente<a class="headerlink" href="#file-dattente" title="Permanent link">&para;</a></h4>
+<p>Les queues (files d'attente) permettent d'exécuter des tâches lourdes ou non urgentes en arrière-plan, au lieu de les exécuter immédiatement.</p>
+<ul>
+<li><strong>Exemples de tâches :</strong><ul>
+<li>Envoyer un email après une inscription.</li>
+<li>Générer un rapport PDF.</li>
+<li>Redimensionner une image.</li>
+</ul>
+</li>
+<li>Comment ça fonctionne ?<ul>
+<li>Lorsqu’une tâche est ajoutée à la file d’attente, elle est mise en attente jusqu'à ce qu'un worker (processus en arrière-plan) la traite. Cela évite de bloquer le serveur ou de ralentir l'application.</li>
+</ul>
+</li>
+<li>Configurations courantes :<ul>
+<li><strong><code>sync</code></strong> : Les tâches sont exécutées immédiatement (pas vraiment en file d’attente).</li>
+<li><strong><code>database</code></strong> : Les tâches sont stockées dans la base de données et exécutées par un worker.</li>
+<li><strong><code>redis</code></strong> : Utilise Redis pour une file d’attente rapide et performante.</li>
+</ul>
+</li>
+</ul>
+<p>Il est possible d'utiliser sync par défaut. Mais si l'application a beaucoup de tâches, passer à une file d’attente comme database ou redis est recommandé.</p>
+<ul>
+<li><strong><code>QUEUE_CONNECTION</code></strong> : Type de gestion des files d'attente (<code>sync</code>, <code>database</code>, <code>redis</code>, etc.).</li>
+</ul>
+<h4 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>CACHE_STORE</code></strong> : Méthode de stockage du cache (<code>file</code>, <code>redis</code>, <code>database</code>, etc.).</li>
+<li><strong><code>CACHE_PREFIX</code></strong> : Préfixe utilisé pour identifier les clés de cache.</li>
+</ul>
+<h4 id="memcached">Memcached<a class="headerlink" href="#memcached" title="Permanent link">&para;</a></h4>
+<p>Memcached est un système de gestion de cache en mémoire rapide, utilisé pour stocker des données temporaires (comme des résultats de requêtes) afin d'améliorer les performances en réduisant les appels à la base de données. Ce système est optionnel.</p>
+<ul>
+<li><strong><code>MEMCACHED_HOST</code></strong> : Adresse IP du serveur Memcached (si utilisé).</li>
+</ul>
+<h4 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Redis est une base de données en mémoire rapide et légère, souvent utilisée comme :<ul>
+<li><strong>Cache</strong> : Pour stocker des données temporairement.</li>
+<li><strong>File d'attente</strong> : Pour gérer les files d'attente des tâches (plus rapide que la base de données traditionnelle).</li>
+<li><strong>Session store</strong> : Pour gérer les sessions utilisateur.</li>
+</ul>
+</li>
+<li>Laravel peut fonctionner sans Redis, mais l'utiliser peut améliorer les performances, surtout dans les applications à grande échelle.</li>
+<li>
+<p><strong>Alternatives</strong> : Tu peux utiliser des systèmes de cache comme <code>file</code>, <code>database</code>, ou <code>Memcached</code>.</p>
+</li>
+<li>
+<p><strong><code>REDIS_CLIENT</code></strong> : Client Redis utilisé (<code>predis</code> ou <code>phpredis</code>).</p>
+</li>
+<li><strong><code>REDIS_HOST</code></strong> : Adresse du serveur Redis.</li>
+<li><strong><code>REDIS_PASSWORD</code></strong> : Mot de passe pour le serveur Redis (si requis).</li>
+<li><strong><code>REDIS_PORT</code></strong> : Port utilisé pour la connexion à Redis.</li>
+</ul>
+<h4 id="email">Email<a class="headerlink" href="#email" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>MAIL_MAILER</code></strong> : Service utilisé pour envoyer des emails (<code>smtp</code>, <code>mailgun</code>, <code>sendmail</code>, etc.).</li>
+<li><strong><code>MAIL_DRIVER</code></strong> : Ancien nom pour <code>MAIL_MAILER</code> (encore utilisé dans certaines versions).</li>
+<li><strong><code>MAIL_HOST</code></strong> : Adresse du serveur SMTP. (Exemple : <code>smtp.gmail.com</code> pour Gmail).</li>
+<li><strong><code>MAIL_PORT</code></strong> : Port utilisé pour le serveur SMTP. (Exemple : <code>465</code> pour Gmail).</li>
+<li><strong><code>MAIL_USERNAME</code></strong> : Identifiant pour le serveur SMTP.</li>
+<li><strong><code>MAIL_NAME</code></strong> : Nom de l’expéditeur (affiché dans les emails envoyés).</li>
+<li><strong><code>MAIL_PASSWORD</code></strong> : Mot de passe pour le serveur SMTP. Disponible sur Gmail via la propriété <code>Mot de passe d'application</code> disponible uniquement si l'authentification à deux facteurs est activée.</li>
+<li><strong><code>MAIL_ENCRYPTION</code></strong> : Méthode de cryptage pour les emails (<code>tls</code>, <code>ssl</code>).</li>
+<li><strong><code>MAIL_FROM_ADDRESS</code></strong> : Adresse email de l’expéditeur par défaut.</li>
+<li><strong><code>MAIL_FROM_NAME</code></strong> : Nom affiché pour l’expéditeur.</li>
+</ul>
+<h4 id="vitejs">ViteJS<a class="headerlink" href="#vitejs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>VITE_APP_NAME</code></strong> : Nom de l’application pour le système de bundling Vite.js.</li>
+</ul>
+<h3 id="integration-de-tailwind-css">Intégration de Tailwind CSS<a class="headerlink" href="#integration-de-tailwind-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installation de Tailwind CSS</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>tailwindcss<span class="w"> </span>postcss<span class="w"> </span>autoprefixer
+</code></pre></div>
+</li>
+<li>
+<p>Création du fichier de configuration de Tailwind CSS</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>tailwindcss<span class="w"> </span>init<span class="w"> </span>-p
+</code></pre></div>
+</li>
+<li>
+<p>Ajoutez le code suivant dans le fichier <code>tailwind.config.js</code></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/** @type {import(&#39;tailwindcss&#39;).Config} */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.blade.php&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.vue&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Ajoutez le code suivant dans le fichier <code>ressources/css/app.css</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">base</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">components</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">utilities</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">forms</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Vous pouvez compiler les fichiers CSS de Tailwind CSS en utilisant la commande suivante</p>
+<ul>
+<li>Vous pouvez voir ça comme l'activation du style Tailwind CSS. Il faudra refaire cette commande à chaque fois que vous ajouter un nouveau style dans votre projet</li>
+</ul>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div>
+</li>
+</ul>
+<h3 id="integration-de-livewire">Intégration de Livewire<a class="headerlink" href="#integration-de-livewire" title="Permanent link">&para;</a></h3>
+<h3 id="ajout-de-livewire-a-un-projet-laravel">Ajout de Livewire à un projet Laravel<a class="headerlink" href="#ajout-de-livewire-a-un-projet-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer LiveWire grâce à <code>Composer</code></p>
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>livewire/livewire
+</code></pre></div>
+</li>
+</ul>
+<h3 id="creation-dun-composant-livewire">Création d'un composant Livewire<a class="headerlink" href="#creation-dun-composant-livewire" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Éxécuter la commande suivante dans le dossier racine de votre projet Laravel pour créer un composant Livewire</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:livewire<span class="w"> </span>&lt;NomDuComposant&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

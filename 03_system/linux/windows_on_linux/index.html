@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Utilisation d'outils windows sous Linux - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../virtual_machine/virtual_machines/" class="dropdown-item">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../dual_boot/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../windows/windows_security/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/03_system/linux/windows_on_linux.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#execution-de-logiciel-windows-sur-linux" class="nav-link">Exécution de logiciel Windows sur Linux</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#presentation-des-differentes-solutions-pour-executer-des-logiciels-windows-sur-linux" class="nav-link">Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wine" class="nav-link">Wine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#proton" class="nav-link">Proton</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#playonlinux" class="nav-link">PlayOnLinux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lutris" class="nav-link">Lutris</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-league-of-legends-a-laide-de-lutris-linux" class="nav-link">Installation de League of Legends à l'aide de Lutris - Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="execution-de-logiciel-windows-sur-linux">Exécution de logiciel Windows sur Linux<a class="headerlink" href="#execution-de-logiciel-windows-sur-linux" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#exécution-de-logiciel-windows-sur-linux">Exécution de logiciel Windows sur Linux</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#présentation-des-différentes-solutions-pour-exécuter-des-logiciels-windows-sur-linux">Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux</a></li>
+<li><a href="#wine">Wine</a><ul>
+<li><a href="#installation-de-wine---linux">Installation de Wine - Linux</a></li>
+<li><a href="#configurer-de-wine-comme-programme-par-défaut-pour-charger-les-applications-windows">configurer de Wine comme programme par défaut pour charger les applications Windows</a></li>
+</ul>
+</li>
+<li><a href="#proton">Proton</a></li>
+<li><a href="#playonlinux">PlayOnLinux</a></li>
+<li><a href="#lutris">Lutris</a></li>
+<li><a href="#installation-de-league-of-legends-à-laide-de-lutris---linux">Installation de League of Legends à l'aide de Lutris - Linux</a><ul>
+<li><a href="#prérequit">Prérequit</a></li>
+<li><a href="#installation-de-wine">Installation de Wine</a><ul>
+<li><a href="#utilisation-dapplications-windows-sur-ubuntu-grâce-à-wine">Utilisation d'applications Windows sur Ubuntu grâce à Wine</a></li>
+</ul>
+</li>
+<li><a href="#installtion-de-lutris">Installtion de Lutris</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="presentation-des-differentes-solutions-pour-executer-des-logiciels-windows-sur-linux">Présentation des différentes solutions pour exécuter des logiciels Windows sur Linux<a class="headerlink" href="#presentation-des-differentes-solutions-pour-executer-des-logiciels-windows-sur-linux" title="Permanent link">&para;</a></h2>
+<p>Pour exécuter des logiciels Windows sur Linux il existe plusieurs solutions</p>
+<ul>
+<li>Wine</li>
+<li>Lutris</li>
+<li>Proton</li>
+<li>PlayOnLinux</li>
+</ul>
+<h2 id="wine">Wine<a class="headerlink" href="#wine" title="Permanent link">&para;</a></h2>
+<p>Wine est un logiciel qui permet de traduire les appels systèmes de Windows en appels systèmes POSIX, permettant ainsi d'exécuter des applications Windows sous Linux.</p>
+<p>Il est fortement recommandé parce qu'il est très efficace, stable et permet d'exécuter des logiciels Windows et pas uniquement des jeux. Il est plus difficile à configurer que Proton mais il est plus stable et permet d'exécuter des logiciels non Steam de façon plus sure.</p>
+<h3 id="installation-de-wine-linux">Installation de Wine - Linux<a class="headerlink" href="#installation-de-wine-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet <code>wine</code> depuis le dépot <code>apt</code></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wine
+</code></pre></div>
+</li>
+<li>
+<p>Installer le paquet <code>wine32</code> depuis le dépot <code>apt</code> ainsi que l'architecture 32 bits <code>i386</code></p>
+<ul>
+<li>Ce paquet est nécessaire pour le bon fonctionnement de wine, même si vous avez un système 64 bits et n'utiliser que des applications 64 bits</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>--add-architecture<span class="w"> </span>i386<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>wine32:i386
+</code></pre></div>
+</li>
+<li>
+<p>Tester le bon fonctionnement de wine en installant le logiciel <code>notepad++</code> :</p>
+<ul>
+<li>
+<p>Télécharger le fichier d'installation de notepad++</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8/npp.8.0.Installer.x64.exe
+</code></pre></div>
+</li>
+<li>
+<p>Installer notepad++ avec wine</p>
+<div class="highlight"><pre><span></span><code>wine<span class="w"> </span>npp.8.0.Installer.x64.exe
+</code></pre></div>
+</li>
+<li>
+<p>Suiver les instructions d'installation de notepad++</p>
+</li>
+<li>Créer un raccourci de notepad++ sur le bureau</li>
+<li>Pour que le raccourci fonctionne, il faut faire clique droit dessus &gt; '<code>Autoriser l'exécution</code>'</li>
+</ul>
+</li>
+</ul>
+<h3 id="configurer-de-wine-comme-programme-par-defaut-pour-charger-les-applications-windows">configurer de Wine comme programme par défaut pour charger les applications Windows<a class="headerlink" href="#configurer-de-wine-comme-programme-par-defaut-pour-charger-les-applications-windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer un lien symbolique de <code>wine.desktop</code> dans le dossier <code>/usr/share/applications</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/usr/share/doc/wine/examples/wine.desktop<span class="w"> </span>/usr/share/applications
+</code></pre></div>
+</li>
+<li>
+<p>Faite un clique droit sur l'application Windows que vous voulez lancer &gt; Ouvrir avec &gt; Autre application &gt; Wine - Chargeur de programmes Windows</p>
+<ul>
+<li>Penser à bien cocher la case '<code>Toujours utiliser pour ce type de fichier</code>'</li>
+</ul>
+</li>
+<li>Vous pouvez maintenant lancer l'application Windows en double cliquant dessus</li>
+</ul>
+<h2 id="proton">Proton<a class="headerlink" href="#proton" title="Permanent link">&para;</a></h2>
+<p>Proton est un outil de compatibilité pour exécuter des jeux Windows sur Linux via Steam. Proton est développé par Valve et basé sur Wine et d'autres composants.</p>
+<p>Proton est très efficace et stable mais permet uniquement d'exécuter des jeux Steam. Il est tout de même possible d'exécuter des jeux non Steam avec Proton Expérimental mais cela n'est pas recommandé car c'est encore en développement et ne fonctionne pas toujours.</p>
+<h2 id="playonlinux">PlayOnLinux<a class="headerlink" href="#playonlinux" title="Permanent link">&para;</a></h2>
+<p>PlayOnLinux est un logiciel qui permet d'installer et d'utiliser facilement de nombreux jeux et logiciels conçus pour fonctionner exclusivement sous Windows.</p>
+<h2 id="lutris">Lutris<a class="headerlink" href="#lutris" title="Permanent link">&para;</a></h2>
+<p>Lutris est une plate-forme de jeu open source pour Linux. Il est conçu pour gérer l’installation et la configuration des jeux et pour fournir une interface unifiée pour jouer à des jeux à partir de plusieurs sources.</p>
+<p>Lutris peut gérer des jeux provenant de diverses sources, notamment Steam, GOG et Humble Bundle. Il peut également gérer les installations de jeux personnalisées, par exemple à partir d'un fichier ISO.</p>
+<h2 id="installation-de-league-of-legends-a-laide-de-lutris-linux">Installation de League of Legends à l'aide de Lutris - Linux<a class="headerlink" href="#installation-de-league-of-legends-a-laide-de-lutris-linux" title="Permanent link">&para;</a></h2>
+<p><strong>L'installation de League of Legends à l'aide de Lutris n'a pas fonctionné pour moi, j'ai donc fini pas abandonner l'idée de jouer à League of Legends sur Linux</strong></p>
+<ul>
+<li>Installer lutris</li>
+<li>Installer wine</li>
+<li>Installer winetricks</li>
+<li>suivre les instructions d'installation de lutris</li>
+<li>Erreur, impossible de lancer le fichier <code>explorer.exe</code></li>
+</ul>
+<h3 id="prerequit">Prérequit<a class="headerlink" href="#prerequit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Avoir les droits d'administration</li>
+<li>Vous n'avez même pas besoin d'installer Wine, Lutris s'en charge pour vous</li>
+</ul>
+<h3 id="installation-de-wine">Installation de Wine<a class="headerlink" href="#installation-de-wine" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wine
+</code></pre></div>
+</li>
+</ul>
+<h4 id="utilisation-dapplications-windows-sur-ubuntu-grace-a-wine">Utilisation d'applications Windows sur Ubuntu grâce à Wine<a class="headerlink" href="#utilisation-dapplications-windows-sur-ubuntu-grace-a-wine" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Installer et configurer <code>Wine</code></li>
+<li>Installer l'exécutable de l'application Windows</li>
+<li>
+<p>Lancer l'exécutable avec <code>Wine</code></p>
+<div class="highlight"><pre><span></span><code>wine<span class="w"> </span>&lt;nom_du_fichier&gt;.exe
+</code></pre></div>
+</li>
+<li>
+<p>Vous pouvez maintenant utiliser l'application Windows sur Ubuntu</p>
+</li>
+</ul>
+<h3 id="installtion-de-lutris">Installtion de Lutris<a class="headerlink" href="#installtion-de-lutris" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lutris
+</code></pre></div>
+</li>
+<li>
+<p>Ouvrez Lutris</p>
+</li>
+<li>Cliquer sur le bouton '<code>+</code>' en haut à gauche de la fenêtre</li>
+<li>Cliquer sur '<code>Rechercher des installateurs sur le site de Lutris</code>'</li>
+<li>Chercher "<code>League of Legends</code>"</li>
+<li>Cliquer sur '<code>League of Legends</code>' avec en dessous '<code>2009, Mac, Windows</code>'</li>
+<li>Cliquer sur '<code>Installer</code>'</li>
+<li>Cliquer sur '<code>Continuer</code>'</li>
+<li>
+<p>Patienter pendant l'installation, cela peut prendre beaucoup de temps</p>
+</li>
+<li>
+<p>OSerror</p>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+/* Variables personnalisées */
+:root {
+    /* Nav link color */
+    --bs-link-color: #ab2222;
+    --bs-link-color-rgb: 171, 34, 34;
+    --bs-link-hover-color: #721414;
+    --bs-link-hover-color-rgb: 114, 20, 20;
+    --bs-primary: #721414;
+    --bs-primary-rgb: 114, 20, 20;
+
+    --bs-primary-dark: #5B1010;
+    --bs-dropdown-link-active-bg: #5B1010;
+    --bs-dropdown-link-hover-bg: #5B1010;
+}
+
+.navbar.bg-primary {
+    background-image: linear-gradient(var(--bs-primary-dark), var(--bs-primary-dark));
+}
+
+.dropdown-item.open {
+    background-color: var(--bs-dropdown-link-active-bg);
+}

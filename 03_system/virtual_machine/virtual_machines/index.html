@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="{'default_mode': 'auto', 'disable_switch': False}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Floris Robart">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Machines virtuels avec VirtualBox - Documentation Floris</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Documentation Floris</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Meta & règles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../00_meta/all_project/" class="dropdown-item">Tous mes projets</a>
+</li>
+                                    
+<li>
+    <a href="../../../00_meta/documentation_rules/" class="dropdown-item">Règles de documentation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Développement</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestion de projets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/project_management/project_management_tools/" class="dropdown-item">Outils de gestion de projets</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Database</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/database/postgresql/" class="dropdown-item">PostgreSQL</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/database/migrations_and_seeders_by_tanvir/" class="dropdown-item">Migration Laravel</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Back-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/backend/java/" class="dropdown-item">Java</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/create_api_typescript/" class="dropdown-item">TypeScript (Node.js/Express)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/laravel/" class="dropdown-item">Laravel</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/symfony/" class="dropdown-item">Symfony</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/backend/codeigniter/" class="dropdown-item">CodeIgniter</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Front-end</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/frontend/flutter/" class="dropdown-item">Flutter</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/frontend/react/" class="dropdown-item">React</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/deployment/production_with_docker/" class="dropdown-item">Mise en production d'une application dockerisée</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/debian_package_creation/" class="dropdown-item">Creation de packets Debian</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/open_source_licensing_gnu_gpl/" class="dropdown-item">Mise sous licence d'un projet open source</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/deployment/php_web_server_creation/" class="dropdown-item">Création d'un serveur web PHP</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres*</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../01_development/others/clean_code/" class="dropdown-item">Clean code (Codé proprement)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_micro_service/" class="dropdown-item">Developpement web en micro-services (Recommandé)</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/coding_best_practices_by_chatgpt/" class="dropdown-item">Bonne pratiques de développement by ChatGPT</a>
+</li>
+            
+<li>
+    <a href="../../../01_development/others/web_development_php/" class="dropdown-item">Developpement web en PHP</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Applications</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../02_applications/installation_usage/" class="dropdown-item">Installation d'applications Linux divers</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/docker_installation/" class="dropdown-item">Installation de Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ssh/" class="dropdown-item">SSH</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/vscode/" class="dropdown-item">Visual Studio Code</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/gnome_shell_connect/" class="dropdown-item">Gnome Shell Connect (GSC)</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/ventoy/" class="dropdown-item">Ventoy</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/hp_printer_connection/" class="dropdown-item">Connection d'une imprimante HP</a>
+</li>
+                                    
+<li>
+    <a href="../../../02_applications/thunderbird_iut_le_havre/" class="dropdown-item">Configuration de Thunderbird pour l'IUT du Havre</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Systèmes</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Server</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../server/server_creation_2026/" class="dropdown-item">Création d'un serveur (2026)</a>
+</li>
+            
+<li>
+    <a href="../../server/server_creation_2023/" class="dropdown-item">Création d'un serveur (Obsolète - 2023)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../linux/dual_boot/" class="dropdown-item">Création d'un dual boot</a>
+</li>
+            
+<li>
+    <a href="../../linux/windows_on_linux/" class="dropdown-item">Utilisation d'outils windows sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../windows/windows_security/" class="dropdown-item">Contournement des sécurités Windows</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Android</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../android/flashing_android_device/" class="dropdown-item">Flashing d'un appareil Android</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machines virtuelles</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Machines virtuels avec VirtualBox</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Autres</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../others/general_manipulation/" class="dropdown-item">Resolution de problèmes divers sous Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entrepreneuriat</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="dropdown-item">Creation d'une entreprise pour le developpement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Electronique</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Aucune documentation pour le moment." class="dropdown-item">Aucune documentation pour le moment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Autres</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../98_others/creation_page_don_telethon/" class="dropdown-item">Page don Téléthon</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Rechercher
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../android/flashing_android_device/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Précédent
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../others/general_manipulation/" class="nav-link">
+                                    Suivant <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/FloRobart/Documentations/edit/master/docs/03_system/virtual_machine/virtual_machines.md" class="nav-link">Editer dans Florobart/Documentation
+                                    </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table des matières">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systemes-dexploitation" class="nav-link">Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-des-matieres" class="nav-link">Table des matières</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-de-virtualbox" class="nav-link">Installation de VirtualBox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox" class="nav-link">Création d'une machine virtuel Ubuntu desktop dans VirtualBox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-windows-11" class="nav-link">Création d'une machine virtuel Windows 11</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-macos-ventura" class="nav-link">Création d'une machine virtuel MacOS Ventura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-mac-os-x-mountain-lion" class="nav-link">Création d'une machine virtuel Mac OS X Mountain Lion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-ubuntu-server-1604" class="nav-link">Création d'une machine virtuel Ubuntu server 16.04</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creation-dune-machine-virtuel-debian-12" class="nav-link">Création d'une machine virtuel Debian 12</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#licence" class="nav-link">Licence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systemes-dexploitation">Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation<a class="headerlink" href="#installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systemes-dexploitation" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#installation-et-configuration-de-virtualbox-de-machines-virtuel-et-de-systèmes-dexploitation">Installation et configuration de VirtualBox, de machines virtuel et de systèmes d'exploitation</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#installation-de-virtualbox">Installation de VirtualBox</a></li>
+<li><a href="#création-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox">Création d'une machine virtuel Ubuntu desktop dans VirtualBox</a><ul>
+<li><a href="#création-de-la-machine-virtuel">Création de la machine virtuel</a></li>
+<li><a href="#création-du-profil-utilisateur">Création du profil utilisateur</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel">Configuration matériel de la machine virtuel</a></li>
+<li><a href="#installer-les-additions-invités-après-linstallation-de-la-vm">Installer les additions invités après l'installation de la VM</a></li>
+<li><a href="#activer-le-copier-coller-entre-lhôte-et-la-vm">Activer le copier coller entre l'hôte et la VM</a></li>
+</ul>
+</li>
+<li><a href="#création-dune-machine-virtuel-windows-11">Création d'une machine virtuel Windows 11</a><ul>
+<li><a href="#création-de-la-machine-virtuel-windows-11">Création de la machine virtuel Windows 11</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel-windows-11">Configuration matériel de la machine virtuel Windows 11</a></li>
+<li><a href="#installation-et-configuration-de-windows-1011">Installation et configuration de Windows 10/11</a></li>
+<li><a href="#installer-les-additions-invités-après-linstallation-de-la-vm-windows-11">Installer les additions invités après l'installation de la VM Windows 11</a></li>
+<li><a href="#activer-le-copier-coller-entre-lhôte-et-la-vm-windows-11">Activer le copier coller entre l'hôte et la VM Windows 11</a></li>
+</ul>
+</li>
+<li><a href="#création-dune-machine-virtuel-macos-ventura">Création d'une machine virtuel MacOS Ventura</a><ul>
+<li><a href="#création-de-la-machine-virtuel-macos-ventura">Création de la machine virtuel MacOS Ventura</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel-macos-ventura">Configuration matériel de la machine virtuel MacOS Ventura</a></li>
+</ul>
+</li>
+<li><a href="#création-dune-machine-virtuel-mac-os-x-mountain-lion">Création d'une machine virtuel Mac OS X Mountain Lion</a><ul>
+<li><a href="#création-de-la-machine-virtuel-mac-os-x-mountain-lion">Création de la machine virtuel Mac OS X Mountain Lion</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel-mac-os-x-mountain-lion">Configuration matériel de la machine virtuel Mac OS X Mountain Lion</a></li>
+</ul>
+</li>
+<li><a href="#création-dune-machine-virtuel-ubuntu-server-1604">Création d'une machine virtuel Ubuntu server 16.04</a><ul>
+<li><a href="#création-de-la-machine-virtuel-ubuntu-server-1604">Création de la machine virtuel Ubuntu server 16.04</a></li>
+<li><a href="#pré-configuration-du-système-dexploitation-si-vous-navez-pas-cocher-la-case-skip-unattended-installation-uniquement">Pré-configuration du système d'exploitation (si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>' uniquement)</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel-ubuntu-server-1604">Configuration matériel de la machine virtuel Ubuntu server 16.04</a></li>
+<li><a href="#configuration-logiciel-de-ubuntu-server-1604-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement">configuration logiciel de Ubuntu server 16.04 (si vous avez cocher la case '<code>Skip Unattended Installation</code>' uniquement)</a></li>
+<li><a href="#instruction-tirer-de-linstallation-échoué-de-ubuntu-server-2204-sur-une-machine-physique">Instruction tirer de l'installation échoué de Ubuntu server 22.04 sur une machine physique</a><ul>
+<li><a href="#configurer-la-connexion-réseau">Configurer la connexion réseau</a></li>
+<li><a href="#connexion-au-réseau-wifi">Connexion au réseau (Wifi)</a></li>
+<li><a href="#suite-de-la-configuration">Suite de la configuration</a></li>
+<li><a href="#création-de-lutilisateur">Création de l'utilisateur</a></li>
+<li><a href="#configuration-ssh">Configuration SSH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#création-dune-machine-virtuel-debian-12">Création d'une machine virtuel Debian 12</a><ul>
+<li><a href="#création-de-la-machine-virtuel-debian-12">Création de la machine virtuel Debian 12</a></li>
+<li><a href="#configuration-matériel-de-la-machine-virtuel-debian-12">Configuration matériel de la machine virtuel Debian 12</a><ul>
+<li><a href="#configuration-du-processeur-de-la-mémoire-ram-et-du-bios">Configuration du processeur, de la mémoire RAM et du BIOS</a></li>
+<li><a href="#configuration-du-disque-dur">Configuration du disque dur</a></li>
+</ul>
+</li>
+<li><a href="#configuration-logiciel-de-debian-12-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement">configuration logiciel de Debian 12 (si vous avez cocher la case '<code>Skip Unattended Installation</code>' uniquement)</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-virtualbox">Installation de VirtualBox<a class="headerlink" href="#installation-de-virtualbox" title="Permanent link">&para;</a></h2>
+<p><a href="../../../02_applications/installation_usage/#installation-de-virtualbox-sur-linux-ubuntu">Installation de VirtualBox</a></p>
+<h2 id="creation-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox">Création d'une machine virtuel Ubuntu desktop dans VirtualBox<a class="headerlink" href="#creation-dune-machine-virtuel-ubuntu-desktop-dans-virtualbox" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel">Création de la machine virtuel<a class="headerlink" href="#creation-de-la-machine-virtuel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso d'Ubuntu desktop sur :
+    &gt; <a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Téléchargements/ubuntu-22.04.2-desktop-amd64.iso<span class="w"> </span>/OS/Mon_Drive/ISO/ubuntu-22.04.2-desktop-amd64.iso
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>Ubuntu desktop 22.04 LTS</code>"</li>
+<li>Type : '<code>Linux</code>'</li>
+<li>Version : '<code>Ubuntu (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, c'est à dire le dossier <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso d'Ubuntu desktop téléchargé précédement</li>
+<li>laisser la case à cocher '<code>Skip Unattended Installation</code>' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="creation-du-profil-utilisateur">Création du profil utilisateur<a class="headerlink" href="#creation-du-profil-utilisateur" title="Permanent link">&para;</a></h3>
+<p>Si vous avez cocher la case '<code>Skip Unattended Installation</code>' vous pouvez passer cette étape</p>
+<p><strong>Attention, il est important de modifier ces valeurs car les valeurs par défaut créeront un utilisateur sans accès sudo</strong></p>
+<ul>
+<li>Entrer les informations suivantes :<ul>
+<li>Username : "<code>floris</code>"</li>
+<li>Passeword : "<code>floris</code>"</li>
+<li>Repeat Passeword : "<code>floris</code>"</li>
+<li>Hostname : "<code>floris-vm-ubuntu</code>" <strong>Attention à ne pas mettre d'espace ni de caractères spéciaux dans ce champ</strong></li>
+<li>Domain name : "<code>floris.virtualbox.org</code>"</li>
+</ul>
+</li>
+<li>Cocher la case '<code>Guest Additions</code>' pour installer automatiquement les additions invités</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel">Configuration matériel de la machine virtuel<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 4096 MB mais dans mon cas j'ai mis "<code>6000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Il est recommandé d'en mettre plusieur pour améliorer la vitesse de calcule et il ne faut surtout pas mettre plus de la moitié des CPU de la machine hôte sous risque de problème de conflit entre la VM et la machine hôte. Dans mon cas j'ai mis "<code>3</code>" CPU.</li>
+<li>laisser la case à cocher '<code>Enable EFI (Special OSes only)</code>' décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner '<code>Create a virtual hard disk now</code>'<ul>
+<li>en français : '<code>Créer un disque dur virtuel maintenant</code>'</li>
+</ul>
+</li>
+<li>Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "<code>30</code>" Gio</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>laisser les deux autres cases à cocher décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Ubuntu desktop</li>
+</ul>
+<h3 id="installer-les-additions-invites-apres-linstallation-de-la-vm">Installer les additions invités après l'installation de la VM<a class="headerlink" href="#installer-les-additions-invites-apres-linstallation-de-la-vm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Démarrer la machine virtuel sur laquel installer les additions invités</li>
+<li>Cliquer sur '<code>Périphériques</code>' &gt; '<code>Insérer l'image CD des aditions invité...</code>'</li>
+<li>Cliquer sur le logo de CD puis executer le script <code>autorun.sh</code></li>
+<li>Attender plusieurs minute jusqu'à se que le message <code>Press Return to close this window...</code> apparaisse</li>
+</ul>
+<h3 id="activer-le-copier-coller-entre-lhote-et-la-vm">Activer le copier coller entre l'hôte et la VM<a class="headerlink" href="#activer-le-copier-coller-entre-lhote-et-la-vm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Arrêter la machine virtuelle si elle est en cours de fonctionnement (elle ne doit pas être en mode suspension, donc il ne faut pas sélectionner '<code>Sauvegarder l'état de la machine</code>' mais '<code>Eteindre la machine</code>')</li>
+<li>Sélectionner la machine virtuelle pour laquelle vous voulez activer le copier coller</li>
+<li>Cliquez sur '<code>configuration</code>' avec l’icône d'engrenage</li>
+<li>Séléctionner '<code>Général</code>' &gt; '<code>Avancé</code>'</li>
+<li>Pour les champs '<code>Presse-papiers partagée</code>' et '<code>glisser-déposer</code>' sélectionner l'option que vous voulez, dans mon cas j'ai sélectionner '<code>Hôte vers invité</code>' pour les deux</li>
+</ul>
+<h2 id="creation-dune-machine-virtuel-windows-11">Création d'une machine virtuel Windows 11<a class="headerlink" href="#creation-dune-machine-virtuel-windows-11" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel-windows-11">Création de la machine virtuel Windows 11<a class="headerlink" href="#creation-de-la-machine-virtuel-windows-11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso de Windows sur :
+    &gt; <a href="https://www.microsoft.com/fr-fr/software-download">https://www.microsoft.com/fr-fr/software-download</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mv<span class="w"> </span>~/Téléchargements/Win11_22H2_French_x64v2.iso<span class="w"> </span>/OS/Mon_Drive/ISO/Win11_22H2_French_x64v2.iso
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>Windows 11</code>"</li>
+<li>Type : '<code>Microsoft Windows</code>'</li>
+<li>Version : '<code>Windows 11 (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, c'est à dire le dossier <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso de windows 11 téléchargé précédement</li>
+<li>laisser la case à cocher '<code>Skip Unattended Installation</code>' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel-windows-11">Configuration matériel de la machine virtuel Windows 11<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel-windows-11" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 4096 MB mais dans mon cas j'ai mis "<code>8000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Il est recommandé d'en mettre plusieur pour améliorer la vitesse de calcule et il ne faut surtout pas mettre plus de la moitié des CPU de la machine hôte sous risque de problème de conflit entre la VM et la machine hôte. Dans mon cas j'ai mis "<code>3</code>" CPU.</li>
+<li>laisser la case à cocher '<code>Enable EFI (Special OSes only)</code>' cocher</li>
+<li>Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 50 Gio et dans mon cas j'ai mis "<code>30</code>" Gio mais il reste qu'environs 6,25 Go de libre après l'installation de Windows 11</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>laisser les deux autres cases à cocher décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Windows 10/11.</li>
+</ul>
+<h3 id="installation-et-configuration-de-windows-1011">Installation et configuration de Windows 10/11<a class="headerlink" href="#installation-et-configuration-de-windows-1011" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Une fenêtre s'ouvre avec le message suivant : <code>Press any key to boot from CD or DVD...</code></li>
+<li>Appuyer sur une touche du clavier pour démarrer l'installation de Windows 11<ul>
+<li>Si vous n'appuyer pas sur une touche du clavier, un message d'erreur sera afficher. Appuyer sur '<code>Ok</code>' (ou sur '<code>Redémarrer</code>'). la machine virtuel va redémarrer, patienter quelque minute puis vous devrez répéter l'étape précédente</li>
+</ul>
+</li>
+<li>Sélectionner les information de langage suivant :<ul>
+<li>Langue à installer : '<code>Français (France)</code>'</li>
+<li>Format horaire et monétaire : '<code>Français (France)</code>'</li>
+<li>Clavier ou méthode d'entré : '<code>Français</code>'</li>
+</ul>
+</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Cliquer sur '<code>Installer maintenant</code>'</li>
+<li>Une clé de produit est demander, pour contourner cette étape il faut ouvrir un invite de commande en appuyant sur :
+    &gt; Maj + F10</li>
+<li>
+<p>Dans l'invite de commande saisir la commande suivante :</p>
+<div class="highlight"><pre><span></span><code>    regedit
+</code></pre></div>
+</li>
+<li>
+<p>Une fenêtre <code>Éditeur du Registre</code> s'ouvre, selectionner <code>HKEY_LOCAL_MACHINE\SYSTEM\Setup</code></p>
+</li>
+<li>Clique droit sur le dossier <code>Setup</code> puis cliquer sur '<code>Nouveau</code>' &gt; '<code>Clé</code>'</li>
+<li>Nommer la clé "<code>LabConfig</code>"</li>
+<li>Clique droit sur la clé "<code>LabConfig</code>" puis cliquer sur '<code>Nouveau</code>' &gt; '<code>Valeur DWORD (32 bits)</code>'</li>
+<li>Nommer la valeur "<code>BypassTPMCheck</code>"</li>
+<li>Double cliquer sur la valeur '<code>BypassTPMCheck</code>' puis saisir "<code>1</code>" dans le champ <code>Données de la valeur</code></li>
+<li>Clique droit sur la clé "<code>LabConfig</code>" puis cliquer sur '<code>Nouveau</code>' &gt; '<code>Valeur DWORD (32 bits)</code>'</li>
+<li>Nommer la valeur "<code>BypassSecureBootCheck</code>"</li>
+<li>Double cliquer sur la valeur '<code>BypassSecureBootCheck</code>' puis saisir "<code>1</code>" dans le champ <code>Données de la valeur</code></li>
+<li>Clique droit sur la clé "<code>LabConfig</code>" puis cliquer sur '<code>Nouveau</code>' &gt; '<code>Valeur DWORD (32 bits)</code>'</li>
+<li>Nommer la valeur "<code>BypassRamCheck</code>"</li>
+<li>Double cliquer sur la valeur '<code>BypassRamCheck</code>' puis saisir "<code>1</code>" dans le champ <code>Données de la valeur</code></li>
+<li>Vous devriez avoir ceci :
+    <img alt="&quot;Image editeur du registre windows 11&quot;" src="../../../images/virtualbox_installation_windows_11.png" title="Image de l'éditeur du registre de Windows 11" /></li>
+<li>Fermez l'éditeur du registre et l'invite de commande pour continuer l'installation de Windows 11</li>
+<li>Cliquer sur '<code>Je n'ai pas de clé de produit (Product Key)</code>'</li>
+<li>Sélectionner la version de Windows 11 que vous voulez installer, dans mon cas j'ai sélectionner '<code>Windows 11 Famille</code>'</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Accepter les termes du contrat de licence logiciel Microsoft.</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner le type d'installation que vous voulez effectuer (dans mon cas j'ai sélectionner '<code>Personnalisée : installer uniquement Windows (avancé)</code>') :<ul>
+<li>'<code>Personnalisée : installer uniquement Windows (avancé)</code>' : Permet de choisir l'emplacement d'installation de Windows 11</li>
+<li>'<code>Mise à niveau : installer Windows et conserver les fichiers, les paramètres et les applications</code>' : Permet de mettre à jour Windows 10 vers Windows 11</li>
+</ul>
+</li>
+<li>Sélectionner le disque dur virtuel sur lequel vous voulez installer Windows 11 (Normalement il n'y a qu'un seul disque dur virtuel puisqu'on en a créer qu'un seul)</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Patienter le temps que Windows 11 s'installe</li>
+<li>Windows 11 va démarrer, suivez les instructions pour configurer Windows 11</li>
+<li>Nommer votre ordinateur virtuel, dans mon cas "<code>floris-vbox</code>"</li>
+<li>Créer un code condidentiel : "<code>floris</code>"</li>
+</ul>
+<h3 id="installer-les-additions-invites-apres-linstallation-de-la-vm-windows-11">Installer les additions invités après l'installation de la VM Windows 11<a class="headerlink" href="#installer-les-additions-invites-apres-linstallation-de-la-vm-windows-11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Démarrer la machine virtuel sur laquel installer les additions invités</li>
+<li>Cliquer sur '<code>Périphériques</code>' &gt; '<code>Insérer l'image CD des aditions invité...</code>'</li>
+<li>Ouvrer l'explorateur de fichier et aller dans <code>Lecteur de CD (D:) VirtualBox Guest Additions</code></li>
+<li>Double cliquer sur le fichier <code>VBoxWindowsAdditions.exe</code></li>
+<li>Suiver les instructions d'installation</li>
+<li>Cliquer sur '<code>Installer</code>'</li>
+<li>Cliquer sur '<code>Redémarrer maintenant</code>'</li>
+<li>Si le redimensionnement de l'écran ne fonctionne pas, il faut activer le '<code>Mode intégré</code>' puis le désactiver avec le racourci clavier :
+    &gt; Ctrl (droite) + C</li>
+</ul>
+<h3 id="activer-le-copier-coller-entre-lhote-et-la-vm-windows-11">Activer le copier coller entre l'hôte et la VM Windows 11<a class="headerlink" href="#activer-le-copier-coller-entre-lhote-et-la-vm-windows-11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Arrêter la machine virtuelle si elle est en cours de fonctionnement (elle ne doit pas être en mode suspension, donc il ne faut pas sélectionner '<code>Sauvegarder l'état de la machine</code>' mais '<code>Eteindre la machine</code>')</li>
+<li>Sélectionner la machine virtuelle pour laquelle vous voulez activer le copier coller</li>
+<li>Cliquez sur '<code>configuration</code>' avec l’icône d'engrenage</li>
+<li>Séléctionner '<code>Général</code>' &gt; '<code>Avancé</code>'</li>
+<li>Pour les champs '<code>Presse-papiers partagée</code>' et '<code>glisser-déposer</code>' sélectionner l'option que vous voulez, dans mon cas j'ai sélectionner '<code>Hôte vers invité</code>' pour les deux</li>
+</ul>
+<h2 id="creation-dune-machine-virtuel-macos-ventura">Création d'une machine virtuel MacOS Ventura<a class="headerlink" href="#creation-dune-machine-virtuel-macos-ventura" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel-macos-ventura">Création de la machine virtuel MacOS Ventura<a class="headerlink" href="#creation-de-la-machine-virtuel-macos-ventura" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso de MacOS Ventura sur :
+    &gt; <a href="https://www.mediafire.com/file/dcji26zay7s3p8r/macOS+Ventura+ISO+for+VM+by+techrechard.com.iso/file">https://www.mediafire.com/file/dcji26zay7s3p8r/macOS+Ventura+ISO+for+VM+by+techrechard.com.iso/file</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mv<span class="w"> </span>~/Téléchargements/macOS_Ventura_ISO_for_VM.iso<span class="w"> </span>/OS/Mon_Drive/ISO/macOS_Ventura_ISO_for_VM.iso
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>MacOS Ventura</code>"</li>
+<li>Type : '<code>Mac OS X</code>'</li>
+<li>Version : '<code>Mac OS X (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, c'est à dire le dossier <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso de MacOS Ventura téléchargé précédement</li>
+<li>laisser la case à cocher '<code>Skip Unattended Installation</code>' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel-macos-ventura">Configuration matériel de la machine virtuel MacOS Ventura<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel-macos-ventura" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 4096 MB mais dans mon cas j'ai mis "<code>6000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Il est recommandé d'en mettre plusieur pour améliorer la vitesse de calcule et il ne faut surtout pas mettre plus de la moitié des CPU de la machine hôte sous risque de problème de conflit entre la VM et la machine hôte. Dans mon cas j'ai mis "<code>3</code>" CPU.</li>
+<li>laisser la case à cocher '<code>Enable EFI (Special OSes only)</code>' décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner '<code>Create a virtual hard disk now</code>'<ul>
+<li>en français : '<code>Créer un disque dur virtuel maintenant</code>'</li>
+</ul>
+</li>
+<li>Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "<code>30</code>" Gio</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>
+<p>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Ubuntu desktop</p>
+</li>
+<li>
+<p><strong>Echech de l'installation de MacOS Ventura</strong></p>
+</li>
+</ul>
+<h2 id="creation-dune-machine-virtuel-mac-os-x-mountain-lion">Création d'une machine virtuel Mac OS X Mountain Lion<a class="headerlink" href="#creation-dune-machine-virtuel-mac-os-x-mountain-lion" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel-mac-os-x-mountain-lion">Création de la machine virtuel Mac OS X Mountain Lion<a class="headerlink" href="#creation-de-la-machine-virtuel-mac-os-x-mountain-lion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso de Mac OS X Mountain Lion sur :
+    &gt; <a href="https://www.malekal.com/telecharger-iso-macos-x/">https://www.malekal.com/telecharger-iso-macos-x/</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mv<span class="w"> </span>~/Téléchargements/MAC_OS_X_Mountain_Lion_10.8.5_french.iso<span class="w"> </span>/OS/Mon_Drive/ISO/MAC_OS_X_Mountain_Lion_10.8.5_french.iso
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>MacOS Ventura</code>"</li>
+<li>Type : '<code>Mac OS X</code>'</li>
+<li>Version : '<code>Mac OS X 10.8 Mountain Lion (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, c'est à dire le dossier <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso de MacOS Ventura téléchargé précédement</li>
+<li>laisser la case à cocher '<code>Skip Unattended Installation</code>' décocher pour installer le système d'exploitation automatiquement, si vous cochez cette case il faudra installer le système d'exploitation manuellement (comme si vous installiez un système d'exploitation sur un ordinateur physique)</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel-mac-os-x-mountain-lion">Configuration matériel de la machine virtuel Mac OS X Mountain Lion<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel-mac-os-x-mountain-lion" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 4096 MB mais dans mon cas j'ai mis "<code>6000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Il est recommandé d'en mettre plusieur pour améliorer la vitesse de calcule et il ne faut surtout pas mettre plus de la moitié des CPU de la machine hôte sous risque de problème de conflit entre la VM et la machine hôte. Dans mon cas j'ai mis "<code>3</code>" CPU.</li>
+<li>laisser la case à cocher '<code>Enable EFI (Special OSes only)</code>' décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner '<code>Create a virtual hard disk now</code>'<ul>
+<li>en français : '<code>Créer un disque dur virtuel maintenant</code>'</li>
+</ul>
+</li>
+<li>Définisser la taille du disque dur virtuel. Il est recommander de mettre au moins 25 Gio mais dans mon cas j'ai mis "<code>30</code>" Gio</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>
+<p>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Ubuntu desktop</p>
+</li>
+<li>
+<p><strong>Echech de l'installation de Mac OS X Mountain Lion</strong></p>
+</li>
+</ul>
+<h2 id="creation-dune-machine-virtuel-ubuntu-server-1604">Création d'une machine virtuel Ubuntu server 16.04<a class="headerlink" href="#creation-dune-machine-virtuel-ubuntu-server-1604" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel-ubuntu-server-1604">Création de la machine virtuel Ubuntu server 16.04<a class="headerlink" href="#creation-de-la-machine-virtuel-ubuntu-server-1604" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso de de Ubuntu server 16.04 sur :
+    &gt; <a href="https://releases.ubuntu.com/xenial/">https://releases.ubuntu.com/xenial/</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mv<span class="w"> </span>~/Téléchargements/ubuntu-16.04.7-server-amd64.iso<span class="w"> </span>/OS/Mon_Drive/ISO/ubuntu-16.04.7-server-amd64.iso
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>Ubuntu server 16.04</code>"</li>
+<li>Type : '<code>Linux</code>'</li>
+<li>Version : '<code>Ubuntu (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, dans mon cas <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso de Ubuntu server 16.04 téléchargé précédement, dans mon cas <code>/OS/Mon_Drive/ISO/ubuntu-16.04.7-server-amd64.iso</code></li>
+<li>Cocher la case '<code>Skip Unattended Installation</code>' pour installer le système d'exploitation manuellement, comme si vous l'installiez sur un ordinateur physique. Si vous voulez installer le système d'exploitation automatiquement décocher cette case</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="pre-configuration-du-systeme-dexploitation-si-vous-navez-pas-cocher-la-case-skip-unattended-installation-uniquement">Pré-configuration du système d'exploitation (si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>' uniquement)<a class="headerlink" href="#pre-configuration-du-systeme-dexploitation-si-vous-navez-pas-cocher-la-case-skip-unattended-installation-uniquement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entrer votre nom d'utilisateur, dans mon cas "<code>floris</code>"</li>
+<li>Entrer votre mot de passe, dans mon cas "<code>floris</code>"</li>
+<li>confirmer votre mot de passe</li>
+<li>Entrer votre nom d'hôte, c'est à dire le nom de votre machine, dans mon cas "<code>floris-vm-ubuntu</code>"</li>
+<li>Entrer le nom de domaine, dans mon cas "<code>floris.virtualbox.org</code>"</li>
+<li>Décocher la case '<code>Guest Additions</code>' parce que c'est pas nécessaire pour un serveur</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel-ubuntu-server-1604">Configuration matériel de la machine virtuel Ubuntu server 16.04<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel-ubuntu-server-1604" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 2000 MB mais dans mon cas j'ai mis "<code>4000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Il est recommandé d'en mettre plusieur pour améliorer la vitesse de calcule et il ne faut surtout pas mettre plus de la moitié des CPU de la machine hôte sous risque de problème de conflit entre la VM et la machine hôte. Dans mon cas j'ai mis "<code>2</code>" CPU.</li>
+<li>laisser la case à cocher '<code>Enable EFI (Special OSes only)</code>' décocher</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Sélectionner '<code>Create a virtual hard disk now</code>'<ul>
+<li>en français : '<code>Créer un disque dur virtuel maintenant</code>'</li>
+</ul>
+</li>
+<li>Définisser la taille du disque dur virtuel. J'ai mis seulement "<code>20</code>" Gio car c'est une machine virtuel de test</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Ubuntu server 16.04 qui sont disponible dans la section suivante</li>
+</ul>
+<h3 id="configuration-logiciel-de-ubuntu-server-1604-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement">configuration logiciel de Ubuntu server 16.04 (si vous avez cocher la case '<code>Skip Unattended Installation</code>' uniquement)<a class="headerlink" href="#configuration-logiciel-de-ubuntu-server-1604-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entrer la langue à utiliser pour l'installation, dans mon cas '<code>Français</code>'</li>
+<li>Sélectionner '<code>Installer Ubuntu Server</code>'</li>
+<li>Sélectionner votre pays pour définir le fuseau horaire, dans mon cas '<code>France</code>'</li>
+<li>Faire détecter l'agencement du clavier en sélectionnant '<code>&lt;Oui&gt;</code>'</li>
+<li>répondre à la question '<code>Is there a key labelled 'œ' ? Only count labels for the key on its own or with Shift, not with Alt or other modifier keys.</code>', en français '<code>Y a-t-il une touche étiquetée 'œ' ? Ne comptez que les étiquettes pour la touche seule ou avec Maj, pas avec Alt ou d'autres touches de modification.</code>', dans mon cas la réponse est '<code>Non</code>'</li>
+<li>répondre à la question '<code>Is there a key labelled '°' ? Only count labels for the key on its own or with Shift, not with Alt or other modifier keys.</code>', en français '<code>Y a-t-il une touche étiquetée '°' ? Ne comptez que les étiquettes pour la touche seule ou avec Maj, pas avec Alt ou d'autres touches de modification.</code>', dans mon cas la réponse est '<code>Oui</code>'</li>
+<li>répondre à la question '<code>Is there a key labelled 'œ' ? Only count labels for the key on its own or with Shift, not with Alt or other modifier keys.</code>', en français '<code>Y a-t-il une touche étiquetée 'œ' ? Ne comptez que les étiquettes pour la touche seule ou avec Maj, pas avec Alt ou d'autres touches de modification.</code>', dans mon cas la réponse est '<code>Non</code>'</li>
+<li>Une fois le clavier détecté et correct sélectionner '<code>Continuer</code>', si le clavier n'est pas correctement détecté sélectionner '<code>Revenir en arrière</code>' puis à la question '<code>Détecter l'agencement du clavier ?</code>' sélectionner '<code>Non</code>' puis '<code>Frensh</code>' et enfin '<code>Français</code>'</li>
+<li>Sélectionner '<code>Continuer</code>'</li>
+<li>Indiquer le nom de la machine, dans mon cas "<code>floris-ubuntu-server-vm</code>"</li>
+<li>Sélectionner '<code>Continuer</code>'</li>
+<li>Indiquer le nom d'utilisateur complet, dans mon cas "<code>floris-vm</code>"</li>
+<li>Indiquer le nom d'utilisateur qui servira de login lorsque l'installation sera terminé, dans mon cas "<code>floris</code>"</li>
+<li>Définisser un mot de passe pour le compte utilisateur, dans mon cas "<code>floris</code>"</li>
+<li>Confirmer le mot de passe</li>
+<li>Choisissez si vous voulez chiffrer votre dossier personnel, dans mon cas j'ai sélectionner '<code>Non</code>'</li>
+<li>Confirmer si votre fuseau horaire est correct, dans mon cas j'ai sélectionner '<code>Oui</code>'</li>
+<li>S'il existe d'autre partition sur le disque dur, l'installateur vous demandera si vous voulez les démonter, dans mon cas j'ai sélectionner '<code>Non</code>' pour pouvoir installer Ubuntu server 16.04 sur tout le disque dur et donc écraser les autres partitions. <strong>(Attention cela aura pour effet de supprimer toute les données présente sur les autre partition)</strong></li>
+<li>Sélectionner le partitionnement de disque '<code>Assisté - utiliser tout un disque avec LVM</code>' pour utiliser tout le disque dur pour installer Ubuntu server 16.04</li>
+<li>Sélectionner le disque dur sur lequel vous voulez installer Ubuntu server 16.04, dans mon cas il n'y a qu'un seul disque qui se nomme '<code>SCSI3 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK</code>'</li>
+<li>Confirmer que vous voulez utiliser tout le disque dur pour installer Ubuntu server 16.04 en sélectionnant '<code>Oui</code>'</li>
+<li>Laisser la quantité d'espace sur le groupe de volumes pour le partitionnement assisté par défaut, dans mon cas "<code>20.7 GB</code>"</li>
+<li>Sélectionner '<code>Continuer</code>'</li>
+<li>S'il existe d'autre partition sur le disque dur, l'installateur vous demandera si vous voulez les démonter, dans mon cas j'ai sélectionner '<code>Non</code>' pour pouvoir installer Ubuntu server 16.04 sur tout le disque dur et donc écraser les autres partitions. <strong>(Attention cela aura pour effet de supprimer toute les données présente sur les autre partition)</strong></li>
+<li>Confirmer que vous voulez écrire les changements sur le disque dur en sélectionnant '<code>Oui</code>'. <strong>Attention les changement supprimeront toutes les données présente sur le disque de façon irréversible</strong></li>
+<li>Un message d'erreur apparait. Impossible de créer un système de fichiers de type ext4 sur la partition 1 de SCSI3 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK. Dans mon cas j'ai sélectionner '<code>Continuer</code>' pour continuer l'installation</li>
+<li>La table de partitionnement du disque dur va être écrite sur le disque dur, confirmer en sélectionnant '<code>Terminer le partitionnement et appliquer les changements</code>'</li>
+<li>Confirmer l'application des changements sur le disque en sélectionnant '<code>Oui</code>'</li>
+<li>Si le message d'erreur réapparait sélectionner '<code>Revenir en arrière</code>'<ul>
+<li>Sélectionner '<code>Revenir en arrière</code>' à nouveau</li>
+<li>Sélectionner '<code>Partitionner le disque</code>'</li>
+<li>A la question '<code>Démonter les partitions en cours d'utilisation ?</code>' je sélectionne '<code>Oui</code>'</li>
+<li>Je sélectionne '<code>Terminer le partitionnement et appliquer les changements</code>'</li>
+<li>Confirmer l'application des changements sur le disque en sélectionnant '<code>Oui</code>'</li>
+</ul>
+</li>
+<li>Entrer le mandataire HTTP, dans mon cas je laisse le champ vide parce que je n'en ai pas</li>
+<li>Séléctionner '<code>Continuer</code>'</li>
+<li>Sélectionner le système de mise à jour, dans mon cas j'ai sélectionner '<code>Pas de mise à jour automatique</code>' parce que c'est une VM mais sur un vrai serveur il est recommander de sélectionner '<code>Installer les mises à jour de sécurité automatiquement</code>'</li>
+<li>Sélectionner les logiciels à installer, dans mon cas j'ai sélectionner '<code>OpenSSH server</code>' pour accèder au serveur à distance et '<code>standard system utilities</code>' qui est pré-sélectionner par défaut et qui est obligatoire pour installer Ubuntu server 16.04. (Pour sélectionner un logiciel il faut utiliser la touche <code>Espace</code> du clavier)</li>
+<li>Appuyer sur la touche <code>Entrée</code> pour continuer</li>
+<li>Choisissez si vous voulez installer le programme de démarrage GRUB sur le disque dur, dans mon cas j'ai sélectionner '<code>Non</code>' parce que c'est une VM et qu'il y a un seul OS installé sur le disque dur. Sur un vrai serveur il est recommander de sélectionner '<code>Oui</code>'</li>
+<li>Si vous avez utiliser un support d'installation (comme une clé USB ou un CD) retirer le avant de Sélectionner '<code>Continuer</code>'</li>
+<li>La machine virtuel va redémarrer, patienter quelques minutes le temps que l'installation se termine</li>
+</ul>
+<p><strong>La VM ne fonctionne pas mais sur un PC physique l'installation à réussie</strong></p>
+<h3 id="instruction-tirer-de-linstallation-echoue-de-ubuntu-server-2204-sur-une-machine-physique">Instruction tirer de l'installation échoué de Ubuntu server 22.04 sur une machine physique<a class="headerlink" href="#instruction-tirer-de-linstallation-echoue-de-ubuntu-server-2204-sur-une-machine-physique" title="Permanent link">&para;</a></h3>
+<h4 id="configurer-la-connexion-reseau">Configurer la connexion réseau<a class="headerlink" href="#configurer-la-connexion-reseau" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Si la configuration automatique du réseau échoue clique sur '<code>Configurer vous-même le réseau</code>'
+    &gt; <a href="https://ubuntu.com/tutorials/install-ubuntu-server-1604">https://ubuntu.com/tutorials/install-ubuntu-server-1604</a></li>
+<li>Sélectionner la première carte réseau, dans mon cas '<code>enp3s0</code>'</li>
+<li>Sélectionner '<code>Edit IPv4</code>'</li>
+<li>Dans <code>IPv4 Method</code>, sélectionner '<code>Manuel</code>'</li>
+<li>Dans <code>Masque de sous-réseau</code>, entrer : "<code>192.168.0/24</code>"</li>
+<li>Dans <code>Adresse</code>, entrer : "<code>192.168.1.250</code>"</li>
+<li>Dans <code>Passerelle</code>, entrer : "<code>192.168.1.1</code>"</li>
+<li>Dans <code>Serveurs DNS</code>, entrer : "<code>8.8.8.8,1.1.1.1</code>"</li>
+<li>Laisser le champ <code>Domaines de recherche</code> vide</li>
+<li>Cliquer sur '<code>Sauvegarder</code>'</li>
+</ul>
+<h4 id="connexion-au-reseau-wifi">Connexion au réseau (Wifi)<a class="headerlink" href="#connexion-au-reseau-wifi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sélectionner la deuxième carte réseau, dans mon cas '<code>wlp2s0</code>'</li>
+<li>Sélectionner '<code>Edit Wifi</code>'</li>
+<li>Entrer le nom du réseau WIFI et le mot de passe</li>
+<li>Cliquer sur '<code>Sauvegarder</code>'</li>
+</ul>
+<h4 id="suite-de-la-configuration">Suite de la configuration<a class="headerlink" href="#suite-de-la-configuration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Laisser le champs <code>Proxy adress</code> vide</li>
+<li>Cliquer sur '<code>Continuer</code>'</li>
+<li>Laisser le champs <code>Mirror address</code> avec la valeur par defaut, pour moi c'est :
+    &gt; <a href="http://fr.archive.ubuntu.com/ubuntu">http://fr.archive.ubuntu.com/ubuntu</a></li>
+<li>Cliquer sur '<code>Continuer</code>'</li>
+<li>Lancer la mise à jour puis attendez que tous s'installent</li>
+<li>Une fenêtre vas apparaître (pour moi elle indique une erreur), cliquer sur '<code>Continuer</code>'</li>
+<li>Une page avec toute les partitions que Ubuntu vas créer vas apparaître, cliquer sur '<code>Terminé</code>'</li>
+<li>Une fenêtre de confirmation vas apparaître, cliquer sur '<code>Continuer</code>'</li>
+</ul>
+<h4 id="creation-de-lutilisateur">Création de l'utilisateur<a class="headerlink" href="#creation-de-lutilisateur" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Entrez votre nom, dans mon cas : "<code>Floris</code>"</li>
+<li>Entrez le nom de la machine, dans mon cas : "<code>server_pc_portable_asus</code>"</li>
+<li>Entrez le nom de l'utilisateur, dans mon cas : "<code>floris</code>"</li>
+<li>Entrez le mot de passe de l'utilisateur (pour le sudo), dans mon cas : "<code>floris</code>"</li>
+<li>Confirmez le mot de passe de l'utilisateur</li>
+<li>
+<p>Appuyez sur '<code>Terminé</code>'</p>
+</li>
+<li>
+<p>sélectionnez '<code>Skip Ubuntu Pro setup for now</code>'</p>
+</li>
+<li>Cliquez sur '<code>Continuer</code>'</li>
+<li>Une liste de logiciel vas apparaître, sélectionnez ceux qui vous interesse, dans mon cas je laisse tout vide</li>
+<li>cliquez sur '<code>Continué</code>' puis attendez que tous s'installe (cela peut prendre plusieurs minutes)</li>
+<li>cliquer sur '<code>Redémarrer maintenant</code>'</li>
+</ul>
+<h4 id="configuration-ssh">Configuration SSH<a class="headerlink" href="#configuration-ssh" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sélectionnez '<code>Installer le serveur OpenSSH</code>'</li>
+<li>Cliquez sur '<code>Terminé</code>'</li>
+<li>Attendez la fin de l'installation et de configuration automatique</li>
+<li>Cliquez sur '<code>Redémarrer maintenant</code>'</li>
+</ul>
+<h2 id="creation-dune-machine-virtuel-debian-12">Création d'une machine virtuel Debian 12<a class="headerlink" href="#creation-dune-machine-virtuel-debian-12" title="Permanent link">&para;</a></h2>
+<h3 id="creation-de-la-machine-virtuel-debian-12">Création de la machine virtuel Debian 12<a class="headerlink" href="#creation-de-la-machine-virtuel-debian-12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger l'image iso de de Debian 12 sur :
+    &gt; <a href="https://www.debian.org/download.fr.html">https://www.debian.org/download.fr.html</a></li>
+<li>
+<p>Déplacer le fichier ISO dans un dossier de votre choix, dans mon cas le dossier <code>/OS/Mon_Drive/ISO/</code> :</p>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Téléchargements/debian-12.1.0-amd64-netinst.iso<span class="w"> </span>/OS/Mon_Drive/ISO/
+</code></pre></div>
+</li>
+<li>
+<p>Dans VirtualBox Cliquer sur '<code>Nouvelle</code>' pour créer une nouvelle machine virtuel</p>
+</li>
+<li>Ajouter les informations suivantes :<ul>
+<li>Nom : "<code>Debian 12</code>"</li>
+<li>Type : '<code>Linux</code>'</li>
+<li>Version : '<code>Debian (64-bit)</code>'</li>
+</ul>
+</li>
+<li>Laisser le paramètre '<code>Folder</code>' par défaut, c'est à dire le dossier <code>/home/floris/VirtualBox VMs</code></li>
+<li>Dans le champ <code>ISO Image</code> saisisser le fichier iso de debien 12 téléchargé précédement</li>
+<li>Cocher la case '<code>Skip Unattended Installation</code>' pour installer le système d'exploitation manuellement, comme si vous l'installiez sur un ordinateur physique.</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h3 id="configuration-materiel-de-la-machine-virtuel-debian-12">Configuration matériel de la machine virtuel Debian 12<a class="headerlink" href="#configuration-materiel-de-la-machine-virtuel-debian-12" title="Permanent link">&para;</a></h3>
+<p><strong>Ne surtout pas amené les cursors au niveau des barres rouges sous peine de conflit entre la VM et la machine hôte</strong></p>
+<h4 id="configuration-du-processeur-de-la-memoire-ram-et-du-bios">Configuration du processeur, de la mémoire RAM et du BIOS<a class="headerlink" href="#configuration-du-processeur-de-la-memoire-ram-et-du-bios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sélectionner la mémoire RAM de la machine hôte à allouer à la machine virtuel, qui doit être au moins de 2000 MB mais dans mon cas j'ai mis "<code>4000</code>" MB</li>
+<li>Sélectionner le nombre CPU (Coeur) que pourra utiliser la machine virtuel. Le minimum requie pour debian 12 est 2. Dans mon cas j'ai mis "<code>3</code>" CPU.</li>
+<li>La case à cocher '<code>Enable EFI (Special OSes only)</code>' permet d'émuler un BIOS UEFI pour la machine virtuel (qui est présent sur la plupart des machine vendues aujourd'hui). Il ne faut pas cocher cette case sinon l'installation de debian 12 ne fonctionnera pas. Si vous avez cocher cette case, décocher la.</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+</ul>
+<h4 id="configuration-du-disque-dur">Configuration du disque dur<a class="headerlink" href="#configuration-du-disque-dur" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sélectionner '<code>Create a virtual hard disk now</code>'<ul>
+<li>en français : '<code>Créer un disque dur virtuel maintenant</code>'</li>
+</ul>
+</li>
+<li>Définisser la taille du disque dur virtuel. J'ai mis "<code>20</code>" Gio parce que c'est une machine virtuel de test</li>
+<li>laisser la case à cocher '<code>Pre-allocate Full Size</code>' décocher parce que même si cela permet d'améliorer les performances de la machine virtuel, cela prend beaucoup de place sur le disque dur de la machine hôte, car même si vous n'utiliser pas cette place dans la VM elle sera quand même allouer sur le disque dur de la machine hôte</li>
+<li>Cliquer sur '<code>Suivant</code>'</li>
+<li>Reliser les informations de la machine virtuel grâce au récapitulatif</li>
+<li>Cliquer sur '<code>Finish</code>'</li>
+<li>Si vous n'avez pas cocher la case '<code>Skip Unattended Installation</code>', attender quelques minutes le temps que la machine virtuel se créer et que l'OS s'installe. Sinon démarrer la machine virtuel puis suivez les instructions d'installation de Ubuntu server 16.04 qui sont disponible dans la section suivante</li>
+</ul>
+<h3 id="configuration-logiciel-de-debian-12-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement">configuration logiciel de Debian 12 (si vous avez cocher la case '<code>Skip Unattended Installation</code>' uniquement)<a class="headerlink" href="#configuration-logiciel-de-debian-12-si-vous-avez-cocher-la-case-skip-unattended-installation-uniquement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lancer la machine virtuel</li>
+<li>Sélectionner le mode d'installation, dans mon cas j'ai sélectionner '<code>Install</code>' mais '<code>Graphics install</code>' est exactement la même chose en plus jolie.</li>
+<li>Sélectionner la langue, dans mon cas '<code>Français</code>'</li>
+<li>Sélectionner la situation géographique, dans mon cas '<code>France</code>'</li>
+<li>Sélectionner la configuration du clavier, dans mon cas '<code>Français</code>'</li>
+<li>Configuration du nom de la machine sur le réseau, dans mon cas "<code>debian-12-vm</code>"</li>
+<li>Configuration du nom de domaine, dans mon cas j'ai laissé le champ vide</li>
+<li>Configuration du mot de passe du super utilisateur <code>root</code>, dans mon cas "<code>root</code>"</li>
+<li>Création d'un utilisateur, dans mon cas :<ul>
+<li>Nom complet : "<code>Floris VM</code>"</li>
+<li>Identifiant pour le compte utilisateur : "<code>floris</code>"</li>
+<li>Mot de passe : "<code>floris</code>"</li>
+<li>Confirmer le mot de passe</li>
+</ul>
+</li>
+<li>Choisissez le partitionnement du disque '<code>Assisté - utiliser tout un disque avec LVM</code>'</li>
+<li>Sélectionner le disque dur sur lequel vous voulez installer Debian 12, dans mon cas il n'y a qu'un seul disque qui se nomme '<code>SCSI3 (0,0,0) (sda) - 21.5 GB ATA VBOX HARDDISK</code>'</li>
+<li>Sélectionner le type de partitionnement, dans mon cas j'ai sélectionner '<code>Tout dans une seule partition (recommandé pour les débutants)</code>'</li>
+<li>Confirmer que vous voulez utiliser tout le disque dur pour installer Debian 12 en sélectionnant '<code>Oui</code>'</li>
+<li>Laisser la quantité d'espace sur le groupe de volumes pour le partitionnement assisté par défaut, dans mon cas "<code>21.0 GB</code>"</li>
+<li>Confirmer que vous voulez écrire les changements sur le disque dur en sélectionnant '<code>Oui</code>'. <strong>Attention les changement supprimeront toutes les données présente sur le disque de façon irréversible</strong></li>
+<li>Si vous avez un autre support à analysé, comme un autre disque dur insérer puis sélectionner '<code>Oui</code>' sinon sélectionner '<code>Non</code>', dans mon cas j'ai sélectionner '<code>Non</code>'</li>
+<li>Sélectionner la langue pour la configuration du gestionnaire de paquet, dans mon cas '<code>France</code>'</li>
+<li>Sélectionner le miroir de l'archive Debian, dans mon cas j'ai sélectionner '<code>deb.debian.org</code>'</li>
+<li>Sélectionner le mandataire HTTP, dans mon cas j'ai laissé le champ vide</li>
+<li>Sélectionner si vous voulez participer à l'étude statistique de Debian, dans mon cas j'ai sélectionner '<code>Non</code>'</li>
+<li>Sélectionner l'environnement de bureau, dans mon cas j'ai sélectionner '<code>... KDE Plasma</code>'. Sélectionné également '<code>utilitaires usuels du système</code>'</li>
+<li>Sélectionner si vous voulez installer le programme de démarrage GRUB sur le disque dur, dans mon cas j'ai sélectionner '<code>Oui</code>'</li>
+<li>Sélectionner la partition sur lequel vous voulez installer le programme de démarrage GRUB, dans mon cas il n'y a qu'une seule partition qui se nomme '<code>/dev/sda</code>' mais si vous en avez plusieur sélectionner celle qui correspond au disque dur sur lequel vous avez installer Debian 12</li>
+<li>Sélectionner '<code>Continuer</code>' pour redémarrer la machine virtuel</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation générée avec <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Rechercher</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ici vous pouvez chercher dans les documents. Entrez votre recherche ci-dessous.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Rechercher..." id="mkdocs-search-query" title="Tapez vos mots clés ici">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Aucun résultat trouvé"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Raccourcis Clavier</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Touches</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Ouvrir l'aide</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Page suivante</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Page précédente</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Rechercher</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
