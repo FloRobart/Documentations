@@ -27,6 +27,7 @@
         - [Modifier les noms de domaine de façon temporaire](#modifier-les-noms-de-domaine-de-façon-temporaire)
         - [Modifier les noms de domaine de façon permanente](#modifier-les-noms-de-domaine-de-façon-permanente)
     - [Convertir les doubles espaces en 4 espaces dans un fichier avec vscode](#convertir-les-doubles-espaces-en-4-espaces-dans-un-fichier-avec-vscode)
+    - [Améliorer la recherche dans l'historique du terminal bash](#améliorer-la-recherche-dans-lhistorique-du-terminal-bash)
     - [Licence](#licence)
 
 ## Réinitialiser une clé USB ou un disque dur
@@ -642,6 +643,24 @@ snap-store --quit && sudo snap refresh snap-store
 - Cliquer sur `Convertir les retraits en espaces`
 - Sauvegarder le fichier
     > Ctrl + S
+
+## Améliorer la recherche dans l'historique du terminal bash
+
+- Ajouter les lignes suivantes dans le fichier `~/.bashrc`
+
+    ```bash
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+    ```
+
+    - Cela permet de rechercher dans l'historique du terminal bash en utilisant les flèches haut et bas après avoir tapé le début d'une commande. Par exemple, si vous tapez `cd` puis que vous appuyez sur la flèche haut, vous verrez toutes les commandes commençant par `cd` dans l'historique
+
+- Sauvegarder le fichier
+- Recharger le fichier `~/.bashrc`
+
+    ```shell
+    source ~/.bashrc
+    ```
 
 ## Licence
 
