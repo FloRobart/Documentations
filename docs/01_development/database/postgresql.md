@@ -87,6 +87,7 @@
     - Remplacez `<utilisateur>` par le nom d'utilisateur PostgreSQL.
     - Remplacez `<nom_base>` par le nom de la base de données que vous souhaitez sauvegarder.
     - `fichier.sql` est le nom du fichier où la sauvegarde sera enregistrée.
+
 - Importer la base de données depuis le fichier SQL en utilisant la commande suivante :
 
     ```sh

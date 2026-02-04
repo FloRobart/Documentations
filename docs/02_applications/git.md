@@ -343,6 +343,18 @@ La documentation ci-dessous utilise deux comptes Github, avec deux clés SSH dif
         ```
 
         - Vous pouvez remplacer 1 par le nombre de commit que vous voulez supprimer
+- Si vous avez déjà fait un `reset` en local et que finalement vous voulez récupérer les commits supprimés, vous pouvez utiliser la commande suivante :
+
+    ```shell
+    git reflog
+    ```
+
+    - Trouver le SHA du commit avant le `reset`
+    - Revenir à ce commit
+
+        ```shell
+        git reset --hard <commit>
+        ```
 
 - Faire un push pour mettre à jour le dépôt
 
