@@ -1,0 +1,62 @@
+services:
+  #=======================#
+  # Reverse proxy Traefik #
+  #=======================#
+  # Extends flower garden traefik configuration #
+  # traefik:
+  #   image: traefik:latest
+  #   restart: always
+  #   command:
+  #     - "--providers.docker=true"
+  #     - "--providers.docker.exposedbydefault=false"
+  #     - "--entrypoints.web.address=:80"
+  #     - "--entrypoints.websecure.address=:443"
+  #     - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+  #     - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+  #     - "--certificatesresolvers.le.acme.httpchallenge=true"
+  #     - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
+  #     - "--certificatesresolvers.le.acme.email=${LETSENCRYPT_EMAIL}"
+  #     - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+  #     - "--log.level=${TRAEFIK_LOG_LEVEL:-INFO}"
+  #     - "--accesslog=${TRAEFIK_ACCESS_LOG:-true}"
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - "/var/run/docker.sock:/var/run/docker.sock:ro"
+  #     - "letsencrypt:/letsencrypt"
+  #   networks:
+  #     - documentations-network
+
+
+
+  #===================#
+  # CV static website #
+  #===================#
+  documentations-server:
+    build: .
+    restart: always
+    networks:
+      - documentations-network
+    ports:
+      - :80
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://documentations-server:80/"]
+      interval: 10m
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=cv-network"
+      - "traefik.http.routers.documentations-server.rule=Host(`documentation.florobart.fr`)"
+      - "traefik.http.routers.documentations-server.entrypoints=websecure"
+      - "traefik.http.routers.documentations-server.tls.certresolver=le"
+      - "traefik.http.services.documentations-server.loadbalancer.server.port=80"
+
+
+
+networks:
+  documentations-network:
+    name: documentations-network
+    driver: bridge
