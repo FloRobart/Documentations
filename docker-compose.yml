@@ -38,7 +38,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=documentations-network"
-      - "traefik.http.routers.documentations-server.rule=Host(`documentation.florobart.fr`,`documentations.florobart.fr`)"
+      - "traefik.http.routers.documentations-server.rule=Host(`documentation.florobart.fr`) || Host(`documentations.florobart.fr`)"
       - "traefik.http.routers.documentations-server.entrypoints=websecure"
       - "traefik.http.routers.documentations-server.tls.certresolver=le"
       - "traefik.http.services.documentations-server.loadbalancer.server.port=80"
