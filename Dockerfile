@@ -1,11 +1,13 @@
 FROM python:slim-bookworm AS builder
 WORKDIR /app
 
-# Copy all files to the builder stage
-COPY . .
-
 # Install mkdocs and dependencies
-RUN pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
+COPY requirements-mkdocs.txt requirements-mkdocs.txt
+RUN pip install --no-cache-dir -r requirements-mkdocs.txt
+
+# Copy all files to the builder stage
+COPY docs/ docs/
+COPY mkdocs.yml mkdocs.yml
 
 # Build the static site using mkdocs
 RUN mkdocs build --site-dir /app/site

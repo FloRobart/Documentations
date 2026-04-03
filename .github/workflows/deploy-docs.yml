@@ -16,7 +16,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
+        run: pip install -r requirements-mkdocs.txt
 
       - name: Deploy
         run: mkdocs gh-deploy --force
