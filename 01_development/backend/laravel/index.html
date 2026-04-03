@@ -1,0 +1,4385 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation personnelle sur divers sujets informatiques et autres centres d'intérêt.">
+      
+      
+        <meta name="author" content="Floris Robart">
+      
+      
+      
+        <link rel="prev" href="../create_api_typescript/">
+      
+      
+        <link rel="next" href="../symfony/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Laravel - Documentation Floris</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-laravel" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Documentation Floris" class="md-header__button md-logo" aria-label="Documentation Floris" data-md-component="logo">
+      
+  <img src="../../../img/flower_garden_logo_192.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation Floris
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Laravel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FloRobart/Documentations" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Florobart/Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../00_meta/all_project/" class="md-tabs__link">
+          
+  
+  
+  Meta & règles
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../project_management/project_management_tools/" class="md-tabs__link">
+          
+  
+  
+  Développement
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02_applications/installation_usage/" class="md-tabs__link">
+          
+  
+  
+  Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03_system/server/server_creation_2026/" class="md-tabs__link">
+          
+  
+  
+  Systèmes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="md-tabs__link">
+          
+  
+  
+  Entrepreneuriat
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../05_electronic/vide/" class="md-tabs__link">
+          
+  
+  
+  Electronique
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../98_others/creation_page_don_telethon/" class="md-tabs__link">
+          
+  
+  
+  Autres
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation Floris" class="md-nav__button md-logo" aria-label="Documentation Floris" data-md-component="logo">
+      
+  <img src="../../../img/flower_garden_logo_192.png" alt="logo">
+
+    </a>
+    Documentation Floris
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FloRobart/Documentations" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Florobart/Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta & règles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Meta & règles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_meta/all_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tous mes projets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_meta/documentation_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles de documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Développement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de projets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestion de projets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_management/project_management_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de gestion de projets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/migrations_and_seeders_by_tanvir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Back-end
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Back-end
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_api_typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript (Node.js/Express)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laravel
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table des matières
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation de Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-de-laravel-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Laravel CLI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilisation de Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation de Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-dun-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'un projet Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-la-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion de la base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-plusieurs-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de plusieurs base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seeders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancement d'un projet Laravel en local grâce au serveur web Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-votre-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration de votre projet Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration de votre projet Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-du-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration du .env
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration du .env">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-de-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langue-et-localisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langue et localisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffusion-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion (Broadcast)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filesystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-dattente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File d'attente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memcached" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memcached
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vitejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ViteJS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-tailwind-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de Tailwind CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-livewire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de Livewire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajout-de-livewire-a-un-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajout de Livewire à un projet Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dun-composant-livewire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'un composant Livewire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symfony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symfony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codeigniter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CodeIgniter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front-end
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front-end
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déploiement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Déploiement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/production_with_docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise en production d'une application dockerisée
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/debian_package_creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creation de packets Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/open_source_licensing_gnu_gpl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise sous licence d'un projet open source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/php_web_server_creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur web PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres*
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres*
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/clean_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean code (Codé proprement)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/web_development_micro_service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developpement web en micro-services (Recommandé)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/coding_best_practices_by_chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonne pratiques de développement by ChatGPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/web_development_php/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developpement web en PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Applications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/installation_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d'applications Linux divers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/docker_installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation de Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/gnome_shell_connect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome Shell Connect (GSC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/ventoy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ventoy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/hp_printer_connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connection d'une imprimante HP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_applications/thunderbird_iut_le_havre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration de Thunderbird pour l'IUT du Havre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systèmes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systèmes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/server/server_creation_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur (2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/server/server_creation_2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur (Obsolète - 2023)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/linux/dual_boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un dual boot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/linux/windows_on_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilisation d'outils windows sous Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/windows/windows_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contournement des sécurités Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Android
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/android/flashing_android_device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flashing d'un appareil Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines virtuelles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machines virtuelles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/virtual_machine/virtual_machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines virtuels avec VirtualBox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_system/others/general_manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resolution de problèmes divers sous Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrepreneuriat
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entrepreneuriat
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_entrepreneuriat/company_creation_for_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creation d'une entreprise pour le developpement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Electronique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05_electronic/vide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aucune documentation pour le moment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../98_others/creation_page_don_telethon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page don Téléthon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table des matières
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation de Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-de-laravel-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Laravel CLI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilisation de Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation de Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-dun-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'un projet Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-la-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion de la base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-plusieurs-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de plusieurs base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seeders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancement d'un projet Laravel en local grâce au serveur web Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-votre-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration de votre projet Laravel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration de votre projet Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-du-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration du .env
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration du .env">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-de-lapplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration de l'application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langue-et-localisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langue et localisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sécurité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffusion-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion (Broadcast)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filesystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-dattente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File d'attente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memcached" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memcached
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vitejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ViteJS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-tailwind-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de Tailwind CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-de-livewire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration de Livewire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajout-de-livewire-a-un-projet-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajout de Livewire à un projet Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dun-composant-livewire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'un composant Livewire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="documentation-laravel">Documentation Laravel<a class="headerlink" href="#documentation-laravel" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-laravel">Documentation Laravel</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#installation-de-laravel">Installation de Laravel</a><ul>
+<li><a href="#installation-de-laravel-cli">Installation de Laravel CLI</a></li>
+</ul>
+</li>
+<li><a href="#utilisation-de-laravel">Utilisation de Laravel</a><ul>
+<li><a href="#création-dun-projet-laravel">Création d'un projet Laravel</a></li>
+<li><a href="#gestion-de-la-base-de-données">Gestion de la base de données</a></li>
+<li><a href="#intégration-de-plusieurs-base-de-données">Intégration de plusieurs base de données</a></li>
+<li><a href="#migrations">Migrations</a></li>
+<li><a href="#seeders">Seeders</a></li>
+<li><a href="#lancement-dun-projet-laravel-en-local-grâce-au-serveur-web-apache">Lancement d'un projet Laravel en local grâce au serveur web Apache</a></li>
+<li><a href="#lancement-dun-projet-laravel-en-local-grâce-au-serveur-de-développement-de-laravel">Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel</a></li>
+<li><a href="#rendre-le-serveur-de-développement-de-laravel-accessible-sur-tout-les-appareils-dun-réseau-local">Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local</a></li>
+</ul>
+</li>
+<li><a href="#configuration-de-votre-projet-laravel">Configuration de votre projet Laravel</a><ul>
+<li><a href="#configuration-du-env">Configuration du .env</a><ul>
+<li><a href="#configuration-de-lapplication">Configuration de l'application</a></li>
+<li><a href="#langue-et-localisation">Langue et localisation</a></li>
+<li><a href="#maintenance">Maintenance</a></li>
+<li><a href="#sécurité">Sécurité</a></li>
+<li><a href="#logs">Logs</a></li>
+<li><a href="#base-de-données">Base de données</a></li>
+<li><a href="#sessions">Sessions</a></li>
+<li><a href="#diffusion-broadcast">Diffusion (Broadcast)</a></li>
+<li><a href="#filesystems">Filesystems</a></li>
+<li><a href="#file-dattente">File d'attente</a></li>
+<li><a href="#cache">Cache</a></li>
+<li><a href="#memcached">Memcached</a></li>
+<li><a href="#redis">Redis</a></li>
+<li><a href="#email">Email</a></li>
+<li><a href="#vitejs">ViteJS</a></li>
+</ul>
+</li>
+<li><a href="#intégration-de-tailwind-css">Intégration de Tailwind CSS</a></li>
+<li><a href="#intégration-de-livewire">Intégration de Livewire</a></li>
+<li><a href="#ajout-de-livewire-à-un-projet-laravel">Ajout de Livewire à un projet Laravel</a></li>
+<li><a href="#création-dun-composant-livewire">Création d'un composant Livewire</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-laravel">Installation de Laravel<a class="headerlink" href="#installation-de-laravel" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Documentation officiel, complète et très bien expliqué
+    &gt; <a href="https://laravel.com/docs/10.x">https://laravel.com/docs/10.x</a></li>
+<li>
+<p>Source
+    &gt; <a href="https://www.webhi.com/how-to/how-to-install-laravel-on-ubuntu-debian-apache-nginx/">https://www.webhi.com/how-to/how-to-install-laravel-on-ubuntu-debian-apache-nginx/</a></p>
+</li>
+<li>
+<p>Installer les différentes dépendances PHP dont Laravel à besoin</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>php-cli<span class="w"> </span>php-common<span class="w"> </span>php-mbstring<span class="w"> </span>php-xml<span class="w"> </span>php-zip<span class="w"> </span>php-mysql<span class="w"> </span>php-pgsql<span class="w"> </span>php-sqlite3<span class="w"> </span>php-json<span class="w"> </span>php-bcmath<span class="w"> </span>php-gd<span class="w"> </span>php-tokenizer<span class="w"> </span>php-xmlwriter
+</code></pre></div>
+</li>
+<li>
+<p><a href="../../others/web_development_php/#composer">Installer Composer</a></p>
+</li>
+<li><a href="../../others/web_development_php/#apache">Installer le serveur web Apache pour php</a></li>
+</ul>
+<h3 id="installation-de-laravel-cli">Installation de Laravel CLI<a class="headerlink" href="#installation-de-laravel-cli" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installation de Laravel CLI grâce à <code>Composer</code></p>
+<div class="language-shell highlight"><pre><span></span><code>composer<span class="w"> </span>global<span class="w"> </span>require<span class="w"> </span>laravel/installer
+</code></pre></div>
+</li>
+</ul>
+<h2 id="utilisation-de-laravel">Utilisation de Laravel<a class="headerlink" href="#utilisation-de-laravel" title="Permanent link">&para;</a></h2>
+<h3 id="creation-dun-projet-laravel">Création d'un projet Laravel<a class="headerlink" href="#creation-dun-projet-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer un projet Laravel grâce à <code>Composer</code></p>
+<div class="language-shell highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>--prefer-dist<span class="w"> </span>laravel/laravel<span class="w"> </span>your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un projet Laravel grâce à la commande <code>laravel</code></p>
+<div class="language-shell highlight"><pre><span></span><code>laravel<span class="w"> </span>new<span class="w"> </span>your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un projet Laravel avec une version spécifique</p>
+<div class="language-shell highlight"><pre><span></span><code>composer<span class="w"> </span>create-project<span class="w"> </span>--prefer-dist<span class="w"> </span>laravel/laravel<span class="w"> </span>your-project-name<span class="w"> </span><span class="s2">&quot;8.*&quot;</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="gestion-de-la-base-de-donnees">Gestion de la base de données<a class="headerlink" href="#gestion-de-la-base-de-donnees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Créer une migration</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:migration<span class="w"> </span>create_&lt;table-name&gt;_table
+</code></pre></div>
+</li>
+<li>
+<p>Créer un modèle</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:model<span class="w"> </span>&lt;ModelName&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Créer un modèle et une migration</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:model<span class="w"> </span>&lt;ModelName&gt;<span class="w"> </span>-m
+</code></pre></div>
+<ul>
+<li>
+<p>Modifier le fichier de Model pour ajouter le nom de la table</p>
+<div class="language-php highlight"><pre><span></span><code><span class="x">protected $fillable = [</span>
+<span class="x">&#39;name&#39;,</span>
+<span class="x">&#39;email&#39;,</span>
+<span class="x">];</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Éxécuter les migrations</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div>
+</li>
+<li>
+<p>Éxécuter une migration spécifique</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate<span class="w"> </span>--path<span class="o">=</span>/path/to/migration.php
+</code></pre></div>
+</li>
+<li>
+<p>Créer un contrôleur</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:controller<span class="w"> </span>&lt;ControllerName&gt;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="integration-de-plusieurs-base-de-donnees">Intégration de plusieurs base de données<a class="headerlink" href="#integration-de-plusieurs-base-de-donnees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Source
+    &gt; <a href="https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223">https://arjunamrutiya.medium.com/laravel-multiple-database-connectivity-a-step-by-step-guide-72cecb5d9223</a></li>
+</ul>
+<h3 id="migrations">Migrations<a class="headerlink" href="#migrations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../database/migrations_and_seeders_by_tanvir/">Source</a></li>
+</ul>
+<p>Les migrations sont des fichiers qui permettent de creer, modifier ou supprimer des tables dans une base de donnees. Les migrations sont executees en premier lieu pour configurer la base de donnees de l'application.</p>
+<p>Si vous voulez modifier une table existante, il ne faut pas modifier la migration existante. Il faut créer une nouvelle migration pour ajouter ou modifier des colonnes. le but étant que vous ayez toujours la possibilité de revenir en arrière et que vous puissiez les utiliser sans supprimer les données de la base de données.</p>
+<ul>
+<li>
+<p>Créer une migration</p>
+<div class="language-bash highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:migration<span class="w"> </span>&lt;nom_de_la_migration&gt;
+</code></pre></div>
+<ul>
+<li><strong>Convention de nommage</strong> : Lorsque l'on nomme un fichier de migration dans le terminal bash, il est recommandé de le créer de la forme suivante <code>create_&lt;nom_de_la_table&gt;_table</code></li>
+</ul>
+</li>
+<li>
+<p>Ouvrez le fichier créé dans le dossier <code>/database/migrations</code> et ajoutez le code qui permet de créer la table. L'aspect du fichier de migration est déjà configuré, il contient déjà les méthodes <code>up</code> et <code>down</code> qui permettent de lancer et d'annuler la migration. Utilisez ce template pour compléter le code en remplaçant les <code>&lt;&gt;</code> par les valeurs appropriées :</p>
+<div class="language-PHP highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="err">&lt;</span><span class="nc">nom_de_la_migration</span><span class="o">&gt;</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="nv">$connection</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">connection_name</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Run the migrations.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;&lt;nom_de_la_table&gt;&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;&lt;</span><span class="nx">type</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;&lt;column_name&gt;&#39;</span><span class="p">)</span><span class="o">-&gt;&lt;</span><span class="nx">attribute</span><span class="o">&gt;</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;exemple&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">nullable</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="s1">&#39;default_value&#39;</span><span class="p">);</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Reverse the migrations.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">dropIfExists</span><span class="p">(</span><span class="s1">&#39;&lt;nom_de_la_table&gt;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>nom_de_la_migration</code> : Nom de la migration (Laravel le complète automatiquement)</li>
+<li><code>connection_name</code> : Nom de la connexion à la base de données (Par défaut <code>mysql</code>)</li>
+<li><code>nom_de_la_table</code> : Nom de la table à créer (Laravel le complète automatiquement mais vérifiez que le nom est correct)</li>
+<li><code>id()</code> : Crée une colonne <code>id</code> de type <code>bigIncrements</code> (Vous pouvez utiliser <code>id('id_name')</code> pour changer le nom de la colonne de l'id)</li>
+<li><code>type</code> : Type de la colonne (integer, string, text, etc.)</li>
+<li><code>column_name</code> : Nom de la colonne</li>
+<li><code>attribute</code> : Attribut de la colonne (nullable, default, etc.)</li>
+<li><code>string('exemple')-&gt;nullable()-&gt;default('default_value')</code> : Crée une colonne <code>exemple</code> de type <code>string</code> qui peut être <code>null</code> et qui a une valeur par défaut <code>default_value</code></li>
+<li><code>timestamps()</code> : Crée deux colonnes <code>created_at</code> et <code>updated_at</code> de type <code>timestamp</code></li>
+</ul>
+</li>
+<li>
+<p>Exécuter les migrations</p>
+<div class="language-bash highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div>
+</li>
+</ul>
+<h3 id="seeders">Seeders<a class="headerlink" href="#seeders" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../database/migrations_and_seeders_by_tanvir/">Source</a></li>
+</ul>
+<p>Un seeder est un fichier qui permet de remplir les tables de la base de donnees avec des donnees. Les seeders sont executees apres les migrations pour fournir des donnees a l'application.</p>
+<ul>
+<li>
+<p>Créer un seeder</p>
+<div class="language-bash highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:seeder<span class="w"> </span>&lt;nom_du_seeder&gt;
+</code></pre></div>
+<ul>
+<li><strong>Convention de nommage</strong> : Lorsque l'on nomme un fichier seeder dans le terminal bash, il est recommandé de le créer de la forme suivante <code>&lt;NomDeLaTable&gt;Seeder</code>. S'il y a un <code>s</code> avant <code>Seeder</code>, il est conseillé de supprimer ce <code>s</code>.</li>
+</ul>
+</li>
+<li>
+<p>Ouvrez le fichier de seeder situé dans le dossier <code>/database/seeders</code> et ajoutez le code nécessaire pour remplir la table de la base de données. Le fichier de seeder contient deja la classe <code>&lt;nom_du_seeder&gt;</code> qui contient la méthode <code>run</code> qui permet de lancer le remplissage de la table. Utilisez ce template pour compléter le code en remplaçant les <code>&lt;&gt;</code> par les valeurs appropriées :</p>
+<div class="language-PHP highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Database\Seeders</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Console\Seeds\WithoutModelEvents</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\DB</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="err">&lt;</span><span class="nc">nom_du_seeder</span><span class="o">&gt;</span> <span class="k">extends</span> <span class="nx">Seeder</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Run the database seeds.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="nx">DB</span><span class="o">::</span><span class="na">connection</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">connection_name</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">table</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">nom_de_la_table</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span>
+            <span class="p">[</span>
+                <span class="o">&lt;</span><span class="nx">nom_du_primaire</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">valeur_du_primaire</span><span class="o">&gt;</span><span class="p">,</span>
+                <span class="o">&lt;</span><span class="nx">nom_de_la_colonne</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">valeur_de_la_colonne</span><span class="o">&gt;</span><span class="p">,</span>
+                <span class="o">...</span>
+            <span class="p">]</span>
+        <span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>nom_du_seeder</code> : Nom du seeder (Laravel le complète automatiquement)</li>
+<li><code>connection_name</code> : Nom de la connexion à la base de données (Par défaut <code>mysql</code>)</li>
+<li><code>nom_de_la_table</code> : Nom de la table à remplir</li>
+<li><code>nom_du_primaire</code> : Nom de la colonne de la clé primaire</li>
+<li><code>valeur_du_primaire</code> : Valeur de la clé primaire</li>
+<li><code>nom_de_la_colonne</code> : Nom de la colonne à remplir</li>
+<li><code>valeur_de_la_colonne</code> : Valeur de la colonne</li>
+</ul>
+</li>
+<li>
+<p>Exécuter les seeders</p>
+<div class="language-bash highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>db:seed
+</code></pre></div>
+</li>
+</ul>
+<h3 id="lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache">Lancement d'un projet Laravel en local grâce au serveur web Apache<a class="headerlink" href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-web-apache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Si vous n'avez pas créer le projet Laravel dans le dossier <code>/var/www/html</code> il faut créer un lien symbolique entre le dossier du projet Laravel et le dossier <code>/var/www/html</code></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/path/to/your-project-name<span class="w"> </span>/var/www/html/your-project-name
+</code></pre></div>
+</li>
+<li>
+<p>Créer un fichier de configuration pour le projet Laravel</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/your-project-name.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter le code suivant dans le fichier de configuration</p>
+<div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="err">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span>ServerName<span class="w"> </span>your-domain-or-ip
+<span class="w">    </span>DocumentRoot<span class="w"> </span>/var/www/html/your-project-name/public
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="err">/var/www/html/your-project-name</span><span class="nt">&gt;</span>
+<span class="w">        </span>AllowOverride<span class="w"> </span>All
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Activez le module de réécriture Apache :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+</code></pre></div>
+</li>
+<li>
+<p>Activez l'hôte virtuel :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>your-project-name.conf
+</code></pre></div>
+</li>
+<li>
+<p>Redémarrez Apache pour que les modifications prennent effet :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+</li>
+</ul>
+<h3 id="lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel">Lancement d'un projet Laravel en local grâce au serveur de développement de Laravel<a class="headerlink" href="#lancement-dun-projet-laravel-en-local-grace-au-serveur-de-developpement-de-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Lancez le serveur web de développement de Laravel</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve
+</code></pre></div>
+<ul>
+<li>
+<p>Si vous avez cette erreur <code>The stream or file "/path/to/your-project-name/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied</code> il faut modifier le créateur du dossier <code>storage</code> et de son contenu</p>
+<ul>
+<li>
+<p>Source de la solution
+    &gt; <a href="https://stackoverflow.com/questions/30639174/laravel-5-ubuntu-14-04-permission-denied-on-storage-log">https://stackoverflow.com/questions/30639174/laravel-5-ubuntu-14-04-permission-denied-on-storage-log</a></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>:www-data<span class="w"> </span>/path/to/your-project-name/storage
+</code></pre></div>
+</li>
+<li>
+<p>Redonnez les droits au dossier <code>storage</code> si nécessaire</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">775</span><span class="w"> </span>/path/to/your-project-name/storage
+</code></pre></div>
+</li>
+<li>
+<p>Relancez le serveur web de développement de Laravel</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local">Rendre le serveur de développement de laravel accessible sur tout les appareils d'un réseau local<a class="headerlink" href="#rendre-le-serveur-de-developpement-de-laravel-accessible-sur-tout-les-appareils-dun-reseau-local" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Lancer le serveur laravel avec la commande suivante</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>serve<span class="w"> </span>--host<span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="o">=</span><span class="m">8000</span>
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP ou le nom de la machine sur laquel le serveur laravel est lancé</p>
+<ul>
+<li>
+<p>Récupérer l'adresse IP sous Linux</p>
+<div class="language-shell highlight"><pre><span></span><code>hostname<span class="w"> </span>-I
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer le nom de la machine sous Linux</p>
+<div class="language-shell highlight"><pre><span></span><code>hostname
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP sous Windows</p>
+<div class="language-shell highlight"><pre><span></span><code>ipconfig
+</code></pre></div>
+</li>
+<li>
+<p>Récupérer l'adresse IP sous Windows grâce à l'inteface graphique</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9">https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Ouvrir un navigateur sur un autre appareil connecté au même réseau</p>
+</li>
+<li>
+<p>Entrer l'adresse IP de la machine sur lequel le serveur laravel est lancé suivi du numéro de port, en l'occurence "<code>:8000</code>"</p>
+<div class="language-shell highlight"><pre><span></span><code>&lt;adresse_ip&gt;:8000
+</code></pre></div>
+<p>OU</p>
+<div class="language-shell highlight"><pre><span></span><code>&lt;nom&gt;:8000
+</code></pre></div>
+<ul>
+<li>
+<p>En règle général l'adresse IP est de la forme <code>192.168.1.XX</code></p>
+<div class="language-shell highlight"><pre><span></span><code><span class="m">192</span>.168.1.XX:8000
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-de-votre-projet-laravel">Configuration de votre projet Laravel<a class="headerlink" href="#configuration-de-votre-projet-laravel" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Configuration des permissions dans votre projet Laravel (normalement vous n'avez pas besoin de faire cette étape)</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/path/to/your-project-name
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/path/to/your-project-name
+</code></pre></div>
+</li>
+</ul>
+<h3 id="configuration-du-env">Configuration du .env<a class="headerlink" href="#configuration-du-env" title="Permanent link">&para;</a></h3>
+<p>Voici une explication détaillée des différentes variables du fichier <code>.env</code> et leur utilité dans une application Laravel :</p>
+<h4 id="configuration-de-lapplication">Configuration de l'application<a class="headerlink" href="#configuration-de-lapplication" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>APP_NAME</code></strong> : Nom de l'application. Utilisé dans les notifications, les emails, ou dans certaines parties du frontend pour afficher le nom de l'application.</li>
+<li><strong><code>APP_ENV</code></strong> : Environnement de l'application (<code>local</code>, <code>production</code>, <code>staging</code>, etc.). Permet d'ajuster le comportement de l'application en fonction de l'environnement.</li>
+<li><strong><code>APP_KEY</code></strong> : Clé utilisée pour chiffrer des données sensibles. Générée par Laravel avec la commande <code>php artisan key:generate</code>.</li>
+<li><strong><code>APP_DEBUG</code></strong> : Active ou désactive le mode débogage (<code>true</code> ou <code>false</code>). En mode débogage, les erreurs s'affichent directement dans le navigateur.</li>
+<li><strong><code>APP_TIMEZONE</code></strong> : Définit le fuseau horaire de l'application, comme <code>UTC</code>, <code>Europe/Paris</code>, etc.</li>
+<li><strong><code>APP_URL</code></strong> : URL de base de l'application. Utilisée pour générer des liens absolus dans l'application.</li>
+</ul>
+<h4 id="langue-et-localisation">Langue et localisation<a class="headerlink" href="#langue-et-localisation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>APP_LOCALE</code></strong> : Langue par défaut de l'application, comme <code>en</code> pour l'anglais ou <code>fr</code> pour le français.</li>
+<li><strong><code>APP_FALLBACK_LOCALE</code></strong> : Langue utilisée si la traduction dans <code>APP_LOCALE</code> n'est pas disponible.</li>
+<li><strong><code>APP_FAKER_LOCALE</code></strong> : Langue utilisée par la librairie <code>Faker</code> pour générer des données fictives (noms, adresses, etc.).</li>
+</ul>
+<h4 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h4>
+<p>La maintenance dans Laravel fait référence à un mode spécial où l'application devient temporairement inaccessible aux utilisateurs finaux. Cela permet aux développeurs d'effectuer des tâches comme des mises à jour, des modifications ou des réparations sans interrompre l'expérience utilisateur avec des erreurs ou des bugs.</p>
+<ul>
+<li><strong><code>APP_MAINTENANCE_DRIVER</code></strong> : Détermine comment l'état de maintenance est géré (fichier, base de données, etc.).</li>
+<li>
+<p><strong><code>APP_MAINTENANCE_STORE</code></strong> : Emplacement pour stocker les données de maintenance (si nécessaire).</p>
+</li>
+<li>
+<p><strong>Fonctionnement :</strong></p>
+<ul>
+<li>En mode maintenance, Laravel affiche une page par défaut ou personnalisée indiquant que le site est temporairement hors service.</li>
+<li>Les commandes comme <code>php artisan down</code> activent le mode maintenance, tandis que <code>php artisan up</code> le désactive.</li>
+<li>Tu peux spécifier des utilisateurs ou des IP autorisés à contourner ce mode avec <code>--allow</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Ce n'est pas obligatoire. Cependant, c'est une bonne pratique dans les environnements de production pour éviter que les utilisateurs ne rencontrent des bugs ou des incohérences pendant des opérations critiques.</p>
+<h4 id="securite">Sécurité<a class="headerlink" href="#securite" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong><code>BCRYPT_ROUNDS</code></strong> : Nombre de tours pour hacher les mots de passe avec bcrypt. Plus la valeur est élevée, plus le processus est sécurisé mais gourmand en ressources.</p>
+</li>
+<li>
+<p><strong>Valeur de référence :</strong></p>
+<ul>
+<li>Laravel utilise une valeur par défaut de 10. Cette valeur offre un bon compromis entre sécurité et performances.</li>
+<li>Dans des environnements nécessitant une sécurité accrue (par exemple, avec des serveurs puissants), tu peux augmenter ce nombre à 12 ou 14.</li>
+<li>Éviter des valeurs trop élevées (comme 20+), car elles ralentiront considérablement le processus de connexion.</li>
+</ul>
+</li>
+</ul>
+<h4 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>LOG_CHANNEL</code></strong> : Définit le canal de journalisation principal (fichier, stack, daily, etc.).</li>
+<li><strong><code>LOG_STACK</code></strong> : Permet d'activer une pile de canaux de journalisation.</li>
+<li><strong><code>LOG_DEPRECATIONS_CHANNEL</code></strong> : Canal pour capturer les messages d'obsolescence de code.</li>
+</ul>
+<h4 id="base-de-donnees">Base de données<a class="headerlink" href="#base-de-donnees" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>DB_CONNECTION</code></strong> : Type de base de données utilisé (<code>mysql</code>, <code>sqlite</code>, <code>pgsql</code>, etc.).</li>
+<li><strong><code>DB_HOST</code></strong> : Adresse du serveur de base de données.</li>
+<li><strong><code>DB_PORT</code></strong> : Port utilisé pour la connexion à la base de données.</li>
+<li><strong><code>DB_DATABASE</code></strong> : Nom de la base de données.</li>
+<li><strong><code>DB_USERNAME</code></strong> : Nom d'utilisateur pour se connecter à la base.</li>
+<li><strong><code>DB_PASSWORD</code></strong> : Mot de passe pour la connexion.</li>
+</ul>
+<h4 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>SESSION_DRIVER</code></strong> : Méthode de gestion des sessions (<code>file</code>, <code>cookie</code>, <code>database</code>, <code>redis</code>, etc.).</li>
+<li><strong><code>SESSION_LIFETIME</code></strong> : Durée de vie des sessions en minutes.</li>
+<li><strong><code>SESSION_ENCRYPT</code></strong> : Détermine si les sessions doivent être chiffrées (<code>true</code> ou <code>false</code>).</li>
+<li><strong><code>SESSION_PATH</code></strong> : Chemin où les cookies de session sont accessibles.<ul>
+<li>Définit le chemin sur lequel les cookies de session sont valides.</li>
+<li><strong>Exemple :</strong><ul>
+<li>Si la valeur est /app, les cookies ne seront accessibles que pour les URLs commençant par /app.</li>
+</ul>
+</li>
+<li>Par défaut, Laravel utilise /, ce qui signifie que les cookies sont valides pour toutes les routes de ton domaine.</li>
+</ul>
+</li>
+<li><strong><code>SESSION_DOMAIN</code></strong> : Domaine associé aux cookies de session.<ul>
+<li>Définit le domaine pour lequel les cookies de session sont valides.</li>
+<li><strong>Exemple :</strong><ul>
+<li>Si ton site est <code>example.com</code> et que tu as un sous-domaine <code>admin.example.com</code> :<ul>
+<li>Valeur par défaut (vide) : Les sessions sont spécifiques à chaque sous-domaine.</li>
+<li>Valeur <code>.example.com</code> : Partage les sessions entre <code>example.com</code> et <code>admin.example.com</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Utilité :</strong><ul>
+<li>Ces paramètres sont utiles pour gérer les sessions dans des applications multi-domaines ou ayant des chemins spécifiques nécessitant des restrictions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="diffusion-broadcast">Diffusion (Broadcast)<a class="headerlink" href="#diffusion-broadcast" title="Permanent link">&para;</a></h4>
+<p>Le broadcasting est un mécanisme utilisé pour envoyer des mises à jour en temps réel aux utilisateurs sans qu'ils aient besoin de recharger la page.</p>
+<p>Laravel propose le broadcasting pour diffuser des événements via des canaux comme <code>WebSocket</code>, <code>Pusher</code>, ou d'autres services compatibles.</p>
+<ul>
+<li>Exemple d’utilisation :<ul>
+<li><strong>Une application de chat</strong> : Quand un utilisateur envoie un message, tous les autres utilisateurs dans la même discussion voient ce message en temps réel.</li>
+<li><strong>Notifications en direct</strong> : Quand une commande est validée dans un e-commerce, l'administrateur est notifié en direct.</li>
+</ul>
+</li>
+<li>Configurations courantes :<ul>
+<li><strong><code>pusher</code></strong> : Utilise le service Pusher pour diffuser les événements.</li>
+<li><strong><code>log</code></strong> : Enregistre les événements dans les logs pour déboguer (utile pour tester sans configurer un service).</li>
+<li><strong><code>null</code></strong> : Désactive complètement le broadcasting.</li>
+</ul>
+</li>
+</ul>
+<p>Utilisé cette configuration uniquement si l'application a des fonctionnalités en temps réel.</p>
+<ul>
+<li><strong><code>BROADCAST_CONNECTION</code></strong> : Connexion utilisée pour le la diffusion (broadcasting) en temps réel.</li>
+</ul>
+<h4 id="filesystems">Filesystems<a class="headerlink" href="#filesystems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>FILESYSTEM_DISK</code></strong> : Disque utilisé par défaut pour le stockage de fichiers (<code>local</code>, <code>s3</code>, etc.).</li>
+</ul>
+<h4 id="file-dattente">File d'attente<a class="headerlink" href="#file-dattente" title="Permanent link">&para;</a></h4>
+<p>Les queues (files d'attente) permettent d'exécuter des tâches lourdes ou non urgentes en arrière-plan, au lieu de les exécuter immédiatement.</p>
+<ul>
+<li><strong>Exemples de tâches :</strong><ul>
+<li>Envoyer un email après une inscription.</li>
+<li>Générer un rapport PDF.</li>
+<li>Redimensionner une image.</li>
+</ul>
+</li>
+<li>Comment ça fonctionne ?<ul>
+<li>Lorsqu’une tâche est ajoutée à la file d’attente, elle est mise en attente jusqu'à ce qu'un worker (processus en arrière-plan) la traite. Cela évite de bloquer le serveur ou de ralentir l'application.</li>
+</ul>
+</li>
+<li>Configurations courantes :<ul>
+<li><strong><code>sync</code></strong> : Les tâches sont exécutées immédiatement (pas vraiment en file d’attente).</li>
+<li><strong><code>database</code></strong> : Les tâches sont stockées dans la base de données et exécutées par un worker.</li>
+<li><strong><code>redis</code></strong> : Utilise Redis pour une file d’attente rapide et performante.</li>
+</ul>
+</li>
+</ul>
+<p>Il est possible d'utiliser sync par défaut. Mais si l'application a beaucoup de tâches, passer à une file d’attente comme database ou redis est recommandé.</p>
+<ul>
+<li><strong><code>QUEUE_CONNECTION</code></strong> : Type de gestion des files d'attente (<code>sync</code>, <code>database</code>, <code>redis</code>, etc.).</li>
+</ul>
+<h4 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>CACHE_STORE</code></strong> : Méthode de stockage du cache (<code>file</code>, <code>redis</code>, <code>database</code>, etc.).</li>
+<li><strong><code>CACHE_PREFIX</code></strong> : Préfixe utilisé pour identifier les clés de cache.</li>
+</ul>
+<h4 id="memcached">Memcached<a class="headerlink" href="#memcached" title="Permanent link">&para;</a></h4>
+<p>Memcached est un système de gestion de cache en mémoire rapide, utilisé pour stocker des données temporaires (comme des résultats de requêtes) afin d'améliorer les performances en réduisant les appels à la base de données. Ce système est optionnel.</p>
+<ul>
+<li><strong><code>MEMCACHED_HOST</code></strong> : Adresse IP du serveur Memcached (si utilisé).</li>
+</ul>
+<h4 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Redis est une base de données en mémoire rapide et légère, souvent utilisée comme :<ul>
+<li><strong>Cache</strong> : Pour stocker des données temporairement.</li>
+<li><strong>File d'attente</strong> : Pour gérer les files d'attente des tâches (plus rapide que la base de données traditionnelle).</li>
+<li><strong>Session store</strong> : Pour gérer les sessions utilisateur.</li>
+</ul>
+</li>
+<li>Laravel peut fonctionner sans Redis, mais l'utiliser peut améliorer les performances, surtout dans les applications à grande échelle.</li>
+<li>
+<p><strong>Alternatives</strong> : Tu peux utiliser des systèmes de cache comme <code>file</code>, <code>database</code>, ou <code>Memcached</code>.</p>
+</li>
+<li>
+<p><strong><code>REDIS_CLIENT</code></strong> : Client Redis utilisé (<code>predis</code> ou <code>phpredis</code>).</p>
+</li>
+<li><strong><code>REDIS_HOST</code></strong> : Adresse du serveur Redis.</li>
+<li><strong><code>REDIS_PASSWORD</code></strong> : Mot de passe pour le serveur Redis (si requis).</li>
+<li><strong><code>REDIS_PORT</code></strong> : Port utilisé pour la connexion à Redis.</li>
+</ul>
+<h4 id="email">Email<a class="headerlink" href="#email" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>MAIL_MAILER</code></strong> : Service utilisé pour envoyer des emails (<code>smtp</code>, <code>mailgun</code>, <code>sendmail</code>, etc.).</li>
+<li><strong><code>MAIL_DRIVER</code></strong> : Ancien nom pour <code>MAIL_MAILER</code> (encore utilisé dans certaines versions).</li>
+<li><strong><code>MAIL_HOST</code></strong> : Adresse du serveur SMTP. (Exemple : <code>smtp.gmail.com</code> pour Gmail).</li>
+<li><strong><code>MAIL_PORT</code></strong> : Port utilisé pour le serveur SMTP. (Exemple : <code>465</code> pour Gmail).</li>
+<li><strong><code>MAIL_USERNAME</code></strong> : Identifiant pour le serveur SMTP.</li>
+<li><strong><code>MAIL_NAME</code></strong> : Nom de l’expéditeur (affiché dans les emails envoyés).</li>
+<li><strong><code>MAIL_PASSWORD</code></strong> : Mot de passe pour le serveur SMTP. Disponible sur Gmail via la propriété <code>Mot de passe d'application</code> disponible uniquement si l'authentification à deux facteurs est activée.</li>
+<li><strong><code>MAIL_ENCRYPTION</code></strong> : Méthode de cryptage pour les emails (<code>tls</code>, <code>ssl</code>).</li>
+<li><strong><code>MAIL_FROM_ADDRESS</code></strong> : Adresse email de l’expéditeur par défaut.</li>
+<li><strong><code>MAIL_FROM_NAME</code></strong> : Nom affiché pour l’expéditeur.</li>
+</ul>
+<h4 id="vitejs">ViteJS<a class="headerlink" href="#vitejs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>VITE_APP_NAME</code></strong> : Nom de l’application pour le système de bundling Vite.js.</li>
+</ul>
+<h3 id="integration-de-tailwind-css">Intégration de Tailwind CSS<a class="headerlink" href="#integration-de-tailwind-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installation de Tailwind CSS</p>
+<div class="language-shell highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>tailwindcss<span class="w"> </span>postcss<span class="w"> </span>autoprefixer
+</code></pre></div>
+</li>
+<li>
+<p>Création du fichier de configuration de Tailwind CSS</p>
+<div class="language-shell highlight"><pre><span></span><code>npx<span class="w"> </span>tailwindcss<span class="w"> </span>init<span class="w"> </span>-p
+</code></pre></div>
+</li>
+<li>
+<p>Ajoutez le code suivant dans le fichier <code>tailwind.config.js</code></p>
+<div class="language-js highlight"><pre><span></span><code><span class="cm">/** @type {import(&#39;tailwindcss&#39;).Config} */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.blade.php&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./resources/**/*.vue&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Ajoutez le code suivant dans le fichier <code>ressources/css/app.css</code></p>
+<div class="language-css highlight"><pre><span></span><code><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">base</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">components</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">utilities</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">forms</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Vous pouvez compiler les fichiers CSS de Tailwind CSS en utilisant la commande suivante</p>
+<ul>
+<li>Vous pouvez voir ça comme l'activation du style Tailwind CSS. Il faudra refaire cette commande à chaque fois que vous ajouter un nouveau style dans votre projet</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div>
+</li>
+</ul>
+<h3 id="integration-de-livewire">Intégration de Livewire<a class="headerlink" href="#integration-de-livewire" title="Permanent link">&para;</a></h3>
+<h3 id="ajout-de-livewire-a-un-projet-laravel">Ajout de Livewire à un projet Laravel<a class="headerlink" href="#ajout-de-livewire-a-un-projet-laravel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer LiveWire grâce à <code>Composer</code></p>
+<div class="language-shell highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>livewire/livewire
+</code></pre></div>
+</li>
+</ul>
+<h3 id="creation-dun-composant-livewire">Création d'un composant Livewire<a class="headerlink" href="#creation-dun-composant-livewire" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Éxécuter la commande suivante dans le dossier racine de votre projet Laravel pour créer un composant Livewire</p>
+<div class="language-shell highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:livewire<span class="w"> </span>&lt;NomDuComposant&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Florobart" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

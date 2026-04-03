@@ -1,0 +1,4029 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation personnelle sur divers sujets informatiques et autres centres d'intérêt.">
+      
+      
+        <meta name="author" content="Floris Robart">
+      
+      
+      
+        <link rel="prev" href="../../01_development/others/web_development_php/">
+      
+      
+        <link rel="next" href="../docker_installation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Installation d'applications Linux divers - Documentation Floris</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Documentation Floris" class="md-header__button md-logo" aria-label="Documentation Floris" data-md-component="logo">
+      
+  <img src="../../img/flower_garden_logo_192.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation Floris
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation d'applications Linux divers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FloRobart/Documentations" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Florobart/Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00_meta/all_project/" class="md-tabs__link">
+          
+  
+  
+  Meta & règles
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_development/project_management/project_management_tools/" class="md-tabs__link">
+          
+  
+  
+  Développement
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Applications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_system/server/server_creation_2026/" class="md-tabs__link">
+          
+  
+  
+  Systèmes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04_entrepreneuriat/company_creation_for_development/" class="md-tabs__link">
+          
+  
+  
+  Entrepreneuriat
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05_electronic/vide/" class="md-tabs__link">
+          
+  
+  
+  Electronique
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../98_others/creation_page_don_telethon/" class="md-tabs__link">
+          
+  
+  
+  Autres
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation Floris" class="md-nav__button md-logo" aria-label="Documentation Floris" data-md-component="logo">
+      
+  <img src="../../img/flower_garden_logo_192.png" alt="logo">
+
+    </a>
+    Documentation Floris
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FloRobart/Documentations" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Florobart/Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta & règles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Meta & règles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_meta/all_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tous mes projets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_meta/documentation_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Règles de documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Développement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de projets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestion de projets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/project_management/project_management_tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils de gestion de projets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/database/postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/database/migrations_and_seeders_by_tanvir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Back-end
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Back-end
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/backend/java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/backend/create_api_typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript (Node.js/Express)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/backend/laravel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/backend/symfony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symfony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/backend/codeigniter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CodeIgniter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front-end
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front-end
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/frontend/flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/frontend/react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déploiement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Déploiement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/deployment/production_with_docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise en production d'une application dockerisée
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/deployment/debian_package_creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creation de packets Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/deployment/open_source_licensing_gnu_gpl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise sous licence d'un projet open source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/deployment/php_web_server_creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur web PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres*
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres*
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/others/clean_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean code (Codé proprement)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/others/web_development_micro_service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developpement web en micro-services (Recommandé)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/others/coding_best_practices_by_chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonne pratiques de développement by ChatGPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_development/others/web_development_php/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developpement web en PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applications
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Applications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d'applications Linux divers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation d'applications Linux divers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table des matières
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-ventoy-multi-boot-usb-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation Ventoy (Multi-boot USB) - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-docker-engine-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Docker engine - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-chrome-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Chrome - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-qdirstat-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Qdirstat - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-ticktick-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Ticktick - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-dandroid-studio-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation d'android studio - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-netbeans-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Netbeans - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-postman-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Postman - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-trello-desktop-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Trello desktop - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-slack-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Slack - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-curl-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de curl - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de wget
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-gcc-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de gcc - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-pip-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de pip - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-gpt-cli-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de gpt-cli - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation de Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Studio Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gnome_shell_connect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome Shell Connect (GSC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ventoy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ventoy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hp_printer_connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connection d'une imprimante HP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thunderbird_iut_le_havre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration de Thunderbird pour l'IUT du Havre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systèmes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systèmes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/server/server_creation_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur (2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/server/server_creation_2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un serveur (Obsolète - 2023)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/linux/dual_boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Création d'un dual boot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/linux/windows_on_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilisation d'outils windows sous Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/windows/windows_security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contournement des sécurités Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Android
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/android/flashing_android_device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flashing d'un appareil Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines virtuelles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machines virtuelles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/virtual_machine/virtual_machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machines virtuels avec VirtualBox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_system/others/general_manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resolution de problèmes divers sous Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrepreneuriat
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entrepreneuriat
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_entrepreneuriat/company_creation_for_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creation d'une entreprise pour le developpement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Electronique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_electronic/vide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aucune documentation pour le moment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../98_others/creation_page_don_telethon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Page don Téléthon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table des matières
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-ventoy-multi-boot-usb-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation Ventoy (Multi-boot USB) - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-docker-engine-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Docker engine - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-chrome-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Chrome - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-qdirstat-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Qdirstat - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-ticktick-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Ticktick - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-dandroid-studio-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation d'android studio - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-netbeans-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Netbeans - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-postman-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Postman - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-trello-desktop-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Trello desktop - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-slack-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de Slack - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-curl-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de curl - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de wget
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-gcc-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de gcc - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-pip-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de pip - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-gpt-cli-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation de gpt-cli - Linux
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels">Documentation d'installation, de configuration et d'utilisation de différents logiciels<a class="headerlink" href="#documentation-dinstallation-de-configuration-et-dutilisation-de-differents-logiciels" title="Permanent link">&para;</a></h1>
+<h2 id="table-des-matieres">Table des matières<a class="headerlink" href="#table-des-matieres" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#documentation-dinstallation-de-configuration-et-dutilisation-de-différents-logiciels">Documentation d'installation, de configuration et d'utilisation de différents logiciels</a><ul>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#installation-ventoy-multi-boot-usb---linux">Installation Ventoy (Multi-boot USB) - Linux</a></li>
+<li><a href="#installation-de-docker-engine---linux">Installation de Docker engine - Linux</a></li>
+<li><a href="#installation-de-chrome---linux">Installation de Chrome - Linux</a></li>
+<li><a href="#installation-de-qdirstat---linux">Installation de Qdirstat - Linux</a></li>
+<li><a href="#installation-de-ticktick---linux">Installation de Ticktick - Linux</a></li>
+<li><a href="#installation-dandroid-studio---linux">Installation d'android studio - Linux</a></li>
+<li><a href="#installation-de-netbeans---linux">Installation de Netbeans - Linux</a></li>
+<li><a href="#installation-de-postman---linux">Installation de Postman - Linux</a></li>
+<li><a href="#installation-de-trello-desktop---linux">Installation de Trello desktop - Linux</a></li>
+<li><a href="#installation-de-slack---linux">Installation de Slack - Linux</a></li>
+<li><a href="#installation-de-curl---linux">Installation de curl - Linux</a></li>
+<li><a href="#installation-de-wget">Installation de wget</a></li>
+<li><a href="#installation-de-gcc---linux">Installation de gcc - Linux</a></li>
+<li><a href="#installation-de-pip---linux">Installation de pip - Linux</a></li>
+<li><a href="#installation-de-gpt-cli---linux">Installation de gpt-cli - Linux</a></li>
+<li><a href="#installation-de-cmake---linux">Installation de CMake - Linux</a></li>
+<li><a href="#installation-de-wps-office---linux">Installation de WPS Office - Linux</a></li>
+<li><a href="#installation-de-smartmontools---linux">Installation de Smartmontools - Linux</a></li>
+<li><a href="#installation-de-flatpak-gestionnaire-de-paquets---linux">Installation de Flatpak (gestionnaire de paquets) - Linux</a></li>
+<li><a href="#installation-de-mission-center---linux">Installation de Mission center - Linux</a></li>
+<li><a href="#installation-de-zsh-interpréteur-de-commandes-shell---linux">Installation de ZSH (interpréteur de commandes shell) - Linux</a></li>
+<li><a href="#installation-du-gestionnaire-de-packet-snap---linux">Installation du gestionnaire de packet Snap - Linux</a></li>
+<li><a href="#installation-de-thunderbird---linux">Installation de Thunderbird - Linux</a></li>
+<li><a href="#installation-de-filezilla---linux">Installation de FileZilla - Linux</a></li>
+<li><a href="#installation-de-testdisk---linux">Installation de TestDisk - Linux</a></li>
+<li><a href="#installation-de-txt2man---linux">Installation de Txt2man - Linux</a></li>
+<li><a href="#installation-de-neofetch---linux">Installation de neofetch - Linux</a></li>
+<li><a href="#installation-de-scoop---windows">Installation de Scoop - Windows</a></li>
+<li><a href="#installation-de-jekyll---linux">Installation de Jekyll - Linux</a></li>
+<li><a href="#installation-de-discord---linux">Installation de Discord - Linux</a></li>
+<li><a href="#installation-de-virtualbox-sur-linux-ubuntu">Installation de VirtualBox sur Linux (Ubuntu)</a><ul>
+<li><a href="#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt">Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets <code>apt</code></a></li>
+<li><a href="#installation-en-téléchargeant-le-fichier-deb">Installation en téléchargeant le fichier deb</a></li>
+<li><a href="#activer-virtualbox-avec-le-secure-boot">Activer VirtualBox avec le secure boot</a></li>
+</ul>
+</li>
+<li><a href="#gparted">GParted</a><ul>
+<li><a href="#installation-de-gparted---linux">Installation de GParted - Linux</a></li>
+<li><a href="#allouée-la-partition-grace-à-gparted---linux">Allouée la partition grace à GParted - Linux</a></li>
+</ul>
+</li>
+<li><a href="#dconf-editor">Dconf-Editor</a><ul>
+<li><a href="#installation-de-dconf-editor---linux">Installation de Dconf-Editor - Linux</a></li>
+<li><a href="#utilisation-de-dconf-editor">Utilisation de Dconf-Editor</a><ul>
+<li><a href="#modifier-le-comportement-du-dock-barre-de-tâche-de-gnome">Modifier le comportement du dock (barre de tâche) de Gnome</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#pandoc">Pandoc</a><ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#installation-de-pandoc---linux">Installation de Pandoc - Linux</a></li>
+<li><a href="#utilisation-de-pandoc">Utilisation de Pandoc</a></li>
+</ul>
+</li>
+<li><a href="#melonds-émulateur-de-nintendo-ds---linux">MelonDS (émulateur de Nintendo DS) - Linux</a><ul>
+<li><a href="#installation-de-la-version-091-de-melonds">Installation de la version 0.9.1 de MelonDS</a></li>
+<li><a href="#configuration-de-melonds">Configuration de MelonDS</a></li>
+<li><a href="#lancer-un-jeu-avec-melonds">Lancer un jeu avec MelonDS</a></li>
+<li><a href="#améliorer-les-graphismes-de-melonds">Améliorer les graphismes de MelonDS</a></li>
+<li><a href="#configurer-les-touches-de-melonds">Configurer les touches de MelonDS</a></li>
+</ul>
+</li>
+<li><a href="#licence">Licence</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-ventoy-multi-boot-usb-linux">Installation Ventoy (Multi-boot USB) - Linux<a class="headerlink" href="#installation-ventoy-multi-boot-usb-linux" title="Permanent link">&para;</a></h2>
+<p><a href="../ventoy/">Documentation complète de Ventoy</a></p>
+<h2 id="installation-de-docker-engine-linux">Installation de Docker engine - Linux<a class="headerlink" href="#installation-de-docker-engine-linux" title="Permanent link">&para;</a></h2>
+<p><a href="../docker_installation/">Documentation complète de l'installation de Docker engine</a></p>
+<h2 id="installation-de-chrome-linux">Installation de Chrome - Linux<a class="headerlink" href="#installation-de-chrome-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet deb disponible sur</p>
+<blockquote>
+<p><a href="https://www.google.fr/chrome/">https://www.google.fr/chrome/</a></p>
+</blockquote>
+</li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>google-chrome-stable_*_amd64.deb
+</code></pre></div>
+</li>
+<li>
+<p>Si chrome ne se lance pas, redémarrer l'ordinateur</p>
+<div class="language-shell highlight"><pre><span></span><code>reboot
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-qdirstat-linux">Installation de Qdirstat - Linux<a class="headerlink" href="#installation-de-qdirstat-linux" title="Permanent link">&para;</a></h2>
+<p>Equivalent de <code>Windirstat</code> qui permet d'analyser les disques pour savoir quel dossier et quel fichier prend le plus de place.</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>qdirstat
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-ticktick-linux">Installation de Ticktick - Linux<a class="headerlink" href="#installation-de-ticktick-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Installer le fichier deb disponible sur :
+    &gt; <a href="https://ticktick.com/about/download">https://ticktick.com/about/download</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>ticktick_*_amd64.deb
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-dandroid-studio-linux">Installation d'android studio - Linux<a class="headerlink" href="#installation-dandroid-studio-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Télécharger le fichier tar.gz disponible sur :
+    &gt; <a href="https://developer.android.com/studio">https://developer.android.com/studio</a></p>
+</li>
+<li>
+<p>Aller dans le dossier <code>/opt</code></p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt
+</code></pre></div>
+</li>
+<li>
+<p>Déplacer le fichier tar.gz dans le dossier <code>/opt</code></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>/home/floris/Téléchargements/android-studio-&lt;version&gt;-linux.tar.gz<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Extraire le fichier tar.gz dans le dossier <code>/opt</code></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Supprimer le fichier tar.gz</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>/opt/android-studio-&lt;version&gt;-linux.tar.gz
+</code></pre></div>
+</li>
+<li>
+<p>Installer les bibliothèques requises pour ordinateurs 64 bits</p>
+<p><strong>Uniquement pour Ubuntu 22.04 LTS (et peut être version antérieur)</strong></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libc6:i386<span class="w"> </span>libncurses5:i386<span class="w"> </span>libstdc++6:i386<span class="w"> </span>lib32z1<span class="w"> </span>libbz2-1.0:i386
+</code></pre></div>
+<p><strong>Uniquement pour Fedora</strong></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>zlib.i686<span class="w"> </span>ncurses-libs.i686<span class="w"> </span>bzip2-libs.i686
+</code></pre></div>
+</li>
+<li>
+<p>Lancer Android Studio</p>
+<div class="language-shell highlight"><pre><span></span><code>/opt/android-studio/bin/studio.sh
+</code></pre></div>
+</li>
+<li>
+<p>Suiver les instructions d'installation</p>
+</li>
+<li>
+<p>Pour afficher Android Studio dans la liste d'applications, sélectionnez '<code>Tools</code>' &gt; '<code>Create Desktop Entry</code>' dans la barre de menu d'Android Studio. En français : '<code>Outils</code>' &gt; '<code>Créer une entrée de bureau</code>'</p>
+</li>
+</ul>
+<h2 id="installation-de-netbeans-linux">Installation de Netbeans - Linux<a class="headerlink" href="#installation-de-netbeans-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le fichier deb disponible sur :
+    &gt; <a href="https://netbeans.apache.org/download/index.html">https://netbeans.apache.org/download/index.html</a></p>
+</li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>netbeans*-bin.deb
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-postman-linux">Installation de Postman - Linux<a class="headerlink" href="#installation-de-postman-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>postman
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-trello-desktop-linux">Installation de Trello desktop - Linux<a class="headerlink" href="#installation-de-trello-desktop-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>trello-desktop
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-slack-linux">Installation de Slack - Linux<a class="headerlink" href="#installation-de-slack-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>slack
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-curl-linux">Installation de curl - Linux<a class="headerlink" href="#installation-de-curl-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-wget">Installation de wget<a class="headerlink" href="#installation-de-wget" title="Permanent link">&para;</a></h2>
+<p>wget est un utilitaire en ligne de commande pour télécharger de fichiers depuis le Web. Il supporte les protocoles HTTP, HTTPS et FTP ainsi que le téléchargement sur des serveurs HTTP à travers des proxies.</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wget
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-gcc-linux">Installation de gcc - Linux<a class="headerlink" href="#installation-de-gcc-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gcc
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-pip-linux">Installation de pip - Linux<a class="headerlink" href="#installation-de-pip-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+</code></pre></div>
+</li>
+<li>
+<p>erreur possible avec pip :</p>
+<div class="language-shell highlight"><pre><span></span><code>error:<span class="w"> </span>externally-managed-environment
+×<span class="w"> </span>This<span class="w"> </span>environment<span class="w"> </span>is<span class="w"> </span>externally<span class="w"> </span>managed
+╰─&gt;<span class="w"> </span>To<span class="w"> </span>install<span class="w"> </span>Python<span class="w"> </span>packages<span class="w"> </span>system-wide,<span class="w"> </span>try<span class="w"> </span>apt<span class="w"> </span>install
+<span class="w">        </span>python3-xyz,<span class="w"> </span>where<span class="w"> </span>xyz<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>package<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>trying<span class="w"> </span>to
+<span class="w">        </span>install.
+
+<span class="w">        </span>If<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>a<span class="w"> </span>non-Debian-packaged<span class="w"> </span>Python<span class="w"> </span>package,
+<span class="w">        </span>create<span class="w"> </span>a<span class="w"> </span>virtual<span class="w"> </span>environment<span class="w"> </span>using<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>path/to/venv.
+<span class="w">        </span>Then<span class="w"> </span>use<span class="w"> </span>path/to/venv/bin/python<span class="w"> </span>and<span class="w"> </span>path/to/venv/bin/pip.<span class="w"> </span>Make
+<span class="w">        </span>sure<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>python3-full<span class="w"> </span>installed.
+
+<span class="w">        </span>If<span class="w"> </span>you<span class="w"> </span>wish<span class="w"> </span>to<span class="w"> </span>install<span class="w"> </span>a<span class="w"> </span>non-Debian<span class="w"> </span>packaged<span class="w"> </span>Python<span class="w"> </span>application,
+<span class="w">        </span>it<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>easiest<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>pipx<span class="w"> </span>install<span class="w"> </span>xyz,<span class="w"> </span>which<span class="w"> </span>will<span class="w"> </span>manage<span class="w"> </span>a
+<span class="w">        </span>virtual<span class="w"> </span>environment<span class="w"> </span><span class="k">for</span><span class="w"> </span>you.<span class="w"> </span>Make<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>pipx<span class="w"> </span>installed.
+
+<span class="w">        </span>See<span class="w"> </span>/usr/share/doc/python3.11/README.venv<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+
+note:<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>believe<span class="w"> </span>this<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>mistake,<span class="w"> </span>please<span class="w"> </span>contact<span class="w"> </span>your<span class="w"> </span>Python<span class="w"> </span>installation<span class="w"> </span>or<span class="w"> </span>OS<span class="w"> </span>distribution<span class="w"> </span>provider.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>override<span class="w"> </span>this,<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>risk<span class="w"> </span>of<span class="w"> </span>breaking<span class="w"> </span>your<span class="w"> </span>Python<span class="w"> </span>installation<span class="w"> </span>or<span class="w"> </span>OS,<span class="w"> </span>by<span class="w"> </span>passing<span class="w"> </span>--break-system-packages.
+hint:<span class="w"> </span>See<span class="w"> </span>PEP<span class="w"> </span><span class="m">668</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>detailed<span class="w"> </span>specification.
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Pour résoudre ce problème, ouvrez le fichier <code>/home/${USER}/.config/pip/pip.conf</code></strong></p>
+<ul>
+<li>Il est possible que ce fichier n'éxisite pas, dans ce cas créer le fichier puis ouvrez le</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code>open<span class="w"> </span>/home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/.config/pip/pip.conf
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter les lignes suivantes à la fin du fichier :</p>
+<div class="language-text highlight"><pre><span></span><code>[global]
+break-system-packages = true
+</code></pre></div>
+</li>
+<li>
+<p>Sauvegarder le fichier</p>
+</li>
+<li>
+<p>Relancer la commande qui à échoué ou tester en installant le paquet <code>mouse</code></p>
+<div class="language-shell highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mouse
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-gpt-cli-linux">Installation de gpt-cli - Linux<a class="headerlink" href="#installation-de-gpt-cli-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Cloner le repertoire Github :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/kharvd/gpt-cli
+</code></pre></div>
+</li>
+<li>
+<p>Aller dans le dossier du projet :</p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>gpt-cli
+</code></pre></div>
+</li>
+<li>
+<p>Installer les dépendances :</p>
+<div class="language-shell highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+</li>
+<li>
+<p>Trouver la clé d'API OpenIA (l'adresse mail que j'utilise est <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#111;&#114;&#116;&#103;&#97;&#115;&#100;&#46;&#97;&#99;&#101;&#52;&#57;&#49;&#56;&#48;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#111;&#114;&#116;&#103;&#97;&#115;&#100;&#46;&#97;&#99;&#101;&#52;&#57;&#49;&#56;&#48;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>) sur le site :
+    &gt; <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
+</li>
+<li>
+<p>Ajouter la clé d'API OpenIA dans le fichier <code>.bashrc</code> :</p>
+<p><strong>Attention, la clé d'API doit permettre d'utiliser l'API</strong></p>
+<div class="language-shell highlight"><pre><span></span><code>code<span class="w"> </span>~/.bashrc
+</code></pre></div>
+<ul>
+<li>
+<p>Ajouter la ligne suivante à la fin du fichier <code>.bashrc</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code><span class="c1"># Ajout de la clé d&#39;API OpenAI pour gpt-cli</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s1">&#39;&lt;votre clé d\&#39;</span>api&gt;<span class="err">&#39;</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Modifier le script python <code>gpt.py</code> :</p>
+<p>Remplacer cette ligne :</p>
+<p>```python</p>
+<h1 id="usrbinenv-python">!/usr/bin/env python<a class="headerlink" href="#usrbinenv-python" title="Permanent link">&para;</a></h1>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
+<p>Par cette ligne :</p>
+<p>```python</p>
+<h1 id="usrbinenv-python3">!/usr/bin/env python3<a class="headerlink" href="#usrbinenv-python3" title="Permanent link">&para;</a></h1>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
+</li>
+<li>
+<p>Executer le script python :</p>
+<div class="language-shell highlight"><pre><span></span><code>./gpt.py
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-cmake-linux">Installation de CMake - Linux<a class="headerlink" href="#installation-de-cmake-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>--classic<span class="w"> </span>cmake
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-wps-office-linux">Installation de WPS Office - Linux<a class="headerlink" href="#installation-de-wps-office-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>wps-office
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-smartmontools-linux">Installation de Smartmontools - Linux<a class="headerlink" href="#installation-de-smartmontools-linux" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><a href="https://doc.ubuntu-fr.org/smartmontools">https://doc.ubuntu-fr.org/smartmontools</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>smartmontools
+</code></pre></div>
+</li>
+<li>
+<p>Installer l'interface graphique de smartmontools du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gsmartcontrol
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-flatpak-gestionnaire-de-paquets-linux">Installation de Flatpak (gestionnaire de paquets) - Linux<a class="headerlink" href="#installation-de-flatpak-gestionnaire-de-paquets-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-mission-center-linux">Installation de Mission center - Linux<a class="headerlink" href="#installation-de-mission-center-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>flatpak</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>io.missioncenter.MissionCenter
+</code></pre></div>
+</li>
+<li>
+<p>Allez voir le site ci-dessous pour la fin de l'installation
+    &gt; <a href="https://dl.flathub.org/repo/appstream/io.missioncenter.MissionCenter.flatpakref">https://dl.flathub.org/repo/appstream/io.missioncenter.MissionCenter.flatpakref</a></p>
+</li>
+</ul>
+<h2 id="installation-de-zsh-interpreteur-de-commandes-shell-linux">Installation de ZSH (interpréteur de commandes shell) - Linux<a class="headerlink" href="#installation-de-zsh-interpreteur-de-commandes-shell-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>zsh
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-du-gestionnaire-de-packet-snap-linux">Installation du gestionnaire de packet Snap - Linux<a class="headerlink" href="#installation-du-gestionnaire-de-packet-snap-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet principale du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
+</code></pre></div>
+</li>
+<li>
+<p>Installer le packet <code>core</code> du dépot <code>snap</code> :
+    <strong>Cette action peut prendre quelque minutes</strong></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>core
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-thunderbird-linux">Installation de Thunderbird - Linux<a class="headerlink" href="#installation-de-thunderbird-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>thunderbird
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-filezilla-linux">Installation de FileZilla - Linux<a class="headerlink" href="#installation-de-filezilla-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>filezilla
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-testdisk-linux">Installation de TestDisk - Linux<a class="headerlink" href="#installation-de-testdisk-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>testdisk
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-txt2man-linux">Installation de Txt2man - Linux<a class="headerlink" href="#installation-de-txt2man-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>txt2man
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-neofetch-linux">Installation de neofetch - Linux<a class="headerlink" href="#installation-de-neofetch-linux" title="Permanent link">&para;</a></h2>
+<p>script d’information sur le système, en ligne de commande</p>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>neofetch
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-scoop-windows">Installation de Scoop - Windows<a class="headerlink" href="#installation-de-scoop-windows" title="Permanent link">&para;</a></h2>
+<p><strong>Scoop est un gestionnaire de paquets pour Windows. Il permet d'installer des logiciels en ligne de commande.</strong></p>
+<ul>
+<li>Ouvrir un terminal <code>PowerShell</code></li>
+<li>
+<p>Exécuter la commande suivante :</p>
+<div class="language-powershell highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
+</li>
+<li>
+<p>Exécuter la commande suivante :</p>
+<div class="language-powershell highlight"><pre><span></span><code><span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">get</span><span class="p">.</span><span class="n">scoop</span><span class="p">.</span><span class="n">sh</span> <span class="p">|</span> <span class="nb">Invoke-Expression</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-jekyll-linux">Installation de Jekyll - Linux<a class="headerlink" href="#installation-de-jekyll-linux" title="Permanent link">&para;</a></h2>
+<p><strong>Jekyll est un générateur de site statique écrit en Ruby. Jekyll est compatible avec GitHub Pages.</strong></p>
+<ul>
+<li>
+<p>Installer le paquet ruby du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ruby-full<span class="w"> </span>build-essential<span class="w"> </span>zlib1g-dev
+</code></pre></div>
+</li>
+<li>
+<p>Configurer les variables d'environnement pour ruby</p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;# Install Ruby Gems to ~/gems&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export GEM_HOME=&quot;$HOME/gems&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Recharger le fichier <code>.bashrc</code></p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+</li>
+<li>
+<p>Installer Jekyll et Bundler</p>
+<div class="language-shell highlight"><pre><span></span><code>gem<span class="w"> </span>install<span class="w"> </span>jekyll<span class="w"> </span>bundler
+</code></pre></div>
+</li>
+</ul>
+<h2 id="installation-de-discord-linux">Installation de Discord - Linux<a class="headerlink" href="#installation-de-discord-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Installation de Discord avec le dépot <code>snap</code></p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>discord
+</code></pre></div>
+</li>
+<li>
+<p>Installation de Discord avec un fichier deb</p>
+<ul>
+<li>Télecharger le fichier deb de la dernière version sur :
+    &gt; <a href="https://discord.com/download">https://discord.com/download</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>discord-*.deb
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-de-virtualbox-sur-linux-ubuntu">Installation de VirtualBox sur Linux (Ubuntu)<a class="headerlink" href="#installation-de-virtualbox-sur-linux-ubuntu" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt">Installation de VirtualBox en ajoutant le fichier deb dans le gestionnaire de paquets <code>apt</code><a class="headerlink" href="#installation-de-virtualbox-en-ajoutant-le-fichier-deb-dans-le-gestionnaire-de-paquets-apt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>récupérer les clés de signature du dépôt de VirtualBox :</p>
+<div class="language-shell highlight"><pre><span></span><code>wget<span class="w"> </span>-q<span class="w"> </span>-O-<span class="w"> </span>http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter le dépôt de VirtualBox à la liste des sources de paquets :</p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://download.virtualbox.org/virtualbox/debian </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+<p><strong>Attention, la commande suivante est valable uniquement pour Ubuntu 22.04.1 LTS et supérieur</strong></p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/etc/apt/trusted.gpg] http://download.virtualbox.org/virtualbox/debian jammy contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+<p><strong>Pour la version 20.04.1 LTS d'ubuntu utiliser la ligne suivante</strong></p>
+<div class="language-shell highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/virtualbox.list
+</code></pre></div>
+</li>
+<li>
+<p>Mettre à jour la liste des paquets disponibles :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+</li>
+<li>
+<p>Pour connaître la dernière version de virtualbox installable :</p>
+<div class="language-shell highlight"><pre><span></span><code>apt-cache<span class="w"> </span>madison<span class="w"> </span>virtualbox
+</code></pre></div>
+</li>
+<li>
+<p>Installer la dernière version de virtualbox (dans mon cas la version 6.1) :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>virtualbox-&lt;version&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Ajouter votre compte dans le groupe <code>vboxusers</code> pour avoir accès à l'USB dans vos machines virtuelles.</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>usermod<span class="w"> </span>-G<span class="w"> </span>vboxusers<span class="w"> </span>-a<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
+</li>
+<li>
+<p>il peut-être nécessaire de mettre à jour le module DKMS, même si moi je n'ai pas eu à le faire :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>/etc/init.d/vboxdrv<span class="w"> </span>setup
+</code></pre></div>
+</li>
+</ul>
+<h3 id="installation-en-telechargeant-le-fichier-deb">Installation en téléchargeant le fichier deb<a class="headerlink" href="#installation-en-telechargeant-le-fichier-deb" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger le fichier deb disponible sur :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/">https://download.virtualbox.org/virtualbox/</a></li>
+<li>Vérifier la dernière version disponible sur :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/LATEST.TXT">https://download.virtualbox.org/virtualbox/LATEST.TXT</a></li>
+<li>
+<p>Dans mon cas la dernière version est la 7.0.8, disponible ici :
+    &gt; <a href="https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb">https://download.virtualbox.org/virtualbox/7.0.8/virtualbox-7.0_7.0.8-156879~Ubuntu~jammy_amd64.deb</a></p>
+</li>
+<li>
+<p>Executez le fichier deb télécharger :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>virtualbox-*.deb
+</code></pre></div>
+</li>
+</ul>
+<h3 id="activer-virtualbox-avec-le-secure-boot">Activer VirtualBox avec le secure boot<a class="headerlink" href="#activer-virtualbox-avec-le-secure-boot" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Si vous recevez se message d'erreur</p>
+<div class="language-text highlight"><pre><span></span><code>Kernel driver not installed (rc=-1908)
+
+The VirtualBox Linux kernel driver is either not loaded or not set up correctly. Please try setting it up again by executing
+
+&#39;/sbin/vboxconfig&#39; as root.
+
+If your system has EFI Secure Boot enabled you may also need to sign the kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) before you can load them. Please see your Linux system&#39;s documentation for more information.
+
+where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT.
+</code></pre></div>
+<ul>
+<li>Cela signifi que probablement que le secure boot est activé. Vous devrez donc recompiler certains modules de VirtualBox ainsi que les signées</li>
+<li>Mettez à jour vos paquet</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>at<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+</li>
+<li>
+<p>Créer un dossier pour stocker les clés de signature</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/root/module-signing
+</code></pre></div>
+</li>
+<li>
+<p>Connecter vous en tant que root et acceder au dossier que vous venez de créer</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>su
+<span class="nb">cd</span><span class="w"> </span>/root/module-signing
+</code></pre></div>
+</li>
+<li>
+<p>Générer une clé de signature</p>
+<div class="language-shell highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-x509<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>MOK.priv<span class="w"> </span>-outform<span class="w"> </span>DER<span class="w"> </span>-out<span class="w"> </span>MOK.der<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">36500</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">&quot;/CN=Module Sign Key/&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enregistrer les clés auprès du secure boot</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>mokutil<span class="w"> </span>--import<span class="w"> </span>MOK.der
+</code></pre></div>
+</li>
+<li>
+<p>Choisir un mot de passe (préférer un mot de passe sans majuscule ni chiffre)</p>
+</li>
+<li>Redémarrer votre ordinateur</li>
+<li>Une page bleu apparait</li>
+<li>Selectionner l'option <code>Enroll MOK</code></li>
+<li>Selectionner <code>Continuer</code></li>
+<li>Selectionner <code>Yes</code></li>
+<li>Entrer le mot de passe précédemment créer</li>
+<li>Selectionner <code>Reboot</code></li>
+<li>Une fois l'ordinateur redémarrer</li>
+<li>Ouvrer un terminal</li>
+<li>
+<p>Compiler et signer les modules VirtualBox</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.der<span class="w"> </span><span class="se">\</span>
+<span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxdrv<span class="k">)</span>
+</code></pre></div>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span>/root/module-signing/MOK.der<span class="w"> </span><span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxnetflt<span class="k">)</span>
+</code></pre></div>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/src/linux-headers-<span class="k">$(</span>uname<span class="w"> </span>-r<span class="k">)</span>/scripts/sign-file<span class="w"> </span>sha256<span class="w"> </span><span class="se">\</span>
+/root/module-signing/MOK.priv<span class="w"> </span>/root/module-signing/MOK.der<span class="w"> </span><span class="k">$(</span>modinfo<span class="w"> </span>-n<span class="w"> </span>vboxnetadp<span class="k">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Recharger les modules</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>modprobe<span class="w"> </span>vboxdrv
+</code></pre></div>
+</li>
+<li>
+<p>Vérifier que les modules existes bien</p>
+<div class="language-shell highlight"><pre><span></span><code>lsmod<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>vbox
+</code></pre></div>
+<ul>
+<li>
+<p>Résultat attendu</p>
+<div class="language-text highlight"><pre><span></span><code>vboxdrv               696320  0
+</code></pre></div>
+</li>
+<li>
+<p>Si rien n'est affiché c'est qu'aucun module n'a été trouver</p>
+</li>
+<li>Vous pouvez maintenant lancer votre Machine Virtuel</li>
+</ul>
+</li>
+</ul>
+<h2 id="gparted">GParted<a class="headerlink" href="#gparted" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-gparted-linux">Installation de GParted - Linux<a class="headerlink" href="#installation-de-gparted-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gparted
+</code></pre></div>
+</li>
+</ul>
+<h3 id="allouee-la-partition-grace-a-gparted-linux">Allouée la partition grace à GParted - Linux<a class="headerlink" href="#allouee-la-partition-grace-a-gparted-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#installation-de-gparted---linux">Installer GParted</a></li>
+<li>Ouvrez GParted</li>
+<li>Dans la liste déroulante en haut à droite, sélectionnez la clé USB</li>
+<li>Clique droit sur la partition non allouée</li>
+<li>Sélectionnez '<code>Nouvelle</code>'</li>
+<li>Dans 'Espace libre précédent (Mio)', entrez le minimum, dans mon cas "<code>1</code>"</li>
+<li>Laisser tout les autres champs par défaut</li>
+<li>Sélectionnez le système de fichier de votre choix, dans mon cas "<code>ext4</code>"</li>
+<li>Cliquez sur '<code>Ajouter</code>'</li>
+</ul>
+<h2 id="dconf-editor">Dconf-Editor<a class="headerlink" href="#dconf-editor" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-dconf-editor-linux">Installation de Dconf-Editor - Linux<a class="headerlink" href="#installation-de-dconf-editor-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>apt</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>dconf-editor
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-dconf-editor">Utilisation de Dconf-Editor<a class="headerlink" href="#utilisation-de-dconf-editor" title="Permanent link">&para;</a></h3>
+<h4 id="modifier-le-comportement-du-dock-barre-de-tache-de-gnome">Modifier le comportement du dock (barre de tâche) de Gnome<a class="headerlink" href="#modifier-le-comportement-du-dock-barre-de-tache-de-gnome" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ouvrir Dconf-Editor</li>
+<li>Allez dans <code>/org/gnome/shell/extensions/dash-to-dock</code></li>
+<li>Cliquez sur '<code>click-action</code>'</li>
+<li>Décochez la case '<code>Utiliser la valeur par défaut</code>'</li>
+<li>Sélectionnez l'option que vous voulez, dans mon cas '<code>minimize-or-previews</code>'</li>
+</ul>
+<h2 id="pandoc">Pandoc<a class="headerlink" href="#pandoc" title="Permanent link">&para;</a></h2>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>Pandoc est un logiciel qui permet de convertir des fichiers dans d'autres formats.
+Il permet par exemple de convertir un fichier markdown en fichier pdf, html, docx, latex, etc... et inversement, il peux également convertir un fichier pdf en fichier markdown, html, docx, latex, etc...</p>
+<h3 id="installation-de-pandoc-linux">Installation de Pandoc - Linux<a class="headerlink" href="#installation-de-pandoc-linux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Télécharger le fichier deb disponible sur :
+    &gt; <a href="https://github.com/jgm/pandoc/releases/latest">https://github.com/jgm/pandoc/releases/latest</a></li>
+<li>
+<p>Executer le fichier deb</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>pandoc-*-amd64.deb
+</code></pre></div>
+</li>
+</ul>
+<h3 id="utilisation-de-pandoc">Utilisation de Pandoc<a class="headerlink" href="#utilisation-de-pandoc" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="https://pandoc.org/MANUAL.html">https://pandoc.org/MANUAL.html</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Pour convertir un fichier</p>
+<div class="language-shell highlight"><pre><span></span><code>pandoc<span class="w"> </span>-s<span class="w"> </span>input.&lt;extention&gt;<span class="w"> </span>-o<span class="w"> </span>output.&lt;extention&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="melonds-emulateur-de-nintendo-ds-linux">MelonDS (émulateur de Nintendo DS) - Linux<a class="headerlink" href="#melonds-emulateur-de-nintendo-ds-linux" title="Permanent link">&para;</a></h2>
+<h3 id="installation-de-la-version-091-de-melonds">Installation de la version 0.9.1 de MelonDS<a class="headerlink" href="#installation-de-la-version-091-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Installer le paquet du dépot <code>snap</code> :</p>
+<div class="language-shell highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>melonds
+</code></pre></div>
+</li>
+</ul>
+<h3 id="configuration-de-melonds">Configuration de MelonDS<a class="headerlink" href="#configuration-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Emu settings</code>' &gt; '<code>DS-mode</code>'</li>
+<li>Séléctionner la case '<code>Use external BIOS/firmware files</code>'</li>
+<li>Dans l'emplacement '<code>DS ARM9 BIOS</code>', séléctionner le fichier <code>biosnds9.rom</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Dans l'emplacement '<code>DS ARM7 BIOS</code>', séléctionner le fichier <code>biosnds7.rom</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Dans l'emplacement '<code>DS firmware</code>', séléctionner le fichier <code>firmware.bin</code> Télécharger au préalable (mais je n'ai pas le site)</li>
+<li>Séléctionner '<code>OK</code>'</li>
+<li>Lorsque le message '<code>Problematic firmware dump</code>' apparait, séléctionner '<code>OK</code>'</li>
+</ul>
+<h3 id="lancer-un-jeu-avec-melonds">Lancer un jeu avec MelonDS<a class="headerlink" href="#lancer-un-jeu-avec-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>File</code>' &gt; '<code>Open ROM</code>'</li>
+<li>Séléctionner le fichier <code>.nds</code> du jeu que vous voulez lancer</li>
+</ul>
+<h3 id="ameliorer-les-graphismes-de-melonds">Améliorer les graphismes de MelonDS<a class="headerlink" href="#ameliorer-les-graphismes-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Video settings</code>'</li>
+<li>Dans la section '<code>3D renderer</code>' Séléctionner '<code>OpenGL</code>' à la place de '<code>Software</code>'</li>
+<li>Dans la section '<code>OpenGL renderer</code>' Séléctionner '<code>4x native (1024x768)</code>' à la place de '<code>1x native (256x192)</code>'</li>
+</ul>
+<h3 id="configurer-les-touches-de-melonds">Configurer les touches de MelonDS<a class="headerlink" href="#configurer-les-touches-de-melonds" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ouvrir MelonDS</li>
+<li>Aller dans le menu '<code>Config</code>' &gt; '<code>Input and hotkeys</code>'</li>
+<li>Séléctionner la touche que vous voulez configurer</li>
+</ul>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
+<p>Copyright (C) 2024 Floris Robart</p>
+<p>Authors: Floris Robart</p>
+<p>This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.</p>
+<p>You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Florobart" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
