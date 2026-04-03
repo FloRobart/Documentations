@@ -9,6 +9,8 @@ site_dir: site
 
 theme:
     name: material
+    logo: img/flower_garden_logo_192.png
+    favicon: img/favicon.png
     palette:
         - media: "(prefers-color-scheme: light)"
           scheme: default

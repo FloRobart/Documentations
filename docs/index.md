@@ -61,7 +61,7 @@
 - Entrepreneuriat
     - [Creation d'une entreprise pour le developpement](04_entrepreneuriat/company_creation_for_development.md)
 - Electronique
-    - [vide](05_electronic/vide.md)
+    - [Aucune documentation pour le moment](05_electronic/vide.md)
 - Autres
     - [Page don Téléthon](98_others/creation_page_don_telethon.md)
 

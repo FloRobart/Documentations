@@ -31,7 +31,7 @@
 
 /* Light theme: warm cream background */
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: #f7f1e7;
+    --md-default-bg-color: #fff9f9;
     --md-default-fg-color: hsla(18, 18%, 14%, 0.93);
     --md-default-fg-color--light: hsla(18, 18%, 14%, 0.72);
     --md-default-fg-color--lighter: hsla(18, 18%, 14%, 0.5);
@@ -43,7 +43,25 @@
 [data-md-color-scheme="default"] .md-content__inner,
 [data-md-color-scheme="default"] .md-sidebar,
 [data-md-color-scheme="default"] .md-sidebar__scrollwrap {
-    background-color: #f7f1e7;
+    background-color: #fff9f9;
+}
+
+/* Light theme code styling: gray/black blocks */
+[data-md-color-scheme="default"] .md-typeset code {
+    background-color: #f1ebeb;
+    color: #1a1a1a;
+}
+
+[data-md-color-scheme="default"] .md-typeset pre,
+[data-md-color-scheme="default"] .md-typeset .highlight pre {
+    background-color: #efefef;
+    color: #1f1f1f;
+}
+
+[data-md-color-scheme="default"] .md-typeset pre code,
+[data-md-color-scheme="default"] .md-typeset .highlight code {
+    background-color: transparent;
+    color: #1f1f1f;
 }
 
 /* Dark theme: premium near-black background */
