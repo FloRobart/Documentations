@@ -10,6 +10,8 @@
     - [Maven](#maven)
         - [Installation de Maven - Linux](#installation-de-maven---linux)
         - [Utilisation de Maven](#utilisation-de-maven)
+    - [Spring Boot](#spring-boot)
+        - [Démarrer un projet Spring Boot](#démarrer-un-projet-spring-boot)
     - [Wildfly](#wildfly)
         - [Installation de Wildfly - Linux](#installation-de-wildfly---linux)
         - [Suppressions de la sécurité SSL de Java pour Wildfly - Linux](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---linux)
@@ -141,6 +143,31 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
     ```shell
     mvn package wildfly:deploy
     ```
+
+## Spring Boot
+
+### Démarrer un projet Spring Boot
+
+- Aller sur le site :
+
+><https://start.spring.io/>
+
+- Choisissez les options suivantes :
+    - Project : Maven
+    - Language : Java
+    - Spring Boot : <last_stable_version> (exemple : 4.1.0)
+    - Project Metadata :
+        - Group : <votre_nom_de_domaine> (exemple : com.mycompany)
+        - Artifact : <app_name> (exemple : my-app)
+        - Package name : com.mycompany.app (rempli automatiquement)
+        - Packaging : Jar
+        - Configuration : Properties
+        - Java : <last_stable_version> (exemple : 25)
+    - Dependencies :
+        - Spring Web
+        - Spring Data JPA
+        - H2 Database, PostgreSQL Driver ou MySQL Driver (selon la base de données que vous utilisez)
+- Cliquez sur le bouton "Generate" pour télécharger le projet Spring Boot sous forme d'archive zip.
 
 ## Wildfly
 
