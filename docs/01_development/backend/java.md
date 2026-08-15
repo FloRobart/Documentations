@@ -12,6 +12,8 @@
         - [Utilisation de Maven](#utilisation-de-maven)
     - [Spring Boot](#spring-boot)
         - [Démarrer un projet Spring Boot](#démarrer-un-projet-spring-boot)
+        - [Compiler le projet Spring Boot](#compiler-le-projet-spring-boot)
+        - [Executer le projet Spring Boot](#executer-le-projet-spring-boot)
     - [Wildfly](#wildfly)
         - [Installation de Wildfly - Linux](#installation-de-wildfly---linux)
         - [Suppressions de la sécurité SSL de Java pour Wildfly - Linux](#suppressions-de-la-sécurité-ssl-de-java-pour-wildfly---linux)
@@ -167,7 +169,25 @@ La version du jdk et du jre doit être la même, sinon il y aura des problèmes 
         - Spring Web
         - Spring Data JPA
         - H2 Database, PostgreSQL Driver ou MySQL Driver (selon la base de données que vous utilisez)
+        - Spring Boot DevTools (optionnel, mais recommandé pour le développement)
 - Cliquez sur le bouton "Generate" pour télécharger le projet Spring Boot sous forme d'archive zip.
+- Votre dossier décompressé deviendra le projet Spring Boot que vous pourrez ouvrir avec votre IDE préféré
+
+### Compiler le projet Spring Boot
+
+- Pour compiler le projet Spring Boot, ouvrez un terminal dans le dossier du projet et exécutez la commande suivante :
+
+    ```shell
+    mvn clean install
+    ```
+
+### Executer le projet Spring Boot
+
+- Pour exécuter le projet Spring Boot, ouvrez un terminal dans le dossier du projet et exécutez la commande suivante :
+
+    ```shell
+    mvn spring-boot:run
+    ```
 
 ## Wildfly
 
