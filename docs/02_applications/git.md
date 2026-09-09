@@ -87,7 +87,7 @@
     git config --global user.email <adresse mail>
     ```
 
-- Configurer l'adresse mail :
+- Configurer le nom d'utilisateur :
 
     ```shell
     git config --global user.name <votre prenom>
@@ -98,7 +98,7 @@
 - Générer une clé SSH :
 
     ```shell
-    ssh-keygen -t rsa -b 4096 -C "votre adresse mail"
+    ssh-keygen -t rsa -b 4096 -C "commentaire (généralement votre adresse mail)"
     ```
 
 - laisser vide les trois champs suivant (sauf si vous voulez changer l'emplacement de la clé ou mettre un mot de passe d'accès à la clé) :
