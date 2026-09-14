@@ -100,6 +100,7 @@ nav:
         - SSH: 02_applications/ssh.md
         - Visual Studio Code: 02_applications/vscode.md
         - Gnome Shell Connect (GSC): 02_applications/gnome_shell_connect.md
+        - KeePass: 02_applications/keepass.md
         - Ventoy: 02_applications/ventoy.md
         - Connection d'une imprimante HP: 02_applications/hp_printer_connection.md
         - Configuration de Thunderbird pour l'IUT du Havre: 02_applications/thunderbird_iut_le_havre.md
@@ -124,3 +125,4 @@ nav:
         - Aucune documentation pour le moment: 05_electronic/vide.md
     - Autres:
         - Page don Téléthon: 98_others/creation_page_don_telethon.md
+        - Choix de croquettes pour chat/chaton: 98_others/choix_croquette_chat.md
